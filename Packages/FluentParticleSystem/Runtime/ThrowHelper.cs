@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FluentParticleSystem
+namespace OUCC.FluentParticleSystem
 {
     internal static class ThrowHelper
     {

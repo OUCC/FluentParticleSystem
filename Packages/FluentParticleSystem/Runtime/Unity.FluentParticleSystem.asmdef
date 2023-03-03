@@ -1,6 +1,6 @@
 {
     "name": "Unity.FluentParticleSystem",
-    "rootNamespace": "FluentParticleSystem",
+    "rootNamespace": "OUCC.FluentParticleSystem",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
