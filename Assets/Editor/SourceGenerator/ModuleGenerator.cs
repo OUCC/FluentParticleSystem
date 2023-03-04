@@ -7,18 +7,24 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
 {
     public static class ModuleGenerator
     {
+        private const string INT = "int";
         private const string FLOAT = "float";
         private const string BOOL = "bool";
 
+        /// <summary>
+        /// Tools/Generate Scripts からコードを自動生成します。
+        /// </summary>
         [MenuItem("Tools/Generate Scripts")]
         public static void Generate() {
             var parameters = new (string moduleName, string moduleParameter, (string methodName, string type, string parameterName)[])[]{
-                (nameof(MainModule), nameof(ParticleSystem.main), new (string, string, string)[]{
+                (nameof(MainModule), nameof(ParticleSystem.main), new (string methodName, string type, string parameterName)[]{
                     ("Duration", FLOAT, nameof(MainModule.duration)),
                     ("Looping", BOOL, nameof(MainModule.loop)),
                     ("Prewarm", BOOL, nameof(MainModule.prewarm)),
-
                 }),
+                (nameof(EmissionModule), nameof(ParticleSystem.emission), new (string methodName, string type, string parameterName)[] {
+                    ("BurstCount", INT, nameof(EmissionModule.burstCount)),
+                })
             };
 
             foreach (var parameter in parameters) {
@@ -32,7 +38,14 @@ using UnityEngine;
 namespace OUCC.FluentParticleSystem
 {{
     public static class {parameter.moduleName}Extension
-    {{");
+    {{
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem Edit{parameter.moduleParameter.c2p()}(this ParticleSystem particleSystem, Action<ParticleSystem.{parameter.moduleName}> moduleEditor) {{
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            moduleEditor(particleSystem.{parameter.moduleParameter});
+            return particleSystem;
+        }}
+");
                 foreach (var (methodName, type, parameterName) in parameter.Item3) {
                     sw.Write($@"
         #region {methodName}

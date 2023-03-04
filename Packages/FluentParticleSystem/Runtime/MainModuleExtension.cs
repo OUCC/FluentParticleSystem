@@ -6,6 +6,13 @@ namespace OUCC.FluentParticleSystem
 {
     public static class MainModuleExtension
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<ParticleSystem.MainModule> moduleEditor) {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            moduleEditor(particleSystem.main);
+            return particleSystem;
+        }
+
         #region Duration
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, float duration) {
@@ -25,7 +32,7 @@ namespace OUCC.FluentParticleSystem
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem.MainModule SetDuration(this ParticleSystem.MainModule module, float duration) {
-            module.duration = duration;
+            module.duration = duration;    
             return module;
         }
 
@@ -55,7 +62,7 @@ namespace OUCC.FluentParticleSystem
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem.MainModule SetLooping(this ParticleSystem.MainModule module, bool looping) {
-            module.loop = looping;
+            module.loop = looping;    
             return module;
         }
 
@@ -85,7 +92,7 @@ namespace OUCC.FluentParticleSystem
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem.MainModule SetPrewarm(this ParticleSystem.MainModule module, bool prewarm) {
-            module.prewarm = prewarm;
+            module.prewarm = prewarm;    
             return module;
         }
 
