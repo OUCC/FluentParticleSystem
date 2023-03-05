@@ -102,7 +102,7 @@ $@"    }}
         public static void GenerateWithReflection()
         {
             var modules = typeof(ParticleSystem).GetProperties().Where(m => m.PropertyType.Name.EndsWith("Module"));
-            foreach (var module in modules.OrderBy(m => m.Name))
+            foreach (var module in modules)
             {
                 var filePath = $"Packages/FluentParticleSystem/Runtime/{module.PropertyType.Name}Extension.cs";
                 WriteExtensionFile(filePath, module);
