@@ -49,74 +49,6 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Multiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, float multiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.multiplier = multiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, Func<float, float> multiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.multiplier = multiplierChanger(module.multiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetMultiplier(this ExternalForcesModule module, float multiplier)
-        {
-            module.multiplier = multiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetMultiplier(this ExternalForcesModule module, Func<float, float> multiplierChanger)
-        {
-            module.multiplier = multiplierChanger(module.multiplier);
-            return module;
-        }
-        #endregion
-
-        #region MultiplierCurve
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, MinMaxCurve multiplierCurve)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.multiplierCurve = multiplierCurve;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> multiplierCurveChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.multiplierCurve = multiplierCurveChanger(module.multiplierCurve);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetMultiplierCurve(this ExternalForcesModule module, MinMaxCurve multiplierCurve)
-        {
-            module.multiplierCurve = multiplierCurve;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetMultiplierCurve(this ExternalForcesModule module, Func<MinMaxCurve, MinMaxCurve> multiplierCurveChanger)
-        {
-            module.multiplierCurve = multiplierCurveChanger(module.multiplierCurve);
-            return module;
-        }
-        #endregion
-
         #region InfluenceFilter
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, UnityEngine.ParticleSystemGameObjectFilter influenceFilter)
@@ -181,6 +113,74 @@ namespace OUCC.FluentParticleSystem
         public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> influenceMaskChanger)
         {
             module.influenceMask = influenceMaskChanger(module.influenceMask);
+            return module;
+        }
+        #endregion
+
+        #region Multiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, float multiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.multiplier = multiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, Func<float, float> multiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.multiplier = multiplierChanger(module.multiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetMultiplier(this ExternalForcesModule module, float multiplier)
+        {
+            module.multiplier = multiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetMultiplier(this ExternalForcesModule module, Func<float, float> multiplierChanger)
+        {
+            module.multiplier = multiplierChanger(module.multiplier);
+            return module;
+        }
+        #endregion
+
+        #region MultiplierCurve
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, MinMaxCurve multiplierCurve)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.multiplierCurve = multiplierCurve;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> multiplierCurveChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.multiplierCurve = multiplierCurveChanger(module.multiplierCurve);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetMultiplierCurve(this ExternalForcesModule module, MinMaxCurve multiplierCurve)
+        {
+            module.multiplierCurve = multiplierCurve;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetMultiplierCurve(this ExternalForcesModule module, Func<MinMaxCurve, MinMaxCurve> multiplierCurveChanger)
+        {
+            module.multiplierCurve = multiplierCurveChanger(module.multiplierCurve);
             return module;
         }
         #endregion

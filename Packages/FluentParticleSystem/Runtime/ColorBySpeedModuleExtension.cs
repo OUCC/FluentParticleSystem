@@ -15,40 +15,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region Enabled
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedEnabled(this ParticleSystem particleSystem, bool enabled)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorBySpeed;
-            module.enabled = enabled;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorBySpeed;
-            module.enabled = enabledChanger(module.enabled);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetEnabled(this ColorBySpeedModule module, bool enabled)
-        {
-            module.enabled = enabled;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetEnabled(this ColorBySpeedModule module, Func<bool, bool> enabledChanger)
-        {
-            module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
         #region Color
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetColorBySpeedColor(this ParticleSystem particleSystem, MinMaxGradient color)
@@ -79,6 +45,40 @@ namespace OUCC.FluentParticleSystem
         public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
         {
             module.color = colorChanger(module.color);
+            return module;
+        }
+        #endregion
+
+        #region Enabled
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorBySpeedEnabled(this ParticleSystem particleSystem, bool enabled)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorBySpeed;
+            module.enabled = enabled;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorBySpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorBySpeed;
+            module.enabled = enabledChanger(module.enabled);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorBySpeedModule SetEnabled(this ColorBySpeedModule module, bool enabled)
+        {
+            module.enabled = enabled;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorBySpeedModule SetEnabled(this ColorBySpeedModule module, Func<bool, bool> enabledChanger)
+        {
+            module.enabled = enabledChanger(module.enabled);
             return module;
         }
         #endregion

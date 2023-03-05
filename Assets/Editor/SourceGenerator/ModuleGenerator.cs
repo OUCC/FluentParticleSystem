@@ -35,7 +35,10 @@ namespace OUCC.FluentParticleSystem
         }}
 ");
 
-            var availableProperties = module.PropertyType.GetProperties().Where(p => p.GetCustomAttribute<ObsoleteAttribute>() is null && p.CanWrite);
+            var availableProperties = module.PropertyType
+                    .GetProperties()
+                    .Where(p => p.GetCustomAttribute<ObsoleteAttribute>() is null && p.CanWrite)
+                    .OrderBy(p => p.Name);
 
             foreach (var property in availableProperties)
             {

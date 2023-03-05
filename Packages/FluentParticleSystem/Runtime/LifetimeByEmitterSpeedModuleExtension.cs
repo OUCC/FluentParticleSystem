@@ -15,40 +15,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region Enabled
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.enabled = enabled;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.enabled = enabledChanger(module.enabled);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, bool enabled)
-        {
-            module.enabled = enabled;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, Func<bool, bool> enabledChanger)
-        {
-            module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
         #region Curve
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
@@ -113,6 +79,40 @@ namespace OUCC.FluentParticleSystem
         public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, Func<float, float> curveMultiplierChanger)
         {
             module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region Enabled
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.enabled = enabled;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.enabled = enabledChanger(module.enabled);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, bool enabled)
+        {
+            module.enabled = enabled;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, Func<bool, bool> enabledChanger)
+        {
+            module.enabled = enabledChanger(module.enabled);
             return module;
         }
         #endregion

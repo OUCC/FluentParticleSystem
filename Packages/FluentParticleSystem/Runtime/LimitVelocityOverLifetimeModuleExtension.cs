@@ -15,6 +15,108 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        #region Dampen
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDampen(this ParticleSystem particleSystem, float dampen)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.dampen = dampen;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDampen(this ParticleSystem particleSystem, Func<float, float> dampenChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.dampen = dampenChanger(module.dampen);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDampen(this LimitVelocityOverLifetimeModule module, float dampen)
+        {
+            module.dampen = dampen;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDampen(this LimitVelocityOverLifetimeModule module, Func<float, float> dampenChanger)
+        {
+            module.dampen = dampenChanger(module.dampen);
+            return module;
+        }
+        #endregion
+
+        #region Drag
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDrag(this ParticleSystem particleSystem, MinMaxCurve drag)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.drag = drag;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDrag(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> dragChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.drag = dragChanger(module.drag);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDrag(this LimitVelocityOverLifetimeModule module, MinMaxCurve drag)
+        {
+            module.drag = drag;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDrag(this LimitVelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> dragChanger)
+        {
+            module.drag = dragChanger(module.drag);
+            return module;
+        }
+        #endregion
+
+        #region DragMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDragMultiplier(this ParticleSystem particleSystem, float dragMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.dragMultiplier = dragMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeDragMultiplier(this ParticleSystem particleSystem, Func<float, float> dragMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.dragMultiplier = dragMultiplierChanger(module.dragMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDragMultiplier(this LimitVelocityOverLifetimeModule module, float dragMultiplier)
+        {
+            module.dragMultiplier = dragMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetDragMultiplier(this LimitVelocityOverLifetimeModule module, Func<float, float> dragMultiplierChanger)
+        {
+            module.dragMultiplier = dragMultiplierChanger(module.dragMultiplier);
+            return module;
+        }
+        #endregion
+
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
@@ -45,6 +147,74 @@ namespace OUCC.FluentParticleSystem
         public static LimitVelocityOverLifetimeModule SetEnabled(this LimitVelocityOverLifetimeModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
+            return module;
+        }
+        #endregion
+
+        #region Limit
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeLimit(this ParticleSystem particleSystem, MinMaxCurve limit)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.limit = limit;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeLimit(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> limitChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.limit = limitChanger(module.limit);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetLimit(this LimitVelocityOverLifetimeModule module, MinMaxCurve limit)
+        {
+            module.limit = limit;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetLimit(this LimitVelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> limitChanger)
+        {
+            module.limit = limitChanger(module.limit);
+            return module;
+        }
+        #endregion
+
+        #region LimitMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeLimitMultiplier(this ParticleSystem particleSystem, float limitMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.limitMultiplier = limitMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLimitVelocityOverLifetimeLimitMultiplier(this ParticleSystem particleSystem, Func<float, float> limitMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.limitVelocityOverLifetime;
+            module.limitMultiplier = limitMultiplierChanger(module.limitMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetLimitMultiplier(this LimitVelocityOverLifetimeModule module, float limitMultiplier)
+        {
+            module.limitMultiplier = limitMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LimitVelocityOverLifetimeModule SetLimitMultiplier(this LimitVelocityOverLifetimeModule module, Func<float, float> limitMultiplierChanger)
+        {
+            module.limitMultiplier = limitMultiplierChanger(module.limitMultiplier);
             return module;
         }
         #endregion
@@ -253,104 +423,70 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Limit
+        #region MultiplyDragByParticleSize
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeLimit(this ParticleSystem particleSystem, MinMaxCurve limit)
+        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleSize(this ParticleSystem particleSystem, bool multiplyDragByParticleSize)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
-            module.limit = limit;
+            module.multiplyDragByParticleSize = multiplyDragByParticleSize;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeLimit(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> limitChanger)
+        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleSize(this ParticleSystem particleSystem, Func<bool, bool> multiplyDragByParticleSizeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
-            module.limit = limitChanger(module.limit);
+            module.multiplyDragByParticleSize = multiplyDragByParticleSizeChanger(module.multiplyDragByParticleSize);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetLimit(this LimitVelocityOverLifetimeModule module, MinMaxCurve limit)
+        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleSize(this LimitVelocityOverLifetimeModule module, bool multiplyDragByParticleSize)
         {
-            module.limit = limit;
+            module.multiplyDragByParticleSize = multiplyDragByParticleSize;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetLimit(this LimitVelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> limitChanger)
+        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleSize(this LimitVelocityOverLifetimeModule module, Func<bool, bool> multiplyDragByParticleSizeChanger)
         {
-            module.limit = limitChanger(module.limit);
-            return module;
-        }
-        #endregion
-
-        #region LimitMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeLimitMultiplier(this ParticleSystem particleSystem, float limitMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.limitMultiplier = limitMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeLimitMultiplier(this ParticleSystem particleSystem, Func<float, float> limitMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.limitMultiplier = limitMultiplierChanger(module.limitMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetLimitMultiplier(this LimitVelocityOverLifetimeModule module, float limitMultiplier)
-        {
-            module.limitMultiplier = limitMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetLimitMultiplier(this LimitVelocityOverLifetimeModule module, Func<float, float> limitMultiplierChanger)
-        {
-            module.limitMultiplier = limitMultiplierChanger(module.limitMultiplier);
+            module.multiplyDragByParticleSize = multiplyDragByParticleSizeChanger(module.multiplyDragByParticleSize);
             return module;
         }
         #endregion
 
-        #region Dampen
+        #region MultiplyDragByParticleVelocity
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDampen(this ParticleSystem particleSystem, float dampen)
+        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleVelocity(this ParticleSystem particleSystem, bool multiplyDragByParticleVelocity)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
-            module.dampen = dampen;
+            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocity;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDampen(this ParticleSystem particleSystem, Func<float, float> dampenChanger)
+        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleVelocity(this ParticleSystem particleSystem, Func<bool, bool> multiplyDragByParticleVelocityChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
-            module.dampen = dampenChanger(module.dampen);
+            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocityChanger(module.multiplyDragByParticleVelocity);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDampen(this LimitVelocityOverLifetimeModule module, float dampen)
+        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleVelocity(this LimitVelocityOverLifetimeModule module, bool multiplyDragByParticleVelocity)
         {
-            module.dampen = dampen;
+            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocity;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDampen(this LimitVelocityOverLifetimeModule module, Func<float, float> dampenChanger)
+        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleVelocity(this LimitVelocityOverLifetimeModule module, Func<bool, bool> multiplyDragByParticleVelocityChanger)
         {
-            module.dampen = dampenChanger(module.dampen);
+            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocityChanger(module.multiplyDragByParticleVelocity);
             return module;
         }
         #endregion
@@ -419,142 +555,6 @@ namespace OUCC.FluentParticleSystem
         public static LimitVelocityOverLifetimeModule SetSpace(this LimitVelocityOverLifetimeModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
         {
             module.space = spaceChanger(module.space);
-            return module;
-        }
-        #endregion
-
-        #region Drag
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDrag(this ParticleSystem particleSystem, MinMaxCurve drag)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.drag = drag;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDrag(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> dragChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.drag = dragChanger(module.drag);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDrag(this LimitVelocityOverLifetimeModule module, MinMaxCurve drag)
-        {
-            module.drag = drag;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDrag(this LimitVelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> dragChanger)
-        {
-            module.drag = dragChanger(module.drag);
-            return module;
-        }
-        #endregion
-
-        #region DragMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDragMultiplier(this ParticleSystem particleSystem, float dragMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.dragMultiplier = dragMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeDragMultiplier(this ParticleSystem particleSystem, Func<float, float> dragMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.dragMultiplier = dragMultiplierChanger(module.dragMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDragMultiplier(this LimitVelocityOverLifetimeModule module, float dragMultiplier)
-        {
-            module.dragMultiplier = dragMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetDragMultiplier(this LimitVelocityOverLifetimeModule module, Func<float, float> dragMultiplierChanger)
-        {
-            module.dragMultiplier = dragMultiplierChanger(module.dragMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region MultiplyDragByParticleSize
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleSize(this ParticleSystem particleSystem, bool multiplyDragByParticleSize)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.multiplyDragByParticleSize = multiplyDragByParticleSize;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleSize(this ParticleSystem particleSystem, Func<bool, bool> multiplyDragByParticleSizeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.multiplyDragByParticleSize = multiplyDragByParticleSizeChanger(module.multiplyDragByParticleSize);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleSize(this LimitVelocityOverLifetimeModule module, bool multiplyDragByParticleSize)
-        {
-            module.multiplyDragByParticleSize = multiplyDragByParticleSize;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleSize(this LimitVelocityOverLifetimeModule module, Func<bool, bool> multiplyDragByParticleSizeChanger)
-        {
-            module.multiplyDragByParticleSize = multiplyDragByParticleSizeChanger(module.multiplyDragByParticleSize);
-            return module;
-        }
-        #endregion
-
-        #region MultiplyDragByParticleVelocity
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleVelocity(this ParticleSystem particleSystem, bool multiplyDragByParticleVelocity)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocity;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleVelocity(this ParticleSystem particleSystem, Func<bool, bool> multiplyDragByParticleVelocityChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.limitVelocityOverLifetime;
-            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocityChanger(module.multiplyDragByParticleVelocity);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleVelocity(this LimitVelocityOverLifetimeModule module, bool multiplyDragByParticleVelocity)
-        {
-            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocity;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetMultiplyDragByParticleVelocity(this LimitVelocityOverLifetimeModule module, Func<bool, bool> multiplyDragByParticleVelocityChanger)
-        {
-            module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocityChanger(module.multiplyDragByParticleVelocity);
             return module;
         }
         #endregion

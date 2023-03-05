@@ -15,36 +15,70 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region EmitterVelocity
+        #region CullingMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, UnityEngine.Vector3 emitterVelocity)
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCullingMode cullingMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.emitterVelocity = emitterVelocity;
+            module.cullingMode = cullingMode;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
+            module.cullingMode = cullingModeChanger(module.cullingMode);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocity(this MainModule module, UnityEngine.Vector3 emitterVelocity)
+        public static MainModule SetCullingMode(this MainModule module, UnityEngine.ParticleSystemCullingMode cullingMode)
         {
-            module.emitterVelocity = emitterVelocity;
+            module.cullingMode = cullingMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocity(this MainModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        public static MainModule SetCullingMode(this MainModule module, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
         {
-            module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
+            module.cullingMode = cullingModeChanger(module.cullingMode);
+            return module;
+        }
+        #endregion
+
+        #region CustomSimulationSpace
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, UnityEngine.Transform customSimulationSpace)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.customSimulationSpace = customSimulationSpace;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetCustomSimulationSpace(this MainModule module, UnityEngine.Transform customSimulationSpace)
+        {
+            module.customSimulationSpace = customSimulationSpace;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetCustomSimulationSpace(this MainModule module, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
+        {
+            module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
             return module;
         }
         #endregion
@@ -83,6 +117,176 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region EmitterVelocity
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, UnityEngine.Vector3 emitterVelocity)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.emitterVelocity = emitterVelocity;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetEmitterVelocity(this MainModule module, UnityEngine.Vector3 emitterVelocity)
+        {
+            module.emitterVelocity = emitterVelocity;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetEmitterVelocity(this MainModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        {
+            module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
+            return module;
+        }
+        #endregion
+
+        #region EmitterVelocityMode
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.emitterVelocityMode = emitterVelocityMode;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetEmitterVelocityMode(this MainModule module, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        {
+            module.emitterVelocityMode = emitterVelocityMode;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetEmitterVelocityMode(this MainModule module, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        {
+            module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
+            return module;
+        }
+        #endregion
+
+        #region FlipRotation
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.flipRotation = flipRotation;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, Func<float, float> flipRotationChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.flipRotation = flipRotationChanger(module.flipRotation);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetFlipRotation(this MainModule module, float flipRotation)
+        {
+            module.flipRotation = flipRotation;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetFlipRotation(this MainModule module, Func<float, float> flipRotationChanger)
+        {
+            module.flipRotation = flipRotationChanger(module.flipRotation);
+            return module;
+        }
+        #endregion
+
+        #region GravityModifier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravityModifier = gravityModifier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravityModifier = gravityModifierChanger(module.gravityModifier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravityModifier(this MainModule module, MinMaxCurve gravityModifier)
+        {
+            module.gravityModifier = gravityModifier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravityModifier(this MainModule module, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
+        {
+            module.gravityModifier = gravityModifierChanger(module.gravityModifier);
+            return module;
+        }
+        #endregion
+
+        #region GravityModifierMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravityModifierMultiplier = gravityModifierMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, Func<float, float> gravityModifierMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravityModifierMultiplier(this MainModule module, float gravityModifierMultiplier)
+        {
+            module.gravityModifierMultiplier = gravityModifierMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravityModifierMultiplier(this MainModule module, Func<float, float> gravityModifierMultiplierChanger)
+        {
+            module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
+            return module;
+        }
+        #endregion
+
         #region Loop
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, bool loop)
@@ -117,6 +321,74 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region MaxParticles
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.maxParticles = maxParticles;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, Func<int, int> maxParticlesChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.maxParticles = maxParticlesChanger(module.maxParticles);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetMaxParticles(this MainModule module, int maxParticles)
+        {
+            module.maxParticles = maxParticles;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetMaxParticles(this MainModule module, Func<int, int> maxParticlesChanger)
+        {
+            module.maxParticles = maxParticlesChanger(module.maxParticles);
+            return module;
+        }
+        #endregion
+
+        #region PlayOnAwake
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.playOnAwake = playOnAwake;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, Func<bool, bool> playOnAwakeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetPlayOnAwake(this MainModule module, bool playOnAwake)
+        {
+            module.playOnAwake = playOnAwake;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetPlayOnAwake(this MainModule module, Func<bool, bool> playOnAwakeChanger)
+        {
+            module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
+            return module;
+        }
+        #endregion
+
         #region Prewarm
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, bool prewarm)
@@ -147,6 +419,210 @@ namespace OUCC.FluentParticleSystem
         public static MainModule SetPrewarm(this MainModule module, Func<bool, bool> prewarmChanger)
         {
             module.prewarm = prewarmChanger(module.prewarm);
+            return module;
+        }
+        #endregion
+
+        #region RingBufferLoopRange
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, UnityEngine.Vector2 ringBufferLoopRange)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.ringBufferLoopRange = ringBufferLoopRange;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRingBufferLoopRange(this MainModule module, UnityEngine.Vector2 ringBufferLoopRange)
+        {
+            module.ringBufferLoopRange = ringBufferLoopRange;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRingBufferLoopRange(this MainModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
+        {
+            module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
+            return module;
+        }
+        #endregion
+
+        #region RingBufferMode
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.ringBufferMode = ringBufferMode;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRingBufferMode(this MainModule module, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        {
+            module.ringBufferMode = ringBufferMode;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRingBufferMode(this MainModule module, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        {
+            module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
+            return module;
+        }
+        #endregion
+
+        #region ScalingMode
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemScalingMode scalingMode)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.scalingMode = scalingMode;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.scalingMode = scalingModeChanger(module.scalingMode);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetScalingMode(this MainModule module, UnityEngine.ParticleSystemScalingMode scalingMode)
+        {
+            module.scalingMode = scalingMode;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetScalingMode(this MainModule module, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        {
+            module.scalingMode = scalingModeChanger(module.scalingMode);
+            return module;
+        }
+        #endregion
+
+        #region SimulationSpace
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.simulationSpace = simulationSpace;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetSimulationSpace(this MainModule module, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        {
+            module.simulationSpace = simulationSpace;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetSimulationSpace(this MainModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        {
+            module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
+            return module;
+        }
+        #endregion
+
+        #region SimulationSpeed
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.simulationSpeed = simulationSpeed;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, Func<float, float> simulationSpeedChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetSimulationSpeed(this MainModule module, float simulationSpeed)
+        {
+            module.simulationSpeed = simulationSpeed;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetSimulationSpeed(this MainModule module, Func<float, float> simulationSpeedChanger)
+        {
+            module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
+            return module;
+        }
+        #endregion
+
+        #region StartColor
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startColor = startColor;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startColor = startColorChanger(module.startColor);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartColor(this MainModule module, MinMaxGradient startColor)
+        {
+            module.startColor = startColor;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartColor(this MainModule module, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
+        {
+            module.startColor = startColorChanger(module.startColor);
             return module;
         }
         #endregion
@@ -287,376 +763,36 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region StartSpeed
+        #region StartRotation
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
+        public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.startSpeed = startSpeed;
+            module.startRotation = startRotation;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
+        public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.startSpeed = startSpeedChanger(module.startSpeed);
+            module.startRotation = startRotationChanger(module.startRotation);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSpeed(this MainModule module, MinMaxCurve startSpeed)
+        public static MainModule SetStartRotation(this MainModule module, MinMaxCurve startRotation)
         {
-            module.startSpeed = startSpeed;
+            module.startRotation = startRotation;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSpeed(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
+        public static MainModule SetStartRotation(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
-            module.startSpeed = startSpeedChanger(module.startSpeed);
-            return module;
-        }
-        #endregion
-
-        #region StartSpeedMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSpeedMultiplier = startSpeedMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> startSpeedMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSpeedMultiplier(this MainModule module, float startSpeedMultiplier)
-        {
-            module.startSpeedMultiplier = startSpeedMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSpeedMultiplier(this MainModule module, Func<float, float> startSpeedMultiplierChanger)
-        {
-            module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region StartSize3D
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSize3D = startSize3D;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, Func<bool, bool> startSize3DChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSize3D = startSize3DChanger(module.startSize3D);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSize3D(this MainModule module, bool startSize3D)
-        {
-            module.startSize3D = startSize3D;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSize3D(this MainModule module, Func<bool, bool> startSize3DChanger)
-        {
-            module.startSize3D = startSize3DChanger(module.startSize3D);
-            return module;
-        }
-        #endregion
-
-        #region StartSize
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSize = startSize;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSize = startSizeChanger(module.startSize);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSize(this MainModule module, MinMaxCurve startSize)
-        {
-            module.startSize = startSize;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSize(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
-        {
-            module.startSize = startSizeChanger(module.startSize);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeMultiplier = startSizeMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeMultiplier(this MainModule module, float startSizeMultiplier)
-        {
-            module.startSizeMultiplier = startSizeMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeMultiplier(this MainModule module, Func<float, float> startSizeMultiplierChanger)
-        {
-            module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeX
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeX = startSizeX;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeX = startSizeXChanger(module.startSizeX);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeX(this MainModule module, MinMaxCurve startSizeX)
-        {
-            module.startSizeX = startSizeX;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
-        {
-            module.startSizeX = startSizeXChanger(module.startSizeX);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeXMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeXMultiplier = startSizeXMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeXMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeXMultiplier(this MainModule module, float startSizeXMultiplier)
-        {
-            module.startSizeXMultiplier = startSizeXMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeXMultiplier(this MainModule module, Func<float, float> startSizeXMultiplierChanger)
-        {
-            module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeY
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeY = startSizeY;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeY = startSizeYChanger(module.startSizeY);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeY(this MainModule module, MinMaxCurve startSizeY)
-        {
-            module.startSizeY = startSizeY;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
-        {
-            module.startSizeY = startSizeYChanger(module.startSizeY);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeYMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeYMultiplier = startSizeYMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeYMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeYMultiplier(this MainModule module, float startSizeYMultiplier)
-        {
-            module.startSizeYMultiplier = startSizeYMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeYMultiplier(this MainModule module, Func<float, float> startSizeYMultiplierChanger)
-        {
-            module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeZ
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeZ = startSizeZ;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeZ = startSizeZChanger(module.startSizeZ);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeZ(this MainModule module, MinMaxCurve startSizeZ)
-        {
-            module.startSizeZ = startSizeZ;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
-        {
-            module.startSizeZ = startSizeZChanger(module.startSizeZ);
-            return module;
-        }
-        #endregion
-
-        #region StartSizeZMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeZMultiplier = startSizeZMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeZMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeZMultiplier(this MainModule module, float startSizeZMultiplier)
-        {
-            module.startSizeZMultiplier = startSizeZMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartSizeZMultiplier(this MainModule module, Func<float, float> startSizeZMultiplierChanger)
-        {
-            module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
+            module.startRotation = startRotationChanger(module.startRotation);
             return module;
         }
         #endregion
@@ -691,40 +827,6 @@ namespace OUCC.FluentParticleSystem
         public static MainModule SetStartRotation3D(this MainModule module, Func<bool, bool> startRotation3DChanger)
         {
             module.startRotation3D = startRotation3DChanger(module.startRotation3D);
-            return module;
-        }
-        #endregion
-
-        #region StartRotation
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startRotation = startRotation;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startRotation = startRotationChanger(module.startRotation);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartRotation(this MainModule module, MinMaxCurve startRotation)
-        {
-            module.startRotation = startRotation;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartRotation(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
-        {
-            module.startRotation = startRotationChanger(module.startRotation);
             return module;
         }
         #endregion
@@ -967,410 +1069,376 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region FlipRotation
+        #region StartSize
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
+        public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.flipRotation = flipRotation;
+            module.startSize = startSize;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, Func<float, float> flipRotationChanger)
+        public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.flipRotation = flipRotationChanger(module.flipRotation);
+            module.startSize = startSizeChanger(module.startSize);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetFlipRotation(this MainModule module, float flipRotation)
+        public static MainModule SetStartSize(this MainModule module, MinMaxCurve startSize)
         {
-            module.flipRotation = flipRotation;
+            module.startSize = startSize;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetFlipRotation(this MainModule module, Func<float, float> flipRotationChanger)
+        public static MainModule SetStartSize(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
-            module.flipRotation = flipRotationChanger(module.flipRotation);
-            return module;
-        }
-        #endregion
-
-        #region StartColor
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startColor = startColor;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.startColor = startColorChanger(module.startColor);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartColor(this MainModule module, MinMaxGradient startColor)
-        {
-            module.startColor = startColor;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStartColor(this MainModule module, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
-        {
-            module.startColor = startColorChanger(module.startColor);
+            module.startSize = startSizeChanger(module.startSize);
             return module;
         }
         #endregion
 
-        #region GravityModifier
+        #region StartSize3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
+        public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.gravityModifier = gravityModifier;
+            module.startSize3D = startSize3D;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
+        public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, Func<bool, bool> startSize3DChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.gravityModifier = gravityModifierChanger(module.gravityModifier);
+            module.startSize3D = startSize3DChanger(module.startSize3D);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetGravityModifier(this MainModule module, MinMaxCurve gravityModifier)
+        public static MainModule SetStartSize3D(this MainModule module, bool startSize3D)
         {
-            module.gravityModifier = gravityModifier;
+            module.startSize3D = startSize3D;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetGravityModifier(this MainModule module, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
+        public static MainModule SetStartSize3D(this MainModule module, Func<bool, bool> startSize3DChanger)
         {
-            module.gravityModifier = gravityModifierChanger(module.gravityModifier);
-            return module;
-        }
-        #endregion
-
-        #region GravityModifierMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.gravityModifierMultiplier = gravityModifierMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, Func<float, float> gravityModifierMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetGravityModifierMultiplier(this MainModule module, float gravityModifierMultiplier)
-        {
-            module.gravityModifierMultiplier = gravityModifierMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetGravityModifierMultiplier(this MainModule module, Func<float, float> gravityModifierMultiplierChanger)
-        {
-            module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
+            module.startSize3D = startSize3DChanger(module.startSize3D);
             return module;
         }
         #endregion
 
-        #region SimulationSpace
+        #region StartSizeMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.simulationSpace = simulationSpace;
+            module.startSizeMultiplier = startSizeMultiplier;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeMultiplierChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
+            module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpace(this MainModule module, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        public static MainModule SetStartSizeMultiplier(this MainModule module, float startSizeMultiplier)
         {
-            module.simulationSpace = simulationSpace;
+            module.startSizeMultiplier = startSizeMultiplier;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpace(this MainModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        public static MainModule SetStartSizeMultiplier(this MainModule module, Func<float, float> startSizeMultiplierChanger)
         {
-            module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
-            return module;
-        }
-        #endregion
-
-        #region CustomSimulationSpace
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, UnityEngine.Transform customSimulationSpace)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.customSimulationSpace = customSimulationSpace;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCustomSimulationSpace(this MainModule module, UnityEngine.Transform customSimulationSpace)
-        {
-            module.customSimulationSpace = customSimulationSpace;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCustomSimulationSpace(this MainModule module, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
-        {
-            module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
+            module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
             return module;
         }
         #endregion
 
-        #region SimulationSpeed
+        #region StartSizeX
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
+        public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.simulationSpeed = simulationSpeed;
+            module.startSizeX = startSizeX;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, Func<float, float> simulationSpeedChanger)
+        public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
+            module.startSizeX = startSizeXChanger(module.startSizeX);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpeed(this MainModule module, float simulationSpeed)
+        public static MainModule SetStartSizeX(this MainModule module, MinMaxCurve startSizeX)
         {
-            module.simulationSpeed = simulationSpeed;
+            module.startSizeX = startSizeX;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpeed(this MainModule module, Func<float, float> simulationSpeedChanger)
+        public static MainModule SetStartSizeX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
-            module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
-            return module;
-        }
-        #endregion
-
-        #region UseUnscaledTime
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.useUnscaledTime = useUnscaledTime;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, Func<bool, bool> useUnscaledTimeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetUseUnscaledTime(this MainModule module, bool useUnscaledTime)
-        {
-            module.useUnscaledTime = useUnscaledTime;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetUseUnscaledTime(this MainModule module, Func<bool, bool> useUnscaledTimeChanger)
-        {
-            module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
+            module.startSizeX = startSizeXChanger(module.startSizeX);
             return module;
         }
         #endregion
 
-        #region ScalingMode
+        #region StartSizeXMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemScalingMode scalingMode)
+        public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.scalingMode = scalingMode;
+            module.startSizeXMultiplier = startSizeXMultiplier;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeXMultiplierChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.scalingMode = scalingModeChanger(module.scalingMode);
+            module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetScalingMode(this MainModule module, UnityEngine.ParticleSystemScalingMode scalingMode)
+        public static MainModule SetStartSizeXMultiplier(this MainModule module, float startSizeXMultiplier)
         {
-            module.scalingMode = scalingMode;
+            module.startSizeXMultiplier = startSizeXMultiplier;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetScalingMode(this MainModule module, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        public static MainModule SetStartSizeXMultiplier(this MainModule module, Func<float, float> startSizeXMultiplierChanger)
         {
-            module.scalingMode = scalingModeChanger(module.scalingMode);
-            return module;
-        }
-        #endregion
-
-        #region PlayOnAwake
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.playOnAwake = playOnAwake;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, Func<bool, bool> playOnAwakeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetPlayOnAwake(this MainModule module, bool playOnAwake)
-        {
-            module.playOnAwake = playOnAwake;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetPlayOnAwake(this MainModule module, Func<bool, bool> playOnAwakeChanger)
-        {
-            module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
+            module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
             return module;
         }
         #endregion
 
-        #region MaxParticles
+        #region StartSizeY
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
+        public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.maxParticles = maxParticles;
+            module.startSizeY = startSizeY;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, Func<int, int> maxParticlesChanger)
+        public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.maxParticles = maxParticlesChanger(module.maxParticles);
+            module.startSizeY = startSizeYChanger(module.startSizeY);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetMaxParticles(this MainModule module, int maxParticles)
+        public static MainModule SetStartSizeY(this MainModule module, MinMaxCurve startSizeY)
         {
-            module.maxParticles = maxParticles;
+            module.startSizeY = startSizeY;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetMaxParticles(this MainModule module, Func<int, int> maxParticlesChanger)
+        public static MainModule SetStartSizeY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
-            module.maxParticles = maxParticlesChanger(module.maxParticles);
+            module.startSizeY = startSizeYChanger(module.startSizeY);
             return module;
         }
         #endregion
 
-        #region EmitterVelocityMode
+        #region StartSizeYMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.emitterVelocityMode = emitterVelocityMode;
+            module.startSizeYMultiplier = startSizeYMultiplier;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeYMultiplierChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
+            module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocityMode(this MainModule module, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        public static MainModule SetStartSizeYMultiplier(this MainModule module, float startSizeYMultiplier)
         {
-            module.emitterVelocityMode = emitterVelocityMode;
+            module.startSizeYMultiplier = startSizeYMultiplier;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocityMode(this MainModule module, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        public static MainModule SetStartSizeYMultiplier(this MainModule module, Func<float, float> startSizeYMultiplierChanger)
         {
-            module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
+            module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region StartSizeZ
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSizeZ = startSizeZ;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSizeZ = startSizeZChanger(module.startSizeZ);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSizeZ(this MainModule module, MinMaxCurve startSizeZ)
+        {
+            module.startSizeZ = startSizeZ;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSizeZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
+        {
+            module.startSizeZ = startSizeZChanger(module.startSizeZ);
+            return module;
+        }
+        #endregion
+
+        #region StartSizeZMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSizeZMultiplier = startSizeZMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeZMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSizeZMultiplier(this MainModule module, float startSizeZMultiplier)
+        {
+            module.startSizeZMultiplier = startSizeZMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSizeZMultiplier(this MainModule module, Func<float, float> startSizeZMultiplierChanger)
+        {
+            module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region StartSpeed
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSpeed = startSpeed;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSpeed = startSpeedChanger(module.startSpeed);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSpeed(this MainModule module, MinMaxCurve startSpeed)
+        {
+            module.startSpeed = startSpeed;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSpeed(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
+        {
+            module.startSpeed = startSpeedChanger(module.startSpeed);
+            return module;
+        }
+        #endregion
+
+        #region StartSpeedMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSpeedMultiplier = startSpeedMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> startSpeedMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSpeedMultiplier(this MainModule module, float startSpeedMultiplier)
+        {
+            module.startSpeedMultiplier = startSpeedMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetStartSpeedMultiplier(this MainModule module, Func<float, float> startSpeedMultiplierChanger)
+        {
+            module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
             return module;
         }
         #endregion
@@ -1409,104 +1477,36 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region RingBufferMode
+        #region UseUnscaledTime
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.ringBufferMode = ringBufferMode;
+            module.useUnscaledTime = useUnscaledTime;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, Func<bool, bool> useUnscaledTimeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
-            module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
+            module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferMode(this MainModule module, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        public static MainModule SetUseUnscaledTime(this MainModule module, bool useUnscaledTime)
         {
-            module.ringBufferMode = ringBufferMode;
+            module.useUnscaledTime = useUnscaledTime;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferMode(this MainModule module, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        public static MainModule SetUseUnscaledTime(this MainModule module, Func<bool, bool> useUnscaledTimeChanger)
         {
-            module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
-            return module;
-        }
-        #endregion
-
-        #region RingBufferLoopRange
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, UnityEngine.Vector2 ringBufferLoopRange)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.ringBufferLoopRange = ringBufferLoopRange;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferLoopRange(this MainModule module, UnityEngine.Vector2 ringBufferLoopRange)
-        {
-            module.ringBufferLoopRange = ringBufferLoopRange;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferLoopRange(this MainModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
-        {
-            module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
-            return module;
-        }
-        #endregion
-
-        #region CullingMode
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCullingMode cullingMode)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.cullingMode = cullingMode;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.main;
-            module.cullingMode = cullingModeChanger(module.cullingMode);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCullingMode(this MainModule module, UnityEngine.ParticleSystemCullingMode cullingMode)
-        {
-            module.cullingMode = cullingMode;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCullingMode(this MainModule module, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
-        {
-            module.cullingMode = cullingModeChanger(module.cullingMode);
+            module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
             return module;
         }
         #endregion
