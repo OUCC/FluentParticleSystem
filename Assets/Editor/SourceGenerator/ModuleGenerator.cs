@@ -1,4 +1,7 @@
+Ôªøusing System;
 using System.IO;
+using System.Reflection;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,84 +10,125 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
 {
     public static class ModuleGenerator
     {
-        private const string INT = "int";
-        private const string FLOAT = "float";
-        private const string BOOL = "bool";
+        public static void WriteExtensionFile(string filePath, PropertyInfo module)
+        {
+            var moduleType = module.PropertyType.Name;
+            var moduleName = module.Name;
+            using var sw = new StreamWriter(filePath, false);
 
-        /// <summary>
-        /// Tools/Generate Scripts Ç©ÇÁÉRÅ[ÉhÇé©ìÆê∂ê¨ÇµÇ‹Ç∑ÅB
-        /// </summary>
-        [MenuItem("Tools/Generate Scripts")]
-        public static void Generate() {
-            var parameters = new (string moduleName, string moduleParameter, (string methodName, string type, string parameterName)[])[]{
-                (nameof(MainModule), nameof(ParticleSystem.main), new (string methodName, string type, string parameterName)[]{
-                    ("Duration", FLOAT, nameof(MainModule.duration)),
-                    ("Looping", BOOL, nameof(MainModule.loop)),
-                    ("Prewarm", BOOL, nameof(MainModule.prewarm)),
-                }),
-                (nameof(EmissionModule), nameof(ParticleSystem.emission), new (string methodName, string type, string parameterName)[] {
-                    ("BurstCount", INT, nameof(EmissionModule.burstCount)),
-                })
-            };
-
-            foreach (var parameter in parameters) {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/{parameter.moduleName}Extension.cs";
-                using var sw = new StreamWriter(filePath, false);
-
-                sw.Write($@"using System;
+                sw.Write(
+$@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Rendering;
+using static UnityEngine.ParticleSystem;
+
 
 namespace OUCC.FluentParticleSystem
 {{
-    public static class {parameter.moduleName}Extension
+    public static class {moduleType}Extension
     {{
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Edit{parameter.moduleParameter.c2p()}(this ParticleSystem particleSystem, Action<ParticleSystem.{parameter.moduleName}> moduleEditor) {{
+        public static ParticleSystem Edit{moduleName.c2p()}(this ParticleSystem particleSystem, Action<{moduleType}> moduleEditor)
+        {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            moduleEditor(particleSystem.{parameter.moduleParameter});
+            moduleEditor(particleSystem.{moduleName});
             return particleSystem;
         }}
-");
-                foreach (var (methodName, type, parameterName) in parameter.Item3) {
+"               );
+                foreach (var property in module.PropertyType.GetProperties().OrderBy(p => p.Name))
+                {
+                    if (property.GetCustomAttribute<ObsoleteAttribute>() != null)
+                    {
+                        continue;
+                    }
+
+                    if (!property.CanWrite)
+                    {
+                        continue;
+                    }
+
+                    string propertyType;
+
+                    if (property.PropertyType == typeof(float))
+                    {
+                        propertyType = "float";
+                    }
+                    else if (property.PropertyType == typeof(bool))
+                    {
+                        propertyType = "bool";
+                    }
+                    else
+                    {
+                        propertyType = property.PropertyType.Name;
+                    }
+
+                    var propertyName = property.Name;
+
                     sw.Write($@"
-        #region {methodName}
+        #region {propertyName.c2p()}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{parameter.moduleParameter.c2p()}{methodName}(this ParticleSystem particleSystem, {type} {methodName.p2c()}) {{
+        public static ParticleSystem Set{moduleName.c2p()}{propertyName.c2p()}(this ParticleSystem particleSystem, {propertyType} {propertyName.p2c()})
+        {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.{parameter.moduleParameter};
-            module.{parameterName} = {methodName.p2c()};
+            var module = particleSystem.{moduleName};
+            module.{propertyName} = {propertyName.p2c()};
             return particleSystem;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{parameter.moduleParameter.c2p()}{methodName}(this ParticleSystem particleSystem, Func<{type}, {type}> {methodName.p2c()}Changer) {{
+        public static ParticleSystem Set{moduleName.c2p()}{propertyName.c2p()}(this ParticleSystem particleSystem, Func<{propertyType}, {propertyType}> {propertyName.p2c()}Changer)
+        {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.{parameter.moduleParameter};
-            module.{parameterName} = {methodName.p2c()}Changer(module.{parameterName});
+            var module = particleSystem.{moduleName};
+            module.{propertyName} = {propertyName.p2c()}Changer(module.{propertyName});
             return particleSystem;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem.{parameter.moduleName} Set{methodName}(this ParticleSystem.{parameter.moduleName} module, {type} {methodName.p2c()}) {{
-            module.{parameterName} = {methodName.p2c()};    
+        public static {moduleType} Set{propertyName.c2p()}(this {moduleType} module, {propertyType} {propertyName.p2c()})
+        {{
+            module.{propertyName} = {propertyName.p2c()};
             return module;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem.{parameter.moduleName} Set{methodName}(this ParticleSystem.{parameter.moduleName} module, Func<{type}, {type}> {methodName.p2c()}Changer) {{
-            module.{parameterName} = {methodName.p2c()}Changer(module.{parameterName});
+        public static {moduleType} Set{propertyName.c2p()}(this {moduleType} module, Func<{propertyType}, {propertyType}> {propertyName.p2c()}Changer)
+        {{
+            module.{propertyName} = {propertyName.p2c()}Changer(module.{propertyName});
             return module;
         }}
         #endregion
-");
+"                   );
                 }
-                sw.Write($@"    }}
+
+                sw.Write($@"
+    }}
 }}
-");
+"               );
                 sw.Flush();
             }
+
+
+        /// <summary>
+        /// Tools/Generate Scripts „Åã„Çâ„Ç≥„Éº„Éâ„ÇíËá™ÂãïÁîüÊàê„Åó„Åæ„Åô„ÄÇ
+        /// </summary>
+        [MenuItem("Tools/Generate Scripts")]
+        public static void GenerateWithReflection()
+        {
+            var modules = typeof(ParticleSystem).GetProperties();
+            foreach (var module in modules.OrderBy(m => m.Name))
+            {
+                if (!module.PropertyType.Name.Contains("Module"))
+                {
+                    continue;
+                }
+
+                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.PropertyType.Name}Extension.cs";
+                WriteExtensionFile(filePath, module);
+            }
             AssetDatabase.Refresh();
+
         }
     }
 }
