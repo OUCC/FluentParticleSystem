@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -16,142 +14,6 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.trails);
             return particleSystem;
         }
-
-        #region AttachRibbonsToTransform
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, bool attachRibbonsToTransform)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.attachRibbonsToTransform = attachRibbonsToTransform;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, Func<bool, bool> attachRibbonsToTransformChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, bool attachRibbonsToTransform)
-        {
-            module.attachRibbonsToTransform = attachRibbonsToTransform;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, Func<bool, bool> attachRibbonsToTransformChanger)
-        {
-            module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
-            return module;
-        }
-        #endregion
-
-        #region ColorOverLifetime
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, MinMaxGradient colorOverLifetime)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.colorOverLifetime = colorOverLifetime;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetColorOverLifetime(this TrailModule module, MinMaxGradient colorOverLifetime)
-        {
-            module.colorOverLifetime = colorOverLifetime;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetColorOverLifetime(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
-        {
-            module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
-            return module;
-        }
-        #endregion
-
-        #region ColorOverTrail
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, MinMaxGradient colorOverTrail)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.colorOverTrail = colorOverTrail;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetColorOverTrail(this TrailModule module, MinMaxGradient colorOverTrail)
-        {
-            module.colorOverTrail = colorOverTrail;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetColorOverTrail(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
-        {
-            module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
-            return module;
-        }
-        #endregion
-
-        #region DieWithParticles
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, bool dieWithParticles)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.dieWithParticles = dieWithParticles;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, Func<bool, bool> dieWithParticlesChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetDieWithParticles(this TrailModule module, bool dieWithParticles)
-        {
-            module.dieWithParticles = dieWithParticles;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetDieWithParticles(this TrailModule module, Func<bool, bool> dieWithParticlesChanger)
-        {
-            module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
-            return module;
-        }
-        #endregion
 
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -187,70 +49,70 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region GenerateLightingData
+        #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, bool generateLightingData)
+        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemTrailMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.generateLightingData = generateLightingData;
+            module.mode = mode;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, Func<bool, bool> generateLightingDataChanger)
+        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemTrailMode, UnityEngine.ParticleSystemTrailMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
+            module.mode = modeChanger(module.mode);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetGenerateLightingData(this TrailModule module, bool generateLightingData)
+        public static TrailModule SetMode(this TrailModule module, UnityEngine.ParticleSystemTrailMode mode)
         {
-            module.generateLightingData = generateLightingData;
+            module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetGenerateLightingData(this TrailModule module, Func<bool, bool> generateLightingDataChanger)
+        public static TrailModule SetMode(this TrailModule module, Func<UnityEngine.ParticleSystemTrailMode, UnityEngine.ParticleSystemTrailMode> modeChanger)
         {
-            module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
+            module.mode = modeChanger(module.mode);
             return module;
         }
         #endregion
 
-        #region InheritParticleColor
+        #region Ratio
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, bool inheritParticleColor)
+        public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, float ratio)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.inheritParticleColor = inheritParticleColor;
+            module.ratio = ratio;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, Func<bool, bool> inheritParticleColorChanger)
+        public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, Func<float, float> ratioChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
+            module.ratio = ratioChanger(module.ratio);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetInheritParticleColor(this TrailModule module, bool inheritParticleColor)
+        public static TrailModule SetRatio(this TrailModule module, float ratio)
         {
-            module.inheritParticleColor = inheritParticleColor;
+            module.ratio = ratio;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetInheritParticleColor(this TrailModule module, Func<bool, bool> inheritParticleColorChanger)
+        public static TrailModule SetRatio(this TrailModule module, Func<float, float> ratioChanger)
         {
-            module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
+            module.ratio = ratioChanger(module.ratio);
             return module;
         }
         #endregion
@@ -357,172 +219,104 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Mode
+        #region TextureMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, ParticleSystemTrailMode mode)
+        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemTrailTextureMode textureMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.mode = mode;
+            module.textureMode = textureMode;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
+        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemTrailTextureMode, UnityEngine.ParticleSystemTrailTextureMode> textureModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.mode = modeChanger(module.mode);
+            module.textureMode = textureModeChanger(module.textureMode);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetMode(this TrailModule module, ParticleSystemTrailMode mode)
+        public static TrailModule SetTextureMode(this TrailModule module, UnityEngine.ParticleSystemTrailTextureMode textureMode)
         {
-            module.mode = mode;
+            module.textureMode = textureMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetMode(this TrailModule module, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
+        public static TrailModule SetTextureMode(this TrailModule module, Func<UnityEngine.ParticleSystemTrailTextureMode, UnityEngine.ParticleSystemTrailTextureMode> textureModeChanger)
         {
-            module.mode = modeChanger(module.mode);
-            return module;
-        }
-        #endregion
-
-        #region Ratio
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, float ratio)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.ratio = ratio;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, Func<float, float> ratioChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.ratio = ratioChanger(module.ratio);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetRatio(this TrailModule module, float ratio)
-        {
-            module.ratio = ratio;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetRatio(this TrailModule module, Func<float, float> ratioChanger)
-        {
-            module.ratio = ratioChanger(module.ratio);
+            module.textureMode = textureModeChanger(module.textureMode);
             return module;
         }
         #endregion
 
-        #region RibbonCount
+        #region WorldSpace
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, Int32 ribbonCount)
+        public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, bool worldSpace)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.ribbonCount = ribbonCount;
+            module.worldSpace = worldSpace;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, Func<Int32, Int32> ribbonCountChanger)
+        public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, Func<bool, bool> worldSpaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.ribbonCount = ribbonCountChanger(module.ribbonCount);
+            module.worldSpace = worldSpaceChanger(module.worldSpace);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetRibbonCount(this TrailModule module, Int32 ribbonCount)
+        public static TrailModule SetWorldSpace(this TrailModule module, bool worldSpace)
         {
-            module.ribbonCount = ribbonCount;
+            module.worldSpace = worldSpace;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetRibbonCount(this TrailModule module, Func<Int32, Int32> ribbonCountChanger)
+        public static TrailModule SetWorldSpace(this TrailModule module, Func<bool, bool> worldSpaceChanger)
         {
-            module.ribbonCount = ribbonCountChanger(module.ribbonCount);
-            return module;
-        }
-        #endregion
-
-        #region ShadowBias
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, float shadowBias)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.shadowBias = shadowBias;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, Func<float, float> shadowBiasChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.trails;
-            module.shadowBias = shadowBiasChanger(module.shadowBias);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetShadowBias(this TrailModule module, float shadowBias)
-        {
-            module.shadowBias = shadowBias;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetShadowBias(this TrailModule module, Func<float, float> shadowBiasChanger)
-        {
-            module.shadowBias = shadowBiasChanger(module.shadowBias);
+            module.worldSpace = worldSpaceChanger(module.worldSpace);
             return module;
         }
         #endregion
 
-        #region SizeAffectsLifetime
+        #region DieWithParticles
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, bool sizeAffectsLifetime)
+        public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, bool dieWithParticles)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.sizeAffectsLifetime = sizeAffectsLifetime;
+            module.dieWithParticles = dieWithParticles;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, Func<bool, bool> sizeAffectsLifetimeChanger)
+        public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, Func<bool, bool> dieWithParticlesChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
+            module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetSizeAffectsLifetime(this TrailModule module, bool sizeAffectsLifetime)
+        public static TrailModule SetDieWithParticles(this TrailModule module, bool dieWithParticles)
         {
-            module.sizeAffectsLifetime = sizeAffectsLifetime;
+            module.dieWithParticles = dieWithParticles;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetSizeAffectsLifetime(this TrailModule module, Func<bool, bool> sizeAffectsLifetimeChanger)
+        public static TrailModule SetDieWithParticles(this TrailModule module, Func<bool, bool> dieWithParticlesChanger)
         {
-            module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
+            module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
             return module;
         }
         #endregion
@@ -561,70 +355,104 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region SplitSubEmitterRibbons
+        #region SizeAffectsLifetime
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, bool splitSubEmitterRibbons)
+        public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, bool sizeAffectsLifetime)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.splitSubEmitterRibbons = splitSubEmitterRibbons;
+            module.sizeAffectsLifetime = sizeAffectsLifetime;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, Func<bool, bool> splitSubEmitterRibbonsChanger)
+        public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, Func<bool, bool> sizeAffectsLifetimeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
+            module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, bool splitSubEmitterRibbons)
+        public static TrailModule SetSizeAffectsLifetime(this TrailModule module, bool sizeAffectsLifetime)
         {
-            module.splitSubEmitterRibbons = splitSubEmitterRibbons;
+            module.sizeAffectsLifetime = sizeAffectsLifetime;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, Func<bool, bool> splitSubEmitterRibbonsChanger)
+        public static TrailModule SetSizeAffectsLifetime(this TrailModule module, Func<bool, bool> sizeAffectsLifetimeChanger)
         {
-            module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
+            module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
             return module;
         }
         #endregion
 
-        #region TextureMode
+        #region InheritParticleColor
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, ParticleSystemTrailTextureMode textureMode)
+        public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, bool inheritParticleColor)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.textureMode = textureMode;
+            module.inheritParticleColor = inheritParticleColor;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
+        public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, Func<bool, bool> inheritParticleColorChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.textureMode = textureModeChanger(module.textureMode);
+            module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetTextureMode(this TrailModule module, ParticleSystemTrailTextureMode textureMode)
+        public static TrailModule SetInheritParticleColor(this TrailModule module, bool inheritParticleColor)
         {
-            module.textureMode = textureMode;
+            module.inheritParticleColor = inheritParticleColor;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetTextureMode(this TrailModule module, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
+        public static TrailModule SetInheritParticleColor(this TrailModule module, Func<bool, bool> inheritParticleColorChanger)
         {
-            module.textureMode = textureModeChanger(module.textureMode);
+            module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
+            return module;
+        }
+        #endregion
+
+        #region ColorOverLifetime
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, MinMaxGradient colorOverLifetime)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.colorOverLifetime = colorOverLifetime;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetColorOverLifetime(this TrailModule module, MinMaxGradient colorOverLifetime)
+        {
+            module.colorOverLifetime = colorOverLifetime;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetColorOverLifetime(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
+        {
+            module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
             return module;
         }
         #endregion
@@ -697,39 +525,208 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region WorldSpace
+        #region ColorOverTrail
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, bool worldSpace)
+        public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, MinMaxGradient colorOverTrail)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.worldSpace = worldSpace;
+            module.colorOverTrail = colorOverTrail;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, Func<bool, bool> worldSpaceChanger)
+        public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
-            module.worldSpace = worldSpaceChanger(module.worldSpace);
+            module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetWorldSpace(this TrailModule module, bool worldSpace)
+        public static TrailModule SetColorOverTrail(this TrailModule module, MinMaxGradient colorOverTrail)
         {
-            module.worldSpace = worldSpace;
+            module.colorOverTrail = colorOverTrail;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetWorldSpace(this TrailModule module, Func<bool, bool> worldSpaceChanger)
+        public static TrailModule SetColorOverTrail(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
         {
-            module.worldSpace = worldSpaceChanger(module.worldSpace);
+            module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
             return module;
         }
         #endregion
 
+        #region GenerateLightingData
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, bool generateLightingData)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.generateLightingData = generateLightingData;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, Func<bool, bool> generateLightingDataChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetGenerateLightingData(this TrailModule module, bool generateLightingData)
+        {
+            module.generateLightingData = generateLightingData;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetGenerateLightingData(this TrailModule module, Func<bool, bool> generateLightingDataChanger)
+        {
+            module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
+            return module;
+        }
+        #endregion
+
+        #region RibbonCount
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, int ribbonCount)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.ribbonCount = ribbonCount;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, Func<int, int> ribbonCountChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.ribbonCount = ribbonCountChanger(module.ribbonCount);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetRibbonCount(this TrailModule module, int ribbonCount)
+        {
+            module.ribbonCount = ribbonCount;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetRibbonCount(this TrailModule module, Func<int, int> ribbonCountChanger)
+        {
+            module.ribbonCount = ribbonCountChanger(module.ribbonCount);
+            return module;
+        }
+        #endregion
+
+        #region ShadowBias
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, float shadowBias)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.shadowBias = shadowBias;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, Func<float, float> shadowBiasChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.shadowBias = shadowBiasChanger(module.shadowBias);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetShadowBias(this TrailModule module, float shadowBias)
+        {
+            module.shadowBias = shadowBias;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetShadowBias(this TrailModule module, Func<float, float> shadowBiasChanger)
+        {
+            module.shadowBias = shadowBiasChanger(module.shadowBias);
+            return module;
+        }
+        #endregion
+
+        #region SplitSubEmitterRibbons
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, bool splitSubEmitterRibbons)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.splitSubEmitterRibbons = splitSubEmitterRibbons;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, Func<bool, bool> splitSubEmitterRibbonsChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, bool splitSubEmitterRibbons)
+        {
+            module.splitSubEmitterRibbons = splitSubEmitterRibbons;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, Func<bool, bool> splitSubEmitterRibbonsChanger)
+        {
+            module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
+            return module;
+        }
+        #endregion
+
+        #region AttachRibbonsToTransform
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, bool attachRibbonsToTransform)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.attachRibbonsToTransform = attachRibbonsToTransform;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, Func<bool, bool> attachRibbonsToTransformChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, bool attachRibbonsToTransform)
+        {
+            module.attachRibbonsToTransform = attachRibbonsToTransform;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, Func<bool, bool> attachRibbonsToTransformChanger)
+        {
+            module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
+            return module;
+        }
+        #endregion
     }
 }

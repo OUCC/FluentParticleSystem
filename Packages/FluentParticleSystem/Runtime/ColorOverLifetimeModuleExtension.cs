@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -16,40 +14,6 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.colorOverLifetime);
             return particleSystem;
         }
-
-        #region Color
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorOverLifetimeColor(this ParticleSystem particleSystem, MinMaxGradient color)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorOverLifetime;
-            module.color = color;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorOverLifetimeColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorOverLifetime;
-            module.color = colorChanger(module.color);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorOverLifetimeModule SetColor(this ColorOverLifetimeModule module, MinMaxGradient color)
-        {
-            module.color = color;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorOverLifetimeModule SetColor(this ColorOverLifetimeModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
-        {
-            module.color = colorChanger(module.color);
-            return module;
-        }
-        #endregion
 
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -85,5 +49,38 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region Color
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorOverLifetimeColor(this ParticleSystem particleSystem, MinMaxGradient color)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorOverLifetime;
+            module.color = color;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorOverLifetimeColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorOverLifetime;
+            module.color = colorChanger(module.color);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorOverLifetimeModule SetColor(this ColorOverLifetimeModule module, MinMaxGradient color)
+        {
+            module.color = color;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorOverLifetimeModule SetColor(this ColorOverLifetimeModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
+        {
+            module.color = colorChanger(module.color);
+            return module;
+        }
+        #endregion
     }
 }

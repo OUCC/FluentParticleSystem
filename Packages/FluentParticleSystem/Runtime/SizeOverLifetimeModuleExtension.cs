@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -47,40 +45,6 @@ namespace OUCC.FluentParticleSystem
         public static SizeOverLifetimeModule SetEnabled(this SizeOverLifetimeModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
-        #region SeparateAxes
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeOverLifetime;
-            module.separateAxes = separateAxes;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeOverLifetime;
-            module.separateAxes = separateAxesChanger(module.separateAxes);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, bool separateAxes)
-        {
-            module.separateAxes = separateAxes;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
-        {
-            module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
         #endregion
@@ -357,5 +321,38 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region SeparateAxes
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeOverLifetime;
+            module.separateAxes = separateAxes;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeOverLifetime;
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, bool separateAxes)
+        {
+            module.separateAxes = separateAxes;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
+        {
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return module;
+        }
+        #endregion
     }
 }

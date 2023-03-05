@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -16,40 +14,6 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.colorBySpeed);
             return particleSystem;
         }
-
-        #region Color
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedColor(this ParticleSystem particleSystem, MinMaxGradient color)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorBySpeed;
-            module.color = color;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.colorBySpeed;
-            module.color = colorChanger(module.color);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, MinMaxGradient color)
-        {
-            module.color = color;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
-        {
-            module.color = colorChanger(module.color);
-            return module;
-        }
-        #endregion
 
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -85,9 +49,43 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region Color
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorBySpeedColor(this ParticleSystem particleSystem, MinMaxGradient color)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorBySpeed;
+            module.color = color;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetColorBySpeedColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.colorBySpeed;
+            module.color = colorChanger(module.color);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, MinMaxGradient color)
+        {
+            module.color = color;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
+        {
+            module.color = colorChanger(module.color);
+            return module;
+        }
+        #endregion
+
         #region Range
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
+        public static ParticleSystem SetColorBySpeedRange(this ParticleSystem particleSystem, UnityEngine.Vector2 range)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.colorBySpeed;
@@ -96,7 +94,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetColorBySpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
+        public static ParticleSystem SetColorBySpeedRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.colorBySpeed;
@@ -105,19 +103,18 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetRange(this ColorBySpeedModule module, Vector2 range)
+        public static ColorBySpeedModule SetRange(this ColorBySpeedModule module, UnityEngine.Vector2 range)
         {
             module.range = range;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ColorBySpeedModule SetRange(this ColorBySpeedModule module, Func<Vector2, Vector2> rangeChanger)
+        public static ColorBySpeedModule SetRange(this ColorBySpeedModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
         {
             module.range = rangeChanger(module.range);
             return module;
         }
         #endregion
-
     }
 }

@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
+using System.Text;
 
 namespace OUCC.FluentParticleSystem.SourceGenerator
 {
@@ -14,15 +14,13 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
         {
             var moduleType = module.PropertyType.Name;
             var moduleName = module.Name;
-            using var sw = new StreamWriter(filePath, false);
+            using var sw = new StreamWriter(filePath, false, Encoding.UTF8);
 
-                sw.Write(
+            sw.Write(
 $@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {{
@@ -35,37 +33,24 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.{moduleName});
             return particleSystem;
         }}
-"               );
-                foreach (var property in module.PropertyType.GetProperties().OrderBy(p => p.Name))
+");
+
+            var availableProperties = module.PropertyType.GetProperties().Where(p => p.GetCustomAttribute<ObsoleteAttribute>() is null && p.CanWrite);
+
+            foreach (var property in availableProperties)
+            {
+                var propertyName = property.Name;
+                var propertyType = property.PropertyType.FullName switch
                 {
-                    if (property.GetCustomAttribute<ObsoleteAttribute>() != null)
-                    {
-                        continue;
-                    }
+                    "System.Int32" => "int",
+                    "System.Single" => "float",
+                    "System.Boolean" => "bool",
+                    var n => n.StartsWith("UnityEngine.ParticleSystem+") 
+                        ? property.PropertyType.Name
+                        : n.Replace('+',',')
+                };
 
-                    if (!property.CanWrite)
-                    {
-                        continue;
-                    }
-
-                    string propertyType;
-
-                    if (property.PropertyType == typeof(float))
-                    {
-                        propertyType = "float";
-                    }
-                    else if (property.PropertyType == typeof(bool))
-                    {
-                        propertyType = "bool";
-                    }
-                    else
-                    {
-                        propertyType = property.PropertyType.Name;
-                    }
-
-                    var propertyName = property.Name;
-
-                    sw.Write($@"
+                sw.Write($@"
         #region {propertyName.c2p()}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{moduleName.c2p()}{propertyName.c2p()}(this ParticleSystem particleSystem, {propertyType} {propertyName.p2c()})
@@ -99,15 +84,15 @@ namespace OUCC.FluentParticleSystem
             return module;
         }}
         #endregion
-"                   );
-                }
-
-                sw.Write($@"
-    }}
-}}
-"               );
-                sw.Flush();
+");
             }
+
+            sw.Write(
+$@"    }}
+}}
+");
+            sw.Flush();
+        }
 
 
         /// <summary>
@@ -116,14 +101,9 @@ namespace OUCC.FluentParticleSystem
         [MenuItem("Tools/Generate Scripts")]
         public static void GenerateWithReflection()
         {
-            var modules = typeof(ParticleSystem).GetProperties();
+            var modules = typeof(ParticleSystem).GetProperties().Where(m => m.PropertyType.Name.EndsWith("Module"));
             foreach (var module in modules.OrderBy(m => m.Name))
             {
-                if (!module.PropertyType.Name.Contains("Module"))
-                {
-                    continue;
-                }
-
                 var filePath = $"Packages/FluentParticleSystem/Runtime/{module.PropertyType.Name}Extension.cs";
                 WriteExtensionFile(filePath, module);
             }

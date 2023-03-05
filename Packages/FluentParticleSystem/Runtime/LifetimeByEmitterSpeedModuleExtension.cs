@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -16,6 +14,40 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.lifetimeByEmitterSpeed);
             return particleSystem;
         }
+
+        #region Enabled
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.enabled = enabled;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.enabled = enabledChanger(module.enabled);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, bool enabled)
+        {
+            module.enabled = enabled;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, Func<bool, bool> enabledChanger)
+        {
+            module.enabled = enabledChanger(module.enabled);
+            return module;
+        }
+        #endregion
 
         #region Curve
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -85,43 +117,9 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Enabled
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.enabled = enabled;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.enabled = enabledChanger(module.enabled);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, bool enabled)
-        {
-            module.enabled = enabled;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, Func<bool, bool> enabledChanger)
-        {
-            module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
         #region Range
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Vector2 range)
+        public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, UnityEngine.Vector2 range)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.lifetimeByEmitterSpeed;
@@ -130,7 +128,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
+        public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.lifetimeByEmitterSpeed;
@@ -139,19 +137,18 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, Vector2 range)
+        public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, UnityEngine.Vector2 range)
         {
             module.range = range;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, Func<Vector2, Vector2> rangeChanger)
+        public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
         {
             module.range = rangeChanger(module.range);
             return module;
         }
         #endregion
-
     }
 }

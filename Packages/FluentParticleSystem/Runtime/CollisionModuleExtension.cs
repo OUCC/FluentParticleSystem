@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -17,138 +15,104 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region Bounce
+        #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionBounce(this ParticleSystem particleSystem, MinMaxCurve bounce)
+        public static ParticleSystem SetCollisionEnabled(this ParticleSystem particleSystem, bool enabled)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.bounce = bounce;
+            module.enabled = enabled;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionBounce(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> bounceChanger)
+        public static ParticleSystem SetCollisionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.bounce = bounceChanger(module.bounce);
+            module.enabled = enabledChanger(module.enabled);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetBounce(this CollisionModule module, MinMaxCurve bounce)
+        public static CollisionModule SetEnabled(this CollisionModule module, bool enabled)
         {
-            module.bounce = bounce;
+            module.enabled = enabled;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetBounce(this CollisionModule module, Func<MinMaxCurve, MinMaxCurve> bounceChanger)
+        public static CollisionModule SetEnabled(this CollisionModule module, Func<bool, bool> enabledChanger)
         {
-            module.bounce = bounceChanger(module.bounce);
-            return module;
-        }
-        #endregion
-
-        #region BounceMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionBounceMultiplier(this ParticleSystem particleSystem, float bounceMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.bounceMultiplier = bounceMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionBounceMultiplier(this ParticleSystem particleSystem, Func<float, float> bounceMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.bounceMultiplier = bounceMultiplierChanger(module.bounceMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetBounceMultiplier(this CollisionModule module, float bounceMultiplier)
-        {
-            module.bounceMultiplier = bounceMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetBounceMultiplier(this CollisionModule module, Func<float, float> bounceMultiplierChanger)
-        {
-            module.bounceMultiplier = bounceMultiplierChanger(module.bounceMultiplier);
+            module.enabled = enabledChanger(module.enabled);
             return module;
         }
         #endregion
 
-        #region ColliderForce
+        #region Type
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionColliderForce(this ParticleSystem particleSystem, float colliderForce)
+        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionType type)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.colliderForce = colliderForce;
+            module.type = type;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionColliderForce(this ParticleSystem particleSystem, Func<float, float> colliderForceChanger)
+        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionType, UnityEngine.ParticleSystemCollisionType> typeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.colliderForce = colliderForceChanger(module.colliderForce);
+            module.type = typeChanger(module.type);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetColliderForce(this CollisionModule module, float colliderForce)
+        public static CollisionModule SetType(this CollisionModule module, UnityEngine.ParticleSystemCollisionType type)
         {
-            module.colliderForce = colliderForce;
+            module.type = type;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetColliderForce(this CollisionModule module, Func<float, float> colliderForceChanger)
+        public static CollisionModule SetType(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionType, UnityEngine.ParticleSystemCollisionType> typeChanger)
         {
-            module.colliderForce = colliderForceChanger(module.colliderForce);
+            module.type = typeChanger(module.type);
             return module;
         }
         #endregion
 
-        #region CollidesWith
+        #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, LayerMask collidesWith)
+        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.collidesWith = collidesWith;
+            module.mode = mode;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, Func<LayerMask, LayerMask> collidesWithChanger)
+        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionMode, UnityEngine.ParticleSystemCollisionMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.collidesWith = collidesWithChanger(module.collidesWith);
+            module.mode = modeChanger(module.mode);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetCollidesWith(this CollisionModule module, LayerMask collidesWith)
+        public static CollisionModule SetMode(this CollisionModule module, UnityEngine.ParticleSystemCollisionMode mode)
         {
-            module.collidesWith = collidesWith;
+            module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetCollidesWith(this CollisionModule module, Func<LayerMask, LayerMask> collidesWithChanger)
+        public static CollisionModule SetMode(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionMode, UnityEngine.ParticleSystemCollisionMode> modeChanger)
         {
-            module.collidesWith = collidesWithChanger(module.collidesWith);
+            module.mode = modeChanger(module.mode);
             return module;
         }
         #endregion
@@ -221,70 +185,70 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Enabled
+        #region Bounce
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionEnabled(this ParticleSystem particleSystem, bool enabled)
+        public static ParticleSystem SetCollisionBounce(this ParticleSystem particleSystem, MinMaxCurve bounce)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.enabled = enabled;
+            module.bounce = bounce;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        public static ParticleSystem SetCollisionBounce(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> bounceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.enabled = enabledChanger(module.enabled);
+            module.bounce = bounceChanger(module.bounce);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetEnabled(this CollisionModule module, bool enabled)
+        public static CollisionModule SetBounce(this CollisionModule module, MinMaxCurve bounce)
         {
-            module.enabled = enabled;
+            module.bounce = bounce;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetEnabled(this CollisionModule module, Func<bool, bool> enabledChanger)
+        public static CollisionModule SetBounce(this CollisionModule module, Func<MinMaxCurve, MinMaxCurve> bounceChanger)
         {
-            module.enabled = enabledChanger(module.enabled);
+            module.bounce = bounceChanger(module.bounce);
             return module;
         }
         #endregion
 
-        #region EnableDynamicColliders
+        #region BounceMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionEnableDynamicColliders(this ParticleSystem particleSystem, bool enableDynamicColliders)
+        public static ParticleSystem SetCollisionBounceMultiplier(this ParticleSystem particleSystem, float bounceMultiplier)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.enableDynamicColliders = enableDynamicColliders;
+            module.bounceMultiplier = bounceMultiplier;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionEnableDynamicColliders(this ParticleSystem particleSystem, Func<bool, bool> enableDynamicCollidersChanger)
+        public static ParticleSystem SetCollisionBounceMultiplier(this ParticleSystem particleSystem, Func<float, float> bounceMultiplierChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.enableDynamicColliders = enableDynamicCollidersChanger(module.enableDynamicColliders);
+            module.bounceMultiplier = bounceMultiplierChanger(module.bounceMultiplier);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetEnableDynamicColliders(this CollisionModule module, bool enableDynamicColliders)
+        public static CollisionModule SetBounceMultiplier(this CollisionModule module, float bounceMultiplier)
         {
-            module.enableDynamicColliders = enableDynamicColliders;
+            module.bounceMultiplier = bounceMultiplier;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetEnableDynamicColliders(this CollisionModule module, Func<bool, bool> enableDynamicCollidersChanger)
+        public static CollisionModule SetBounceMultiplier(this CollisionModule module, Func<float, float> bounceMultiplierChanger)
         {
-            module.enableDynamicColliders = enableDynamicCollidersChanger(module.enableDynamicColliders);
+            module.bounceMultiplier = bounceMultiplierChanger(module.bounceMultiplier);
             return module;
         }
         #endregion
@@ -357,36 +321,36 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region MaxCollisionShapes
+        #region MinKillSpeed
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMaxCollisionShapes(this ParticleSystem particleSystem, Int32 maxCollisionShapes)
+        public static ParticleSystem SetCollisionMinKillSpeed(this ParticleSystem particleSystem, float minKillSpeed)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.maxCollisionShapes = maxCollisionShapes;
+            module.minKillSpeed = minKillSpeed;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMaxCollisionShapes(this ParticleSystem particleSystem, Func<Int32, Int32> maxCollisionShapesChanger)
+        public static ParticleSystem SetCollisionMinKillSpeed(this ParticleSystem particleSystem, Func<float, float> minKillSpeedChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.maxCollisionShapes = maxCollisionShapesChanger(module.maxCollisionShapes);
+            module.minKillSpeed = minKillSpeedChanger(module.minKillSpeed);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMaxCollisionShapes(this CollisionModule module, Int32 maxCollisionShapes)
+        public static CollisionModule SetMinKillSpeed(this CollisionModule module, float minKillSpeed)
         {
-            module.maxCollisionShapes = maxCollisionShapes;
+            module.minKillSpeed = minKillSpeed;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMaxCollisionShapes(this CollisionModule module, Func<Int32, Int32> maxCollisionShapesChanger)
+        public static CollisionModule SetMinKillSpeed(this CollisionModule module, Func<float, float> minKillSpeedChanger)
         {
-            module.maxCollisionShapes = maxCollisionShapesChanger(module.maxCollisionShapes);
+            module.minKillSpeed = minKillSpeedChanger(module.minKillSpeed);
             return module;
         }
         #endregion
@@ -425,179 +389,111 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region MinKillSpeed
+        #region CollidesWith
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMinKillSpeed(this ParticleSystem particleSystem, float minKillSpeed)
+        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, UnityEngine.LayerMask collidesWith)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.minKillSpeed = minKillSpeed;
+            module.collidesWith = collidesWith;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMinKillSpeed(this ParticleSystem particleSystem, Func<float, float> minKillSpeedChanger)
+        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> collidesWithChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.minKillSpeed = minKillSpeedChanger(module.minKillSpeed);
+            module.collidesWith = collidesWithChanger(module.collidesWith);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMinKillSpeed(this CollisionModule module, float minKillSpeed)
+        public static CollisionModule SetCollidesWith(this CollisionModule module, UnityEngine.LayerMask collidesWith)
         {
-            module.minKillSpeed = minKillSpeed;
+            module.collidesWith = collidesWith;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMinKillSpeed(this CollisionModule module, Func<float, float> minKillSpeedChanger)
+        public static CollisionModule SetCollidesWith(this CollisionModule module, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> collidesWithChanger)
         {
-            module.minKillSpeed = minKillSpeedChanger(module.minKillSpeed);
-            return module;
-        }
-        #endregion
-
-        #region Mode
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, ParticleSystemCollisionMode mode)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.mode = mode;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, Func<ParticleSystemCollisionMode, ParticleSystemCollisionMode> modeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.mode = modeChanger(module.mode);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMode(this CollisionModule module, ParticleSystemCollisionMode mode)
-        {
-            module.mode = mode;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMode(this CollisionModule module, Func<ParticleSystemCollisionMode, ParticleSystemCollisionMode> modeChanger)
-        {
-            module.mode = modeChanger(module.mode);
+            module.collidesWith = collidesWithChanger(module.collidesWith);
             return module;
         }
         #endregion
 
-        #region MultiplyColliderForceByCollisionAngle
+        #region EnableDynamicColliders
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByCollisionAngle(this ParticleSystem particleSystem, bool multiplyColliderForceByCollisionAngle)
+        public static ParticleSystem SetCollisionEnableDynamicColliders(this ParticleSystem particleSystem, bool enableDynamicColliders)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngle;
+            module.enableDynamicColliders = enableDynamicColliders;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByCollisionAngle(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByCollisionAngleChanger)
+        public static ParticleSystem SetCollisionEnableDynamicColliders(this ParticleSystem particleSystem, Func<bool, bool> enableDynamicCollidersChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngleChanger(module.multiplyColliderForceByCollisionAngle);
+            module.enableDynamicColliders = enableDynamicCollidersChanger(module.enableDynamicColliders);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByCollisionAngle(this CollisionModule module, bool multiplyColliderForceByCollisionAngle)
+        public static CollisionModule SetEnableDynamicColliders(this CollisionModule module, bool enableDynamicColliders)
         {
-            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngle;
+            module.enableDynamicColliders = enableDynamicColliders;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByCollisionAngle(this CollisionModule module, Func<bool, bool> multiplyColliderForceByCollisionAngleChanger)
+        public static CollisionModule SetEnableDynamicColliders(this CollisionModule module, Func<bool, bool> enableDynamicCollidersChanger)
         {
-            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngleChanger(module.multiplyColliderForceByCollisionAngle);
-            return module;
-        }
-        #endregion
-
-        #region MultiplyColliderForceByParticleSize
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSize(this ParticleSystem particleSystem, bool multiplyColliderForceByParticleSize)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSize;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSize(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByParticleSizeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSizeChanger(module.multiplyColliderForceByParticleSize);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByParticleSize(this CollisionModule module, bool multiplyColliderForceByParticleSize)
-        {
-            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSize;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByParticleSize(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSizeChanger)
-        {
-            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSizeChanger(module.multiplyColliderForceByParticleSize);
+            module.enableDynamicColliders = enableDynamicCollidersChanger(module.enableDynamicColliders);
             return module;
         }
         #endregion
 
-        #region MultiplyColliderForceByParticleSpeed
+        #region MaxCollisionShapes
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSpeed(this ParticleSystem particleSystem, bool multiplyColliderForceByParticleSpeed)
+        public static ParticleSystem SetCollisionMaxCollisionShapes(this ParticleSystem particleSystem, int maxCollisionShapes)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeed;
+            module.maxCollisionShapes = maxCollisionShapes;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSpeed(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByParticleSpeedChanger)
+        public static ParticleSystem SetCollisionMaxCollisionShapes(this ParticleSystem particleSystem, Func<int, int> maxCollisionShapesChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeedChanger(module.multiplyColliderForceByParticleSpeed);
+            module.maxCollisionShapes = maxCollisionShapesChanger(module.maxCollisionShapes);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByParticleSpeed(this CollisionModule module, bool multiplyColliderForceByParticleSpeed)
+        public static CollisionModule SetMaxCollisionShapes(this CollisionModule module, int maxCollisionShapes)
         {
-            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeed;
+            module.maxCollisionShapes = maxCollisionShapes;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMultiplyColliderForceByParticleSpeed(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSpeedChanger)
+        public static CollisionModule SetMaxCollisionShapes(this CollisionModule module, Func<int, int> maxCollisionShapesChanger)
         {
-            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeedChanger(module.multiplyColliderForceByParticleSpeed);
+            module.maxCollisionShapes = maxCollisionShapesChanger(module.maxCollisionShapes);
             return module;
         }
         #endregion
 
         #region Quality
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, ParticleSystemCollisionQuality quality)
+        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionQuality quality)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -606,7 +502,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, Func<ParticleSystemCollisionQuality, ParticleSystemCollisionQuality> qualityChanger)
+        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionQuality, UnityEngine.ParticleSystemCollisionQuality> qualityChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -615,16 +511,50 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetQuality(this CollisionModule module, ParticleSystemCollisionQuality quality)
+        public static CollisionModule SetQuality(this CollisionModule module, UnityEngine.ParticleSystemCollisionQuality quality)
         {
             module.quality = quality;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetQuality(this CollisionModule module, Func<ParticleSystemCollisionQuality, ParticleSystemCollisionQuality> qualityChanger)
+        public static CollisionModule SetQuality(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionQuality, UnityEngine.ParticleSystemCollisionQuality> qualityChanger)
         {
             module.quality = qualityChanger(module.quality);
+            return module;
+        }
+        #endregion
+
+        #region VoxelSize
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionVoxelSize(this ParticleSystem particleSystem, float voxelSize)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.voxelSize = voxelSize;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionVoxelSize(this ParticleSystem particleSystem, Func<float, float> voxelSizeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.voxelSize = voxelSizeChanger(module.voxelSize);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetVoxelSize(this CollisionModule module, float voxelSize)
+        {
+            module.voxelSize = voxelSize;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetVoxelSize(this CollisionModule module, Func<float, float> voxelSizeChanger)
+        {
+            module.voxelSize = voxelSizeChanger(module.voxelSize);
             return module;
         }
         #endregion
@@ -697,73 +627,140 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Type
+        #region ColliderForce
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, ParticleSystemCollisionType type)
+        public static ParticleSystem SetCollisionColliderForce(this ParticleSystem particleSystem, float colliderForce)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.type = type;
+            module.colliderForce = colliderForce;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, Func<ParticleSystemCollisionType, ParticleSystemCollisionType> typeChanger)
+        public static ParticleSystem SetCollisionColliderForce(this ParticleSystem particleSystem, Func<float, float> colliderForceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
-            module.type = typeChanger(module.type);
+            module.colliderForce = colliderForceChanger(module.colliderForce);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetType(this CollisionModule module, ParticleSystemCollisionType type)
+        public static CollisionModule SetColliderForce(this CollisionModule module, float colliderForce)
         {
-            module.type = type;
+            module.colliderForce = colliderForce;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetType(this CollisionModule module, Func<ParticleSystemCollisionType, ParticleSystemCollisionType> typeChanger)
+        public static CollisionModule SetColliderForce(this CollisionModule module, Func<float, float> colliderForceChanger)
         {
-            module.type = typeChanger(module.type);
-            return module;
-        }
-        #endregion
-
-        #region VoxelSize
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionVoxelSize(this ParticleSystem particleSystem, float voxelSize)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.voxelSize = voxelSize;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionVoxelSize(this ParticleSystem particleSystem, Func<float, float> voxelSizeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.collision;
-            module.voxelSize = voxelSizeChanger(module.voxelSize);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetVoxelSize(this CollisionModule module, float voxelSize)
-        {
-            module.voxelSize = voxelSize;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetVoxelSize(this CollisionModule module, Func<float, float> voxelSizeChanger)
-        {
-            module.voxelSize = voxelSizeChanger(module.voxelSize);
+            module.colliderForce = colliderForceChanger(module.colliderForce);
             return module;
         }
         #endregion
 
+        #region MultiplyColliderForceByCollisionAngle
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByCollisionAngle(this ParticleSystem particleSystem, bool multiplyColliderForceByCollisionAngle)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngle;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByCollisionAngle(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByCollisionAngleChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngleChanger(module.multiplyColliderForceByCollisionAngle);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByCollisionAngle(this CollisionModule module, bool multiplyColliderForceByCollisionAngle)
+        {
+            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngle;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByCollisionAngle(this CollisionModule module, Func<bool, bool> multiplyColliderForceByCollisionAngleChanger)
+        {
+            module.multiplyColliderForceByCollisionAngle = multiplyColliderForceByCollisionAngleChanger(module.multiplyColliderForceByCollisionAngle);
+            return module;
+        }
+        #endregion
+
+        #region MultiplyColliderForceByParticleSpeed
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSpeed(this ParticleSystem particleSystem, bool multiplyColliderForceByParticleSpeed)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeed;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSpeed(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByParticleSpeedChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeedChanger(module.multiplyColliderForceByParticleSpeed);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByParticleSpeed(this CollisionModule module, bool multiplyColliderForceByParticleSpeed)
+        {
+            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeed;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByParticleSpeed(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSpeedChanger)
+        {
+            module.multiplyColliderForceByParticleSpeed = multiplyColliderForceByParticleSpeedChanger(module.multiplyColliderForceByParticleSpeed);
+            return module;
+        }
+        #endregion
+
+        #region MultiplyColliderForceByParticleSize
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSize(this ParticleSystem particleSystem, bool multiplyColliderForceByParticleSize)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSize;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetCollisionMultiplyColliderForceByParticleSize(this ParticleSystem particleSystem, Func<bool, bool> multiplyColliderForceByParticleSizeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.collision;
+            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSizeChanger(module.multiplyColliderForceByParticleSize);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByParticleSize(this CollisionModule module, bool multiplyColliderForceByParticleSize)
+        {
+            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSize;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static CollisionModule SetMultiplyColliderForceByParticleSize(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSizeChanger)
+        {
+            module.multiplyColliderForceByParticleSize = multiplyColliderForceByParticleSizeChanger(module.multiplyColliderForceByParticleSize);
+            return module;
+        }
+        #endregion
     }
 }

@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -50,6 +48,5 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
-
     }
 }

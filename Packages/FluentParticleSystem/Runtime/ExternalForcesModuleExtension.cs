@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -47,74 +45,6 @@ namespace OUCC.FluentParticleSystem
         public static ExternalForcesModule SetEnabled(this ExternalForcesModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
-        #region InfluenceFilter
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, ParticleSystemGameObjectFilter influenceFilter)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.influenceFilter = influenceFilter;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, Func<ParticleSystemGameObjectFilter, ParticleSystemGameObjectFilter> influenceFilterChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.influenceFilter = influenceFilterChanger(module.influenceFilter);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetInfluenceFilter(this ExternalForcesModule module, ParticleSystemGameObjectFilter influenceFilter)
-        {
-            module.influenceFilter = influenceFilter;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetInfluenceFilter(this ExternalForcesModule module, Func<ParticleSystemGameObjectFilter, ParticleSystemGameObjectFilter> influenceFilterChanger)
-        {
-            module.influenceFilter = influenceFilterChanger(module.influenceFilter);
-            return module;
-        }
-        #endregion
-
-        #region InfluenceMask
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, LayerMask influenceMask)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.influenceMask = influenceMask;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, Func<LayerMask, LayerMask> influenceMaskChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.externalForces;
-            module.influenceMask = influenceMaskChanger(module.influenceMask);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, LayerMask influenceMask)
-        {
-            module.influenceMask = influenceMask;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, Func<LayerMask, LayerMask> influenceMaskChanger)
-        {
-            module.influenceMask = influenceMaskChanger(module.influenceMask);
             return module;
         }
         #endregion
@@ -187,5 +117,72 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region InfluenceFilter
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, UnityEngine.ParticleSystemGameObjectFilter influenceFilter)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.influenceFilter = influenceFilter;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemGameObjectFilter, UnityEngine.ParticleSystemGameObjectFilter> influenceFilterChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.influenceFilter = influenceFilterChanger(module.influenceFilter);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetInfluenceFilter(this ExternalForcesModule module, UnityEngine.ParticleSystemGameObjectFilter influenceFilter)
+        {
+            module.influenceFilter = influenceFilter;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetInfluenceFilter(this ExternalForcesModule module, Func<UnityEngine.ParticleSystemGameObjectFilter, UnityEngine.ParticleSystemGameObjectFilter> influenceFilterChanger)
+        {
+            module.influenceFilter = influenceFilterChanger(module.influenceFilter);
+            return module;
+        }
+        #endregion
+
+        #region InfluenceMask
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, UnityEngine.LayerMask influenceMask)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.influenceMask = influenceMask;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> influenceMaskChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.externalForces;
+            module.influenceMask = influenceMaskChanger(module.influenceMask);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, UnityEngine.LayerMask influenceMask)
+        {
+            module.influenceMask = influenceMask;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> influenceMaskChanger)
+        {
+            module.influenceMask = influenceMaskChanger(module.influenceMask);
+            return module;
+        }
+        #endregion
     }
 }

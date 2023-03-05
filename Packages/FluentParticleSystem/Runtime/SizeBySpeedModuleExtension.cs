@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static UnityEngine.ParticleSystem;
-
 
 namespace OUCC.FluentParticleSystem
 {
@@ -47,74 +45,6 @@ namespace OUCC.FluentParticleSystem
         public static SizeBySpeedModule SetEnabled(this SizeBySpeedModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
-            return module;
-        }
-        #endregion
-
-        #region Range
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeBySpeed;
-            module.range = range;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeBySpeed;
-            module.range = rangeChanger(module.range);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Vector2 range)
-        {
-            module.range = range;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Func<Vector2, Vector2> rangeChanger)
-        {
-            module.range = rangeChanger(module.range);
-            return module;
-        }
-        #endregion
-
-        #region SeparateAxes
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeBySpeed;
-            module.separateAxes = separateAxes;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.sizeBySpeed;
-            module.separateAxes = separateAxesChanger(module.separateAxes);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, bool separateAxes)
-        {
-            module.separateAxes = separateAxes;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, Func<bool, bool> separateAxesChanger)
-        {
-            module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
         #endregion
@@ -391,5 +321,72 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region SeparateAxes
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeBySpeed;
+            module.separateAxes = separateAxes;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeBySpeed;
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, bool separateAxes)
+        {
+            module.separateAxes = separateAxes;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, Func<bool, bool> separateAxesChanger)
+        {
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return module;
+        }
+        #endregion
+
+        #region Range
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, UnityEngine.Vector2 range)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeBySpeed;
+            module.range = range;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.sizeBySpeed;
+            module.range = rangeChanger(module.range);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, UnityEngine.Vector2 range)
+        {
+            module.range = range;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
+        {
+            module.range = rangeChanger(module.range);
+            return module;
+        }
+        #endregion
     }
 }
