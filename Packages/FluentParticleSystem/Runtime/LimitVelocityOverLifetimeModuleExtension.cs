@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LimitVelocityOverLifetimeModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLimitVelocityOverLifetime(this ParticleSystem particleSystem, Action<LimitVelocityOverLifetimeModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Dampen
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeDampen(this ParticleSystem particleSystem, float dampen)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.dampen = dampenChanger(module.dampen);
             return module;
         }
+#endif
         #endregion
 
         #region Drag
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeDrag(this ParticleSystem particleSystem, MinMaxCurve drag)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.drag = dragChanger(module.drag);
             return module;
         }
+#endif
         #endregion
 
         #region DragMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeDragMultiplier(this ParticleSystem particleSystem, float dragMultiplier)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.dragMultiplier = dragMultiplierChanger(module.dragMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Limit
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimit(this ParticleSystem particleSystem, MinMaxCurve limit)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.limit = limitChanger(module.limit);
             return module;
         }
+#endif
         #endregion
 
         #region LimitMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitMultiplier(this ParticleSystem particleSystem, float limitMultiplier)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.limitMultiplier = limitMultiplierChanger(module.limitMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region LimitX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitX(this ParticleSystem particleSystem, MinMaxCurve limitX)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.limitX = limitXChanger(module.limitX);
             return module;
         }
+#endif
         #endregion
 
         #region LimitXMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitXMultiplier(this ParticleSystem particleSystem, float limitXMultiplier)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.limitXMultiplier = limitXMultiplierChanger(module.limitXMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region LimitY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitY(this ParticleSystem particleSystem, MinMaxCurve limitY)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.limitY = limitYChanger(module.limitY);
             return module;
         }
+#endif
         #endregion
 
         #region LimitYMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitYMultiplier(this ParticleSystem particleSystem, float limitYMultiplier)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.limitYMultiplier = limitYMultiplierChanger(module.limitYMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region LimitZ
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitZ(this ParticleSystem particleSystem, MinMaxCurve limitZ)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.limitZ = limitZChanger(module.limitZ);
             return module;
         }
+#endif
         #endregion
 
         #region LimitZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeLimitZMultiplier(this ParticleSystem particleSystem, float limitZMultiplier)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.limitZMultiplier = limitZMultiplierChanger(module.limitZMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region MultiplyDragByParticleSize
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleSize(this ParticleSystem particleSystem, bool multiplyDragByParticleSize)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.multiplyDragByParticleSize = multiplyDragByParticleSizeChanger(module.multiplyDragByParticleSize);
             return module;
         }
+#endif
         #endregion
 
         #region MultiplyDragByParticleVelocity
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeMultiplyDragByParticleVelocity(this ParticleSystem particleSystem, bool multiplyDragByParticleVelocity)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.multiplyDragByParticleVelocity = multiplyDragByParticleVelocityChanger(module.multiplyDragByParticleVelocity);
             return module;
         }
+#endif
         #endregion
 
         #region SeparateAxes
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
+#endif
         #endregion
 
         #region Space
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLimitVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
@@ -557,6 +589,8 @@ namespace OUCC.FluentParticleSystem
             module.space = spaceChanger(module.space);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

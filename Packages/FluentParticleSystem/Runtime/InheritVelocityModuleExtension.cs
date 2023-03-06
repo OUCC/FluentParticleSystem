@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class InheritVelocityModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditInheritVelocity(this ParticleSystem particleSystem, Action<InheritVelocityModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Curve
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.curve = curveChanger(module.curve);
             return module;
         }
+#endif
         #endregion
 
         #region CurveMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Mode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, ParticleSystemInheritVelocityMode mode)
         {
@@ -149,6 +157,8 @@ namespace OUCC.FluentParticleSystem
             module.mode = modeChanger(module.mode);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

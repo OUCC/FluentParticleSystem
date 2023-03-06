@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TrailModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrails(this ParticleSystem particleSystem, Action<TrailModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AttachRibbonsToTransform
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, bool attachRibbonsToTransform)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
             return module;
         }
+#endif
         #endregion
 
         #region ColorOverLifetime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, MinMaxGradient colorOverLifetime)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
             return module;
         }
+#endif
         #endregion
 
         #region ColorOverTrail
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, MinMaxGradient colorOverTrail)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
             return module;
         }
+#endif
         #endregion
 
         #region DieWithParticles
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, bool dieWithParticles)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region GenerateLightingData
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, bool generateLightingData)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
             return module;
         }
+#endif
         #endregion
 
         #region InheritParticleColor
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, bool inheritParticleColor)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
             return module;
         }
+#endif
         #endregion
 
         #region Lifetime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetime(this ParticleSystem particleSystem, MinMaxCurve lifetime)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.lifetime = lifetimeChanger(module.lifetime);
             return module;
         }
+#endif
         #endregion
 
         #region LifetimeMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetimeMultiplier(this ParticleSystem particleSystem, float lifetimeMultiplier)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.lifetimeMultiplier = lifetimeMultiplierChanger(module.lifetimeMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region MinVertexDistance
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMinVertexDistance(this ParticleSystem particleSystem, float minVertexDistance)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.minVertexDistance = minVertexDistanceChanger(module.minVertexDistance);
             return module;
         }
+#endif
         #endregion
 
         #region Mode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, ParticleSystemTrailMode mode)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.mode = modeChanger(module.mode);
             return module;
         }
+#endif
         #endregion
 
         #region Ratio
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, float ratio)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.ratio = ratioChanger(module.ratio);
             return module;
         }
+#endif
         #endregion
 
         #region RibbonCount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, int ribbonCount)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.ribbonCount = ribbonCountChanger(module.ribbonCount);
             return module;
         }
+#endif
         #endregion
 
         #region ShadowBias
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, float shadowBias)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.shadowBias = shadowBiasChanger(module.shadowBias);
             return module;
         }
+#endif
         #endregion
 
         #region SizeAffectsLifetime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, bool sizeAffectsLifetime)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
             return module;
         }
+#endif
         #endregion
 
         #region SizeAffectsWidth
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsWidth(this ParticleSystem particleSystem, bool sizeAffectsWidth)
         {
@@ -557,9 +589,11 @@ namespace OUCC.FluentParticleSystem
             module.sizeAffectsWidth = sizeAffectsWidthChanger(module.sizeAffectsWidth);
             return module;
         }
+#endif
         #endregion
 
         #region SplitSubEmitterRibbons
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, bool splitSubEmitterRibbons)
         {
@@ -591,9 +625,11 @@ namespace OUCC.FluentParticleSystem
             module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
             return module;
         }
+#endif
         #endregion
 
         #region TextureMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, ParticleSystemTrailTextureMode textureMode)
         {
@@ -625,9 +661,11 @@ namespace OUCC.FluentParticleSystem
             module.textureMode = textureModeChanger(module.textureMode);
             return module;
         }
+#endif
         #endregion
 
         #region WidthOverTrail
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrail(this ParticleSystem particleSystem, MinMaxCurve widthOverTrail)
         {
@@ -659,9 +697,11 @@ namespace OUCC.FluentParticleSystem
             module.widthOverTrail = widthOverTrailChanger(module.widthOverTrail);
             return module;
         }
+#endif
         #endregion
 
         #region WidthOverTrailMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrailMultiplier(this ParticleSystem particleSystem, float widthOverTrailMultiplier)
         {
@@ -693,9 +733,11 @@ namespace OUCC.FluentParticleSystem
             module.widthOverTrailMultiplier = widthOverTrailMultiplierChanger(module.widthOverTrailMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region WorldSpace
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, bool worldSpace)
         {
@@ -727,6 +769,8 @@ namespace OUCC.FluentParticleSystem
             module.worldSpace = worldSpaceChanger(module.worldSpace);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

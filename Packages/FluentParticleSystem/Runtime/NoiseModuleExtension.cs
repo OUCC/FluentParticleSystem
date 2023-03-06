@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class NoiseModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditNoise(this ParticleSystem particleSystem, Action<NoiseModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Damping
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseDamping(this ParticleSystem particleSystem, bool damping)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.damping = dampingChanger(module.damping);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Frequency
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseFrequency(this ParticleSystem particleSystem, float frequency)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.frequency = frequencyChanger(module.frequency);
             return module;
         }
+#endif
         #endregion
 
         #region OctaveCount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseOctaveCount(this ParticleSystem particleSystem, int octaveCount)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.octaveCount = octaveCountChanger(module.octaveCount);
             return module;
         }
+#endif
         #endregion
 
         #region OctaveMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseOctaveMultiplier(this ParticleSystem particleSystem, float octaveMultiplier)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.octaveMultiplier = octaveMultiplierChanger(module.octaveMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region OctaveScale
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseOctaveScale(this ParticleSystem particleSystem, float octaveScale)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.octaveScale = octaveScaleChanger(module.octaveScale);
             return module;
         }
+#endif
         #endregion
 
         #region PositionAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoisePositionAmount(this ParticleSystem particleSystem, MinMaxCurve positionAmount)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.positionAmount = positionAmountChanger(module.positionAmount);
             return module;
         }
+#endif
         #endregion
 
         #region Quality
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseQuality(this ParticleSystem particleSystem, ParticleSystemNoiseQuality quality)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.quality = qualityChanger(module.quality);
             return module;
         }
+#endif
         #endregion
 
         #region Remap
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemap(this ParticleSystem particleSystem, MinMaxCurve remap)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.remap = remapChanger(module.remap);
             return module;
         }
+#endif
         #endregion
 
         #region RemapEnabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapEnabled(this ParticleSystem particleSystem, bool remapEnabled)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.remapEnabled = remapEnabledChanger(module.remapEnabled);
             return module;
         }
+#endif
         #endregion
 
         #region RemapMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapMultiplier(this ParticleSystem particleSystem, float remapMultiplier)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.remapMultiplier = remapMultiplierChanger(module.remapMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region RemapX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapX(this ParticleSystem particleSystem, MinMaxCurve remapX)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.remapX = remapXChanger(module.remapX);
             return module;
         }
+#endif
         #endregion
 
         #region RemapXMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapXMultiplier(this ParticleSystem particleSystem, float remapXMultiplier)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.remapXMultiplier = remapXMultiplierChanger(module.remapXMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region RemapY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapY(this ParticleSystem particleSystem, MinMaxCurve remapY)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.remapY = remapYChanger(module.remapY);
             return module;
         }
+#endif
         #endregion
 
         #region RemapYMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapYMultiplier(this ParticleSystem particleSystem, float remapYMultiplier)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.remapYMultiplier = remapYMultiplierChanger(module.remapYMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region RemapZ
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapZ(this ParticleSystem particleSystem, MinMaxCurve remapZ)
         {
@@ -557,9 +589,11 @@ namespace OUCC.FluentParticleSystem
             module.remapZ = remapZChanger(module.remapZ);
             return module;
         }
+#endif
         #endregion
 
         #region RemapZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRemapZMultiplier(this ParticleSystem particleSystem, float remapZMultiplier)
         {
@@ -591,9 +625,11 @@ namespace OUCC.FluentParticleSystem
             module.remapZMultiplier = remapZMultiplierChanger(module.remapZMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region RotationAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseRotationAmount(this ParticleSystem particleSystem, MinMaxCurve rotationAmount)
         {
@@ -625,9 +661,11 @@ namespace OUCC.FluentParticleSystem
             module.rotationAmount = rotationAmountChanger(module.rotationAmount);
             return module;
         }
+#endif
         #endregion
 
         #region ScrollSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseScrollSpeed(this ParticleSystem particleSystem, MinMaxCurve scrollSpeed)
         {
@@ -659,9 +697,11 @@ namespace OUCC.FluentParticleSystem
             module.scrollSpeed = scrollSpeedChanger(module.scrollSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region ScrollSpeedMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseScrollSpeedMultiplier(this ParticleSystem particleSystem, float scrollSpeedMultiplier)
         {
@@ -693,9 +733,11 @@ namespace OUCC.FluentParticleSystem
             module.scrollSpeedMultiplier = scrollSpeedMultiplierChanger(module.scrollSpeedMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region SeparateAxes
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
@@ -727,9 +769,11 @@ namespace OUCC.FluentParticleSystem
             module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
+#endif
         #endregion
 
         #region SizeAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseSizeAmount(this ParticleSystem particleSystem, MinMaxCurve sizeAmount)
         {
@@ -761,9 +805,11 @@ namespace OUCC.FluentParticleSystem
             module.sizeAmount = sizeAmountChanger(module.sizeAmount);
             return module;
         }
+#endif
         #endregion
 
         #region Strength
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrength(this ParticleSystem particleSystem, MinMaxCurve strength)
         {
@@ -795,9 +841,11 @@ namespace OUCC.FluentParticleSystem
             module.strength = strengthChanger(module.strength);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthMultiplier(this ParticleSystem particleSystem, float strengthMultiplier)
         {
@@ -829,9 +877,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthMultiplier = strengthMultiplierChanger(module.strengthMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthX(this ParticleSystem particleSystem, MinMaxCurve strengthX)
         {
@@ -863,9 +913,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthX = strengthXChanger(module.strengthX);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthXMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthXMultiplier(this ParticleSystem particleSystem, float strengthXMultiplier)
         {
@@ -897,9 +949,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthXMultiplier = strengthXMultiplierChanger(module.strengthXMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthY(this ParticleSystem particleSystem, MinMaxCurve strengthY)
         {
@@ -931,9 +985,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthY = strengthYChanger(module.strengthY);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthYMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthYMultiplier(this ParticleSystem particleSystem, float strengthYMultiplier)
         {
@@ -965,9 +1021,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthYMultiplier = strengthYMultiplierChanger(module.strengthYMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthZ
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthZ(this ParticleSystem particleSystem, MinMaxCurve strengthZ)
         {
@@ -999,9 +1057,11 @@ namespace OUCC.FluentParticleSystem
             module.strengthZ = strengthZChanger(module.strengthZ);
             return module;
         }
+#endif
         #endregion
 
         #region StrengthZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetNoiseStrengthZMultiplier(this ParticleSystem particleSystem, float strengthZMultiplier)
         {
@@ -1033,6 +1093,8 @@ namespace OUCC.FluentParticleSystem
             module.strengthZMultiplier = strengthZMultiplierChanger(module.strengthZMultiplier);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

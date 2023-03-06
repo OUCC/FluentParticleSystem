@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ShapeModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditShape(this ParticleSystem particleSystem, Action<ShapeModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AlignToDirection
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAlignToDirection(this ParticleSystem particleSystem, bool alignToDirection)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.alignToDirection = alignToDirectionChanger(module.alignToDirection);
             return module;
         }
+#endif
         #endregion
 
         #region Angle
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAngle(this ParticleSystem particleSystem, float angle)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.angle = angleChanger(module.angle);
             return module;
         }
+#endif
         #endregion
 
         #region Arc
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArc(this ParticleSystem particleSystem, float arc)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.arc = arcChanger(module.arc);
             return module;
         }
+#endif
         #endregion
 
         #region ArcMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue arcMode)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.arcMode = arcModeChanger(module.arcMode);
             return module;
         }
+#endif
         #endregion
 
         #region ArcSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeed(this ParticleSystem particleSystem, MinMaxCurve arcSpeed)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.arcSpeed = arcSpeedChanger(module.arcSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region ArcSpeedMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeedMultiplier(this ParticleSystem particleSystem, float arcSpeedMultiplier)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.arcSpeedMultiplier = arcSpeedMultiplierChanger(module.arcSpeedMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region ArcSpread
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpread(this ParticleSystem particleSystem, float arcSpread)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.arcSpread = arcSpreadChanger(module.arcSpread);
             return module;
         }
+#endif
         #endregion
 
         #region BoxThickness
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Vector3 boxThickness)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.boxThickness = boxThicknessChanger(module.boxThickness);
             return module;
         }
+#endif
         #endregion
 
         #region DonutRadius
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeDonutRadius(this ParticleSystem particleSystem, float donutRadius)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.donutRadius = donutRadiusChanger(module.donutRadius);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Length
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeLength(this ParticleSystem particleSystem, float length)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.length = lengthChanger(module.length);
             return module;
         }
+#endif
         #endregion
 
         #region Mesh
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Mesh mesh)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.mesh = meshChanger(module.mesh);
             return module;
         }
+#endif
         #endregion
 
         #region MeshMaterialIndex
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshMaterialIndex(this ParticleSystem particleSystem, int meshMaterialIndex)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.meshMaterialIndex = meshMaterialIndexChanger(module.meshMaterialIndex);
             return module;
         }
+#endif
         #endregion
 
         #region MeshRenderer
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, MeshRenderer meshRenderer)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.meshRenderer = meshRendererChanger(module.meshRenderer);
             return module;
         }
+#endif
         #endregion
 
         #region MeshShapeType
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, ParticleSystemMeshShapeType meshShapeType)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.meshShapeType = meshShapeTypeChanger(module.meshShapeType);
             return module;
         }
+#endif
         #endregion
 
         #region MeshSpawnMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue meshSpawnMode)
         {
@@ -557,9 +589,11 @@ namespace OUCC.FluentParticleSystem
             module.meshSpawnMode = meshSpawnModeChanger(module.meshSpawnMode);
             return module;
         }
+#endif
         #endregion
 
         #region MeshSpawnSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeed(this ParticleSystem particleSystem, MinMaxCurve meshSpawnSpeed)
         {
@@ -591,9 +625,11 @@ namespace OUCC.FluentParticleSystem
             module.meshSpawnSpeed = meshSpawnSpeedChanger(module.meshSpawnSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region MeshSpawnSpeedMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeedMultiplier(this ParticleSystem particleSystem, float meshSpawnSpeedMultiplier)
         {
@@ -625,9 +661,11 @@ namespace OUCC.FluentParticleSystem
             module.meshSpawnSpeedMultiplier = meshSpawnSpeedMultiplierChanger(module.meshSpawnSpeedMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region MeshSpawnSpread
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpread(this ParticleSystem particleSystem, float meshSpawnSpread)
         {
@@ -659,9 +697,11 @@ namespace OUCC.FluentParticleSystem
             module.meshSpawnSpread = meshSpawnSpreadChanger(module.meshSpawnSpread);
             return module;
         }
+#endif
         #endregion
 
         #region NormalOffset
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeNormalOffset(this ParticleSystem particleSystem, float normalOffset)
         {
@@ -693,9 +733,11 @@ namespace OUCC.FluentParticleSystem
             module.normalOffset = normalOffsetChanger(module.normalOffset);
             return module;
         }
+#endif
         #endregion
 
         #region Position
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Vector3 position)
         {
@@ -727,9 +769,11 @@ namespace OUCC.FluentParticleSystem
             module.position = positionChanger(module.position);
             return module;
         }
+#endif
         #endregion
 
         #region Radius
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadius(this ParticleSystem particleSystem, float radius)
         {
@@ -761,9 +805,11 @@ namespace OUCC.FluentParticleSystem
             module.radius = radiusChanger(module.radius);
             return module;
         }
+#endif
         #endregion
 
         #region RadiusMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue radiusMode)
         {
@@ -795,9 +841,11 @@ namespace OUCC.FluentParticleSystem
             module.radiusMode = radiusModeChanger(module.radiusMode);
             return module;
         }
+#endif
         #endregion
 
         #region RadiusSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeed(this ParticleSystem particleSystem, MinMaxCurve radiusSpeed)
         {
@@ -829,9 +877,11 @@ namespace OUCC.FluentParticleSystem
             module.radiusSpeed = radiusSpeedChanger(module.radiusSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region RadiusSpeedMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeedMultiplier(this ParticleSystem particleSystem, float radiusSpeedMultiplier)
         {
@@ -863,9 +913,11 @@ namespace OUCC.FluentParticleSystem
             module.radiusSpeedMultiplier = radiusSpeedMultiplierChanger(module.radiusSpeedMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region RadiusSpread
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpread(this ParticleSystem particleSystem, float radiusSpread)
         {
@@ -897,9 +949,11 @@ namespace OUCC.FluentParticleSystem
             module.radiusSpread = radiusSpreadChanger(module.radiusSpread);
             return module;
         }
+#endif
         #endregion
 
         #region RadiusThickness
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusThickness(this ParticleSystem particleSystem, float radiusThickness)
         {
@@ -931,9 +985,11 @@ namespace OUCC.FluentParticleSystem
             module.radiusThickness = radiusThicknessChanger(module.radiusThickness);
             return module;
         }
+#endif
         #endregion
 
         #region RandomDirectionAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomDirectionAmount(this ParticleSystem particleSystem, float randomDirectionAmount)
         {
@@ -965,9 +1021,11 @@ namespace OUCC.FluentParticleSystem
             module.randomDirectionAmount = randomDirectionAmountChanger(module.randomDirectionAmount);
             return module;
         }
+#endif
         #endregion
 
         #region RandomPositionAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomPositionAmount(this ParticleSystem particleSystem, float randomPositionAmount)
         {
@@ -999,9 +1057,11 @@ namespace OUCC.FluentParticleSystem
             module.randomPositionAmount = randomPositionAmountChanger(module.randomPositionAmount);
             return module;
         }
+#endif
         #endregion
 
         #region Rotation
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Vector3 rotation)
         {
@@ -1033,9 +1093,11 @@ namespace OUCC.FluentParticleSystem
             module.rotation = rotationChanger(module.rotation);
             return module;
         }
+#endif
         #endregion
 
         #region Scale
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Vector3 scale)
         {
@@ -1067,9 +1129,11 @@ namespace OUCC.FluentParticleSystem
             module.scale = scaleChanger(module.scale);
             return module;
         }
+#endif
         #endregion
 
         #region ShapeType
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, ParticleSystemShapeType shapeType)
         {
@@ -1101,9 +1165,11 @@ namespace OUCC.FluentParticleSystem
             module.shapeType = shapeTypeChanger(module.shapeType);
             return module;
         }
+#endif
         #endregion
 
         #region SkinnedMeshRenderer
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, SkinnedMeshRenderer skinnedMeshRenderer)
         {
@@ -1135,9 +1201,11 @@ namespace OUCC.FluentParticleSystem
             module.skinnedMeshRenderer = skinnedMeshRendererChanger(module.skinnedMeshRenderer);
             return module;
         }
+#endif
         #endregion
 
         #region SphericalDirectionAmount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSphericalDirectionAmount(this ParticleSystem particleSystem, float sphericalDirectionAmount)
         {
@@ -1169,9 +1237,11 @@ namespace OUCC.FluentParticleSystem
             module.sphericalDirectionAmount = sphericalDirectionAmountChanger(module.sphericalDirectionAmount);
             return module;
         }
+#endif
         #endregion
 
         #region Sprite
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Sprite sprite)
         {
@@ -1203,9 +1273,11 @@ namespace OUCC.FluentParticleSystem
             module.sprite = spriteChanger(module.sprite);
             return module;
         }
+#endif
         #endregion
 
         #region SpriteRenderer
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, SpriteRenderer spriteRenderer)
         {
@@ -1237,9 +1309,11 @@ namespace OUCC.FluentParticleSystem
             module.spriteRenderer = spriteRendererChanger(module.spriteRenderer);
             return module;
         }
+#endif
         #endregion
 
         #region Texture
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Texture2D texture)
         {
@@ -1271,9 +1345,11 @@ namespace OUCC.FluentParticleSystem
             module.texture = textureChanger(module.texture);
             return module;
         }
+#endif
         #endregion
 
         #region TextureAlphaAffectsParticles
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureAlphaAffectsParticles(this ParticleSystem particleSystem, bool textureAlphaAffectsParticles)
         {
@@ -1305,9 +1381,11 @@ namespace OUCC.FluentParticleSystem
             module.textureAlphaAffectsParticles = textureAlphaAffectsParticlesChanger(module.textureAlphaAffectsParticles);
             return module;
         }
+#endif
         #endregion
 
         #region TextureBilinearFiltering
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureBilinearFiltering(this ParticleSystem particleSystem, bool textureBilinearFiltering)
         {
@@ -1339,9 +1417,11 @@ namespace OUCC.FluentParticleSystem
             module.textureBilinearFiltering = textureBilinearFilteringChanger(module.textureBilinearFiltering);
             return module;
         }
+#endif
         #endregion
 
         #region TextureClipChannel
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, ParticleSystemShapeTextureChannel textureClipChannel)
         {
@@ -1373,9 +1453,11 @@ namespace OUCC.FluentParticleSystem
             module.textureClipChannel = textureClipChannelChanger(module.textureClipChannel);
             return module;
         }
+#endif
         #endregion
 
         #region TextureClipThreshold
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipThreshold(this ParticleSystem particleSystem, float textureClipThreshold)
         {
@@ -1407,9 +1489,11 @@ namespace OUCC.FluentParticleSystem
             module.textureClipThreshold = textureClipThresholdChanger(module.textureClipThreshold);
             return module;
         }
+#endif
         #endregion
 
         #region TextureColorAffectsParticles
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureColorAffectsParticles(this ParticleSystem particleSystem, bool textureColorAffectsParticles)
         {
@@ -1441,9 +1525,11 @@ namespace OUCC.FluentParticleSystem
             module.textureColorAffectsParticles = textureColorAffectsParticlesChanger(module.textureColorAffectsParticles);
             return module;
         }
+#endif
         #endregion
 
         #region TextureUVChannel
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureUVChannel(this ParticleSystem particleSystem, int textureUVChannel)
         {
@@ -1475,9 +1561,11 @@ namespace OUCC.FluentParticleSystem
             module.textureUVChannel = textureUVChannelChanger(module.textureUVChannel);
             return module;
         }
+#endif
         #endregion
 
         #region UseMeshColors
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshColors(this ParticleSystem particleSystem, bool useMeshColors)
         {
@@ -1509,9 +1597,11 @@ namespace OUCC.FluentParticleSystem
             module.useMeshColors = useMeshColorsChanger(module.useMeshColors);
             return module;
         }
+#endif
         #endregion
 
         #region UseMeshMaterialIndex
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshMaterialIndex(this ParticleSystem particleSystem, bool useMeshMaterialIndex)
         {
@@ -1543,6 +1633,8 @@ namespace OUCC.FluentParticleSystem
             module.useMeshMaterialIndex = useMeshMaterialIndexChanger(module.useMeshMaterialIndex);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

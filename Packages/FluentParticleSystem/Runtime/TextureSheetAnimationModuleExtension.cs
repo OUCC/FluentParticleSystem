@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TextureSheetAnimationModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTextureSheetAnimation(this ParticleSystem particleSystem, Action<TextureSheetAnimationModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Animation
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, ParticleSystemAnimationType animation)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.animation = animationChanger(module.animation);
             return module;
         }
+#endif
         #endregion
 
         #region CycleCount
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationCycleCount(this ParticleSystem particleSystem, int cycleCount)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.cycleCount = cycleCountChanger(module.cycleCount);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Fps
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFps(this ParticleSystem particleSystem, float fps)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.fps = fpsChanger(module.fps);
             return module;
         }
+#endif
         #endregion
 
         #region FrameOverTime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTime(this ParticleSystem particleSystem, MinMaxCurve frameOverTime)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.frameOverTime = frameOverTimeChanger(module.frameOverTime);
             return module;
         }
+#endif
         #endregion
 
         #region FrameOverTimeMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTimeMultiplier(this ParticleSystem particleSystem, float frameOverTimeMultiplier)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.frameOverTimeMultiplier = frameOverTimeMultiplierChanger(module.frameOverTimeMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Mode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, ParticleSystemAnimationMode mode)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.mode = modeChanger(module.mode);
             return module;
         }
+#endif
         #endregion
 
         #region NumTilesX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesX(this ParticleSystem particleSystem, int numTilesX)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.numTilesX = numTilesXChanger(module.numTilesX);
             return module;
         }
+#endif
         #endregion
 
         #region NumTilesY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesY(this ParticleSystem particleSystem, int numTilesY)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.numTilesY = numTilesYChanger(module.numTilesY);
             return module;
         }
+#endif
         #endregion
 
         #region RowIndex
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowIndex(this ParticleSystem particleSystem, int rowIndex)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.rowIndex = rowIndexChanger(module.rowIndex);
             return module;
         }
+#endif
         #endregion
 
         #region RowMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, ParticleSystemAnimationRowMode rowMode)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.rowMode = rowModeChanger(module.rowMode);
             return module;
         }
+#endif
         #endregion
 
         #region SpeedRange
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Vector2 speedRange)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.speedRange = speedRangeChanger(module.speedRange);
             return module;
         }
+#endif
         #endregion
 
         #region StartFrame
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrame(this ParticleSystem particleSystem, MinMaxCurve startFrame)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.startFrame = startFrameChanger(module.startFrame);
             return module;
         }
+#endif
         #endregion
 
         #region StartFrameMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrameMultiplier(this ParticleSystem particleSystem, float startFrameMultiplier)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.startFrameMultiplier = startFrameMultiplierChanger(module.startFrameMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region TimeMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, ParticleSystemAnimationTimeMode timeMode)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.timeMode = timeModeChanger(module.timeMode);
             return module;
         }
+#endif
         #endregion
 
         #region UvChannelMask
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationUvChannelMask(this ParticleSystem particleSystem, UnityEngine.Rendering.UVChannelFlags uvChannelMask)
         {
@@ -557,6 +589,8 @@ namespace OUCC.FluentParticleSystem
             module.uvChannelMask = uvChannelMaskChanger(module.uvChannelMask);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

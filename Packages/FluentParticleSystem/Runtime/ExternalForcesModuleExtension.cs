@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ExternalForcesModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditExternalForces(this ParticleSystem particleSystem, Action<ExternalForcesModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region InfluenceFilter
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, ParticleSystemGameObjectFilter influenceFilter)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.influenceFilter = influenceFilterChanger(module.influenceFilter);
             return module;
         }
+#endif
         #endregion
 
         #region InfluenceMask
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, LayerMask influenceMask)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.influenceMask = influenceMaskChanger(module.influenceMask);
             return module;
         }
+#endif
         #endregion
 
         #region Multiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, float multiplier)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.multiplier = multiplierChanger(module.multiplier);
             return module;
         }
+#endif
         #endregion
 
         #region MultiplierCurve
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, MinMaxCurve multiplierCurve)
         {
@@ -183,6 +193,8 @@ namespace OUCC.FluentParticleSystem
             module.multiplierCurve = multiplierCurveChanger(module.multiplierCurve);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

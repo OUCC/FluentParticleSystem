@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ForceOverLifetimeModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditForceOverLifetime(this ParticleSystem particleSystem, Action<ForceOverLifetimeModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Randomized
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeRandomized(this ParticleSystem particleSystem, bool randomized)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.randomized = randomizedChanger(module.randomized);
             return module;
         }
+#endif
         #endregion
 
         #region Space
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.space = spaceChanger(module.space);
             return module;
         }
+#endif
         #endregion
 
         #region X
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.x = xChanger(module.x);
             return module;
         }
+#endif
         #endregion
 
         #region XMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.xMultiplier = xMultiplierChanger(module.xMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Y
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.y = yChanger(module.y);
             return module;
         }
+#endif
         #endregion
 
         #region YMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.yMultiplier = yMultiplierChanger(module.yMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Z
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.z = zChanger(module.z);
             return module;
         }
+#endif
         #endregion
 
         #region ZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
@@ -319,6 +337,8 @@ namespace OUCC.FluentParticleSystem
             module.zMultiplier = zMultiplierChanger(module.zMultiplier);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

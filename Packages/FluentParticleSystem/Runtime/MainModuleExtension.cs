@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class MainModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region CullingMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.cullingMode = cullingModeChanger(module.cullingMode);
             return module;
         }
+#endif
         #endregion
 
         #region CustomSimulationSpace
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Transform customSimulationSpace)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
             return module;
         }
+#endif
         #endregion
 
         #region Duration
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, float duration)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.duration = durationChanger(module.duration);
             return module;
         }
+#endif
         #endregion
 
         #region EmitterVelocity
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Vector3 emitterVelocity)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
             return module;
         }
+#endif
         #endregion
 
         #region EmitterVelocityMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
             return module;
         }
+#endif
         #endregion
 
         #region FlipRotation
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.flipRotation = flipRotationChanger(module.flipRotation);
             return module;
         }
+#endif
         #endregion
 
         #region GravityModifier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.gravityModifier = gravityModifierChanger(module.gravityModifier);
             return module;
         }
+#endif
         #endregion
 
         #region GravityModifierMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Loop
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, bool loop)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.loop = loopChanger(module.loop);
             return module;
         }
+#endif
         #endregion
 
         #region MaxParticles
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.maxParticles = maxParticlesChanger(module.maxParticles);
             return module;
         }
+#endif
         #endregion
 
         #region PlayOnAwake
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
             return module;
         }
+#endif
         #endregion
 
         #region Prewarm
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, bool prewarm)
         {
@@ -421,9 +445,11 @@ namespace OUCC.FluentParticleSystem
             module.prewarm = prewarmChanger(module.prewarm);
             return module;
         }
+#endif
         #endregion
 
         #region RingBufferLoopRange
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Vector2 ringBufferLoopRange)
         {
@@ -455,9 +481,11 @@ namespace OUCC.FluentParticleSystem
             module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
             return module;
         }
+#endif
         #endregion
 
         #region RingBufferMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, ParticleSystemRingBufferMode ringBufferMode)
         {
@@ -489,9 +517,11 @@ namespace OUCC.FluentParticleSystem
             module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
             return module;
         }
+#endif
         #endregion
 
         #region ScalingMode
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, ParticleSystemScalingMode scalingMode)
         {
@@ -523,9 +553,11 @@ namespace OUCC.FluentParticleSystem
             module.scalingMode = scalingModeChanger(module.scalingMode);
             return module;
         }
+#endif
         #endregion
 
         #region SimulationSpace
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace simulationSpace)
         {
@@ -557,9 +589,11 @@ namespace OUCC.FluentParticleSystem
             module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
             return module;
         }
+#endif
         #endregion
 
         #region SimulationSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
         {
@@ -591,9 +625,11 @@ namespace OUCC.FluentParticleSystem
             module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region StartColor
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
         {
@@ -625,9 +661,11 @@ namespace OUCC.FluentParticleSystem
             module.startColor = startColorChanger(module.startColor);
             return module;
         }
+#endif
         #endregion
 
         #region StartDelay
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, MinMaxCurve startDelay)
         {
@@ -659,9 +697,11 @@ namespace OUCC.FluentParticleSystem
             module.startDelay = startDelayChanger(module.startDelay);
             return module;
         }
+#endif
         #endregion
 
         #region StartDelayMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, float startDelayMultiplier)
         {
@@ -693,9 +733,11 @@ namespace OUCC.FluentParticleSystem
             module.startDelayMultiplier = startDelayMultiplierChanger(module.startDelayMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartLifetime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, MinMaxCurve startLifetime)
         {
@@ -727,9 +769,11 @@ namespace OUCC.FluentParticleSystem
             module.startLifetime = startLifetimeChanger(module.startLifetime);
             return module;
         }
+#endif
         #endregion
 
         #region StartLifetimeMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, float startLifetimeMultiplier)
         {
@@ -761,9 +805,11 @@ namespace OUCC.FluentParticleSystem
             module.startLifetimeMultiplier = startLifetimeMultiplierChanger(module.startLifetimeMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotation
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
         {
@@ -795,9 +841,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotation = startRotationChanger(module.startRotation);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotation3D
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, bool startRotation3D)
         {
@@ -829,9 +877,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotation3D = startRotation3DChanger(module.startRotation3D);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, float startRotationMultiplier)
         {
@@ -863,9 +913,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationMultiplier = startRotationMultiplierChanger(module.startRotationMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, MinMaxCurve startRotationX)
         {
@@ -897,9 +949,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationX = startRotationXChanger(module.startRotationX);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationXMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, float startRotationXMultiplier)
         {
@@ -931,9 +985,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationXMultiplier = startRotationXMultiplierChanger(module.startRotationXMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, MinMaxCurve startRotationY)
         {
@@ -965,9 +1021,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationY = startRotationYChanger(module.startRotationY);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationYMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, float startRotationYMultiplier)
         {
@@ -999,9 +1057,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationYMultiplier = startRotationYMultiplierChanger(module.startRotationYMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationZ
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, MinMaxCurve startRotationZ)
         {
@@ -1033,9 +1093,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationZ = startRotationZChanger(module.startRotationZ);
             return module;
         }
+#endif
         #endregion
 
         #region StartRotationZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, float startRotationZMultiplier)
         {
@@ -1067,9 +1129,11 @@ namespace OUCC.FluentParticleSystem
             module.startRotationZMultiplier = startRotationZMultiplierChanger(module.startRotationZMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartSize
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
         {
@@ -1101,9 +1165,11 @@ namespace OUCC.FluentParticleSystem
             module.startSize = startSizeChanger(module.startSize);
             return module;
         }
+#endif
         #endregion
 
         #region StartSize3D
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
         {
@@ -1135,9 +1201,11 @@ namespace OUCC.FluentParticleSystem
             module.startSize3D = startSize3DChanger(module.startSize3D);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
         {
@@ -1169,9 +1237,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeX
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
         {
@@ -1203,9 +1273,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeX = startSizeXChanger(module.startSizeX);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeXMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
         {
@@ -1237,9 +1309,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeY
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
         {
@@ -1271,9 +1345,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeY = startSizeYChanger(module.startSizeY);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeYMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
         {
@@ -1305,9 +1381,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeZ
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
         {
@@ -1339,9 +1417,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeZ = startSizeZChanger(module.startSizeZ);
             return module;
         }
+#endif
         #endregion
 
         #region StartSizeZMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
         {
@@ -1373,9 +1453,11 @@ namespace OUCC.FluentParticleSystem
             module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StartSpeed
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
         {
@@ -1407,9 +1489,11 @@ namespace OUCC.FluentParticleSystem
             module.startSpeed = startSpeedChanger(module.startSpeed);
             return module;
         }
+#endif
         #endregion
 
         #region StartSpeedMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
         {
@@ -1441,9 +1525,11 @@ namespace OUCC.FluentParticleSystem
             module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region StopAction
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, ParticleSystemStopAction stopAction)
         {
@@ -1475,9 +1561,11 @@ namespace OUCC.FluentParticleSystem
             module.stopAction = stopActionChanger(module.stopAction);
             return module;
         }
+#endif
         #endregion
 
         #region UseUnscaledTime
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
         {
@@ -1509,6 +1597,8 @@ namespace OUCC.FluentParticleSystem
             module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

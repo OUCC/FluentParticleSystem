@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LifetimeByEmitterSpeedModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLifetimeByEmitterSpeed(this ParticleSystem particleSystem, Action<LifetimeByEmitterSpeedModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Curve
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.curve = curveChanger(module.curve);
             return module;
         }
+#endif
         #endregion
 
         #region CurveMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Range
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -149,6 +157,8 @@ namespace OUCC.FluentParticleSystem
             module.range = rangeChanger(module.range);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

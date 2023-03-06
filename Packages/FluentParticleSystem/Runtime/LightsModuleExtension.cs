@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LightsModuleExtension
     {
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLights(this ParticleSystem particleSystem, Action<LightsModule> moduleEditor)
         {
@@ -16,6 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AlphaAffectsIntensity
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsAlphaAffectsIntensity(this ParticleSystem particleSystem, bool alphaAffectsIntensity)
         {
@@ -47,9 +49,11 @@ namespace OUCC.FluentParticleSystem
             module.alphaAffectsIntensity = alphaAffectsIntensityChanger(module.alphaAffectsIntensity);
             return module;
         }
+#endif
         #endregion
 
         #region Enabled
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -81,9 +85,11 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
+#endif
         #endregion
 
         #region Intensity
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensity(this ParticleSystem particleSystem, MinMaxCurve intensity)
         {
@@ -115,9 +121,11 @@ namespace OUCC.FluentParticleSystem
             module.intensity = intensityChanger(module.intensity);
             return module;
         }
+#endif
         #endregion
 
         #region IntensityMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensityMultiplier(this ParticleSystem particleSystem, float intensityMultiplier)
         {
@@ -149,9 +157,11 @@ namespace OUCC.FluentParticleSystem
             module.intensityMultiplier = intensityMultiplierChanger(module.intensityMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Light
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Light light)
         {
@@ -183,9 +193,11 @@ namespace OUCC.FluentParticleSystem
             module.light = lightChanger(module.light);
             return module;
         }
+#endif
         #endregion
 
         #region MaxLights
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsMaxLights(this ParticleSystem particleSystem, int maxLights)
         {
@@ -217,9 +229,11 @@ namespace OUCC.FluentParticleSystem
             module.maxLights = maxLightsChanger(module.maxLights);
             return module;
         }
+#endif
         #endregion
 
         #region Range
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRange(this ParticleSystem particleSystem, MinMaxCurve range)
         {
@@ -251,9 +265,11 @@ namespace OUCC.FluentParticleSystem
             module.range = rangeChanger(module.range);
             return module;
         }
+#endif
         #endregion
 
         #region RangeMultiplier
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRangeMultiplier(this ParticleSystem particleSystem, float rangeMultiplier)
         {
@@ -285,9 +301,11 @@ namespace OUCC.FluentParticleSystem
             module.rangeMultiplier = rangeMultiplierChanger(module.rangeMultiplier);
             return module;
         }
+#endif
         #endregion
 
         #region Ratio
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRatio(this ParticleSystem particleSystem, float ratio)
         {
@@ -319,9 +337,11 @@ namespace OUCC.FluentParticleSystem
             module.ratio = ratioChanger(module.ratio);
             return module;
         }
+#endif
         #endregion
 
         #region SizeAffectsRange
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsSizeAffectsRange(this ParticleSystem particleSystem, bool sizeAffectsRange)
         {
@@ -353,9 +373,11 @@ namespace OUCC.FluentParticleSystem
             module.sizeAffectsRange = sizeAffectsRangeChanger(module.sizeAffectsRange);
             return module;
         }
+#endif
         #endregion
 
         #region UseParticleColor
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseParticleColor(this ParticleSystem particleSystem, bool useParticleColor)
         {
@@ -387,9 +409,11 @@ namespace OUCC.FluentParticleSystem
             module.useParticleColor = useParticleColorChanger(module.useParticleColor);
             return module;
         }
+#endif
         #endregion
 
         #region UseRandomDistribution
+#if (UNITY_2021_3)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseRandomDistribution(this ParticleSystem particleSystem, bool useRandomDistribution)
         {
@@ -421,6 +445,8 @@ namespace OUCC.FluentParticleSystem
             module.useRandomDistribution = useRandomDistributionChanger(module.useRandomDistribution);
             return module;
         }
+#endif
         #endregion
+#endif
     }
 }

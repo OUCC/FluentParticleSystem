@@ -17,10 +17,8 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
         private const string INFO_PATH = "Assets/Editor/SourceGenerator/module-info.json";
 
         #region generate scripts
-        public static void WriteExtensionFile(string filePath, PropertyInfo module)
+        internal static void WriteExtensionFile(string filePath, PSModuleInfo module)
         {
-            var moduleType = module.PropertyType.Name;
-            var moduleName = module.Name;
             using var sw = new StreamWriter(filePath, false, Encoding.UTF8);
 
             sw.Write(
@@ -31,76 +29,62 @@ using static UnityEngine.ParticleSystem;
 
 namespace OUCC.FluentParticleSystem
 {{
-    public static class {moduleType}Extension
+    public static class {module.TypeName}Extension
     {{
+#if ({GetConditionString(module.AvailableVersions)})
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Edit{moduleName.c2p()}(this ParticleSystem particleSystem, Action<{moduleType}> moduleEditor)
+        public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.TypeName}> moduleEditor)
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            moduleEditor(particleSystem.{moduleName});
+            moduleEditor(particleSystem.{module.PropertyName});
             return particleSystem;
         }}
 ".Replace("\r\n", "\n"));
 
-            var availableProperties = module.PropertyType
-                    .GetProperties()
-                    .Where(p => p.GetCustomAttribute<ObsoleteAttribute>() is null && p.CanWrite)
-                    .OrderBy(p => p.Name);
-
-            foreach (var property in availableProperties)
+            foreach (var property in module.Properties)
             {
-                var propertyName = property.Name;
-                var propertyType = property.PropertyType.FullName switch
-                {
-                    "System.Int32" => "int",
-                    "System.Single" => "float",
-                    "System.Boolean" => "bool",
-                    var n => n.StartsWith("UnityEngine.ParticleSystem+")
-                        ? property.PropertyType.Name
-                        : n.Split('.').Length == 2 && n.StartsWith("UnityEngine.")
-                        ? n.Replace("UnityEngine.", "")
-                        : n
-                };
-
                 sw.Write($@"
-        #region {propertyName.c2p()}
+        #region {property.Name.c2p()}
+#if ({GetConditionString(property.AvailableVersions)})
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{moduleName.c2p()}{propertyName.c2p()}(this ParticleSystem particleSystem, {propertyType} {propertyName.p2c()})
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.Name.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.Name.p2c()})
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.{moduleName};
-            module.{propertyName} = {propertyName.p2c()};
+            var module = particleSystem.{module.PropertyName};
+            module.{property.Name} = {property.Name.p2c()};
             return particleSystem;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{moduleName.c2p()}{propertyName.c2p()}(this ParticleSystem particleSystem, Func<{propertyType}, {propertyType}> {propertyName.p2c()}Changer)
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.Name.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.Name.p2c()}Changer)
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.{moduleName};
-            module.{propertyName} = {propertyName.p2c()}Changer(module.{propertyName});
+            var module = particleSystem.{module.PropertyName};
+            module.{property.Name} = {property.Name.p2c()}Changer(module.{property.Name});
             return particleSystem;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static {moduleType} Set{propertyName.c2p()}(this {moduleType} module, {propertyType} {propertyName.p2c()})
+        public static {module.TypeName} Set{property.Name.c2p()}(this {module.TypeName} module, {property.Type} {property.Name.p2c()})
         {{
-            module.{propertyName} = {propertyName.p2c()};
+            module.{property.Name} = {property.Name.p2c()};
             return module;
         }}
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static {moduleType} Set{propertyName.c2p()}(this {moduleType} module, Func<{propertyType}, {propertyType}> {propertyName.p2c()}Changer)
+        public static {module.TypeName} Set{property.Name.c2p()}(this {module.TypeName} module, Func<{property.Type}, {property.Type}> {property.Name.p2c()}Changer)
         {{
-            module.{propertyName} = {propertyName.p2c()}Changer(module.{propertyName});
+            module.{property.Name} = {property.Name.p2c()}Changer(module.{property.Name});
             return module;
         }}
+#endif
         #endregion
 ".Replace("\r\n", "\n"));
             }
 
             sw.Write(
-$@"    }}
+$@"#endif
+    }}
 }}
 ".Replace("\r\n", "\n"));
             sw.Flush();
@@ -112,14 +96,16 @@ $@"    }}
         [MenuItem("Tools/Generate Scripts")]
         public static void GenerateWithReflection()
         {
-            var modules = typeof(ParticleSystem).GetProperties().Where(m => m.PropertyType.Name.EndsWith("Module"));
+            var modules = LoadModules(INFO_PATH);
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.PropertyType.Name}Extension.cs";
+                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.TypeName}Extension.cs";
                 WriteExtensionFile(filePath, module);
             }
             AssetDatabase.Refresh();
         }
+
+        public static string GetConditionString(string[] versions) => string.Join(" || ", versions.Select(v => $"UNITY_{v.Replace('.', '_')}"));
         #endregion
 
         #region generate json
@@ -153,7 +139,7 @@ $@"    }}
                                 AvailableVersions = new string[] { currentVersion }
                             }).ToArray()
                     });
-            
+
             modules = modules.Concat(currentModules)
                 .GroupBy(m => m.PropertyName)
                 .Select(g =>
