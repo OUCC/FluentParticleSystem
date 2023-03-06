@@ -150,10 +150,10 @@ $@"#endif
                                 .GroupBy(v => v.Count(c => c == '.'))
                                 .OrderBy(g => g.Key)
                                 .Select(g => g.ToList())
-                                .ToList();
-                    for (var i = 0; i < temp.Count; i++)
+                                .ToArray();
+                    for (var i = 0; i < temp.Length; i++)
                     {
-                        for (var j = 1; j < temp.Count; j++)
+                        for (var j = 1; j < temp.Length; j++)
                         {
                             temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
                         }
@@ -169,10 +169,10 @@ $@"#endif
                                                         .GroupBy(v => v.Count(c => c == '.'))
                                                         .OrderBy(g => g.Key)
                                                         .Select(g => g.ToList())
-                                                        .ToList();
-                                            for (var i = 0; i < temp.Count; i++)
+                                                        .ToArray();
+                                            for (var i = 0; i < temp.Length; i++)
                                             {
-                                                for (var j = 1; j < temp.Count; j++)
+                                                for (var j = 1; j < temp.Length; j++)
                                                 {
                                                     temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
                                                 }
