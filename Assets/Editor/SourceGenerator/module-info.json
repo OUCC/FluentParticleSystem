@@ -1,0 +1,2379 @@
+﻿[
+  {
+    "TypeName": "CollisionModule",
+    "PropertyName": "collision",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "bounce",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "bounceMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "colliderForce",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "collidesWith",
+        "Type": "LayerMask",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "dampen",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "dampenMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enableDynamicColliders",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "lifetimeLoss",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "lifetimeLossMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "maxCollisionShapes",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "maxKillSpeed",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "minKillSpeed",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "mode",
+        "Type": "ParticleSystemCollisionMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplyColliderForceByCollisionAngle",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplyColliderForceByParticleSize",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplyColliderForceByParticleSpeed",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "quality",
+        "Type": "ParticleSystemCollisionQuality",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusScale",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sendCollisionMessages",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "type",
+        "Type": "ParticleSystemCollisionType",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "voxelSize",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "ColorBySpeedModule",
+    "PropertyName": "colorBySpeed",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "color",
+        "Type": "MinMaxGradient",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "range",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "ColorOverLifetimeModule",
+    "PropertyName": "colorOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "color",
+        "Type": "MinMaxGradient",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "CustomDataModule",
+    "PropertyName": "customData",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "EmissionModule",
+    "PropertyName": "emission",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "burstCount",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rateOverDistance",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rateOverDistanceMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rateOverTime",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rateOverTimeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "ExternalForcesModule",
+    "PropertyName": "externalForces",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "influenceFilter",
+        "Type": "ParticleSystemGameObjectFilter",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "influenceMask",
+        "Type": "LayerMask",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplierCurve",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "ForceOverLifetimeModule",
+    "PropertyName": "forceOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "randomized",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "InheritVelocityModule",
+    "PropertyName": "inheritVelocity",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "curve",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "curveMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "mode",
+        "Type": "ParticleSystemInheritVelocityMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "LifetimeByEmitterSpeedModule",
+    "PropertyName": "lifetimeByEmitterSpeed",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "curve",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "curveMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "range",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "LightsModule",
+    "PropertyName": "lights",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "alphaAffectsIntensity",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "intensity",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "intensityMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "light",
+        "Type": "Light",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "maxLights",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "range",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rangeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "ratio",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeAffectsRange",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "useParticleColor",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "useRandomDistribution",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "LimitVelocityOverLifetimeModule",
+    "PropertyName": "limitVelocityOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "dampen",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "drag",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "dragMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limit",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "limitZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplyDragByParticleSize",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "multiplyDragByParticleVelocity",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "MainModule",
+    "PropertyName": "main",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "cullingMode",
+        "Type": "ParticleSystemCullingMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "customSimulationSpace",
+        "Type": "Transform",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "duration",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "emitterVelocity",
+        "Type": "Vector3",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "emitterVelocityMode",
+        "Type": "ParticleSystemEmitterVelocityMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "flipRotation",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "gravityModifier",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "gravityModifierMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "loop",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "maxParticles",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "playOnAwake",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "prewarm",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "ringBufferLoopRange",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "ringBufferMode",
+        "Type": "ParticleSystemRingBufferMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "scalingMode",
+        "Type": "ParticleSystemScalingMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "simulationSpace",
+        "Type": "ParticleSystemSimulationSpace",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "simulationSpeed",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startColor",
+        "Type": "MinMaxGradient",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startDelay",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startDelayMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startLifetime",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startLifetimeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotation",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotation3D",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startRotationZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSize",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSize3D",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSizeZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSpeed",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startSpeedMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "stopAction",
+        "Type": "ParticleSystemStopAction",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "useUnscaledTime",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "NoiseModule",
+    "PropertyName": "noise",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "damping",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "frequency",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "octaveCount",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "octaveMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "octaveScale",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "positionAmount",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "quality",
+        "Type": "ParticleSystemNoiseQuality",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remap",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapEnabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "remapZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rotationAmount",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "scrollSpeed",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "scrollSpeedMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeAmount",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strength",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "strengthZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "RotationBySpeedModule",
+    "PropertyName": "rotationBySpeed",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "range",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "RotationOverLifetimeModule",
+    "PropertyName": "rotationOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "ShapeModule",
+    "PropertyName": "shape",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "alignToDirection",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "angle",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "arc",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "arcMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "arcSpeed",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "arcSpeedMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "arcSpread",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "boxThickness",
+        "Type": "Vector3",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "donutRadius",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "length",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "mesh",
+        "Type": "Mesh",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshMaterialIndex",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshRenderer",
+        "Type": "MeshRenderer",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshShapeType",
+        "Type": "ParticleSystemMeshShapeType",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshSpawnMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshSpawnSpeed",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshSpawnSpeedMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "meshSpawnSpread",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "normalOffset",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "position",
+        "Type": "Vector3",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radius",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusSpeed",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusSpeedMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusSpread",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusThickness",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "randomDirectionAmount",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "randomPositionAmount",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rotation",
+        "Type": "Vector3",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "scale",
+        "Type": "Vector3",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "shapeType",
+        "Type": "ParticleSystemShapeType",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "skinnedMeshRenderer",
+        "Type": "SkinnedMeshRenderer",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sphericalDirectionAmount",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sprite",
+        "Type": "Sprite",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "spriteRenderer",
+        "Type": "SpriteRenderer",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "texture",
+        "Type": "Texture2D",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureAlphaAffectsParticles",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureBilinearFiltering",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureClipChannel",
+        "Type": "ParticleSystemShapeTextureChannel",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureClipThreshold",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureColorAffectsParticles",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureUVChannel",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "useMeshColors",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "useMeshMaterialIndex",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "SizeBySpeedModule",
+    "PropertyName": "sizeBySpeed",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "range",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "size",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "SizeOverLifetimeModule",
+    "PropertyName": "sizeOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "separateAxes",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "size",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "SubEmittersModule",
+    "PropertyName": "subEmitters",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "TextureSheetAnimationModule",
+    "PropertyName": "textureSheetAnimation",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "animation",
+        "Type": "ParticleSystemAnimationType",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "cycleCount",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "fps",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "frameOverTime",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "frameOverTimeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "mode",
+        "Type": "ParticleSystemAnimationMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "numTilesX",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "numTilesY",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rowIndex",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "rowMode",
+        "Type": "ParticleSystemAnimationRowMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "speedRange",
+        "Type": "Vector2",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startFrame",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "startFrameMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "timeMode",
+        "Type": "ParticleSystemAnimationTimeMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "uvChannelMask",
+        "Type": "UnityEngine.Rendering.UVChannelFlags",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "TrailModule",
+    "PropertyName": "trails",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "attachRibbonsToTransform",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "colorOverLifetime",
+        "Type": "MinMaxGradient",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "colorOverTrail",
+        "Type": "MinMaxGradient",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "dieWithParticles",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "generateLightingData",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "inheritParticleColor",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "lifetime",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "lifetimeMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "minVertexDistance",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "mode",
+        "Type": "ParticleSystemTrailMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "ratio",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "ribbonCount",
+        "Type": "int",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "shadowBias",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeAffectsLifetime",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "sizeAffectsWidth",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "splitSubEmitterRibbons",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "textureMode",
+        "Type": "ParticleSystemTrailTextureMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "widthOverTrail",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "widthOverTrailMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "worldSpace",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "TriggerModule",
+    "PropertyName": "trigger",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "colliderQueryMode",
+        "Type": "ParticleSystemColliderQueryMode",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "enter",
+        "Type": "ParticleSystemOverlapAction",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "exit",
+        "Type": "ParticleSystemOverlapAction",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "inside",
+        "Type": "ParticleSystemOverlapAction",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "outside",
+        "Type": "ParticleSystemOverlapAction",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radiusScale",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  },
+  {
+    "TypeName": "VelocityOverLifetimeModule",
+    "PropertyName": "velocityOverLifetime",
+    "AvailableVersions": [
+      "2021.3"
+    ],
+    "Properties": [
+      {
+        "Name": "enabled",
+        "Type": "bool",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalOffsetZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalX",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalXMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalY",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalYMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalZ",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "orbitalZMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radial",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "radialMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "speedModifier",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "speedModifierMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "x",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "xMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "y",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "yMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "z",
+        "Type": "MinMaxCurve",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      },
+      {
+        "Name": "zMultiplier",
+        "Type": "float",
+        "AvailableVersions": [
+          "2021.3"
+        ]
+      }
+    ]
+  }
+]

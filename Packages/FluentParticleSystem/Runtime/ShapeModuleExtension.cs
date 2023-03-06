@@ -119,7 +119,7 @@ namespace OUCC.FluentParticleSystem
 
         #region ArcMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemShapeMultiModeValue arcMode)
+        public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue arcMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -128,7 +128,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> arcModeChanger)
+        public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> arcModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -137,14 +137,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetArcMode(this ShapeModule module, UnityEngine.ParticleSystemShapeMultiModeValue arcMode)
+        public static ShapeModule SetArcMode(this ShapeModule module, ParticleSystemShapeMultiModeValue arcMode)
         {
             module.arcMode = arcMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetArcMode(this ShapeModule module, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> arcModeChanger)
+        public static ShapeModule SetArcMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> arcModeChanger)
         {
             module.arcMode = arcModeChanger(module.arcMode);
             return module;
@@ -255,7 +255,7 @@ namespace OUCC.FluentParticleSystem
 
         #region BoxThickness
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, UnityEngine.Vector3 boxThickness)
+        public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Vector3 boxThickness)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -264,7 +264,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> boxThicknessChanger)
+        public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Func<Vector3, Vector3> boxThicknessChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -273,14 +273,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetBoxThickness(this ShapeModule module, UnityEngine.Vector3 boxThickness)
+        public static ShapeModule SetBoxThickness(this ShapeModule module, Vector3 boxThickness)
         {
             module.boxThickness = boxThickness;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetBoxThickness(this ShapeModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> boxThicknessChanger)
+        public static ShapeModule SetBoxThickness(this ShapeModule module, Func<Vector3, Vector3> boxThicknessChanger)
         {
             module.boxThickness = boxThicknessChanger(module.boxThickness);
             return module;
@@ -391,7 +391,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Mesh
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, UnityEngine.Mesh mesh)
+        public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Mesh mesh)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -400,7 +400,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Func<UnityEngine.Mesh, UnityEngine.Mesh> meshChanger)
+        public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Func<Mesh, Mesh> meshChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -409,14 +409,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMesh(this ShapeModule module, UnityEngine.Mesh mesh)
+        public static ShapeModule SetMesh(this ShapeModule module, Mesh mesh)
         {
             module.mesh = mesh;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMesh(this ShapeModule module, Func<UnityEngine.Mesh, UnityEngine.Mesh> meshChanger)
+        public static ShapeModule SetMesh(this ShapeModule module, Func<Mesh, Mesh> meshChanger)
         {
             module.mesh = meshChanger(module.mesh);
             return module;
@@ -459,7 +459,7 @@ namespace OUCC.FluentParticleSystem
 
         #region MeshRenderer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, UnityEngine.MeshRenderer meshRenderer)
+        public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, MeshRenderer meshRenderer)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -468,7 +468,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, Func<UnityEngine.MeshRenderer, UnityEngine.MeshRenderer> meshRendererChanger)
+        public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, Func<MeshRenderer, MeshRenderer> meshRendererChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -477,14 +477,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshRenderer(this ShapeModule module, UnityEngine.MeshRenderer meshRenderer)
+        public static ShapeModule SetMeshRenderer(this ShapeModule module, MeshRenderer meshRenderer)
         {
             module.meshRenderer = meshRenderer;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshRenderer(this ShapeModule module, Func<UnityEngine.MeshRenderer, UnityEngine.MeshRenderer> meshRendererChanger)
+        public static ShapeModule SetMeshRenderer(this ShapeModule module, Func<MeshRenderer, MeshRenderer> meshRendererChanger)
         {
             module.meshRenderer = meshRendererChanger(module.meshRenderer);
             return module;
@@ -493,7 +493,7 @@ namespace OUCC.FluentParticleSystem
 
         #region MeshShapeType
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, UnityEngine.ParticleSystemMeshShapeType meshShapeType)
+        public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, ParticleSystemMeshShapeType meshShapeType)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -502,7 +502,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemMeshShapeType, UnityEngine.ParticleSystemMeshShapeType> meshShapeTypeChanger)
+        public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, Func<ParticleSystemMeshShapeType, ParticleSystemMeshShapeType> meshShapeTypeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -511,14 +511,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshShapeType(this ShapeModule module, UnityEngine.ParticleSystemMeshShapeType meshShapeType)
+        public static ShapeModule SetMeshShapeType(this ShapeModule module, ParticleSystemMeshShapeType meshShapeType)
         {
             module.meshShapeType = meshShapeType;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshShapeType(this ShapeModule module, Func<UnityEngine.ParticleSystemMeshShapeType, UnityEngine.ParticleSystemMeshShapeType> meshShapeTypeChanger)
+        public static ShapeModule SetMeshShapeType(this ShapeModule module, Func<ParticleSystemMeshShapeType, ParticleSystemMeshShapeType> meshShapeTypeChanger)
         {
             module.meshShapeType = meshShapeTypeChanger(module.meshShapeType);
             return module;
@@ -527,7 +527,7 @@ namespace OUCC.FluentParticleSystem
 
         #region MeshSpawnMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemShapeMultiModeValue meshSpawnMode)
+        public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue meshSpawnMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -536,7 +536,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
+        public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -545,14 +545,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshSpawnMode(this ShapeModule module, UnityEngine.ParticleSystemShapeMultiModeValue meshSpawnMode)
+        public static ShapeModule SetMeshSpawnMode(this ShapeModule module, ParticleSystemShapeMultiModeValue meshSpawnMode)
         {
             module.meshSpawnMode = meshSpawnMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetMeshSpawnMode(this ShapeModule module, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
+        public static ShapeModule SetMeshSpawnMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
         {
             module.meshSpawnMode = meshSpawnModeChanger(module.meshSpawnMode);
             return module;
@@ -697,7 +697,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Position
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, UnityEngine.Vector3 position)
+        public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Vector3 position)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -706,7 +706,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> positionChanger)
+        public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Func<Vector3, Vector3> positionChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -715,14 +715,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetPosition(this ShapeModule module, UnityEngine.Vector3 position)
+        public static ShapeModule SetPosition(this ShapeModule module, Vector3 position)
         {
             module.position = position;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetPosition(this ShapeModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> positionChanger)
+        public static ShapeModule SetPosition(this ShapeModule module, Func<Vector3, Vector3> positionChanger)
         {
             module.position = positionChanger(module.position);
             return module;
@@ -765,7 +765,7 @@ namespace OUCC.FluentParticleSystem
 
         #region RadiusMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemShapeMultiModeValue radiusMode)
+        public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue radiusMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -774,7 +774,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> radiusModeChanger)
+        public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> radiusModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -783,14 +783,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetRadiusMode(this ShapeModule module, UnityEngine.ParticleSystemShapeMultiModeValue radiusMode)
+        public static ShapeModule SetRadiusMode(this ShapeModule module, ParticleSystemShapeMultiModeValue radiusMode)
         {
             module.radiusMode = radiusMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetRadiusMode(this ShapeModule module, Func<UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemShapeMultiModeValue> radiusModeChanger)
+        public static ShapeModule SetRadiusMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> radiusModeChanger)
         {
             module.radiusMode = radiusModeChanger(module.radiusMode);
             return module;
@@ -1003,7 +1003,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Rotation
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, UnityEngine.Vector3 rotation)
+        public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Vector3 rotation)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1012,7 +1012,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> rotationChanger)
+        public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Func<Vector3, Vector3> rotationChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1021,14 +1021,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetRotation(this ShapeModule module, UnityEngine.Vector3 rotation)
+        public static ShapeModule SetRotation(this ShapeModule module, Vector3 rotation)
         {
             module.rotation = rotation;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetRotation(this ShapeModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> rotationChanger)
+        public static ShapeModule SetRotation(this ShapeModule module, Func<Vector3, Vector3> rotationChanger)
         {
             module.rotation = rotationChanger(module.rotation);
             return module;
@@ -1037,7 +1037,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Scale
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, UnityEngine.Vector3 scale)
+        public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Vector3 scale)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1046,7 +1046,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> scaleChanger)
+        public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Func<Vector3, Vector3> scaleChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1055,14 +1055,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetScale(this ShapeModule module, UnityEngine.Vector3 scale)
+        public static ShapeModule SetScale(this ShapeModule module, Vector3 scale)
         {
             module.scale = scale;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetScale(this ShapeModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> scaleChanger)
+        public static ShapeModule SetScale(this ShapeModule module, Func<Vector3, Vector3> scaleChanger)
         {
             module.scale = scaleChanger(module.scale);
             return module;
@@ -1071,7 +1071,7 @@ namespace OUCC.FluentParticleSystem
 
         #region ShapeType
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, UnityEngine.ParticleSystemShapeType shapeType)
+        public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, ParticleSystemShapeType shapeType)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1080,7 +1080,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemShapeType, UnityEngine.ParticleSystemShapeType> shapeTypeChanger)
+        public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, Func<ParticleSystemShapeType, ParticleSystemShapeType> shapeTypeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1089,14 +1089,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetShapeType(this ShapeModule module, UnityEngine.ParticleSystemShapeType shapeType)
+        public static ShapeModule SetShapeType(this ShapeModule module, ParticleSystemShapeType shapeType)
         {
             module.shapeType = shapeType;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetShapeType(this ShapeModule module, Func<UnityEngine.ParticleSystemShapeType, UnityEngine.ParticleSystemShapeType> shapeTypeChanger)
+        public static ShapeModule SetShapeType(this ShapeModule module, Func<ParticleSystemShapeType, ParticleSystemShapeType> shapeTypeChanger)
         {
             module.shapeType = shapeTypeChanger(module.shapeType);
             return module;
@@ -1105,7 +1105,7 @@ namespace OUCC.FluentParticleSystem
 
         #region SkinnedMeshRenderer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, UnityEngine.SkinnedMeshRenderer skinnedMeshRenderer)
+        public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, SkinnedMeshRenderer skinnedMeshRenderer)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1114,7 +1114,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, Func<UnityEngine.SkinnedMeshRenderer, UnityEngine.SkinnedMeshRenderer> skinnedMeshRendererChanger)
+        public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, Func<SkinnedMeshRenderer, SkinnedMeshRenderer> skinnedMeshRendererChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1123,14 +1123,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, UnityEngine.SkinnedMeshRenderer skinnedMeshRenderer)
+        public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, SkinnedMeshRenderer skinnedMeshRenderer)
         {
             module.skinnedMeshRenderer = skinnedMeshRenderer;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, Func<UnityEngine.SkinnedMeshRenderer, UnityEngine.SkinnedMeshRenderer> skinnedMeshRendererChanger)
+        public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, Func<SkinnedMeshRenderer, SkinnedMeshRenderer> skinnedMeshRendererChanger)
         {
             module.skinnedMeshRenderer = skinnedMeshRendererChanger(module.skinnedMeshRenderer);
             return module;
@@ -1173,7 +1173,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Sprite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, UnityEngine.Sprite sprite)
+        public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Sprite sprite)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1182,7 +1182,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Func<UnityEngine.Sprite, UnityEngine.Sprite> spriteChanger)
+        public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Func<Sprite, Sprite> spriteChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1191,14 +1191,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSprite(this ShapeModule module, UnityEngine.Sprite sprite)
+        public static ShapeModule SetSprite(this ShapeModule module, Sprite sprite)
         {
             module.sprite = sprite;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSprite(this ShapeModule module, Func<UnityEngine.Sprite, UnityEngine.Sprite> spriteChanger)
+        public static ShapeModule SetSprite(this ShapeModule module, Func<Sprite, Sprite> spriteChanger)
         {
             module.sprite = spriteChanger(module.sprite);
             return module;
@@ -1207,7 +1207,7 @@ namespace OUCC.FluentParticleSystem
 
         #region SpriteRenderer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, UnityEngine.SpriteRenderer spriteRenderer)
+        public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, SpriteRenderer spriteRenderer)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1216,7 +1216,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, Func<UnityEngine.SpriteRenderer, UnityEngine.SpriteRenderer> spriteRendererChanger)
+        public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, Func<SpriteRenderer, SpriteRenderer> spriteRendererChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1225,14 +1225,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSpriteRenderer(this ShapeModule module, UnityEngine.SpriteRenderer spriteRenderer)
+        public static ShapeModule SetSpriteRenderer(this ShapeModule module, SpriteRenderer spriteRenderer)
         {
             module.spriteRenderer = spriteRenderer;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetSpriteRenderer(this ShapeModule module, Func<UnityEngine.SpriteRenderer, UnityEngine.SpriteRenderer> spriteRendererChanger)
+        public static ShapeModule SetSpriteRenderer(this ShapeModule module, Func<SpriteRenderer, SpriteRenderer> spriteRendererChanger)
         {
             module.spriteRenderer = spriteRendererChanger(module.spriteRenderer);
             return module;
@@ -1241,7 +1241,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Texture
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, UnityEngine.Texture2D texture)
+        public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Texture2D texture)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1250,7 +1250,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Func<UnityEngine.Texture2D, UnityEngine.Texture2D> textureChanger)
+        public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Func<Texture2D, Texture2D> textureChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1259,14 +1259,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetTexture(this ShapeModule module, UnityEngine.Texture2D texture)
+        public static ShapeModule SetTexture(this ShapeModule module, Texture2D texture)
         {
             module.texture = texture;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetTexture(this ShapeModule module, Func<UnityEngine.Texture2D, UnityEngine.Texture2D> textureChanger)
+        public static ShapeModule SetTexture(this ShapeModule module, Func<Texture2D, Texture2D> textureChanger)
         {
             module.texture = textureChanger(module.texture);
             return module;
@@ -1343,7 +1343,7 @@ namespace OUCC.FluentParticleSystem
 
         #region TextureClipChannel
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, UnityEngine.ParticleSystemShapeTextureChannel textureClipChannel)
+        public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, ParticleSystemShapeTextureChannel textureClipChannel)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1352,7 +1352,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemShapeTextureChannel, UnityEngine.ParticleSystemShapeTextureChannel> textureClipChannelChanger)
+        public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, Func<ParticleSystemShapeTextureChannel, ParticleSystemShapeTextureChannel> textureClipChannelChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.shape;
@@ -1361,14 +1361,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetTextureClipChannel(this ShapeModule module, UnityEngine.ParticleSystemShapeTextureChannel textureClipChannel)
+        public static ShapeModule SetTextureClipChannel(this ShapeModule module, ParticleSystemShapeTextureChannel textureClipChannel)
         {
             module.textureClipChannel = textureClipChannel;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ShapeModule SetTextureClipChannel(this ShapeModule module, Func<UnityEngine.ParticleSystemShapeTextureChannel, UnityEngine.ParticleSystemShapeTextureChannel> textureClipChannelChanger)
+        public static ShapeModule SetTextureClipChannel(this ShapeModule module, Func<ParticleSystemShapeTextureChannel, ParticleSystemShapeTextureChannel> textureClipChannelChanger)
         {
             module.textureClipChannel = textureClipChannelChanger(module.textureClipChannel);
             return module;

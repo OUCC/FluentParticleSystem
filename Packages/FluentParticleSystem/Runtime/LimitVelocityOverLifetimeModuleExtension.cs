@@ -527,7 +527,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Space
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ParticleSystem SetLimitVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
@@ -536,7 +536,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLimitVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ParticleSystem SetLimitVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.limitVelocityOverLifetime;
@@ -545,14 +545,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetSpace(this LimitVelocityOverLifetimeModule module, UnityEngine.ParticleSystemSimulationSpace space)
+        public static LimitVelocityOverLifetimeModule SetSpace(this LimitVelocityOverLifetimeModule module, ParticleSystemSimulationSpace space)
         {
             module.space = space;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LimitVelocityOverLifetimeModule SetSpace(this LimitVelocityOverLifetimeModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static LimitVelocityOverLifetimeModule SetSpace(this LimitVelocityOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             module.space = spaceChanger(module.space);
             return module;

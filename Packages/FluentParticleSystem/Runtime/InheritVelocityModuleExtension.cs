@@ -119,7 +119,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemInheritVelocityMode mode)
+        public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, ParticleSystemInheritVelocityMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.inheritVelocity;
@@ -128,7 +128,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemInheritVelocityMode, UnityEngine.ParticleSystemInheritVelocityMode> modeChanger)
+        public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, Func<ParticleSystemInheritVelocityMode, ParticleSystemInheritVelocityMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.inheritVelocity;
@@ -137,14 +137,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static InheritVelocityModule SetMode(this InheritVelocityModule module, UnityEngine.ParticleSystemInheritVelocityMode mode)
+        public static InheritVelocityModule SetMode(this InheritVelocityModule module, ParticleSystemInheritVelocityMode mode)
         {
             module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static InheritVelocityModule SetMode(this InheritVelocityModule module, Func<UnityEngine.ParticleSystemInheritVelocityMode, UnityEngine.ParticleSystemInheritVelocityMode> modeChanger)
+        public static InheritVelocityModule SetMode(this InheritVelocityModule module, Func<ParticleSystemInheritVelocityMode, ParticleSystemInheritVelocityMode> modeChanger)
         {
             module.mode = modeChanger(module.mode);
             return module;

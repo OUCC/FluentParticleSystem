@@ -255,7 +255,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Quality
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetNoiseQuality(this ParticleSystem particleSystem, UnityEngine.ParticleSystemNoiseQuality quality)
+        public static ParticleSystem SetNoiseQuality(this ParticleSystem particleSystem, ParticleSystemNoiseQuality quality)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.noise;
@@ -264,7 +264,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetNoiseQuality(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemNoiseQuality, UnityEngine.ParticleSystemNoiseQuality> qualityChanger)
+        public static ParticleSystem SetNoiseQuality(this ParticleSystem particleSystem, Func<ParticleSystemNoiseQuality, ParticleSystemNoiseQuality> qualityChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.noise;
@@ -273,14 +273,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static NoiseModule SetQuality(this NoiseModule module, UnityEngine.ParticleSystemNoiseQuality quality)
+        public static NoiseModule SetQuality(this NoiseModule module, ParticleSystemNoiseQuality quality)
         {
             module.quality = quality;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static NoiseModule SetQuality(this NoiseModule module, Func<UnityEngine.ParticleSystemNoiseQuality, UnityEngine.ParticleSystemNoiseQuality> qualityChanger)
+        public static NoiseModule SetQuality(this NoiseModule module, Func<ParticleSystemNoiseQuality, ParticleSystemNoiseQuality> qualityChanger)
         {
             module.quality = qualityChanger(module.quality);
             return module;

@@ -119,7 +119,7 @@ namespace OUCC.FluentParticleSystem
 
         #region CollidesWith
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, UnityEngine.LayerMask collidesWith)
+        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, LayerMask collidesWith)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -128,7 +128,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> collidesWithChanger)
+        public static ParticleSystem SetCollisionCollidesWith(this ParticleSystem particleSystem, Func<LayerMask, LayerMask> collidesWithChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -137,14 +137,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetCollidesWith(this CollisionModule module, UnityEngine.LayerMask collidesWith)
+        public static CollisionModule SetCollidesWith(this CollisionModule module, LayerMask collidesWith)
         {
             module.collidesWith = collidesWith;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetCollidesWith(this CollisionModule module, Func<UnityEngine.LayerMask, UnityEngine.LayerMask> collidesWithChanger)
+        public static CollisionModule SetCollidesWith(this CollisionModule module, Func<LayerMask, LayerMask> collidesWithChanger)
         {
             module.collidesWith = collidesWithChanger(module.collidesWith);
             return module;
@@ -459,7 +459,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionMode mode)
+        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, ParticleSystemCollisionMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -468,7 +468,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionMode, UnityEngine.ParticleSystemCollisionMode> modeChanger)
+        public static ParticleSystem SetCollisionMode(this ParticleSystem particleSystem, Func<ParticleSystemCollisionMode, ParticleSystemCollisionMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -477,14 +477,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMode(this CollisionModule module, UnityEngine.ParticleSystemCollisionMode mode)
+        public static CollisionModule SetMode(this CollisionModule module, ParticleSystemCollisionMode mode)
         {
             module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetMode(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionMode, UnityEngine.ParticleSystemCollisionMode> modeChanger)
+        public static CollisionModule SetMode(this CollisionModule module, Func<ParticleSystemCollisionMode, ParticleSystemCollisionMode> modeChanger)
         {
             module.mode = modeChanger(module.mode);
             return module;
@@ -595,7 +595,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Quality
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionQuality quality)
+        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, ParticleSystemCollisionQuality quality)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -604,7 +604,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionQuality, UnityEngine.ParticleSystemCollisionQuality> qualityChanger)
+        public static ParticleSystem SetCollisionQuality(this ParticleSystem particleSystem, Func<ParticleSystemCollisionQuality, ParticleSystemCollisionQuality> qualityChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -613,14 +613,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetQuality(this CollisionModule module, UnityEngine.ParticleSystemCollisionQuality quality)
+        public static CollisionModule SetQuality(this CollisionModule module, ParticleSystemCollisionQuality quality)
         {
             module.quality = quality;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetQuality(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionQuality, UnityEngine.ParticleSystemCollisionQuality> qualityChanger)
+        public static CollisionModule SetQuality(this CollisionModule module, Func<ParticleSystemCollisionQuality, ParticleSystemCollisionQuality> qualityChanger)
         {
             module.quality = qualityChanger(module.quality);
             return module;
@@ -697,7 +697,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Type
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCollisionType type)
+        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, ParticleSystemCollisionType type)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -706,7 +706,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCollisionType, UnityEngine.ParticleSystemCollisionType> typeChanger)
+        public static ParticleSystem SetCollisionType(this ParticleSystem particleSystem, Func<ParticleSystemCollisionType, ParticleSystemCollisionType> typeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.collision;
@@ -715,14 +715,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetType(this CollisionModule module, UnityEngine.ParticleSystemCollisionType type)
+        public static CollisionModule SetType(this CollisionModule module, ParticleSystemCollisionType type)
         {
             module.type = type;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static CollisionModule SetType(this CollisionModule module, Func<UnityEngine.ParticleSystemCollisionType, UnityEngine.ParticleSystemCollisionType> typeChanger)
+        public static CollisionModule SetType(this CollisionModule module, Func<ParticleSystemCollisionType, ParticleSystemCollisionType> typeChanger)
         {
             module.type = typeChanger(module.type);
             return module;

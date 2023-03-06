@@ -85,7 +85,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Space
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.forceOverLifetime;
@@ -94,7 +94,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.forceOverLifetime;
@@ -103,14 +103,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, ParticleSystemSimulationSpace space)
         {
             module.space = space;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             module.space = spaceChanger(module.space);
             return module;
