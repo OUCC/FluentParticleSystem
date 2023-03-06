@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class InheritVelocityModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditInheritVelocity(this ParticleSystem particleSystem, Action<InheritVelocityModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Curve
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region CurveMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Mode
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetInheritVelocityMode(this ParticleSystem particleSystem, ParticleSystemInheritVelocityMode mode)
         {

@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class VelocityOverLifetimeModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditVelocityOverLifetime(this ParticleSystem particleSystem, Action<VelocityOverLifetimeModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetX
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetX(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetX)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetXMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetXMultiplier(this ParticleSystem particleSystem, float orbitalOffsetXMultiplier)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetY
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetY)
         {
@@ -161,7 +161,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetYMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetYMultiplier(this ParticleSystem particleSystem, float orbitalOffsetYMultiplier)
         {
@@ -197,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetZ
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetZ)
         {
@@ -233,7 +233,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZMultiplier(this ParticleSystem particleSystem, float orbitalOffsetZMultiplier)
         {
@@ -269,7 +269,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalX
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, MinMaxCurve orbitalX)
         {
@@ -305,7 +305,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalXMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, float orbitalXMultiplier)
         {
@@ -341,7 +341,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalY
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, MinMaxCurve orbitalY)
         {
@@ -377,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalYMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, float orbitalYMultiplier)
         {
@@ -413,7 +413,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalZ
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, MinMaxCurve orbitalZ)
         {
@@ -449,7 +449,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, float orbitalZMultiplier)
         {
@@ -485,7 +485,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Radial
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadial(this ParticleSystem particleSystem, MinMaxCurve radial)
         {
@@ -521,7 +521,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadialMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadialMultiplier(this ParticleSystem particleSystem, float radialMultiplier)
         {
@@ -557,7 +557,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Space
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
@@ -593,7 +593,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SpeedModifier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifier(this ParticleSystem particleSystem, MinMaxCurve speedModifier)
         {
@@ -629,7 +629,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SpeedModifierMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifierMultiplier(this ParticleSystem particleSystem, float speedModifierMultiplier)
         {
@@ -665,7 +665,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region X
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -701,7 +701,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region XMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -737,7 +737,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Y
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -773,7 +773,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region YMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -809,7 +809,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Z
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -845,7 +845,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {

@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ExternalForcesModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditExternalForces(this ParticleSystem particleSystem, Action<ExternalForcesModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region InfluenceFilter
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceFilter(this ParticleSystem particleSystem, ParticleSystemGameObjectFilter influenceFilter)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region InfluenceMask
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, LayerMask influenceMask)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Multiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, float multiplier)
         {
@@ -161,7 +161,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MultiplierCurve
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, MinMaxCurve multiplierCurve)
         {

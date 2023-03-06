@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class RotationBySpeedModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditRotationBySpeed(this ParticleSystem particleSystem, Action<RotationBySpeedModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SeparateAxes
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region X
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -161,7 +161,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region XMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -197,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Y
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -233,7 +233,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region YMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -269,7 +269,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Z
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -305,7 +305,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {

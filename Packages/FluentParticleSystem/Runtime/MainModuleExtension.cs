@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class MainModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region CullingMode
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region CustomSimulationSpace
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Transform customSimulationSpace)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Duration
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, float duration)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region EmitterVelocity
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Vector3 emitterVelocity)
         {
@@ -161,7 +161,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region EmitterVelocityMode
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
@@ -197,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipRotation
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
         {
@@ -233,7 +233,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region GravityModifier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
         {
@@ -269,7 +269,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region GravityModifierMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
         {
@@ -305,7 +305,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Loop
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, bool loop)
         {
@@ -341,7 +341,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MaxParticles
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
         {
@@ -377,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region PlayOnAwake
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
         {
@@ -413,7 +413,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Prewarm
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, bool prewarm)
         {
@@ -449,7 +449,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RingBufferLoopRange
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Vector2 ringBufferLoopRange)
         {
@@ -485,7 +485,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RingBufferMode
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, ParticleSystemRingBufferMode ringBufferMode)
         {
@@ -521,7 +521,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ScalingMode
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, ParticleSystemScalingMode scalingMode)
         {
@@ -557,7 +557,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SimulationSpace
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace simulationSpace)
         {
@@ -593,7 +593,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SimulationSpeed
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
         {
@@ -629,7 +629,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartColor
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
         {
@@ -665,7 +665,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartDelay
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, MinMaxCurve startDelay)
         {
@@ -701,7 +701,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartDelayMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, float startDelayMultiplier)
         {
@@ -737,7 +737,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartLifetime
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, MinMaxCurve startLifetime)
         {
@@ -773,7 +773,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartLifetimeMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, float startLifetimeMultiplier)
         {
@@ -809,7 +809,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotation
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
         {
@@ -845,7 +845,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotation3D
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, bool startRotation3D)
         {
@@ -881,7 +881,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, float startRotationMultiplier)
         {
@@ -917,7 +917,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationX
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, MinMaxCurve startRotationX)
         {
@@ -953,7 +953,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationXMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, float startRotationXMultiplier)
         {
@@ -989,7 +989,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationY
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, MinMaxCurve startRotationY)
         {
@@ -1025,7 +1025,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationYMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, float startRotationYMultiplier)
         {
@@ -1061,7 +1061,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationZ
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, MinMaxCurve startRotationZ)
         {
@@ -1097,7 +1097,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, float startRotationZMultiplier)
         {
@@ -1133,7 +1133,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSize
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
         {
@@ -1169,7 +1169,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSize3D
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
         {
@@ -1205,7 +1205,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
         {
@@ -1241,7 +1241,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeX
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
         {
@@ -1277,7 +1277,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeXMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
         {
@@ -1313,7 +1313,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeY
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
         {
@@ -1349,7 +1349,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeYMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
         {
@@ -1385,7 +1385,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeZ
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
         {
@@ -1421,7 +1421,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeZMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
         {
@@ -1457,7 +1457,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSpeed
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
         {
@@ -1493,7 +1493,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSpeedMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
         {
@@ -1529,7 +1529,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StopAction
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, ParticleSystemStopAction stopAction)
         {
@@ -1565,7 +1565,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseUnscaledTime
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
         {

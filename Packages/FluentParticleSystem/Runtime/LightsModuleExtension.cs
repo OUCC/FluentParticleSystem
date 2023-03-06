@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LightsModuleExtension
     {
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLights(this ParticleSystem particleSystem, Action<LightsModule> moduleEditor)
         {
@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AlphaAffectsIntensity
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsAlphaAffectsIntensity(this ParticleSystem particleSystem, bool alphaAffectsIntensity)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -89,7 +89,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Intensity
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensity(this ParticleSystem particleSystem, MinMaxCurve intensity)
         {
@@ -125,7 +125,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region IntensityMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensityMultiplier(this ParticleSystem particleSystem, float intensityMultiplier)
         {
@@ -161,7 +161,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Light
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Light light)
         {
@@ -197,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MaxLights
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsMaxLights(this ParticleSystem particleSystem, int maxLights)
         {
@@ -233,7 +233,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRange(this ParticleSystem particleSystem, MinMaxCurve range)
         {
@@ -269,7 +269,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RangeMultiplier
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRangeMultiplier(this ParticleSystem particleSystem, float rangeMultiplier)
         {
@@ -305,7 +305,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Ratio
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRatio(this ParticleSystem particleSystem, float ratio)
         {
@@ -341,7 +341,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SizeAffectsRange
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsSizeAffectsRange(this ParticleSystem particleSystem, bool sizeAffectsRange)
         {
@@ -377,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseParticleColor
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseParticleColor(this ParticleSystem particleSystem, bool useParticleColor)
         {
@@ -413,7 +413,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseRandomDistribution
-#if (UNITY_2021_3)
+#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseRandomDistribution(this ParticleSystem particleSystem, bool useRandomDistribution)
         {

@@ -116,7 +116,6 @@ $@"#endif
         public static void GenerateJsonWithReflection()
         {
             var currentVersion = Application.unityVersion;
-            currentVersion = currentVersion[..currentVersion.LastIndexOf('.')];
             var modules = LoadModules(INFO_PATH);
 
             var currentModules = typeof(ParticleSystem)
@@ -145,19 +144,42 @@ $@"#endif
                 .Select(g =>
                 {
                     var m = g.FirstOrDefault()!;
-                    m.AvailableVersions = g.SelectMany(mi => mi.AvailableVersions)
-                                           .Distinct()
-                                           .ToArray();
+                    // 2020.1, 2020, 2020.1.2 などの配列から 2020だけを抽出する
+                    var temp = g.SelectMany(mi => mi.AvailableVersions)
+                                .Distinct()
+                                .GroupBy(v => v.Count(c => c == '.'))
+                                .OrderBy(g => g.Key)
+                                .Select(g => g.ToList())
+                                .ToList();
+                    for (var i = 0; i < temp.Count; i++)
+                    {
+                        for (var j = 1; j < temp.Count; j++)
+                        {
+                            temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
+                        }
+                    }
+                    m.AvailableVersions = temp.SelectMany(v => v).OrderBy(v => v).ToArray();
                     m.Properties = g.SelectMany(p => p.Properties)
                                     .GroupBy(p => p.Name)
-                                    .Select(gp =>
-                                    {
-                                        var p = gp.FirstOrDefault()!;
-                                        p.AvailableVersions = g.SelectMany(mp => mp.AvailableVersions)
-                                                               .Distinct()
-                                                               .ToArray();
-                                        return p;
-                                    }).ToArray();
+                                    .Select(g =>
+                                        {
+                                            var p = g.FirstOrDefault()!;
+                                            var temp = g.SelectMany(mi => mi.AvailableVersions)
+                                                        .Distinct()
+                                                        .GroupBy(v => v.Count(c => c == '.'))
+                                                        .OrderBy(g => g.Key)
+                                                        .Select(g => g.ToList())
+                                                        .ToList();
+                                            for (var i = 0; i < temp.Count; i++)
+                                            {
+                                                for (var j = 1; j < temp.Count; j++)
+                                                {
+                                                    temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
+                                                }
+                                            }
+                                            p.AvailableVersions = temp.SelectMany(v => v).OrderBy(v => v).ToArray();
+                                            return p;
+                                        }).ToArray();
                     return m;
                 }).ToList();
 

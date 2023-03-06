@@ -3,161 +3,161 @@
     "TypeName": "CollisionModule",
     "PropertyName": "collision",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "bounce",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "bounceMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "colliderForce",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "collidesWith",
         "Type": "LayerMask",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "dampen",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "dampenMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enableDynamicColliders",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "lifetimeLoss",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "lifetimeLossMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "maxCollisionShapes",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "maxKillSpeed",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "minKillSpeed",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "mode",
         "Type": "ParticleSystemCollisionMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplyColliderForceByCollisionAngle",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplyColliderForceByParticleSize",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplyColliderForceByParticleSpeed",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "quality",
         "Type": "ParticleSystemCollisionQuality",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusScale",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sendCollisionMessages",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "type",
         "Type": "ParticleSystemCollisionType",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "voxelSize",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -166,28 +166,28 @@
     "TypeName": "ColorBySpeedModule",
     "PropertyName": "colorBySpeed",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "color",
         "Type": "MinMaxGradient",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "range",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -196,21 +196,21 @@
     "TypeName": "ColorOverLifetimeModule",
     "PropertyName": "colorOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "color",
         "Type": "MinMaxGradient",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -219,14 +219,14 @@
     "TypeName": "CustomDataModule",
     "PropertyName": "customData",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -235,49 +235,49 @@
     "TypeName": "EmissionModule",
     "PropertyName": "emission",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "burstCount",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rateOverDistance",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rateOverDistanceMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rateOverTime",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rateOverTimeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -286,42 +286,42 @@
     "TypeName": "ExternalForcesModule",
     "PropertyName": "externalForces",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "influenceFilter",
         "Type": "ParticleSystemGameObjectFilter",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "influenceMask",
         "Type": "LayerMask",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplierCurve",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -330,70 +330,70 @@
     "TypeName": "ForceOverLifetimeModule",
     "PropertyName": "forceOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "randomized",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "space",
         "Type": "ParticleSystemSimulationSpace",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -402,35 +402,35 @@
     "TypeName": "InheritVelocityModule",
     "PropertyName": "inheritVelocity",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "curve",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "curveMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "mode",
         "Type": "ParticleSystemInheritVelocityMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -439,35 +439,35 @@
     "TypeName": "LifetimeByEmitterSpeedModule",
     "PropertyName": "lifetimeByEmitterSpeed",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "curve",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "curveMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "range",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -476,91 +476,91 @@
     "TypeName": "LightsModule",
     "PropertyName": "lights",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "alphaAffectsIntensity",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "intensity",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "intensityMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "light",
         "Type": "Light",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "maxLights",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "range",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rangeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "ratio",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeAffectsRange",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "useParticleColor",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "useRandomDistribution",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -569,119 +569,119 @@
     "TypeName": "LimitVelocityOverLifetimeModule",
     "PropertyName": "limitVelocityOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "dampen",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "drag",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "dragMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limit",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "limitZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplyDragByParticleSize",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "multiplyDragByParticleVelocity",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "space",
         "Type": "ParticleSystemSimulationSpace",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -690,315 +690,315 @@
     "TypeName": "MainModule",
     "PropertyName": "main",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "cullingMode",
         "Type": "ParticleSystemCullingMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "customSimulationSpace",
         "Type": "Transform",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "duration",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "emitterVelocity",
         "Type": "Vector3",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "emitterVelocityMode",
         "Type": "ParticleSystemEmitterVelocityMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "flipRotation",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "gravityModifier",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "gravityModifierMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "loop",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "maxParticles",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "playOnAwake",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "prewarm",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "ringBufferLoopRange",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "ringBufferMode",
         "Type": "ParticleSystemRingBufferMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "scalingMode",
         "Type": "ParticleSystemScalingMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "simulationSpace",
         "Type": "ParticleSystemSimulationSpace",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "simulationSpeed",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startColor",
         "Type": "MinMaxGradient",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startDelay",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startDelayMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startLifetime",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startLifetimeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotation",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotation3D",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startRotationZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSize",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSize3D",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSizeZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSpeed",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startSpeedMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "stopAction",
         "Type": "ParticleSystemStopAction",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "useUnscaledTime",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1007,217 +1007,217 @@
     "TypeName": "NoiseModule",
     "PropertyName": "noise",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "damping",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "frequency",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "octaveCount",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "octaveMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "octaveScale",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "positionAmount",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "quality",
         "Type": "ParticleSystemNoiseQuality",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remap",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapEnabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "remapZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rotationAmount",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "scrollSpeed",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "scrollSpeedMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeAmount",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strength",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "strengthZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1226,70 +1226,70 @@
     "TypeName": "RotationBySpeedModule",
     "PropertyName": "rotationBySpeed",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "range",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1298,63 +1298,63 @@
     "TypeName": "RotationOverLifetimeModule",
     "PropertyName": "rotationOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1363,322 +1363,322 @@
     "TypeName": "ShapeModule",
     "PropertyName": "shape",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "alignToDirection",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "angle",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "arc",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "arcMode",
         "Type": "ParticleSystemShapeMultiModeValue",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "arcSpeed",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "arcSpeedMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "arcSpread",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "boxThickness",
         "Type": "Vector3",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "donutRadius",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "length",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "mesh",
         "Type": "Mesh",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshMaterialIndex",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshRenderer",
         "Type": "MeshRenderer",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshShapeType",
         "Type": "ParticleSystemMeshShapeType",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshSpawnMode",
         "Type": "ParticleSystemShapeMultiModeValue",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshSpawnSpeed",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshSpawnSpeedMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "meshSpawnSpread",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "normalOffset",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "position",
         "Type": "Vector3",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radius",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusMode",
         "Type": "ParticleSystemShapeMultiModeValue",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusSpeed",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusSpeedMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusSpread",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusThickness",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "randomDirectionAmount",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "randomPositionAmount",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rotation",
         "Type": "Vector3",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "scale",
         "Type": "Vector3",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "shapeType",
         "Type": "ParticleSystemShapeType",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "skinnedMeshRenderer",
         "Type": "SkinnedMeshRenderer",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sphericalDirectionAmount",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sprite",
         "Type": "Sprite",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "spriteRenderer",
         "Type": "SpriteRenderer",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "texture",
         "Type": "Texture2D",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureAlphaAffectsParticles",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureBilinearFiltering",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureClipChannel",
         "Type": "ParticleSystemShapeTextureChannel",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureClipThreshold",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureColorAffectsParticles",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureUVChannel",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "useMeshColors",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "useMeshMaterialIndex",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1687,84 +1687,84 @@
     "TypeName": "SizeBySpeedModule",
     "PropertyName": "sizeBySpeed",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "range",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "size",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1773,77 +1773,77 @@
     "TypeName": "SizeOverLifetimeModule",
     "PropertyName": "sizeOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "separateAxes",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "size",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1852,14 +1852,14 @@
     "TypeName": "SubEmittersModule",
     "PropertyName": "subEmitters",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1868,119 +1868,119 @@
     "TypeName": "TextureSheetAnimationModule",
     "PropertyName": "textureSheetAnimation",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "animation",
         "Type": "ParticleSystemAnimationType",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "cycleCount",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "fps",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "frameOverTime",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "frameOverTimeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "mode",
         "Type": "ParticleSystemAnimationMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "numTilesX",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "numTilesY",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rowIndex",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "rowMode",
         "Type": "ParticleSystemAnimationRowMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "speedRange",
         "Type": "Vector2",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startFrame",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "startFrameMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "timeMode",
         "Type": "ParticleSystemAnimationTimeMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "uvChannelMask",
         "Type": "UnityEngine.Rendering.UVChannelFlags",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -1989,154 +1989,154 @@
     "TypeName": "TrailModule",
     "PropertyName": "trails",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "attachRibbonsToTransform",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "colorOverLifetime",
         "Type": "MinMaxGradient",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "colorOverTrail",
         "Type": "MinMaxGradient",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "dieWithParticles",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "generateLightingData",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "inheritParticleColor",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "lifetime",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "lifetimeMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "minVertexDistance",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "mode",
         "Type": "ParticleSystemTrailMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "ratio",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "ribbonCount",
         "Type": "int",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "shadowBias",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeAffectsLifetime",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "sizeAffectsWidth",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "splitSubEmitterRibbons",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "textureMode",
         "Type": "ParticleSystemTrailTextureMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "widthOverTrail",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "widthOverTrailMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "worldSpace",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -2145,56 +2145,56 @@
     "TypeName": "TriggerModule",
     "PropertyName": "trigger",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "colliderQueryMode",
         "Type": "ParticleSystemColliderQueryMode",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "enter",
         "Type": "ParticleSystemOverlapAction",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "exit",
         "Type": "ParticleSystemOverlapAction",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "inside",
         "Type": "ParticleSystemOverlapAction",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "outside",
         "Type": "ParticleSystemOverlapAction",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radiusScale",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
@@ -2203,175 +2203,175 @@
     "TypeName": "VelocityOverLifetimeModule",
     "PropertyName": "velocityOverLifetime",
     "AvailableVersions": [
-      "2021.3"
+      "2021"
     ],
     "Properties": [
       {
         "Name": "enabled",
         "Type": "bool",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalOffsetZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalX",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalXMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalY",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalYMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalZ",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "orbitalZMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radial",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "radialMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "space",
         "Type": "ParticleSystemSimulationSpace",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "speedModifier",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "speedModifierMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "x",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "xMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "y",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "yMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "z",
         "Type": "MinMaxCurve",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       },
       {
         "Name": "zMultiplier",
         "Type": "float",
         "AvailableVersions": [
-          "2021.3"
+          "2021"
         ]
       }
     ]
