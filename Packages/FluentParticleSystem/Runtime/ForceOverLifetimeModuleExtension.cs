@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ForceOverLifetimeModuleExtension
     {
-#if (UNITY_2021)
+#if UNITY_2021_3_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditForceOverLifetime(this ParticleSystem particleSystem, Action<ForceOverLifetimeModule> moduleEditor)
         {
@@ -17,7 +17,6 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -49,83 +48,9 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
-#endif
-        #endregion
-
-        #region Randomized
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeRandomized(this ParticleSystem particleSystem, bool randomized)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.randomized = randomized;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeRandomized(this ParticleSystem particleSystem, Func<bool, bool> randomizedChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.randomized = randomizedChanger(module.randomized);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetRandomized(this ForceOverLifetimeModule module, bool randomized)
-        {
-            module.randomized = randomized;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetRandomized(this ForceOverLifetimeModule module, Func<bool, bool> randomizedChanger)
-        {
-            module.randomized = randomizedChanger(module.randomized);
-            return module;
-        }
-#endif
-        #endregion
-
-        #region Space
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.space = space;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.space = spaceChanger(module.space);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, ParticleSystemSimulationSpace space)
-        {
-            module.space = space;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
-        {
-            module.space = spaceChanger(module.space);
-            return module;
-        }
-#endif
         #endregion
 
         #region X
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -157,47 +82,9 @@ namespace OUCC.FluentParticleSystem
             module.x = xChanger(module.x);
             return module;
         }
-#endif
-        #endregion
-
-        #region XMultiplier
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.xMultiplier = xMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetXMultiplier(this ForceOverLifetimeModule module, float xMultiplier)
-        {
-            module.xMultiplier = xMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetXMultiplier(this ForceOverLifetimeModule module, Func<float, float> xMultiplierChanger)
-        {
-            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
-            return module;
-        }
-#endif
         #endregion
 
         #region Y
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -229,47 +116,9 @@ namespace OUCC.FluentParticleSystem
             module.y = yChanger(module.y);
             return module;
         }
-#endif
-        #endregion
-
-        #region YMultiplier
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.yMultiplier = yMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.forceOverLifetime;
-            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetYMultiplier(this ForceOverLifetimeModule module, float yMultiplier)
-        {
-            module.yMultiplier = yMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetYMultiplier(this ForceOverLifetimeModule module, Func<float, float> yMultiplierChanger)
-        {
-            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
-            return module;
-        }
-#endif
         #endregion
 
         #region Z
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -301,11 +150,77 @@ namespace OUCC.FluentParticleSystem
             module.z = zChanger(module.z);
             return module;
         }
-#endif
+        #endregion
+
+        #region XMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.xMultiplier = xMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetXMultiplier(this ForceOverLifetimeModule module, float xMultiplier)
+        {
+            module.xMultiplier = xMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetXMultiplier(this ForceOverLifetimeModule module, Func<float, float> xMultiplierChanger)
+        {
+            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region YMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.yMultiplier = yMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetYMultiplier(this ForceOverLifetimeModule module, float yMultiplier)
+        {
+            module.yMultiplier = yMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetYMultiplier(this ForceOverLifetimeModule module, Func<float, float> yMultiplierChanger)
+        {
+            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
+            return module;
+        }
         #endregion
 
         #region ZMultiplier
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetForceOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
@@ -337,7 +252,74 @@ namespace OUCC.FluentParticleSystem
             module.zMultiplier = zMultiplierChanger(module.zMultiplier);
             return module;
         }
-#endif
+        #endregion
+
+        #region Space
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.space = space;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.space = spaceChanger(module.space);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, ParticleSystemSimulationSpace space)
+        {
+            module.space = space;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        {
+            module.space = spaceChanger(module.space);
+            return module;
+        }
+        #endregion
+
+        #region Randomized
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeRandomized(this ParticleSystem particleSystem, bool randomized)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.randomized = randomized;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetForceOverLifetimeRandomized(this ParticleSystem particleSystem, Func<bool, bool> randomizedChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.forceOverLifetime;
+            module.randomized = randomizedChanger(module.randomized);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetRandomized(this ForceOverLifetimeModule module, bool randomized)
+        {
+            module.randomized = randomized;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ForceOverLifetimeModule SetRandomized(this ForceOverLifetimeModule module, Func<bool, bool> randomizedChanger)
+        {
+            module.randomized = randomizedChanger(module.randomized);
+            return module;
+        }
         #endregion
 #endif
     }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LifetimeByEmitterSpeedModuleExtension
     {
-#if (UNITY_2021)
+#if UNITY_2021_3_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLifetimeByEmitterSpeed(this ParticleSystem particleSystem, Action<LifetimeByEmitterSpeedModule> moduleEditor)
         {
@@ -16,80 +16,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region Curve
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.curve = curve;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> curveChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.curve = curveChanger(module.curve);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, MinMaxCurve curve)
-        {
-            module.curve = curve;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, Func<MinMaxCurve, MinMaxCurve> curveChanger)
-        {
-            module.curve = curveChanger(module.curve);
-            return module;
-        }
-#endif
-        #endregion
-
-        #region CurveMultiplier
-#if (UNITY_2021)
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.curveMultiplier = curveMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, Func<float, float> curveMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.lifetimeByEmitterSpeed;
-            module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, float curveMultiplier)
-        {
-            module.curveMultiplier = curveMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, Func<float, float> curveMultiplierChanger)
-        {
-            module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
-            return module;
-        }
-#endif
-        #endregion
-
         #region Enabled
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -121,11 +48,77 @@ namespace OUCC.FluentParticleSystem
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
-#endif
+        #endregion
+
+        #region Curve
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.curve = curve;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> curveChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.curve = curveChanger(module.curve);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, MinMaxCurve curve)
+        {
+            module.curve = curve;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, Func<MinMaxCurve, MinMaxCurve> curveChanger)
+        {
+            module.curve = curveChanger(module.curve);
+            return module;
+        }
+        #endregion
+
+        #region CurveMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.curveMultiplier = curveMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, Func<float, float> curveMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.lifetimeByEmitterSpeed;
+            module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, float curveMultiplier)
+        {
+            module.curveMultiplier = curveMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, Func<float, float> curveMultiplierChanger)
+        {
+            module.curveMultiplier = curveMultiplierChanger(module.curveMultiplier);
+            return module;
+        }
         #endregion
 
         #region Range
-#if (UNITY_2021)
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -157,7 +150,6 @@ namespace OUCC.FluentParticleSystem
             module.range = rangeChanger(module.range);
             return module;
         }
-#endif
         #endregion
 #endif
     }

@@ -9,6 +9,7 @@ using System.Text;
 using OUCC.FluentParticleSystem.Generator;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace OUCC.FluentParticleSystem.SourceGenerator
 {
@@ -19,9 +20,10 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
         #region generate scripts
         internal static void WriteExtensionFile(string filePath, PSModuleInfo module)
         {
-            using var sw = new StreamWriter(filePath, false, Encoding.UTF8);
+            var builder = new StringWriter();
+            var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
-            sw.Write(
+            builder.Write(
 $@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -29,65 +31,72 @@ using static UnityEngine.ParticleSystem;
 
 namespace OUCC.FluentParticleSystem
 {{
-    public static class {module.TypeName}Extension
+    public static class {module.Type}Extension
     {{
-#if ({GetConditionString(module.AvailableVersions)})
+#if UNITY_{module.ReleaseVersion.Replace('.', '_')}_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.TypeName}> moduleEditor)
+        public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.Type}> moduleEditor)
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             moduleEditor(particleSystem.{module.PropertyName});
             return particleSystem;
         }}
-".Replace("\r\n", "\n"));
+{(isSameAsPrevious ? "" : "#endif\n")}");
 
-            foreach (var property in module.Properties)
+            for (var i = 0; i < module.Properties.Length; i++)
             {
-                sw.Write($@"
-        #region {property.Name.c2p()}
-#if ({GetConditionString(property.AvailableVersions)})
+                var property = module.Properties[i];
+                var isSameAsNext = i + 1 != module.Properties.Length && module.Properties[i + 1].ReleaseVersion == property.ReleaseVersion;
+                var obsolete = property.ObsoleteData is null ? "" :
+@$"
+#if UNITY_{property.ObsoleteVersion.Replace('.', '_')}_OR_NEWER
+        [Obsolete(""{property.ObsoleteData.Message}"", {property.ObsoleteData.IsError.ToString().ToLower()})]
+#endif";
+
+                builder.Write($@"{(isSameAsPrevious ? "" : $"\n#if UNITY_{property.ReleaseVersion.Replace('.', '_')}_OR_NEWER")}
+        #region {property.PropertyName.c2p()}{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{module.PropertyName.c2p()}{property.Name.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.Name.p2c()})
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.{module.PropertyName};
-            module.{property.Name} = {property.Name.p2c()};
+            module.{property.PropertyName} = {property.PropertyName.p2c()};
             return particleSystem;
         }}
-
+{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{module.PropertyName.c2p()}{property.Name.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.Name.p2c()}Changer)
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.{module.PropertyName};
-            module.{property.Name} = {property.Name.p2c()}Changer(module.{property.Name});
+            module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return particleSystem;
         }}
-
+{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static {module.TypeName} Set{property.Name.c2p()}(this {module.TypeName} module, {property.Type} {property.Name.p2c()})
+        public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, {property.Type} {property.PropertyName.p2c()})
         {{
-            module.{property.Name} = {property.Name.p2c()};
+            module.{property.PropertyName} = {property.PropertyName.p2c()};
             return module;
         }}
-
+{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static {module.TypeName} Set{property.Name.c2p()}(this {module.TypeName} module, Func<{property.Type}, {property.Type}> {property.Name.p2c()}Changer)
+        public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
-            module.{property.Name} = {property.Name.p2c()}Changer(module.{property.Name});
+            module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return module;
         }}
-#endif
         #endregion
-".Replace("\r\n", "\n"));
+{(isSameAsNext ? "" : "#endif\n")}");
+                isSameAsPrevious = isSameAsNext;
             }
 
-            sw.Write(
-$@"#endif
-    }}
+            builder.Write(
+$@"    }}
 }}
-".Replace("\r\n", "\n"));
-            sw.Flush();
+");
+
+            File.WriteAllText(filePath, builder.ToString().Replace("\r\n", "\n"));
         }
 
         /// <summary>
@@ -96,10 +105,16 @@ $@"#endif
         [MenuItem("Tools/Generate Scripts")]
         public static void GenerateWithReflection()
         {
-            var modules = LoadModules(INFO_PATH);
+            var modules = LoadModules(INFO_PATH)
+                .Where(m => m.Enabled)
+                .Select(m =>
+                {
+                    m.Properties = m.Properties.Where(p => p.Enabled).ToArray();
+                    return m;
+                });
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.TypeName}Extension.cs";
+                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.Type}Extension.cs";
                 WriteExtensionFile(filePath, module);
             }
             AssetDatabase.Refresh();
@@ -115,86 +130,120 @@ $@"#endif
         [MenuItem("Tools/Generate JSON")]
         public static void GenerateJsonWithReflection()
         {
-            var currentVersion = Application.unityVersion;
-            var modules = LoadModules(INFO_PATH);
-
+            var currentVersion = Regex.Match(Application.unityVersion, @"[0-9]*\.[0-9]*").Value;
             var currentModules = typeof(ParticleSystem)
                     .GetProperties()
                     .Where(m => m.PropertyType.Name.EndsWith("Module"))
-                    .OrderBy(m => m.PropertyType.Name)
-                    .Select(m => new PSModuleInfo
+                    .Select(m =>
                     {
-                        TypeName = m.PropertyType.Name,
-                        PropertyName = m.Name,
-                        AvailableVersions = new string[] { currentVersion },
-                        Properties = m.PropertyType
-                            .GetProperties()
-                            .Where(p => p.GetCustomAttribute<ObsoleteAttribute>() is null && p.CanWrite)
-                            .OrderBy(p => p.Name)
-                            .Select(p => new ModuleProperty
-                            {
-                                Name = p.Name,
-                                Type = GetSimpleTypeName(p.PropertyType.FullName),
-                                AvailableVersions = new string[] { currentVersion }
-                            }).ToArray()
-                    });
-
-            modules = modules.Concat(currentModules)
-                .GroupBy(m => m.PropertyName)
-                .Select(g =>
-                {
-                    var m = g.FirstOrDefault()!;
-                    // 2020.1, 2020, 2020.1.2 などの配列から 2020だけを抽出する
-                    var temp = g.SelectMany(mi => mi.AvailableVersions)
-                                .Distinct()
-                                .GroupBy(v => v.Count(c => c == '.'))
-                                .OrderBy(g => g.Key)
-                                .Select(g => g.ToList())
-                                .ToArray();
-                    for (var i = 0; i < temp.Length; i++)
-                    {
-                        for (var j = 1; j < temp.Length; j++)
+                        var mobsolete = m.GetCustomAttribute<ObsoleteAttribute>();
+                        return new
                         {
-                            temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
-                        }
-                    }
-                    m.AvailableVersions = temp.SelectMany(v => v).OrderBy(v => v).ToArray();
-                    m.Properties = g.SelectMany(p => p.Properties)
-                                    .GroupBy(p => p.Name)
-                                    .Select(g =>
-                                        {
-                                            var p = g.FirstOrDefault()!;
-                                            var temp = g.SelectMany(mi => mi.AvailableVersions)
-                                                        .Distinct()
-                                                        .GroupBy(v => v.Count(c => c == '.'))
-                                                        .OrderBy(g => g.Key)
-                                                        .Select(g => g.ToList())
-                                                        .ToArray();
-                                            for (var i = 0; i < temp.Length; i++)
-                                            {
-                                                for (var j = 1; j < temp.Length; j++)
-                                                {
-                                                    temp[i].ForEach(v => temp[j] = temp[j].Where(ver => !ver.StartsWith(v)).ToList());
-                                                }
-                                            }
-                                            p.AvailableVersions = temp.SelectMany(v => v).OrderBy(v => v).ToArray();
-                                            return p;
-                                        }).ToArray();
-                    return m;
-                }).ToList();
+                            Type = m.PropertyType.Name,
+                            PropertyName = m.Name,
+                            ReleaseVersion = currentVersion,
+                            ObsoleteVersion = mobsolete is null ? string.Empty : currentVersion,
+                            ObsoleteData = mobsolete is null ? null : new ObsoleteData(mobsolete),
+                            Properties = m.PropertyType
+                                .GetProperties()
+                                .Where(p => p.CanWrite)
+                                .Select(p =>
+                                {
+                                    var pobsolete = p.GetCustomAttribute<ObsoleteAttribute>();
+                                    return new ModuleProperty
+                                    {
+                                        Type = GetSimpleTypeName(p.PropertyType.FullName),
+                                        PropertyName = p.Name,
+                                        ReleaseVersion = currentVersion,
+                                        ObsoleteVersion = pobsolete is null ? string.Empty : currentVersion,
+                                        ObsoleteData = pobsolete is null ? null : new ObsoleteData(pobsolete),
+                                    };
+                                }).ToDictionary(p => p.PropertyName),
+                        };
+                    }).ToDictionary(m => m.Type);
+
+            var modules = LoadModules(INFO_PATH);
+            modules = modules.Select(m =>
+                    {
+                        // 過去に存在したモジュールが完全に削除されることは想定していない
+                        var cm = currentModules[m.Type];
+                        currentModules.Remove(m.Type);
+
+                        if (m.ReleaseVersion.CompareTo(cm.ReleaseVersion) > 0)
+                            m.ReleaseVersion = cm.ReleaseVersion;
+
+                        m.ObsoleteVersion
+                                = m.ObsoleteVersion == string.Empty
+                                    ? cm.ObsoleteVersion
+                                : cm.ObsoleteVersion == string.Empty
+                                    ? m.ObsoleteVersion
+                                : m.ObsoleteVersion.CompareTo(cm.ObsoleteVersion) < 0
+                                    ? m.ObsoleteVersion
+                                    : cm.ObsoleteVersion;
+                        m.ObsoleteData
+                                = m.ObsoleteVersion == string.Empty
+                                    ? cm.ObsoleteData
+                                : cm.ObsoleteVersion == string.Empty
+                                    ? m.ObsoleteData
+                                : m.ObsoleteVersion.CompareTo(cm.ObsoleteVersion) < 0
+                                    ? m.ObsoleteData
+                                    : cm.ObsoleteData;
+
+                        m.Properties = m.Properties.Select(p =>
+                        {
+                            // 過去に存在したプロパティが完全に削除されることは想定していない
+                            var cp = cm.Properties[p.PropertyName];
+                            cm.Properties.Remove(p.PropertyName);
+
+                            if (p.ReleaseVersion.CompareTo(cp.ReleaseVersion) > 0)
+                                p.ReleaseVersion = cp.ReleaseVersion;
+
+                            p.ObsoleteVersion
+                                    = p.ObsoleteVersion == string.Empty
+                                        ? cp.ObsoleteVersion
+                                    : cp.ObsoleteVersion == string.Empty
+                                        ? p.ObsoleteVersion
+                                    : p.ObsoleteVersion.CompareTo(cp.ObsoleteVersion) < 0
+                                        ? p.ObsoleteVersion
+                                        : cp.ObsoleteVersion;
+                            p.ObsoleteData
+                                    = p.ObsoleteVersion == string.Empty
+                                        ? cp.ObsoleteData
+                                    : cp.ObsoleteVersion == string.Empty
+                                        ? p.ObsoleteData
+                                    : p.ObsoleteVersion.CompareTo(cp.ObsoleteVersion) < 0
+                                        ? p.ObsoleteData
+                                        : cp.ObsoleteData;
+                            return p;
+                        }).Concat(cm.Properties.Select(p => p.Value))
+                        .OrderBy(m => m.PropertyName)
+                        .ToArray();
+                        return m;
+                    }).Concat(currentModules
+                        .Select(m => new PSModuleInfo
+                        {
+                            Type = m.Value.Type,
+                            PropertyName = m.Value.PropertyName,
+                            ReleaseVersion = m.Value.ReleaseVersion,
+                            ObsoleteVersion = m.Value.ObsoleteVersion,
+                            Properties = m.Value.Properties.Select(p => p.Value).ToArray(),
+                        }))
+                    .OrderBy(m => m.Type)
+                    .ToArray();
 
             var json = JsonConvert.SerializeObject(modules, Formatting.Indented).Replace("\r\n", "\n");
             File.WriteAllText(INFO_PATH, json, Encoding.UTF8);
+            AssetDatabase.Refresh();
             Debug.Log("Generating module-info.json Completed");
         }
 
-        internal static List<PSModuleInfo> LoadModules(string path)
+        internal static PSModuleInfo[] LoadModules(string path)
         {
             if (!File.Exists(path))
-                return new();
+                return new PSModuleInfo[0];
 
             var json = File.ReadAllText(path);
-            return JsonConvert.DeserializeObject<List<PSModuleInfo>>(json) ?? new();
+            return JsonConvert.DeserializeObject<PSModuleInfo[]>(json) ?? new PSModuleInfo[0];
         }
 
         private static string GetSimpleTypeName(string typeName) => typeName switch
