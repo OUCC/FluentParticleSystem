@@ -543,7 +543,7 @@
     "Enabled": true,
     "Type": "LifetimeByEmitterSpeedModule",
     "PropertyName": "lifetimeByEmitterSpeed",
-    "ReleaseVersion": "2021.3",
+    "ReleaseVersion": "2020.3",
     "ObsoleteVersion": "",
     "ObsoleteData": null,
     "Properties": [
@@ -551,7 +551,7 @@
         "Enabled": true,
         "PropertyName": "curve",
         "Type": "MinMaxCurve",
-        "ReleaseVersion": "2021.3",
+        "ReleaseVersion": "2020.3",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       },
@@ -559,7 +559,7 @@
         "Enabled": true,
         "PropertyName": "curveMultiplier",
         "Type": "float",
-        "ReleaseVersion": "2021.3",
+        "ReleaseVersion": "2020.3",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       },
@@ -567,7 +567,7 @@
         "Enabled": true,
         "PropertyName": "enabled",
         "Type": "bool",
-        "ReleaseVersion": "2021.3",
+        "ReleaseVersion": "2020.3",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       },
@@ -575,7 +575,7 @@
         "Enabled": true,
         "PropertyName": "range",
         "Type": "Vector2",
-        "ReleaseVersion": "2021.3",
+        "ReleaseVersion": "2020.3",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       }
@@ -2640,7 +2640,7 @@
         "Enabled": true,
         "PropertyName": "colliderQueryMode",
         "Type": "ParticleSystemColliderQueryMode",
-        "ReleaseVersion": "2021.3",
+        "ReleaseVersion": "2020.3",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       },

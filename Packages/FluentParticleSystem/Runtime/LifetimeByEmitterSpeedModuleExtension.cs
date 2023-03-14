@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LifetimeByEmitterSpeedModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2020_3_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLifetimeByEmitterSpeed(this ParticleSystem particleSystem, Action<LifetimeByEmitterSpeedModule> moduleEditor)
         {

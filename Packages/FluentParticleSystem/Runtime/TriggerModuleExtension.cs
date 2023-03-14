@@ -17,7 +17,7 @@ namespace OUCC.FluentParticleSystem
         }
 #endif
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2020_3_OR_NEWER
         #region ColliderQueryMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, ParticleSystemColliderQueryMode colliderQueryMode)
