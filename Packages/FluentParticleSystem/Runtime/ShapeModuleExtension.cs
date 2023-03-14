@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ShapeModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditShape(this ParticleSystem particleSystem, Action<ShapeModule> moduleEditor)
         {
@@ -255,7 +255,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Box
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -267,7 +267,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -279,7 +279,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -289,7 +289,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -539,7 +539,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshScale
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -551,7 +551,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -563,7 +563,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -573,7 +573,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1027,7 +1027,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomDirection
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1039,7 +1039,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1051,7 +1051,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1061,7 +1061,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

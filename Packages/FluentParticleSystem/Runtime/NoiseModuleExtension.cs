@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class NoiseModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditNoise(this ParticleSystem particleSystem, Action<NoiseModule> moduleEditor)
         {

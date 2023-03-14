@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ForceOverLifetimeModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditForceOverLifetime(this ParticleSystem particleSystem, Action<ForceOverLifetimeModule> moduleEditor)
         {

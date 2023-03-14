@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class RotationOverLifetimeModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditRotationOverLifetime(this ParticleSystem particleSystem, Action<RotationOverLifetimeModule> moduleEditor)
         {

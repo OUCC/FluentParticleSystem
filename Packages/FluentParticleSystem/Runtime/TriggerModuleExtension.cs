@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TriggerModuleExtension
     {
-#if UNITY_2021_3_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrigger(this ParticleSystem particleSystem, Action<TriggerModule> moduleEditor)
         {
@@ -15,7 +15,9 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.trigger);
             return particleSystem;
         }
+#endif
 
+#if UNITY_2021_3_OR_NEWER
         #region ColliderQueryMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, ParticleSystemColliderQueryMode colliderQueryMode)
@@ -49,7 +51,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, bool enabled)
