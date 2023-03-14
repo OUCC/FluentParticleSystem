@@ -165,8 +165,8 @@ $@"    }}
             var modules = LoadModules(INFO_PATH);
             modules = modules.Select(m =>
                     {
-                        // 過去に存在したモジュールが完全に削除されることは想定していない
-                        var cm = currentModules[m.Type];
+                        if (!currentModules.TryGetValue(m.Type, out var cm))
+                            return m;
                         currentModules.Remove(m.Type);
 
                         if (m.ReleaseVersion.CompareTo(cm.ReleaseVersion) > 0)
@@ -191,8 +191,8 @@ $@"    }}
 
                         m.Properties = m.Properties.Select(p =>
                         {
-                            // 過去に存在したプロパティが完全に削除されることは想定していない
-                            var cp = cm.Properties[p.PropertyName];
+                            if (!cm.Properties.TryGetValue(p.PropertyName, out var cp))
+                                return p;
                             cm.Properties.Remove(p.PropertyName);
 
                             if (p.ReleaseVersion.CompareTo(cp.ReleaseVersion) > 0)
@@ -216,6 +216,7 @@ $@"    }}
                                         : cp.ObsoleteData;
                             return p;
                         }).Concat(cm.Properties.Select(p => p.Value))
+                        .Distinct(EqualityCompareSelecter.Create<ModuleProperty>(m => m.PropertyName))
                         .OrderBy(m => m.PropertyName)
                         .ToArray();
                         return m;
@@ -228,6 +229,7 @@ $@"    }}
                             ObsoleteVersion = m.Value.ObsoleteVersion,
                             Properties = m.Value.Properties.Select(p => p.Value).ToArray(),
                         }))
+                    .Distinct(EqualityCompareSelecter.Create<PSModuleInfo>(m => m.Type))
                     .OrderBy(m => m.Type)
                     .ToArray();
 

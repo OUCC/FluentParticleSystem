@@ -50,6 +50,40 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region SeparateAxes
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetRotationOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.rotationOverLifetime;
+            module.separateAxes = separateAxes;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetRotationOverLifetimeSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.rotationOverLifetime;
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static RotationOverLifetimeModule SetSeparateAxes(this RotationOverLifetimeModule module, bool separateAxes)
+        {
+            module.separateAxes = separateAxes;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static RotationOverLifetimeModule SetSeparateAxes(this RotationOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
+        {
+            module.separateAxes = separateAxesChanger(module.separateAxes);
+            return module;
+        }
+        #endregion
+
         #region X
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
@@ -250,40 +284,6 @@ namespace OUCC.FluentParticleSystem
         public static RotationOverLifetimeModule SetZMultiplier(this RotationOverLifetimeModule module, Func<float, float> zMultiplierChanger)
         {
             module.zMultiplier = zMultiplierChanger(module.zMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region SeparateAxes
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetRotationOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.rotationOverLifetime;
-            module.separateAxes = separateAxes;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetRotationOverLifetimeSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.rotationOverLifetime;
-            module.separateAxes = separateAxesChanger(module.separateAxes);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static RotationOverLifetimeModule SetSeparateAxes(this RotationOverLifetimeModule module, bool separateAxes)
-        {
-            module.separateAxes = separateAxes;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static RotationOverLifetimeModule SetSeparateAxes(this RotationOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
-        {
-            module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
         #endregion

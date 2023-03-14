@@ -16,48 +16,70 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        #region Type
-#if UNITY_2021_3_OR_NEWER
-        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
-#endif
+        #region BurstCount
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, ParticleSystemEmissionType type)
+        public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, int burstCount)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.type = type;
+            module.burstCount = burstCount;
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
-        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
-#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
+        public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, Func<int, int> burstCountChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.type = typeChanger(module.type);
+            module.burstCount = burstCountChanger(module.burstCount);
             return particleSystem;
         }
 
-#if UNITY_2021_3_OR_NEWER
-        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
-#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetType(this EmissionModule module, ParticleSystemEmissionType type)
+        public static EmissionModule SetBurstCount(this EmissionModule module, int burstCount)
         {
-            module.type = type;
+            module.burstCount = burstCount;
             return module;
         }
 
-#if UNITY_2021_3_OR_NEWER
-        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
-#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetType(this EmissionModule module, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
+        public static EmissionModule SetBurstCount(this EmissionModule module, Func<int, int> burstCountChanger)
         {
-            module.type = typeChanger(module.type);
+            module.burstCount = burstCountChanger(module.burstCount);
+            return module;
+        }
+        #endregion
+
+        #region Enabled
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, bool enabled)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.enabled = enabled;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.enabled = enabledChanger(module.enabled);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetEnabled(this EmissionModule module, bool enabled)
+        {
+            module.enabled = enabled;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetEnabled(this EmissionModule module, Func<bool, bool> enabledChanger)
+        {
+            module.enabled = enabledChanger(module.enabled);
             return module;
         }
         #endregion
@@ -154,36 +176,70 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Enabled
+        #region RateOverDistance
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, bool enabled)
+        public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, MinMaxCurve rateOverDistance)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.enabled = enabled;
+            module.rateOverDistance = rateOverDistance;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
+        public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.enabled = enabledChanger(module.enabled);
+            module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetEnabled(this EmissionModule module, bool enabled)
+        public static EmissionModule SetRateOverDistance(this EmissionModule module, MinMaxCurve rateOverDistance)
         {
-            module.enabled = enabled;
+            module.rateOverDistance = rateOverDistance;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetEnabled(this EmissionModule module, Func<bool, bool> enabledChanger)
+        public static EmissionModule SetRateOverDistance(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
-            module.enabled = enabledChanger(module.enabled);
+            module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
+            return module;
+        }
+        #endregion
+
+        #region RateOverDistanceMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, float rateOverDistanceMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rateOverDistanceMultiplier = rateOverDistanceMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverDistanceMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, float rateOverDistanceMultiplier)
+        {
+            module.rateOverDistanceMultiplier = rateOverDistanceMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, Func<float, float> rateOverDistanceMultiplierChanger)
+        {
+            module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
             return module;
         }
         #endregion
@@ -256,104 +312,48 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region RateOverDistance
+        #region Type
+#if UNITY_2021_3_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, MinMaxCurve rateOverDistance)
+        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, ParticleSystemEmissionType type)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.rateOverDistance = rateOverDistance;
+            module.type = type;
             return particleSystem;
         }
 
+#if UNITY_2021_3_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
+        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.emission;
-            module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
+            module.type = typeChanger(module.type);
             return particleSystem;
         }
 
+#if UNITY_2021_3_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetRateOverDistance(this EmissionModule module, MinMaxCurve rateOverDistance)
+        public static EmissionModule SetType(this EmissionModule module, ParticleSystemEmissionType type)
         {
-            module.rateOverDistance = rateOverDistance;
+            module.type = type;
             return module;
         }
 
+#if UNITY_2021_3_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetRateOverDistance(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
+        public static EmissionModule SetType(this EmissionModule module, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
         {
-            module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
-            return module;
-        }
-        #endregion
-
-        #region RateOverDistanceMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, float rateOverDistanceMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.emission;
-            module.rateOverDistanceMultiplier = rateOverDistanceMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverDistanceMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.emission;
-            module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, float rateOverDistanceMultiplier)
-        {
-            module.rateOverDistanceMultiplier = rateOverDistanceMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, Func<float, float> rateOverDistanceMultiplierChanger)
-        {
-            module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region BurstCount
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, int burstCount)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.emission;
-            module.burstCount = burstCount;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, Func<int, int> burstCountChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.emission;
-            module.burstCount = burstCountChanger(module.burstCount);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetBurstCount(this EmissionModule module, int burstCount)
-        {
-            module.burstCount = burstCount;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EmissionModule SetBurstCount(this EmissionModule module, Func<int, int> burstCountChanger)
-        {
-            module.burstCount = burstCountChanger(module.burstCount);
+            module.type = typeChanger(module.type);
             return module;
         }
         #endregion

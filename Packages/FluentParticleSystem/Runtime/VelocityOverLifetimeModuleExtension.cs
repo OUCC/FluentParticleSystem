@@ -50,414 +50,6 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region X
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.x = x;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.x = xChanger(module.x);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, MinMaxCurve x)
-        {
-            module.x = x;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
-        {
-            module.x = xChanger(module.x);
-            return module;
-        }
-        #endregion
-
-        #region Y
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.y = y;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.y = yChanger(module.y);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, MinMaxCurve y)
-        {
-            module.y = y;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
-        {
-            module.y = yChanger(module.y);
-            return module;
-        }
-        #endregion
-
-        #region Z
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.z = z;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.z = zChanger(module.z);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, MinMaxCurve z)
-        {
-            module.z = z;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
-        {
-            module.z = zChanger(module.z);
-            return module;
-        }
-        #endregion
-
-        #region XMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.xMultiplier = xMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, float xMultiplier)
-        {
-            module.xMultiplier = xMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> xMultiplierChanger)
-        {
-            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region YMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.yMultiplier = yMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, float yMultiplier)
-        {
-            module.yMultiplier = yMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> yMultiplierChanger)
-        {
-            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region ZMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.zMultiplier = zMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.zMultiplier = zMultiplierChanger(module.zMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, float zMultiplier)
-        {
-            module.zMultiplier = zMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> zMultiplierChanger)
-        {
-            module.zMultiplier = zMultiplierChanger(module.zMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalX
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, MinMaxCurve orbitalX)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalX = orbitalX;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalX = orbitalXChanger(module.orbitalX);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, MinMaxCurve orbitalX)
-        {
-            module.orbitalX = orbitalX;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
-        {
-            module.orbitalX = orbitalXChanger(module.orbitalX);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalY
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, MinMaxCurve orbitalY)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalY = orbitalY;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalY = orbitalYChanger(module.orbitalY);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalY)
-        {
-            module.orbitalY = orbitalY;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
-        {
-            module.orbitalY = orbitalYChanger(module.orbitalY);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalZ
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, MinMaxCurve orbitalZ)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalZ = orbitalZ;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalZ = orbitalZChanger(module.orbitalZ);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalZ)
-        {
-            module.orbitalZ = orbitalZ;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
-        {
-            module.orbitalZ = orbitalZChanger(module.orbitalZ);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalXMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, float orbitalXMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalXMultiplier = orbitalXMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalXMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalXMultiplier = orbitalXMultiplierChanger(module.orbitalXMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, float orbitalXMultiplier)
-        {
-            module.orbitalXMultiplier = orbitalXMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalXMultiplierChanger)
-        {
-            module.orbitalXMultiplier = orbitalXMultiplierChanger(module.orbitalXMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalYMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, float orbitalYMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalYMultiplier = orbitalYMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalYMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalYMultiplier = orbitalYMultiplierChanger(module.orbitalYMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, float orbitalYMultiplier)
-        {
-            module.orbitalYMultiplier = orbitalYMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalYMultiplierChanger)
-        {
-            module.orbitalYMultiplier = orbitalYMultiplierChanger(module.orbitalYMultiplier);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalZMultiplier
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, float orbitalZMultiplier)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalZMultiplier = orbitalZMultiplier;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalZMultiplierChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalZMultiplier = orbitalZMultiplierChanger(module.orbitalZMultiplier);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, float orbitalZMultiplier)
-        {
-            module.orbitalZMultiplier = orbitalZMultiplier;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalZMultiplierChanger)
-        {
-            module.orbitalZMultiplier = orbitalZMultiplierChanger(module.orbitalZMultiplier);
-            return module;
-        }
-        #endregion
-
         #region OrbitalOffsetX
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetX(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetX)
@@ -488,74 +80,6 @@ namespace OUCC.FluentParticleSystem
         public static VelocityOverLifetimeModule SetOrbitalOffsetX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetXChanger)
         {
             module.orbitalOffsetX = orbitalOffsetXChanger(module.orbitalOffsetX);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalOffsetY
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetY)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalOffsetY = orbitalOffsetY;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalOffsetY = orbitalOffsetYChanger(module.orbitalOffsetY);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetY)
-        {
-            module.orbitalOffsetY = orbitalOffsetY;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
-        {
-            module.orbitalOffsetY = orbitalOffsetYChanger(module.orbitalOffsetY);
-            return module;
-        }
-        #endregion
-
-        #region OrbitalOffsetZ
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetZ)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalOffsetZ = orbitalOffsetZ;
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
-        {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
-            var module = particleSystem.velocityOverLifetime;
-            module.orbitalOffsetZ = orbitalOffsetZChanger(module.orbitalOffsetZ);
-            return particleSystem;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetZ)
-        {
-            module.orbitalOffsetZ = orbitalOffsetZ;
-            return module;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
-        {
-            module.orbitalOffsetZ = orbitalOffsetZChanger(module.orbitalOffsetZ);
             return module;
         }
         #endregion
@@ -594,6 +118,40 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region OrbitalOffsetY
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetY)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalOffsetY = orbitalOffsetY;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalOffsetY = orbitalOffsetYChanger(module.orbitalOffsetY);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetY)
+        {
+            module.orbitalOffsetY = orbitalOffsetY;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
+        {
+            module.orbitalOffsetY = orbitalOffsetYChanger(module.orbitalOffsetY);
+            return module;
+        }
+        #endregion
+
         #region OrbitalOffsetYMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetYMultiplier(this ParticleSystem particleSystem, float orbitalOffsetYMultiplier)
@@ -628,6 +186,40 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region OrbitalOffsetZ
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetZ)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalOffsetZ = orbitalOffsetZ;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalOffsetZ = orbitalOffsetZChanger(module.orbitalOffsetZ);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetZ)
+        {
+            module.orbitalOffsetZ = orbitalOffsetZ;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
+        {
+            module.orbitalOffsetZ = orbitalOffsetZChanger(module.orbitalOffsetZ);
+            return module;
+        }
+        #endregion
+
         #region OrbitalOffsetZMultiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZMultiplier(this ParticleSystem particleSystem, float orbitalOffsetZMultiplier)
@@ -658,6 +250,210 @@ namespace OUCC.FluentParticleSystem
         public static VelocityOverLifetimeModule SetOrbitalOffsetZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalOffsetZMultiplierChanger)
         {
             module.orbitalOffsetZMultiplier = orbitalOffsetZMultiplierChanger(module.orbitalOffsetZMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalX
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, MinMaxCurve orbitalX)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalX = orbitalX;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalX = orbitalXChanger(module.orbitalX);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, MinMaxCurve orbitalX)
+        {
+            module.orbitalX = orbitalX;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
+        {
+            module.orbitalX = orbitalXChanger(module.orbitalX);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalXMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, float orbitalXMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalXMultiplier = orbitalXMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalXMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalXMultiplier = orbitalXMultiplierChanger(module.orbitalXMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, float orbitalXMultiplier)
+        {
+            module.orbitalXMultiplier = orbitalXMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalXMultiplierChanger)
+        {
+            module.orbitalXMultiplier = orbitalXMultiplierChanger(module.orbitalXMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalY
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, MinMaxCurve orbitalY)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalY = orbitalY;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalY = orbitalYChanger(module.orbitalY);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalY)
+        {
+            module.orbitalY = orbitalY;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
+        {
+            module.orbitalY = orbitalYChanger(module.orbitalY);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalYMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, float orbitalYMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalYMultiplier = orbitalYMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalYMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalYMultiplier = orbitalYMultiplierChanger(module.orbitalYMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, float orbitalYMultiplier)
+        {
+            module.orbitalYMultiplier = orbitalYMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalYMultiplierChanger)
+        {
+            module.orbitalYMultiplier = orbitalYMultiplierChanger(module.orbitalYMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalZ
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, MinMaxCurve orbitalZ)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalZ = orbitalZ;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalZ = orbitalZChanger(module.orbitalZ);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalZ)
+        {
+            module.orbitalZ = orbitalZ;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
+        {
+            module.orbitalZ = orbitalZChanger(module.orbitalZ);
+            return module;
+        }
+        #endregion
+
+        #region OrbitalZMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, float orbitalZMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalZMultiplier = orbitalZMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalZMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.orbitalZMultiplier = orbitalZMultiplierChanger(module.orbitalZMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, float orbitalZMultiplier)
+        {
+            module.orbitalZMultiplier = orbitalZMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalZMultiplierChanger)
+        {
+            module.orbitalZMultiplier = orbitalZMultiplierChanger(module.orbitalZMultiplier);
             return module;
         }
         #endregion
@@ -730,6 +526,40 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region Space
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.space = space;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.space = spaceChanger(module.space);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, ParticleSystemSimulationSpace space)
+        {
+            module.space = space;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        {
+            module.space = spaceChanger(module.space);
+            return module;
+        }
+        #endregion
+
         #region SpeedModifier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifier(this ParticleSystem particleSystem, MinMaxCurve speedModifier)
@@ -798,36 +628,206 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
-        #region Space
+        #region X
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
+        public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.velocityOverLifetime;
-            module.space = space;
+            module.x = x;
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.velocityOverLifetime;
-            module.space = spaceChanger(module.space);
+            module.x = xChanger(module.x);
             return particleSystem;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, ParticleSystemSimulationSpace space)
+        public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, MinMaxCurve x)
         {
-            module.space = space;
+            module.x = x;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
+        public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
-            module.space = spaceChanger(module.space);
+            module.x = xChanger(module.x);
+            return module;
+        }
+        #endregion
+
+        #region XMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.xMultiplier = xMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, float xMultiplier)
+        {
+            module.xMultiplier = xMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> xMultiplierChanger)
+        {
+            module.xMultiplier = xMultiplierChanger(module.xMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region Y
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.y = y;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.y = yChanger(module.y);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, MinMaxCurve y)
+        {
+            module.y = y;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
+        {
+            module.y = yChanger(module.y);
+            return module;
+        }
+        #endregion
+
+        #region YMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.yMultiplier = yMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, float yMultiplier)
+        {
+            module.yMultiplier = yMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> yMultiplierChanger)
+        {
+            module.yMultiplier = yMultiplierChanger(module.yMultiplier);
+            return module;
+        }
+        #endregion
+
+        #region Z
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.z = z;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.z = zChanger(module.z);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, MinMaxCurve z)
+        {
+            module.z = z;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
+        {
+            module.z = zChanger(module.z);
+            return module;
+        }
+        #endregion
+
+        #region ZMultiplier
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.zMultiplier = zMultiplier;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.velocityOverLifetime;
+            module.zMultiplier = zMultiplierChanger(module.zMultiplier);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, float zMultiplier)
+        {
+            module.zMultiplier = zMultiplier;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> zMultiplierChanger)
+        {
+            module.zMultiplier = zMultiplierChanger(module.zMultiplier);
             return module;
         }
         #endregion
