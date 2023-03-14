@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TextureSheetAnimationModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTextureSheetAnimation(this ParticleSystem particleSystem, Action<TextureSheetAnimationModule> moduleEditor)
         {
@@ -17,7 +18,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Animation
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, UnityEngine.ParticleSystemAnimationType animation)
+        public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, ParticleSystemAnimationType animation)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -26,7 +27,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemAnimationType, UnityEngine.ParticleSystemAnimationType> animationChanger)
+        public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, Func<ParticleSystemAnimationType, ParticleSystemAnimationType> animationChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -35,14 +36,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, UnityEngine.ParticleSystemAnimationType animation)
+        public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, ParticleSystemAnimationType animation)
         {
             module.animation = animation;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, Func<UnityEngine.ParticleSystemAnimationType, UnityEngine.ParticleSystemAnimationType> animationChanger)
+        public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationType, ParticleSystemAnimationType> animationChanger)
         {
             module.animation = animationChanger(module.animation);
             return module;
@@ -113,6 +114,98 @@ namespace OUCC.FluentParticleSystem
         public static TextureSheetAnimationModule SetEnabled(this TextureSheetAnimationModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
+            return module;
+        }
+        #endregion
+
+        #region FlipU
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationFlipU(this ParticleSystem particleSystem, float flipU)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.flipU = flipU;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationFlipU(this ParticleSystem particleSystem, Func<float, float> flipUChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.flipU = flipUChanger(module.flipU);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetFlipU(this TextureSheetAnimationModule module, float flipU)
+        {
+            module.flipU = flipU;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetFlipU(this TextureSheetAnimationModule module, Func<float, float> flipUChanger)
+        {
+            module.flipU = flipUChanger(module.flipU);
+            return module;
+        }
+        #endregion
+
+        #region FlipV
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationFlipV(this ParticleSystem particleSystem, float flipV)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.flipV = flipV;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationFlipV(this ParticleSystem particleSystem, Func<float, float> flipVChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.flipV = flipVChanger(module.flipV);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetFlipV(this TextureSheetAnimationModule module, float flipV)
+        {
+            module.flipV = flipV;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetFlipV(this TextureSheetAnimationModule module, Func<float, float> flipVChanger)
+        {
+            module.flipV = flipVChanger(module.flipV);
             return module;
         }
         #endregion
@@ -221,7 +314,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemAnimationMode mode)
+        public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, ParticleSystemAnimationMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -230,7 +323,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemAnimationMode, UnityEngine.ParticleSystemAnimationMode> modeChanger)
+        public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationMode, ParticleSystemAnimationMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -239,14 +332,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, UnityEngine.ParticleSystemAnimationMode mode)
+        public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, ParticleSystemAnimationMode mode)
         {
             module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, Func<UnityEngine.ParticleSystemAnimationMode, UnityEngine.ParticleSystemAnimationMode> modeChanger)
+        public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationMode, ParticleSystemAnimationMode> modeChanger)
         {
             module.mode = modeChanger(module.mode);
             return module;
@@ -357,7 +450,7 @@ namespace OUCC.FluentParticleSystem
 
         #region RowMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemAnimationRowMode rowMode)
+        public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, ParticleSystemAnimationRowMode rowMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -366,7 +459,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemAnimationRowMode, UnityEngine.ParticleSystemAnimationRowMode> rowModeChanger)
+        public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationRowMode, ParticleSystemAnimationRowMode> rowModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -375,14 +468,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, UnityEngine.ParticleSystemAnimationRowMode rowMode)
+        public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, ParticleSystemAnimationRowMode rowMode)
         {
             module.rowMode = rowMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, Func<UnityEngine.ParticleSystemAnimationRowMode, UnityEngine.ParticleSystemAnimationRowMode> rowModeChanger)
+        public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationRowMode, ParticleSystemAnimationRowMode> rowModeChanger)
         {
             module.rowMode = rowModeChanger(module.rowMode);
             return module;
@@ -391,7 +484,7 @@ namespace OUCC.FluentParticleSystem
 
         #region SpeedRange
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, UnityEngine.Vector2 speedRange)
+        public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Vector2 speedRange)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -400,7 +493,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> speedRangeChanger)
+        public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> speedRangeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -409,14 +502,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, UnityEngine.Vector2 speedRange)
+        public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, Vector2 speedRange)
         {
             module.speedRange = speedRange;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> speedRangeChanger)
+        public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, Func<Vector2, Vector2> speedRangeChanger)
         {
             module.speedRange = speedRangeChanger(module.speedRange);
             return module;
@@ -493,7 +586,7 @@ namespace OUCC.FluentParticleSystem
 
         #region TimeMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemAnimationTimeMode timeMode)
+        public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, ParticleSystemAnimationTimeMode timeMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -502,7 +595,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemAnimationTimeMode, UnityEngine.ParticleSystemAnimationTimeMode> timeModeChanger)
+        public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationTimeMode, ParticleSystemAnimationTimeMode> timeModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.textureSheetAnimation;
@@ -511,16 +604,62 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, UnityEngine.ParticleSystemAnimationTimeMode timeMode)
+        public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, ParticleSystemAnimationTimeMode timeMode)
         {
             module.timeMode = timeMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, Func<UnityEngine.ParticleSystemAnimationTimeMode, UnityEngine.ParticleSystemAnimationTimeMode> timeModeChanger)
+        public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationTimeMode, ParticleSystemAnimationTimeMode> timeModeChanger)
         {
             module.timeMode = timeModeChanger(module.timeMode);
+            return module;
+        }
+        #endregion
+
+        #region UseRandomRow
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationUseRandomRow(this ParticleSystem particleSystem, bool useRandomRow)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.useRandomRow = useRandomRow;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTextureSheetAnimationUseRandomRow(this ParticleSystem particleSystem, Func<bool, bool> useRandomRowChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.textureSheetAnimation;
+            module.useRandomRow = useRandomRowChanger(module.useRandomRow);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetUseRandomRow(this TextureSheetAnimationModule module, bool useRandomRow)
+        {
+            module.useRandomRow = useRandomRow;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TextureSheetAnimationModule SetUseRandomRow(this TextureSheetAnimationModule module, Func<bool, bool> useRandomRowChanger)
+        {
+            module.useRandomRow = useRandomRowChanger(module.useRandomRow);
             return module;
         }
         #endregion
@@ -558,5 +697,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ForceOverLifetimeModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditForceOverLifetime(this ParticleSystem particleSystem, Action<ForceOverLifetimeModule> moduleEditor)
         {
@@ -85,7 +86,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Space
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.forceOverLifetime;
@@ -94,7 +95,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ParticleSystem SetForceOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.forceOverLifetime;
@@ -103,14 +104,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, ParticleSystemSimulationSpace space)
         {
             module.space = space;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             module.space = spaceChanger(module.space);
             return module;
@@ -320,5 +321,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

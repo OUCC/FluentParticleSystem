@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class EmissionModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditEmission(this ParticleSystem particleSystem, Action<EmissionModule> moduleEditor)
         {
@@ -79,6 +80,98 @@ namespace OUCC.FluentParticleSystem
         public static EmissionModule SetEnabled(this EmissionModule module, Func<bool, bool> enabledChanger)
         {
             module.enabled = enabledChanger(module.enabled);
+            return module;
+        }
+        #endregion
+
+        #region Rate
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRate(this ParticleSystem particleSystem, MinMaxCurve rate)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rate = rate;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRate(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rate = rateChanger(module.rate);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRate(this EmissionModule module, MinMaxCurve rate)
+        {
+            module.rate = rate;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRate(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateChanger)
+        {
+            module.rate = rateChanger(module.rate);
+            return module;
+        }
+        #endregion
+
+        #region RateMultiplier
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRateMultiplier(this ParticleSystem particleSystem, float rateMultiplier)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rateMultiplier = rateMultiplier;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionRateMultiplier(this ParticleSystem particleSystem, Func<float, float> rateMultiplierChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.rateMultiplier = rateMultiplierChanger(module.rateMultiplier);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRateMultiplier(this EmissionModule module, float rateMultiplier)
+        {
+            module.rateMultiplier = rateMultiplier;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetRateMultiplier(this EmissionModule module, Func<float, float> rateMultiplierChanger)
+        {
+            module.rateMultiplier = rateMultiplierChanger(module.rateMultiplier);
             return module;
         }
         #endregion
@@ -218,5 +311,52 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+
+        #region Type
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, ParticleSystemEmissionType type)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.type = type;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.emission;
+            module.type = typeChanger(module.type);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetType(this EmissionModule module, ParticleSystemEmissionType type)
+        {
+            module.type = type;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static EmissionModule SetType(this EmissionModule module, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
+        {
+            module.type = typeChanger(module.type);
+            return module;
+        }
+        #endregion
+#endif
     }
 }

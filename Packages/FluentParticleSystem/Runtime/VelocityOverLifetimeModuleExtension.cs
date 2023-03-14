@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class VelocityOverLifetimeModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditVelocityOverLifetime(this ParticleSystem particleSystem, Action<VelocityOverLifetimeModule> moduleEditor)
         {
@@ -527,7 +528,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Space
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace space)
+        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.velocityOverLifetime;
@@ -536,7 +537,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.velocityOverLifetime;
@@ -545,14 +546,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, UnityEngine.ParticleSystemSimulationSpace space)
+        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, ParticleSystemSimulationSpace space)
         {
             module.space = space;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> spaceChanger)
+        public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
             module.space = spaceChanger(module.space);
             return module;
@@ -830,5 +831,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

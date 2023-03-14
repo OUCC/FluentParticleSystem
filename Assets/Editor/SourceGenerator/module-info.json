@@ -1,0 +1,2899 @@
+﻿[
+  {
+    "Enabled": true,
+    "Type": "CollisionModule",
+    "PropertyName": "collision",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "bounce",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "bounceMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "colliderForce",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "collidesWith",
+        "Type": "LayerMask",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "dampen",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "dampenMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enableDynamicColliders",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enableInteriorCollisions",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "lifetimeLoss",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "lifetimeLossMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "maxCollisionShapes",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "maxKillSpeed",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "minKillSpeed",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "mode",
+        "Type": "ParticleSystemCollisionMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplyColliderForceByCollisionAngle",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplyColliderForceByParticleSize",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplyColliderForceByParticleSpeed",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "quality",
+        "Type": "ParticleSystemCollisionQuality",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusScale",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sendCollisionMessages",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "type",
+        "Type": "ParticleSystemCollisionType",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "voxelSize",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "ColorBySpeedModule",
+    "PropertyName": "colorBySpeed",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "color",
+        "Type": "MinMaxGradient",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "range",
+        "Type": "Vector2",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "ColorOverLifetimeModule",
+    "PropertyName": "colorOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "color",
+        "Type": "MinMaxGradient",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "CustomDataModule",
+    "PropertyName": "customData",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "EmissionModule",
+    "PropertyName": "emission",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "burstCount",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rate",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "rate property is deprecated. Use rateOverTime or rateOverDistance instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rateMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rateOverDistance",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rateOverDistanceMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rateOverTime",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rateOverTimeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "type",
+        "Type": "ParticleSystemEmissionType",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active."
+        }
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "ExternalForcesModule",
+    "PropertyName": "externalForces",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "influenceFilter",
+        "Type": "ParticleSystemGameObjectFilter",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "influenceMask",
+        "Type": "LayerMask",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplierCurve",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "ForceOverLifetimeModule",
+    "PropertyName": "forceOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "randomized",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "InheritVelocityModule",
+    "PropertyName": "inheritVelocity",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "curve",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "curveMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "mode",
+        "Type": "ParticleSystemInheritVelocityMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "LifetimeByEmitterSpeedModule",
+    "PropertyName": "lifetimeByEmitterSpeed",
+    "ReleaseVersion": "2021.3",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "curve",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "curveMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "range",
+        "Type": "Vector2",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "LightsModule",
+    "PropertyName": "lights",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "alphaAffectsIntensity",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "intensity",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "intensityMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "light",
+        "Type": "Light",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "maxLights",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "range",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rangeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "ratio",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeAffectsRange",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useParticleColor",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useRandomDistribution",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "LimitVelocityOverLifetimeModule",
+    "PropertyName": "limitVelocityOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "dampen",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "drag",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "dragMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limit",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "limitZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplyDragByParticleSize",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "multiplyDragByParticleVelocity",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "MainModule",
+    "PropertyName": "main",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "cullingMode",
+        "Type": "ParticleSystemCullingMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "customSimulationSpace",
+        "Type": "Transform",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "duration",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "emitterVelocity",
+        "Type": "Vector3",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "emitterVelocityMode",
+        "Type": "ParticleSystemEmitterVelocityMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "flipRotation",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "gravityModifier",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "gravityModifierMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "loop",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "maxParticles",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "playOnAwake",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "prewarm",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "randomizeRotationDirection",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation"
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "ringBufferLoopRange",
+        "Type": "Vector2",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "ringBufferMode",
+        "Type": "ParticleSystemRingBufferMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "scalingMode",
+        "Type": "ParticleSystemScalingMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "simulationSpace",
+        "Type": "ParticleSystemSimulationSpace",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "simulationSpeed",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startColor",
+        "Type": "MinMaxGradient",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startDelay",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startDelayMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startLifetime",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startLifetimeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotation",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotation3D",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startRotationZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSize",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSize3D",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSizeZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSpeed",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startSpeedMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "stopAction",
+        "Type": "ParticleSystemStopAction",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useUnscaledTime",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "NoiseModule",
+    "PropertyName": "noise",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "damping",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "frequency",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "octaveCount",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "octaveMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "octaveScale",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "positionAmount",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "quality",
+        "Type": "ParticleSystemNoiseQuality",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remap",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapEnabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "remapZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rotationAmount",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "scrollSpeed",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "scrollSpeedMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeAmount",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strength",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "strengthZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "RotationBySpeedModule",
+    "PropertyName": "rotationBySpeed",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "range",
+        "Type": "Vector2",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "RotationOverLifetimeModule",
+    "PropertyName": "rotationOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "ShapeModule",
+    "PropertyName": "shape",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "alignToDirection",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "angle",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "arc",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "arcMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "arcSpeed",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "arcSpeedMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "arcSpread",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "box",
+        "Type": "Vector3",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale"
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "boxThickness",
+        "Type": "Vector3",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "donutRadius",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "length",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "mesh",
+        "Type": "Mesh",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshMaterialIndex",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshRenderer",
+        "Type": "MeshRenderer",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshScale",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "meshScale property is deprecated.Please use scale instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshShapeType",
+        "Type": "ParticleSystemMeshShapeType",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshSpawnMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshSpawnSpeed",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshSpawnSpeedMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "meshSpawnSpread",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "normalOffset",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "position",
+        "Type": "Vector3",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radius",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusMode",
+        "Type": "ParticleSystemShapeMultiModeValue",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusSpeed",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusSpeedMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusSpread",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusThickness",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "randomDirection",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "randomDirection property is deprecated. Use randomDirectionAmount instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "randomDirectionAmount",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "randomPositionAmount",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rotation",
+        "Type": "Vector3",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "scale",
+        "Type": "Vector3",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "shapeType",
+        "Type": "ParticleSystemShapeType",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "skinnedMeshRenderer",
+        "Type": "SkinnedMeshRenderer",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sphericalDirectionAmount",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sprite",
+        "Type": "Sprite",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "spriteRenderer",
+        "Type": "SpriteRenderer",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "texture",
+        "Type": "Texture2D",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureAlphaAffectsParticles",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureBilinearFiltering",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureClipChannel",
+        "Type": "ParticleSystemShapeTextureChannel",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureClipThreshold",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureColorAffectsParticles",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureUVChannel",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useMeshColors",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useMeshMaterialIndex",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "SizeBySpeedModule",
+    "PropertyName": "sizeBySpeed",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "range",
+        "Type": "Vector2",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "size",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "SizeOverLifetimeModule",
+    "PropertyName": "sizeOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "separateAxes",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "size",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "SubEmittersModule",
+    "PropertyName": "subEmitters",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "birth0",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "birth0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "birth1",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "birth1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "collision0",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "collision0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "collision1",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "collision1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "death0",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "death0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "death1",
+        "Type": "ParticleSystem",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "death1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "TextureSheetAnimationModule",
+    "PropertyName": "textureSheetAnimation",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "animation",
+        "Type": "ParticleSystemAnimationType",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "cycleCount",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "flipU",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "flipV",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "fps",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "frameOverTime",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "frameOverTimeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "mode",
+        "Type": "ParticleSystemAnimationMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "numTilesX",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "numTilesY",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rowIndex",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "rowMode",
+        "Type": "ParticleSystemAnimationRowMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "speedRange",
+        "Type": "Vector2",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startFrame",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "startFrameMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "timeMode",
+        "Type": "ParticleSystemAnimationTimeMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "useRandomRow",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "2019.4",
+        "ObsoleteData": {
+          "IsError": false,
+          "Message": "useRandomRow property is deprecated. Use rowMode instead."
+        }
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "uvChannelMask",
+        "Type": "UnityEngine.Rendering.UVChannelFlags",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "TrailModule",
+    "PropertyName": "trails",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "attachRibbonsToTransform",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "colorOverLifetime",
+        "Type": "MinMaxGradient",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "colorOverTrail",
+        "Type": "MinMaxGradient",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "dieWithParticles",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "generateLightingData",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "inheritParticleColor",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "lifetime",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "lifetimeMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "minVertexDistance",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "mode",
+        "Type": "ParticleSystemTrailMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "ratio",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "ribbonCount",
+        "Type": "int",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "shadowBias",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeAffectsLifetime",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "sizeAffectsWidth",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "splitSubEmitterRibbons",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureMode",
+        "Type": "ParticleSystemTrailTextureMode",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "widthOverTrail",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "widthOverTrailMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "worldSpace",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "TriggerModule",
+    "PropertyName": "trigger",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "colliderQueryMode",
+        "Type": "ParticleSystemColliderQueryMode",
+        "ReleaseVersion": "2021.3",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "enter",
+        "Type": "ParticleSystemOverlapAction",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "exit",
+        "Type": "ParticleSystemOverlapAction",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "inside",
+        "Type": "ParticleSystemOverlapAction",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "outside",
+        "Type": "ParticleSystemOverlapAction",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radiusScale",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "Type": "VelocityOverLifetimeModule",
+    "PropertyName": "velocityOverLifetime",
+    "ReleaseVersion": "2019.4",
+    "ObsoleteVersion": "",
+    "ObsoleteData": null,
+    "Properties": [
+      {
+        "Enabled": true,
+        "PropertyName": "enabled",
+        "Type": "bool",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalOffsetZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalX",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalXMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalY",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalYMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalZ",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "orbitalZMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radial",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "radialMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "space",
+        "Type": "ParticleSystemSimulationSpace",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "speedModifier",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "speedModifierMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "x",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "xMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "y",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "yMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "z",
+        "Type": "MinMaxCurve",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "zMultiplier",
+        "Type": "float",
+        "ReleaseVersion": "2019.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      }
+    ]
+  }
+]

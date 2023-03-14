@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ColorOverLifetimeModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditColorOverLifetime(this ParticleSystem particleSystem, Action<ColorOverLifetimeModule> moduleEditor)
         {
@@ -82,5 +83,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

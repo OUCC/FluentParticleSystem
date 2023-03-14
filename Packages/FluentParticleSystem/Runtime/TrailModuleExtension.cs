@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TrailModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrails(this ParticleSystem particleSystem, Action<TrailModule> moduleEditor)
         {
@@ -357,7 +358,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Mode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemTrailMode mode)
+        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, ParticleSystemTrailMode mode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
@@ -366,7 +367,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemTrailMode, UnityEngine.ParticleSystemTrailMode> modeChanger)
+        public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
@@ -375,14 +376,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetMode(this TrailModule module, UnityEngine.ParticleSystemTrailMode mode)
+        public static TrailModule SetMode(this TrailModule module, ParticleSystemTrailMode mode)
         {
             module.mode = mode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetMode(this TrailModule module, Func<UnityEngine.ParticleSystemTrailMode, UnityEngine.ParticleSystemTrailMode> modeChanger)
+        public static TrailModule SetMode(this TrailModule module, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
         {
             module.mode = modeChanger(module.mode);
             return module;
@@ -595,7 +596,7 @@ namespace OUCC.FluentParticleSystem
 
         #region TextureMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemTrailTextureMode textureMode)
+        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, ParticleSystemTrailTextureMode textureMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
@@ -604,7 +605,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemTrailTextureMode, UnityEngine.ParticleSystemTrailTextureMode> textureModeChanger)
+        public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trails;
@@ -613,14 +614,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetTextureMode(this TrailModule module, UnityEngine.ParticleSystemTrailTextureMode textureMode)
+        public static TrailModule SetTextureMode(this TrailModule module, ParticleSystemTrailTextureMode textureMode)
         {
             module.textureMode = textureMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TrailModule SetTextureMode(this TrailModule module, Func<UnityEngine.ParticleSystemTrailTextureMode, UnityEngine.ParticleSystemTrailTextureMode> textureModeChanger)
+        public static TrailModule SetTextureMode(this TrailModule module, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
         {
             module.textureMode = textureModeChanger(module.textureMode);
             return module;
@@ -728,5 +729,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

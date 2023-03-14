@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class MainModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
@@ -17,7 +18,7 @@ namespace OUCC.FluentParticleSystem
 
         #region CullingMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemCullingMode cullingMode)
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -26,7 +27,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -35,14 +36,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCullingMode(this MainModule module, UnityEngine.ParticleSystemCullingMode cullingMode)
+        public static MainModule SetCullingMode(this MainModule module, ParticleSystemCullingMode cullingMode)
         {
             module.cullingMode = cullingMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCullingMode(this MainModule module, Func<UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemCullingMode> cullingModeChanger)
+        public static MainModule SetCullingMode(this MainModule module, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
             module.cullingMode = cullingModeChanger(module.cullingMode);
             return module;
@@ -51,7 +52,7 @@ namespace OUCC.FluentParticleSystem
 
         #region CustomSimulationSpace
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, UnityEngine.Transform customSimulationSpace)
+        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Transform customSimulationSpace)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -60,7 +61,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
+        public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<Transform, Transform> customSimulationSpaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -69,14 +70,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCustomSimulationSpace(this MainModule module, UnityEngine.Transform customSimulationSpace)
+        public static MainModule SetCustomSimulationSpace(this MainModule module, Transform customSimulationSpace)
         {
             module.customSimulationSpace = customSimulationSpace;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetCustomSimulationSpace(this MainModule module, Func<UnityEngine.Transform, UnityEngine.Transform> customSimulationSpaceChanger)
+        public static MainModule SetCustomSimulationSpace(this MainModule module, Func<Transform, Transform> customSimulationSpaceChanger)
         {
             module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
             return module;
@@ -116,10 +117,12 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2021_3_OR_NEWER
         #region EmitterVelocity
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, UnityEngine.Vector3 emitterVelocity)
+        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Vector3 emitterVelocity)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -128,7 +131,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<Vector3, Vector3> emitterVelocityChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -137,23 +140,25 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocity(this MainModule module, UnityEngine.Vector3 emitterVelocity)
+        public static MainModule SetEmitterVelocity(this MainModule module, Vector3 emitterVelocity)
         {
             module.emitterVelocity = emitterVelocity;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocity(this MainModule module, Func<UnityEngine.Vector3, UnityEngine.Vector3> emitterVelocityChanger)
+        public static MainModule SetEmitterVelocity(this MainModule module, Func<Vector3, Vector3> emitterVelocityChanger)
         {
             module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region EmitterVelocityMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -162,7 +167,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -171,14 +176,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocityMode(this MainModule module, UnityEngine.ParticleSystemEmitterVelocityMode emitterVelocityMode)
+        public static MainModule SetEmitterVelocityMode(this MainModule module, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
             module.emitterVelocityMode = emitterVelocityMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetEmitterVelocityMode(this MainModule module, Func<UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
+        public static MainModule SetEmitterVelocityMode(this MainModule module, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
             module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
             return module;
@@ -423,9 +428,55 @@ namespace OUCC.FluentParticleSystem
         }
         #endregion
 
+        #region RandomizeRotationDirection
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRandomizeRotationDirection(this ParticleSystem particleSystem, float randomizeRotationDirection)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.randomizeRotationDirection = randomizeRotationDirection;
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainRandomizeRotationDirection(this ParticleSystem particleSystem, Func<float, float> randomizeRotationDirectionChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.randomizeRotationDirection = randomizeRotationDirectionChanger(module.randomizeRotationDirection);
+            return particleSystem;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRandomizeRotationDirection(this MainModule module, float randomizeRotationDirection)
+        {
+            module.randomizeRotationDirection = randomizeRotationDirection;
+            return module;
+        }
+
+#if UNITY_2019_4_OR_NEWER
+        [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
+#endif
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetRandomizeRotationDirection(this MainModule module, Func<float, float> randomizeRotationDirectionChanger)
+        {
+            module.randomizeRotationDirection = randomizeRotationDirectionChanger(module.randomizeRotationDirection);
+            return module;
+        }
+        #endregion
+
         #region RingBufferLoopRange
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, UnityEngine.Vector2 ringBufferLoopRange)
+        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Vector2 ringBufferLoopRange)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -434,7 +485,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
+        public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -443,14 +494,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferLoopRange(this MainModule module, UnityEngine.Vector2 ringBufferLoopRange)
+        public static MainModule SetRingBufferLoopRange(this MainModule module, Vector2 ringBufferLoopRange)
         {
             module.ringBufferLoopRange = ringBufferLoopRange;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferLoopRange(this MainModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> ringBufferLoopRangeChanger)
+        public static MainModule SetRingBufferLoopRange(this MainModule module, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
             module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
             return module;
@@ -459,7 +510,7 @@ namespace OUCC.FluentParticleSystem
 
         #region RingBufferMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, ParticleSystemRingBufferMode ringBufferMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -468,7 +519,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -477,14 +528,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferMode(this MainModule module, UnityEngine.ParticleSystemRingBufferMode ringBufferMode)
+        public static MainModule SetRingBufferMode(this MainModule module, ParticleSystemRingBufferMode ringBufferMode)
         {
             module.ringBufferMode = ringBufferMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetRingBufferMode(this MainModule module, Func<UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemRingBufferMode> ringBufferModeChanger)
+        public static MainModule SetRingBufferMode(this MainModule module, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
             module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
             return module;
@@ -493,7 +544,7 @@ namespace OUCC.FluentParticleSystem
 
         #region ScalingMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemScalingMode scalingMode)
+        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, ParticleSystemScalingMode scalingMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -502,7 +553,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -511,14 +562,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetScalingMode(this MainModule module, UnityEngine.ParticleSystemScalingMode scalingMode)
+        public static MainModule SetScalingMode(this MainModule module, ParticleSystemScalingMode scalingMode)
         {
             module.scalingMode = scalingMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetScalingMode(this MainModule module, Func<UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemScalingMode> scalingModeChanger)
+        public static MainModule SetScalingMode(this MainModule module, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
             module.scalingMode = scalingModeChanger(module.scalingMode);
             return module;
@@ -527,7 +578,7 @@ namespace OUCC.FluentParticleSystem
 
         #region SimulationSpace
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace simulationSpace)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -536,7 +587,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -545,14 +596,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpace(this MainModule module, UnityEngine.ParticleSystemSimulationSpace simulationSpace)
+        public static MainModule SetSimulationSpace(this MainModule module, ParticleSystemSimulationSpace simulationSpace)
         {
             module.simulationSpace = simulationSpace;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetSimulationSpace(this MainModule module, Func<UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemSimulationSpace> simulationSpaceChanger)
+        public static MainModule SetSimulationSpace(this MainModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
             module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
             return module;
@@ -1445,7 +1496,7 @@ namespace OUCC.FluentParticleSystem
 
         #region StopAction
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, UnityEngine.ParticleSystemStopAction stopAction)
+        public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, ParticleSystemStopAction stopAction)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -1454,7 +1505,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemStopAction, UnityEngine.ParticleSystemStopAction> stopActionChanger)
+        public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.main;
@@ -1463,14 +1514,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStopAction(this MainModule module, UnityEngine.ParticleSystemStopAction stopAction)
+        public static MainModule SetStopAction(this MainModule module, ParticleSystemStopAction stopAction)
         {
             module.stopAction = stopAction;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MainModule SetStopAction(this MainModule module, Func<UnityEngine.ParticleSystemStopAction, UnityEngine.ParticleSystemStopAction> stopActionChanger)
+        public static MainModule SetStopAction(this MainModule module, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
             module.stopAction = stopActionChanger(module.stopAction);
             return module;
@@ -1510,5 +1561,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

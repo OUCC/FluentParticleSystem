@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LightsModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLights(this ParticleSystem particleSystem, Action<LightsModule> moduleEditor)
         {
@@ -153,7 +154,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Light
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, UnityEngine.Light light)
+        public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Light light)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.lights;
@@ -162,7 +163,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Func<UnityEngine.Light, UnityEngine.Light> lightChanger)
+        public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Func<Light, Light> lightChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.lights;
@@ -171,14 +172,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LightsModule SetLight(this LightsModule module, UnityEngine.Light light)
+        public static LightsModule SetLight(this LightsModule module, Light light)
         {
             module.light = light;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LightsModule SetLight(this LightsModule module, Func<UnityEngine.Light, UnityEngine.Light> lightChanger)
+        public static LightsModule SetLight(this LightsModule module, Func<Light, Light> lightChanger)
         {
             module.light = lightChanger(module.light);
             return module;
@@ -422,5 +423,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

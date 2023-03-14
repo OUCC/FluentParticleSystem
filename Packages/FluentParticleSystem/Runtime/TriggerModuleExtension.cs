@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TriggerModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrigger(this ParticleSystem particleSystem, Action<TriggerModule> moduleEditor)
         {
@@ -14,10 +15,12 @@ namespace OUCC.FluentParticleSystem
             moduleEditor(particleSystem.trigger);
             return particleSystem;
         }
+#endif
 
+#if UNITY_2021_3_OR_NEWER
         #region ColliderQueryMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, UnityEngine.ParticleSystemColliderQueryMode colliderQueryMode)
+        public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, ParticleSystemColliderQueryMode colliderQueryMode)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -26,7 +29,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemColliderQueryMode, UnityEngine.ParticleSystemColliderQueryMode> colliderQueryModeChanger)
+        public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -35,20 +38,22 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetColliderQueryMode(this TriggerModule module, UnityEngine.ParticleSystemColliderQueryMode colliderQueryMode)
+        public static TriggerModule SetColliderQueryMode(this TriggerModule module, ParticleSystemColliderQueryMode colliderQueryMode)
         {
             module.colliderQueryMode = colliderQueryMode;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetColliderQueryMode(this TriggerModule module, Func<UnityEngine.ParticleSystemColliderQueryMode, UnityEngine.ParticleSystemColliderQueryMode> colliderQueryModeChanger)
+        public static TriggerModule SetColliderQueryMode(this TriggerModule module, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
             module.colliderQueryMode = colliderQueryModeChanger(module.colliderQueryMode);
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, bool enabled)
@@ -85,7 +90,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Enter
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, UnityEngine.ParticleSystemOverlapAction enter)
+        public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, ParticleSystemOverlapAction enter)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -94,7 +99,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> enterChanger)
+        public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -103,14 +108,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetEnter(this TriggerModule module, UnityEngine.ParticleSystemOverlapAction enter)
+        public static TriggerModule SetEnter(this TriggerModule module, ParticleSystemOverlapAction enter)
         {
             module.enter = enter;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetEnter(this TriggerModule module, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> enterChanger)
+        public static TriggerModule SetEnter(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
             module.enter = enterChanger(module.enter);
             return module;
@@ -119,7 +124,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Exit
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, UnityEngine.ParticleSystemOverlapAction exit)
+        public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, ParticleSystemOverlapAction exit)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -128,7 +133,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> exitChanger)
+        public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -137,14 +142,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetExit(this TriggerModule module, UnityEngine.ParticleSystemOverlapAction exit)
+        public static TriggerModule SetExit(this TriggerModule module, ParticleSystemOverlapAction exit)
         {
             module.exit = exit;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetExit(this TriggerModule module, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> exitChanger)
+        public static TriggerModule SetExit(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
             module.exit = exitChanger(module.exit);
             return module;
@@ -153,7 +158,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Inside
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, UnityEngine.ParticleSystemOverlapAction inside)
+        public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, ParticleSystemOverlapAction inside)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -162,7 +167,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> insideChanger)
+        public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -171,14 +176,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetInside(this TriggerModule module, UnityEngine.ParticleSystemOverlapAction inside)
+        public static TriggerModule SetInside(this TriggerModule module, ParticleSystemOverlapAction inside)
         {
             module.inside = inside;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetInside(this TriggerModule module, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> insideChanger)
+        public static TriggerModule SetInside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
             module.inside = insideChanger(module.inside);
             return module;
@@ -187,7 +192,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Outside
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, UnityEngine.ParticleSystemOverlapAction outside)
+        public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, ParticleSystemOverlapAction outside)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -196,7 +201,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> outsideChanger)
+        public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.trigger;
@@ -205,14 +210,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetOutside(this TriggerModule module, UnityEngine.ParticleSystemOverlapAction outside)
+        public static TriggerModule SetOutside(this TriggerModule module, ParticleSystemOverlapAction outside)
         {
             module.outside = outside;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static TriggerModule SetOutside(this TriggerModule module, Func<UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemOverlapAction> outsideChanger)
+        public static TriggerModule SetOutside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
             module.outside = outsideChanger(module.outside);
             return module;
@@ -252,5 +257,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }

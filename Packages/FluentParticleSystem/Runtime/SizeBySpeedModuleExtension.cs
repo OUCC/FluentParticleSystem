@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -7,6 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class SizeBySpeedModuleExtension
     {
+#if UNITY_2019_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditSizeBySpeed(this ParticleSystem particleSystem, Action<SizeBySpeedModule> moduleEditor)
         {
@@ -51,7 +52,7 @@ namespace OUCC.FluentParticleSystem
 
         #region Range
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, UnityEngine.Vector2 range)
+        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.sizeBySpeed;
@@ -60,7 +61,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
+        public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
         {
             ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
             var module = particleSystem.sizeBySpeed;
@@ -69,14 +70,14 @@ namespace OUCC.FluentParticleSystem
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, UnityEngine.Vector2 range)
+        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Vector2 range)
         {
             module.range = range;
             return module;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Func<UnityEngine.Vector2, UnityEngine.Vector2> rangeChanger)
+        public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Func<Vector2, Vector2> rangeChanger)
         {
             module.range = rangeChanger(module.range);
             return module;
@@ -388,5 +389,6 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
     }
 }
