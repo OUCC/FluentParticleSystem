@@ -1,7 +1,4 @@
-﻿#if NET_4_6
-#nullable enable
-#endif
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace OUCC.FluentParticleSystem.Generator
@@ -24,7 +21,7 @@ namespace OUCC.FluentParticleSystem.Generator
             else if (xtemp == null && ytemp != null)
                 return ytemp.Equals(xtemp);
             else
-                return xtemp!.Equals(ytemp);
+                return xtemp.Equals(ytemp);
         }
 
         public int GetHashCode(T obj)

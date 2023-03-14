@@ -1,6 +1,4 @@
-﻿#nullable enable
-
-using System;
+﻿using System;
 
 namespace OUCC.FluentParticleSystem.Generator
 {
@@ -33,7 +31,7 @@ namespace OUCC.FluentParticleSystem.Generator
         /// </summary>
         public string ObsoleteVersion = string.Empty;
 
-        public ObsoleteData? ObsoleteData = null;
+        public ObsoleteData ObsoleteData = null;
 
         /// <summary>
         /// プロパティ
@@ -68,7 +66,7 @@ namespace OUCC.FluentParticleSystem.Generator
         /// </summary>
         public string ObsoleteVersion = string.Empty;
 
-        public ObsoleteData? ObsoleteData = null;
+        public ObsoleteData ObsoleteData = null;
     }
 
     public class ObsoleteData

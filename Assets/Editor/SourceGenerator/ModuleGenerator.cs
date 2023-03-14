@@ -1,5 +1,4 @@
-﻿#nullable enable
-using System;
+﻿using System;
 using System.IO;
 using System.Reflection;
 using System.Linq;
@@ -48,7 +47,7 @@ namespace OUCC.FluentParticleSystem
                 var property = module.Properties[i];
                 var isSameAsNext = i + 1 != module.Properties.Length && module.Properties[i + 1].ReleaseVersion == property.ReleaseVersion;
                 var obsolete = property.ObsoleteData is null ? "" :
-@$"
+$@"
 #if UNITY_{property.ObsoleteVersion.Replace('.', '_')}_OR_NEWER
         [Obsolete(""{property.ObsoleteData.Message}"", {property.ObsoleteData.IsError.ToString().ToLower()})]
 #endif";
@@ -216,8 +215,8 @@ $@"    }}
                                         : cp.ObsoleteData;
                             return p;
                         }).Concat(cm.Properties.Select(p => p.Value))
-                        .Distinct(EqualityCompareSelecter.Create<ModuleProperty>(m => m.PropertyName))
-                        .OrderBy(m => m.PropertyName)
+                        .Distinct(EqualityCompareSelecter.Create<ModuleProperty>(p => p.PropertyName))
+                        .OrderBy(p => p.PropertyName)
                         .ToArray();
                         return m;
                     }).Concat(currentModules
@@ -248,17 +247,24 @@ $@"    }}
             return JsonConvert.DeserializeObject<PSModuleInfo[]>(json) ?? new PSModuleInfo[0];
         }
 
-        private static string GetSimpleTypeName(string typeName) => typeName switch
+        private static string GetSimpleTypeName(string typeName)
         {
-            "System.Int32" => "int",
-            "System.Single" => "float",
-            "System.Boolean" => "bool",
-            var n => n.StartsWith("UnityEngine.ParticleSystem+")
-                ? n.Split('+').LastOrDefault()
-                : n.Split('.').Length == 2 && n.StartsWith("UnityEngine.")
-                ? n.Replace("UnityEngine.", "")
-                : n
-        };
+            switch (typeName)
+            {
+                case "System.Int32":
+                    return "int";
+                case "System.Single":
+                    return "float";
+                case "System.Boolean":
+                    return "bool";
+                default:
+                    return typeName.StartsWith("UnityEngine.ParticleSystem+")
+                        ? typeName.Split('+').LastOrDefault()
+                        : typeName.Split('.').Length == 2 && typeName.StartsWith("UnityEngine.")
+                        ? typeName.Replace("UnityEngine.", "")
+                        : typeName;
+            };
+        }
         #endregion
     }
 }
