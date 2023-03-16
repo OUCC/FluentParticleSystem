@@ -2,7 +2,7 @@
 
 [English](README.md) / Japanese
 
-このパッケージはUnityの`ParticleSystem`をメソッドチェーンで記述できるようにする拡張メソッド群を提供します
+このパッケージはUnityの`ParticleSystem`を で記述できるようにする拡張メソッド群を提供します
 
 ## インストール方法
 
@@ -23,7 +23,7 @@ public class Foo : MonoBehavior
 
     private void Start()
     {
-        // Set<モジュール名><項目名>で設定できます
+        // Set<モジュール名><項目名> で設定できます
         particleSystem.SetMainDuration(5.0f);
 
         // 現在の設定値を利用して変更できます

@@ -2,7 +2,7 @@
 
 English / [Japanese](README_ja.md)
 
-このパッケージはUnityの`ParticleSystem`をメソッドチェーンで記述できるようにする拡張メソッド群を提供します
+This package provides extension methods to write `ParticleSystem` of Unity with method chains.
 
 ## installation
 
@@ -15,7 +15,7 @@ You can install this package using UPM (Unity Package Manager).
 5. Click **Add**
 
 
-## 使い方
+## Usage
 
 ```csharp
 public class Foo : MonoBehavior
@@ -24,7 +24,7 @@ public class Foo : MonoBehavior
 
     private void Start()
     {
-        // Set<モジュール名><項目名>で設定できます
+        // Assign value with Set<Module Name><Property Name>
         particleSystem.SetMainDuration(5.0f);
 
         // 現在の設定値を利用して変更できます
