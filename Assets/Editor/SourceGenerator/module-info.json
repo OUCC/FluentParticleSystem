@@ -899,6 +899,14 @@
       },
       {
         "Enabled": true,
+        "PropertyName": "gravitySource",
+        "Type": "ParticleSystemGravitySource",
+        "ReleaseVersion": "2022.2",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
         "PropertyName": "loop",
         "Type": "bool",
         "ReleaseVersion": "2018.4",
@@ -2599,6 +2607,14 @@
         "PropertyName": "textureMode",
         "Type": "ParticleSystemTrailTextureMode",
         "ReleaseVersion": "2018.4",
+        "ObsoleteVersion": "",
+        "ObsoleteData": null
+      },
+      {
+        "Enabled": true,
+        "PropertyName": "textureScale",
+        "Type": "Vector2",
+        "ReleaseVersion": "2022.2",
         "ObsoleteVersion": "",
         "ObsoleteData": null
       },
