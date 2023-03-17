@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class CustomDataModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditCustomData(this ParticleSystem particleSystem, Action<CustomDataModule> moduleEditor)
         {

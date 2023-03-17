@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LightsModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLights(this ParticleSystem particleSystem, Action<LightsModule> moduleEditor)
         {

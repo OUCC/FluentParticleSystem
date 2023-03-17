@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TextureSheetAnimationModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTextureSheetAnimation(this ParticleSystem particleSystem, Action<TextureSheetAnimationModule> moduleEditor)
         {
@@ -119,7 +119,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipU
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -131,7 +131,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -143,7 +143,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -153,7 +153,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -165,7 +165,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipV
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -177,7 +177,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -189,7 +189,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -199,7 +199,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -447,7 +447,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region RowMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, ParticleSystemAnimationRowMode rowMode)
@@ -481,7 +483,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2018_4_OR_NEWER
         #region SpeedRange
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Vector2 speedRange)

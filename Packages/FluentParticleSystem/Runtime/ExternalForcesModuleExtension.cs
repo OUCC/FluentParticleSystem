@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class ExternalForcesModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditExternalForces(this ParticleSystem particleSystem, Action<ExternalForcesModule> moduleEditor)
         {
@@ -83,7 +83,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region InfluenceMask
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesInfluenceMask(this ParticleSystem particleSystem, LayerMask influenceMask)
@@ -117,7 +119,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2018_4_OR_NEWER
         #region Multiplier
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplier(this ParticleSystem particleSystem, float multiplier)
@@ -151,7 +155,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2019_4_OR_NEWER
         #region MultiplierCurve
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetExternalForcesMultiplierCurve(this ParticleSystem particleSystem, MinMaxCurve multiplierCurve)

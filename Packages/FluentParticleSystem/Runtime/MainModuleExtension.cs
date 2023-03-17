@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class MainModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
@@ -155,7 +155,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 #endif
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         #region EmitterVelocityMode
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
@@ -429,7 +429,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomizeRotationDirection
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -441,7 +441,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -453,7 +453,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -463,7 +463,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class EmissionModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditEmission(this ParticleSystem particleSystem, Action<EmissionModule> moduleEditor)
         {
@@ -85,7 +85,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Rate
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -97,7 +97,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -109,7 +109,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -119,7 +119,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -131,7 +131,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateMultiplier
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -143,7 +143,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -155,7 +155,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -165,7 +165,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -313,7 +313,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Type
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -325,7 +325,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -337,7 +337,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -347,7 +347,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
