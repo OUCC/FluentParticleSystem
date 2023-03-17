@@ -4,7 +4,7 @@ English / [Japanese](README_ja.md)
 
 This package provides extension methods to write `ParticleSystem` of Unity with method chains.
 
-## installation
+## Installation
 
 You can install this package using UPM (Unity Package Manager).
 

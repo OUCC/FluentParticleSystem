@@ -244,6 +244,7 @@ $@"    }}
                 return new PSModuleInfo[0];
 
             var json = File.ReadAllText(path);
+            // JsonUtilityはnullを扱えない
             return JsonConvert.DeserializeObject<PSModuleInfo[]>(json) ?? new PSModuleInfo[0];
         }
 
