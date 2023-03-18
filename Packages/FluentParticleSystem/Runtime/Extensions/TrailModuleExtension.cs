@@ -846,7 +846,45 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2022_2_OR_NEWER
+        #region TextureScale
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Vector2 textureScale)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.textureScale = textureScale;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Func<Vector2, Vector2> textureScaleChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.trails;
+            module.textureScale = textureScaleChanger(module.textureScale);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetTextureScale(this TrailModule module, Vector2 textureScale)
+        {
+            module.textureScale = textureScale;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TrailModule SetTextureScale(this TrailModule module, Func<Vector2, Vector2> textureScaleChanger)
+        {
+            module.textureScale = textureScaleChanger(module.textureScale);
+            return module;
+        }
+        #endregion
+#endif
+
+#if UNITY_2018_4_OR_NEWER
         #region WidthOverTrail
         /// <summary>
         /// Assign a value to <see cref="TrailModule.widthOverTrail"/>

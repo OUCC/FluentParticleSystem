@@ -390,7 +390,45 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
         #endregion
+#endif
 
+#if UNITY_2022_2_OR_NEWER
+        #region GravitySource
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, ParticleSystemGravitySource gravitySource)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravitySource = gravitySource;
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
+        {
+            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            var module = particleSystem.main;
+            module.gravitySource = gravitySourceChanger(module.gravitySource);
+            return particleSystem;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravitySource(this MainModule module, ParticleSystemGravitySource gravitySource)
+        {
+            module.gravitySource = gravitySource;
+            return module;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MainModule SetGravitySource(this MainModule module, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
+        {
+            module.gravitySource = gravitySourceChanger(module.gravitySource);
+            return module;
+        }
+        #endregion
+#endif
+
+#if UNITY_2018_4_OR_NEWER
         #region Loop
         /// <summary>
         /// Assign a value to <see cref="MainModule.loop"/>
