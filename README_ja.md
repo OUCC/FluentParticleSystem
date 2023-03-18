@@ -1,5 +1,7 @@
 # FluentParticleSystem
 
+[![openupm](https://img.shields.io/npm/v/org.oucc.fluent-particle-system?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/org.oucc.fluent-particle-system/)
+
 [English](README.md) / Japanese
 
 このパッケージはUnityの`ParticleSystem`を で記述できるようにする拡張メソッド群を提供します
@@ -8,13 +10,26 @@
 
 このパッケージは UPM(Unity Package Manager) を利用してインストールすることができます。
 
+### Use Git URL
+
 1. **Package Manager** ウィンドウを開く
 2. ステータスバーの **Add**(+) をクリック
 3. **Add package from git URL** を選択
 4. `https://github.com/OUCC/FluentParticleSystem.git?path=Packages/FluentParticleSystem` を入力
 5. **Add** をクリック
 
+### Use OpenUPM
+
+=> [OpenUPM Page](https://openupm.com/packages/org.oucc.fluent-particle-system/)
+
+コマンドラインを使用する場合
+```bash
+$ openupm add org.oucc.fluent-particle-system
+```
+
 ## 使い方
+
+Assembly Deffinition を使用している場合は, `OUCC.FluentParticleSystem` を `Assembly Definition References` に追加します
 
 ```csharp
 public class Foo : MonoBehavior
