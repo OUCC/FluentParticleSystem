@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class InheritVelocityModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditInheritVelocity(this ParticleSystem particleSystem, Action<InheritVelocityModule> moduleEditor)
         {

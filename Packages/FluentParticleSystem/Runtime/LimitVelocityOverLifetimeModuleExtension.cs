@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class LimitVelocityOverLifetimeModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLimitVelocityOverLifetime(this ParticleSystem particleSystem, Action<LimitVelocityOverLifetimeModule> moduleEditor)
         {

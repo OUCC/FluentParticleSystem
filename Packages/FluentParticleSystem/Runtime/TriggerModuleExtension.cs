@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class TriggerModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrigger(this ParticleSystem particleSystem, Action<TriggerModule> moduleEditor)
         {
@@ -53,7 +53,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 #endif
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         #region Enabled
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, bool enabled)

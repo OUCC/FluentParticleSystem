@@ -7,7 +7,7 @@ namespace OUCC.FluentParticleSystem
 {
     public static class CollisionModuleExtension
     {
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditCollision(this ParticleSystem particleSystem, Action<CollisionModule> moduleEditor)
         {
@@ -289,7 +289,7 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region EnableInteriorCollisions
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -301,7 +301,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -313,7 +313,7 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -323,7 +323,7 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
-#if UNITY_2019_4_OR_NEWER
+#if UNITY_2018_4_OR_NEWER
         [Obsolete("enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system.", false)]
 #endif
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
