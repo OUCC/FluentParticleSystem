@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.enabled"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.enabled"/>
+        /// Edit <see cref="ForceOverLifetimeModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetEnabled(this ForceOverLifetimeModule module, Func<bool, bool> enabledChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.randomized"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.randomized"/>
+        /// Edit <see cref="ForceOverLifetimeModule.randomized"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetRandomized(this ForceOverLifetimeModule module, Func<bool, bool> randomizedChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.space"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.space"/>
+        /// Edit <see cref="ForceOverLifetimeModule.space"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetSpace(this ForceOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.x"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.x"/>
+        /// Edit <see cref="ForceOverLifetimeModule.x"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetX(this ForceOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.xMultiplier"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.xMultiplier"/>
+        /// Edit <see cref="ForceOverLifetimeModule.xMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetXMultiplier(this ForceOverLifetimeModule module, Func<float, float> xMultiplierChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.y"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.y"/>
+        /// Edit <see cref="ForceOverLifetimeModule.y"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetY(this ForceOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.yMultiplier"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.yMultiplier"/>
+        /// Edit <see cref="ForceOverLifetimeModule.yMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetYMultiplier(this ForceOverLifetimeModule module, Func<float, float> yMultiplierChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.z"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.z"/>
+        /// Edit <see cref="ForceOverLifetimeModule.z"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetZ(this ForceOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
@@ -420,7 +412,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ForceOverLifetimeModule.zMultiplier"/>
         /// </summary>
@@ -432,7 +423,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ForceOverLifetimeModule.zMultiplier"/>
+        /// Edit <see cref="ForceOverLifetimeModule.zMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ForceOverLifetimeModule SetZMultiplier(this ForceOverLifetimeModule module, Func<float, float> zMultiplierChanger)

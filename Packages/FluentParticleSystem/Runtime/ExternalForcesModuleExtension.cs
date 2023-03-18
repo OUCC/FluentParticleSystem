@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ExternalForcesModule.enabled"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ExternalForcesModule.enabled"/>
+        /// Edit <see cref="ExternalForcesModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ExternalForcesModule SetEnabled(this ExternalForcesModule module, Func<bool, bool> enabledChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ExternalForcesModule.influenceFilter"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ExternalForcesModule.influenceFilter"/>
+        /// Edit <see cref="ExternalForcesModule.influenceFilter"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ExternalForcesModule SetInfluenceFilter(this ExternalForcesModule module, Func<ParticleSystemGameObjectFilter, ParticleSystemGameObjectFilter> influenceFilterChanger)
@@ -140,7 +138,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ExternalForcesModule.influenceMask"/>
         /// </summary>
@@ -152,7 +149,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ExternalForcesModule.influenceMask"/>
+        /// Edit <see cref="ExternalForcesModule.influenceMask"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ExternalForcesModule SetInfluenceMask(this ExternalForcesModule module, Func<LayerMask, LayerMask> influenceMaskChanger)
@@ -189,7 +186,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ExternalForcesModule.multiplier"/>
         /// </summary>
@@ -201,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ExternalForcesModule.multiplier"/>
+        /// Edit <see cref="ExternalForcesModule.multiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ExternalForcesModule SetMultiplier(this ExternalForcesModule module, Func<float, float> multiplierChanger)
@@ -238,7 +234,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ExternalForcesModule.multiplierCurve"/>
         /// </summary>
@@ -250,7 +245,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ExternalForcesModule.multiplierCurve"/>
+        /// Edit <see cref="ExternalForcesModule.multiplierCurve"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ExternalForcesModule SetMultiplierCurve(this ExternalForcesModule module, Func<MinMaxCurve, MinMaxCurve> multiplierCurveChanger)

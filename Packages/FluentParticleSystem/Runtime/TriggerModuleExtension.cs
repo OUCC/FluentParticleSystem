@@ -46,7 +46,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.colliderQueryMode"/>
         /// </summary>
@@ -58,7 +57,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.colliderQueryMode"/>
+        /// Edit <see cref="TriggerModule.colliderQueryMode"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetColliderQueryMode(this TriggerModule module, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
@@ -95,7 +94,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.enabled"/>
         /// </summary>
@@ -107,7 +105,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.enabled"/>
+        /// Edit <see cref="TriggerModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnabled(this TriggerModule module, Func<bool, bool> enabledChanger)
@@ -142,7 +140,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.enter"/>
         /// </summary>
@@ -154,7 +151,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.enter"/>
+        /// Edit <see cref="TriggerModule.enter"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnter(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
@@ -189,7 +186,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.exit"/>
         /// </summary>
@@ -201,7 +197,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.exit"/>
+        /// Edit <see cref="TriggerModule.exit"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetExit(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
@@ -236,7 +232,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.inside"/>
         /// </summary>
@@ -248,7 +243,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.inside"/>
+        /// Edit <see cref="TriggerModule.inside"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetInside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
@@ -283,7 +278,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.outside"/>
         /// </summary>
@@ -295,7 +289,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.outside"/>
+        /// Edit <see cref="TriggerModule.outside"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetOutside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
@@ -330,7 +324,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TriggerModule.radiusScale"/>
         /// </summary>
@@ -342,7 +335,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TriggerModule.radiusScale"/>
+        /// Edit <see cref="TriggerModule.radiusScale"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetRadiusScale(this TriggerModule module, Func<float, float> radiusScaleChanger)

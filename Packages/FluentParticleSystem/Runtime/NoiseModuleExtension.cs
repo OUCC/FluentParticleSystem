@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.damping"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.damping"/>
+        /// Edit <see cref="NoiseModule.damping"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetDamping(this NoiseModule module, Func<bool, bool> dampingChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.enabled"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.enabled"/>
+        /// Edit <see cref="NoiseModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetEnabled(this NoiseModule module, Func<bool, bool> enabledChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.frequency"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.frequency"/>
+        /// Edit <see cref="NoiseModule.frequency"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetFrequency(this NoiseModule module, Func<float, float> frequencyChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.octaveCount"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.octaveCount"/>
+        /// Edit <see cref="NoiseModule.octaveCount"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetOctaveCount(this NoiseModule module, Func<int, int> octaveCountChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.octaveMultiplier"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.octaveMultiplier"/>
+        /// Edit <see cref="NoiseModule.octaveMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetOctaveMultiplier(this NoiseModule module, Func<float, float> octaveMultiplierChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.octaveScale"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.octaveScale"/>
+        /// Edit <see cref="NoiseModule.octaveScale"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetOctaveScale(this NoiseModule module, Func<float, float> octaveScaleChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.positionAmount"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.positionAmount"/>
+        /// Edit <see cref="NoiseModule.positionAmount"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetPositionAmount(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> positionAmountChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.quality"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.quality"/>
+        /// Edit <see cref="NoiseModule.quality"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetQuality(this NoiseModule module, Func<ParticleSystemNoiseQuality, ParticleSystemNoiseQuality> qualityChanger)
@@ -420,7 +412,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remap"/>
         /// </summary>
@@ -432,7 +423,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remap"/>
+        /// Edit <see cref="NoiseModule.remap"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemap(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> remapChanger)
@@ -467,7 +458,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapEnabled"/>
         /// </summary>
@@ -479,7 +469,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapEnabled"/>
+        /// Edit <see cref="NoiseModule.remapEnabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapEnabled(this NoiseModule module, Func<bool, bool> remapEnabledChanger)
@@ -514,7 +504,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapMultiplier"/>
         /// </summary>
@@ -526,7 +515,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapMultiplier"/>
+        /// Edit <see cref="NoiseModule.remapMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapMultiplier(this NoiseModule module, Func<float, float> remapMultiplierChanger)
@@ -561,7 +550,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapX"/>
         /// </summary>
@@ -573,7 +561,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapX"/>
+        /// Edit <see cref="NoiseModule.remapX"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapX(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> remapXChanger)
@@ -608,7 +596,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapXMultiplier"/>
         /// </summary>
@@ -620,7 +607,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapXMultiplier"/>
+        /// Edit <see cref="NoiseModule.remapXMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapXMultiplier(this NoiseModule module, Func<float, float> remapXMultiplierChanger)
@@ -655,7 +642,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapY"/>
         /// </summary>
@@ -667,7 +653,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapY"/>
+        /// Edit <see cref="NoiseModule.remapY"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapY(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> remapYChanger)
@@ -702,7 +688,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapYMultiplier"/>
         /// </summary>
@@ -714,7 +699,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapYMultiplier"/>
+        /// Edit <see cref="NoiseModule.remapYMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapYMultiplier(this NoiseModule module, Func<float, float> remapYMultiplierChanger)
@@ -749,7 +734,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapZ"/>
         /// </summary>
@@ -761,7 +745,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapZ"/>
+        /// Edit <see cref="NoiseModule.remapZ"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapZ(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> remapZChanger)
@@ -796,7 +780,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.remapZMultiplier"/>
         /// </summary>
@@ -808,7 +791,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.remapZMultiplier"/>
+        /// Edit <see cref="NoiseModule.remapZMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRemapZMultiplier(this NoiseModule module, Func<float, float> remapZMultiplierChanger)
@@ -843,7 +826,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.rotationAmount"/>
         /// </summary>
@@ -855,7 +837,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.rotationAmount"/>
+        /// Edit <see cref="NoiseModule.rotationAmount"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetRotationAmount(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> rotationAmountChanger)
@@ -890,7 +872,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.scrollSpeed"/>
         /// </summary>
@@ -902,7 +883,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.scrollSpeed"/>
+        /// Edit <see cref="NoiseModule.scrollSpeed"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetScrollSpeed(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> scrollSpeedChanger)
@@ -937,7 +918,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.scrollSpeedMultiplier"/>
         /// </summary>
@@ -949,7 +929,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.scrollSpeedMultiplier"/>
+        /// Edit <see cref="NoiseModule.scrollSpeedMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetScrollSpeedMultiplier(this NoiseModule module, Func<float, float> scrollSpeedMultiplierChanger)
@@ -984,7 +964,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.separateAxes"/>
         /// </summary>
@@ -996,7 +975,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.separateAxes"/>
+        /// Edit <see cref="NoiseModule.separateAxes"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetSeparateAxes(this NoiseModule module, Func<bool, bool> separateAxesChanger)
@@ -1031,7 +1010,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.sizeAmount"/>
         /// </summary>
@@ -1043,7 +1021,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.sizeAmount"/>
+        /// Edit <see cref="NoiseModule.sizeAmount"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetSizeAmount(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> sizeAmountChanger)
@@ -1078,7 +1056,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strength"/>
         /// </summary>
@@ -1090,7 +1067,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strength"/>
+        /// Edit <see cref="NoiseModule.strength"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrength(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> strengthChanger)
@@ -1125,7 +1102,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthMultiplier"/>
         /// </summary>
@@ -1137,7 +1113,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthMultiplier"/>
+        /// Edit <see cref="NoiseModule.strengthMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthMultiplier(this NoiseModule module, Func<float, float> strengthMultiplierChanger)
@@ -1172,7 +1148,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthX"/>
         /// </summary>
@@ -1184,7 +1159,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthX"/>
+        /// Edit <see cref="NoiseModule.strengthX"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthX(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> strengthXChanger)
@@ -1219,7 +1194,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthXMultiplier"/>
         /// </summary>
@@ -1231,7 +1205,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthXMultiplier"/>
+        /// Edit <see cref="NoiseModule.strengthXMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthXMultiplier(this NoiseModule module, Func<float, float> strengthXMultiplierChanger)
@@ -1266,7 +1240,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthY"/>
         /// </summary>
@@ -1278,7 +1251,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthY"/>
+        /// Edit <see cref="NoiseModule.strengthY"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthY(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> strengthYChanger)
@@ -1313,7 +1286,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthYMultiplier"/>
         /// </summary>
@@ -1325,7 +1297,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthYMultiplier"/>
+        /// Edit <see cref="NoiseModule.strengthYMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthYMultiplier(this NoiseModule module, Func<float, float> strengthYMultiplierChanger)
@@ -1360,7 +1332,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthZ"/>
         /// </summary>
@@ -1372,7 +1343,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthZ"/>
+        /// Edit <see cref="NoiseModule.strengthZ"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthZ(this NoiseModule module, Func<MinMaxCurve, MinMaxCurve> strengthZChanger)
@@ -1407,7 +1378,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="NoiseModule.strengthZMultiplier"/>
         /// </summary>
@@ -1419,7 +1389,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="NoiseModule.strengthZMultiplier"/>
+        /// Edit <see cref="NoiseModule.strengthZMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static NoiseModule SetStrengthZMultiplier(this NoiseModule module, Func<float, float> strengthZMultiplierChanger)

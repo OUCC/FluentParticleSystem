@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="InheritVelocityModule.curve"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="InheritVelocityModule.curve"/>
+        /// Edit <see cref="InheritVelocityModule.curve"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static InheritVelocityModule SetCurve(this InheritVelocityModule module, Func<MinMaxCurve, MinMaxCurve> curveChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="InheritVelocityModule.curveMultiplier"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="InheritVelocityModule.curveMultiplier"/>
+        /// Edit <see cref="InheritVelocityModule.curveMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static InheritVelocityModule SetCurveMultiplier(this InheritVelocityModule module, Func<float, float> curveMultiplierChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="InheritVelocityModule.enabled"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="InheritVelocityModule.enabled"/>
+        /// Edit <see cref="InheritVelocityModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static InheritVelocityModule SetEnabled(this InheritVelocityModule module, Func<bool, bool> enabledChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="InheritVelocityModule.mode"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="InheritVelocityModule.mode"/>
+        /// Edit <see cref="InheritVelocityModule.mode"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static InheritVelocityModule SetMode(this InheritVelocityModule module, Func<ParticleSystemInheritVelocityMode, ParticleSystemInheritVelocityMode> modeChanger)

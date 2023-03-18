@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ColorOverLifetimeModule.color"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ColorOverLifetimeModule.color"/>
+        /// Edit <see cref="ColorOverLifetimeModule.color"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ColorOverLifetimeModule SetColor(this ColorOverLifetimeModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ColorOverLifetimeModule.enabled"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ColorOverLifetimeModule.enabled"/>
+        /// Edit <see cref="ColorOverLifetimeModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ColorOverLifetimeModule SetEnabled(this ColorOverLifetimeModule module, Func<bool, bool> enabledChanger)

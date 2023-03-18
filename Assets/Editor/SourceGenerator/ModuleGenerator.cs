@@ -81,7 +81,6 @@ $@"
             return particleSystem;
         }}
 
-        
         /// <summary>
         /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
         /// </summary>{obsolete}
@@ -93,7 +92,7 @@ $@"
         }}
 
         /// <summary>
-        /// Edit see cref=""{module.Type}.{property.PropertyName}""/>
+        /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
         /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)

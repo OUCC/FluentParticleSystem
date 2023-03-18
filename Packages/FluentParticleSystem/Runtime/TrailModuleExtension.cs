@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.attachRibbonsToTransform"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.attachRibbonsToTransform"/>
+        /// Edit <see cref="TrailModule.attachRibbonsToTransform"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, Func<bool, bool> attachRibbonsToTransformChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.colorOverLifetime"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.colorOverLifetime"/>
+        /// Edit <see cref="TrailModule.colorOverLifetime"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetColorOverLifetime(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.colorOverTrail"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.colorOverTrail"/>
+        /// Edit <see cref="TrailModule.colorOverTrail"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetColorOverTrail(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.dieWithParticles"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.dieWithParticles"/>
+        /// Edit <see cref="TrailModule.dieWithParticles"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetDieWithParticles(this TrailModule module, Func<bool, bool> dieWithParticlesChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.enabled"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.enabled"/>
+        /// Edit <see cref="TrailModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetEnabled(this TrailModule module, Func<bool, bool> enabledChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.generateLightingData"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.generateLightingData"/>
+        /// Edit <see cref="TrailModule.generateLightingData"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetGenerateLightingData(this TrailModule module, Func<bool, bool> generateLightingDataChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.inheritParticleColor"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.inheritParticleColor"/>
+        /// Edit <see cref="TrailModule.inheritParticleColor"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetInheritParticleColor(this TrailModule module, Func<bool, bool> inheritParticleColorChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.lifetime"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.lifetime"/>
+        /// Edit <see cref="TrailModule.lifetime"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetLifetime(this TrailModule module, Func<MinMaxCurve, MinMaxCurve> lifetimeChanger)
@@ -420,7 +412,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.lifetimeMultiplier"/>
         /// </summary>
@@ -432,7 +423,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.lifetimeMultiplier"/>
+        /// Edit <see cref="TrailModule.lifetimeMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetLifetimeMultiplier(this TrailModule module, Func<float, float> lifetimeMultiplierChanger)
@@ -467,7 +458,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.minVertexDistance"/>
         /// </summary>
@@ -479,7 +469,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.minVertexDistance"/>
+        /// Edit <see cref="TrailModule.minVertexDistance"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetMinVertexDistance(this TrailModule module, Func<float, float> minVertexDistanceChanger)
@@ -514,7 +504,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.mode"/>
         /// </summary>
@@ -526,7 +515,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.mode"/>
+        /// Edit <see cref="TrailModule.mode"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetMode(this TrailModule module, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
@@ -561,7 +550,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.ratio"/>
         /// </summary>
@@ -573,7 +561,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.ratio"/>
+        /// Edit <see cref="TrailModule.ratio"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetRatio(this TrailModule module, Func<float, float> ratioChanger)
@@ -608,7 +596,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.ribbonCount"/>
         /// </summary>
@@ -620,7 +607,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.ribbonCount"/>
+        /// Edit <see cref="TrailModule.ribbonCount"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetRibbonCount(this TrailModule module, Func<int, int> ribbonCountChanger)
@@ -655,7 +642,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.shadowBias"/>
         /// </summary>
@@ -667,7 +653,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.shadowBias"/>
+        /// Edit <see cref="TrailModule.shadowBias"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetShadowBias(this TrailModule module, Func<float, float> shadowBiasChanger)
@@ -702,7 +688,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.sizeAffectsLifetime"/>
         /// </summary>
@@ -714,7 +699,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.sizeAffectsLifetime"/>
+        /// Edit <see cref="TrailModule.sizeAffectsLifetime"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSizeAffectsLifetime(this TrailModule module, Func<bool, bool> sizeAffectsLifetimeChanger)
@@ -749,7 +734,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.sizeAffectsWidth"/>
         /// </summary>
@@ -761,7 +745,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.sizeAffectsWidth"/>
+        /// Edit <see cref="TrailModule.sizeAffectsWidth"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSizeAffectsWidth(this TrailModule module, Func<bool, bool> sizeAffectsWidthChanger)
@@ -796,7 +780,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.splitSubEmitterRibbons"/>
         /// </summary>
@@ -808,7 +791,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.splitSubEmitterRibbons"/>
+        /// Edit <see cref="TrailModule.splitSubEmitterRibbons"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, Func<bool, bool> splitSubEmitterRibbonsChanger)
@@ -843,7 +826,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.textureMode"/>
         /// </summary>
@@ -855,7 +837,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.textureMode"/>
+        /// Edit <see cref="TrailModule.textureMode"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetTextureMode(this TrailModule module, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
@@ -890,7 +872,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.widthOverTrail"/>
         /// </summary>
@@ -902,7 +883,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.widthOverTrail"/>
+        /// Edit <see cref="TrailModule.widthOverTrail"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWidthOverTrail(this TrailModule module, Func<MinMaxCurve, MinMaxCurve> widthOverTrailChanger)
@@ -937,7 +918,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.widthOverTrailMultiplier"/>
         /// </summary>
@@ -949,7 +929,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.widthOverTrailMultiplier"/>
+        /// Edit <see cref="TrailModule.widthOverTrailMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWidthOverTrailMultiplier(this TrailModule module, Func<float, float> widthOverTrailMultiplierChanger)
@@ -984,7 +964,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="TrailModule.worldSpace"/>
         /// </summary>
@@ -996,7 +975,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="TrailModule.worldSpace"/>
+        /// Edit <see cref="TrailModule.worldSpace"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWorldSpace(this TrailModule module, Func<bool, bool> worldSpaceChanger)

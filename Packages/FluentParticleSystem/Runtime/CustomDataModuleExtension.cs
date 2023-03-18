@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CustomDataModule.enabled"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CustomDataModule.enabled"/>
+        /// Edit <see cref="CustomDataModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CustomDataModule SetEnabled(this CustomDataModule module, Func<bool, bool> enabledChanger)

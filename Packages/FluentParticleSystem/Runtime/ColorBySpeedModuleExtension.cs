@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ColorBySpeedModule.color"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ColorBySpeedModule.color"/>
+        /// Edit <see cref="ColorBySpeedModule.color"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ColorBySpeedModule SetColor(this ColorBySpeedModule module, Func<MinMaxGradient, MinMaxGradient> colorChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ColorBySpeedModule.enabled"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ColorBySpeedModule.enabled"/>
+        /// Edit <see cref="ColorBySpeedModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ColorBySpeedModule SetEnabled(this ColorBySpeedModule module, Func<bool, bool> enabledChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="ColorBySpeedModule.range"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="ColorBySpeedModule.range"/>
+        /// Edit <see cref="ColorBySpeedModule.range"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ColorBySpeedModule SetRange(this ColorBySpeedModule module, Func<Vector2, Vector2> rangeChanger)

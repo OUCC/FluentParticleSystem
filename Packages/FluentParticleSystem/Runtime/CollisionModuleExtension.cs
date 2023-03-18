@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.bounce"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.bounce"/>
+        /// Edit <see cref="CollisionModule.bounce"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetBounce(this CollisionModule module, Func<MinMaxCurve, MinMaxCurve> bounceChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.bounceMultiplier"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.bounceMultiplier"/>
+        /// Edit <see cref="CollisionModule.bounceMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetBounceMultiplier(this CollisionModule module, Func<float, float> bounceMultiplierChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.colliderForce"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.colliderForce"/>
+        /// Edit <see cref="CollisionModule.colliderForce"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetColliderForce(this CollisionModule module, Func<float, float> colliderForceChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.collidesWith"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.collidesWith"/>
+        /// Edit <see cref="CollisionModule.collidesWith"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetCollidesWith(this CollisionModule module, Func<LayerMask, LayerMask> collidesWithChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.dampen"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.dampen"/>
+        /// Edit <see cref="CollisionModule.dampen"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetDampen(this CollisionModule module, Func<MinMaxCurve, MinMaxCurve> dampenChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.dampenMultiplier"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.dampenMultiplier"/>
+        /// Edit <see cref="CollisionModule.dampenMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetDampenMultiplier(this CollisionModule module, Func<float, float> dampenMultiplierChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.enabled"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.enabled"/>
+        /// Edit <see cref="CollisionModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetEnabled(this CollisionModule module, Func<bool, bool> enabledChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.enableDynamicColliders"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.enableDynamicColliders"/>
+        /// Edit <see cref="CollisionModule.enableDynamicColliders"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetEnableDynamicColliders(this CollisionModule module, Func<bool, bool> enableDynamicCollidersChanger)
@@ -426,7 +418,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.enableInteriorCollisions"/>
         /// </summary>
@@ -441,7 +432,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.enableInteriorCollisions"/>
+        /// Edit <see cref="CollisionModule.enableInteriorCollisions"/>
         /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("enableInteriorCollisions property is deprecated and is no longer required and has no effect on the particle system.", false)]
@@ -479,7 +470,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.lifetimeLoss"/>
         /// </summary>
@@ -491,7 +481,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.lifetimeLoss"/>
+        /// Edit <see cref="CollisionModule.lifetimeLoss"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetLifetimeLoss(this CollisionModule module, Func<MinMaxCurve, MinMaxCurve> lifetimeLossChanger)
@@ -526,7 +516,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.lifetimeLossMultiplier"/>
         /// </summary>
@@ -538,7 +527,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.lifetimeLossMultiplier"/>
+        /// Edit <see cref="CollisionModule.lifetimeLossMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetLifetimeLossMultiplier(this CollisionModule module, Func<float, float> lifetimeLossMultiplierChanger)
@@ -573,7 +562,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.maxCollisionShapes"/>
         /// </summary>
@@ -585,7 +573,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.maxCollisionShapes"/>
+        /// Edit <see cref="CollisionModule.maxCollisionShapes"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMaxCollisionShapes(this CollisionModule module, Func<int, int> maxCollisionShapesChanger)
@@ -620,7 +608,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.maxKillSpeed"/>
         /// </summary>
@@ -632,7 +619,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.maxKillSpeed"/>
+        /// Edit <see cref="CollisionModule.maxKillSpeed"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMaxKillSpeed(this CollisionModule module, Func<float, float> maxKillSpeedChanger)
@@ -667,7 +654,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.minKillSpeed"/>
         /// </summary>
@@ -679,7 +665,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.minKillSpeed"/>
+        /// Edit <see cref="CollisionModule.minKillSpeed"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMinKillSpeed(this CollisionModule module, Func<float, float> minKillSpeedChanger)
@@ -714,7 +700,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.mode"/>
         /// </summary>
@@ -726,7 +711,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.mode"/>
+        /// Edit <see cref="CollisionModule.mode"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMode(this CollisionModule module, Func<ParticleSystemCollisionMode, ParticleSystemCollisionMode> modeChanger)
@@ -761,7 +746,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.multiplyColliderForceByCollisionAngle"/>
         /// </summary>
@@ -773,7 +757,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.multiplyColliderForceByCollisionAngle"/>
+        /// Edit <see cref="CollisionModule.multiplyColliderForceByCollisionAngle"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMultiplyColliderForceByCollisionAngle(this CollisionModule module, Func<bool, bool> multiplyColliderForceByCollisionAngleChanger)
@@ -808,7 +792,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.multiplyColliderForceByParticleSize"/>
         /// </summary>
@@ -820,7 +803,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.multiplyColliderForceByParticleSize"/>
+        /// Edit <see cref="CollisionModule.multiplyColliderForceByParticleSize"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMultiplyColliderForceByParticleSize(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSizeChanger)
@@ -855,7 +838,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.multiplyColliderForceByParticleSpeed"/>
         /// </summary>
@@ -867,7 +849,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.multiplyColliderForceByParticleSpeed"/>
+        /// Edit <see cref="CollisionModule.multiplyColliderForceByParticleSpeed"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetMultiplyColliderForceByParticleSpeed(this CollisionModule module, Func<bool, bool> multiplyColliderForceByParticleSpeedChanger)
@@ -902,7 +884,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.quality"/>
         /// </summary>
@@ -914,7 +895,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.quality"/>
+        /// Edit <see cref="CollisionModule.quality"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetQuality(this CollisionModule module, Func<ParticleSystemCollisionQuality, ParticleSystemCollisionQuality> qualityChanger)
@@ -949,7 +930,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.radiusScale"/>
         /// </summary>
@@ -961,7 +941,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.radiusScale"/>
+        /// Edit <see cref="CollisionModule.radiusScale"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetRadiusScale(this CollisionModule module, Func<float, float> radiusScaleChanger)
@@ -996,7 +976,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.sendCollisionMessages"/>
         /// </summary>
@@ -1008,7 +987,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.sendCollisionMessages"/>
+        /// Edit <see cref="CollisionModule.sendCollisionMessages"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetSendCollisionMessages(this CollisionModule module, Func<bool, bool> sendCollisionMessagesChanger)
@@ -1043,7 +1022,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.type"/>
         /// </summary>
@@ -1055,7 +1033,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.type"/>
+        /// Edit <see cref="CollisionModule.type"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetType(this CollisionModule module, Func<ParticleSystemCollisionType, ParticleSystemCollisionType> typeChanger)
@@ -1090,7 +1068,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="CollisionModule.voxelSize"/>
         /// </summary>
@@ -1102,7 +1079,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="CollisionModule.voxelSize"/>
+        /// Edit <see cref="CollisionModule.voxelSize"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static CollisionModule SetVoxelSize(this CollisionModule module, Func<float, float> voxelSizeChanger)

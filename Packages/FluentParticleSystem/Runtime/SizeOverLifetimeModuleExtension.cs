@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.enabled"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.enabled"/>
+        /// Edit <see cref="SizeOverLifetimeModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetEnabled(this SizeOverLifetimeModule module, Func<bool, bool> enabledChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.separateAxes"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.separateAxes"/>
+        /// Edit <see cref="SizeOverLifetimeModule.separateAxes"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.size"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.size"/>
+        /// Edit <see cref="SizeOverLifetimeModule.size"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSize(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> sizeChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.sizeMultiplier"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.sizeMultiplier"/>
+        /// Edit <see cref="SizeOverLifetimeModule.sizeMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSizeMultiplier(this SizeOverLifetimeModule module, Func<float, float> sizeMultiplierChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.x"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.x"/>
+        /// Edit <see cref="SizeOverLifetimeModule.x"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetX(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.xMultiplier"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.xMultiplier"/>
+        /// Edit <see cref="SizeOverLifetimeModule.xMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetXMultiplier(this SizeOverLifetimeModule module, Func<float, float> xMultiplierChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.y"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.y"/>
+        /// Edit <see cref="SizeOverLifetimeModule.y"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetY(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.yMultiplier"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.yMultiplier"/>
+        /// Edit <see cref="SizeOverLifetimeModule.yMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetYMultiplier(this SizeOverLifetimeModule module, Func<float, float> yMultiplierChanger)
@@ -420,7 +412,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.z"/>
         /// </summary>
@@ -432,7 +423,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.z"/>
+        /// Edit <see cref="SizeOverLifetimeModule.z"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetZ(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
@@ -467,7 +458,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="SizeOverLifetimeModule.zMultiplier"/>
         /// </summary>
@@ -479,7 +469,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="SizeOverLifetimeModule.zMultiplier"/>
+        /// Edit <see cref="SizeOverLifetimeModule.zMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetZMultiplier(this SizeOverLifetimeModule module, Func<float, float> zMultiplierChanger)

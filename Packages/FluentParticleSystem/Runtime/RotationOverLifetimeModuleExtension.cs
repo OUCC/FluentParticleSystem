@@ -44,7 +44,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.enabled"/>
         /// </summary>
@@ -56,7 +55,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.enabled"/>
+        /// Edit <see cref="RotationOverLifetimeModule.enabled"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetEnabled(this RotationOverLifetimeModule module, Func<bool, bool> enabledChanger)
@@ -91,7 +90,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.separateAxes"/>
         /// </summary>
@@ -103,7 +101,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.separateAxes"/>
+        /// Edit <see cref="RotationOverLifetimeModule.separateAxes"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetSeparateAxes(this RotationOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
@@ -138,7 +136,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.x"/>
         /// </summary>
@@ -150,7 +147,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.x"/>
+        /// Edit <see cref="RotationOverLifetimeModule.x"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetX(this RotationOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
@@ -185,7 +182,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.xMultiplier"/>
         /// </summary>
@@ -197,7 +193,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.xMultiplier"/>
+        /// Edit <see cref="RotationOverLifetimeModule.xMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetXMultiplier(this RotationOverLifetimeModule module, Func<float, float> xMultiplierChanger)
@@ -232,7 +228,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.y"/>
         /// </summary>
@@ -244,7 +239,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.y"/>
+        /// Edit <see cref="RotationOverLifetimeModule.y"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetY(this RotationOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
@@ -279,7 +274,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.yMultiplier"/>
         /// </summary>
@@ -291,7 +285,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.yMultiplier"/>
+        /// Edit <see cref="RotationOverLifetimeModule.yMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetYMultiplier(this RotationOverLifetimeModule module, Func<float, float> yMultiplierChanger)
@@ -326,7 +320,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.z"/>
         /// </summary>
@@ -338,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.z"/>
+        /// Edit <see cref="RotationOverLifetimeModule.z"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetZ(this RotationOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
@@ -373,7 +366,6 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
-        
         /// <summary>
         /// Assign a value to <see cref="RotationOverLifetimeModule.zMultiplier"/>
         /// </summary>
@@ -385,7 +377,7 @@ namespace OUCC.FluentParticleSystem
         }
 
         /// <summary>
-        /// Edit see cref="RotationOverLifetimeModule.zMultiplier"/>
+        /// Edit <see cref="RotationOverLifetimeModule.zMultiplier"/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationOverLifetimeModule SetZMultiplier(this RotationOverLifetimeModule module, Func<float, float> zMultiplierChanger)
