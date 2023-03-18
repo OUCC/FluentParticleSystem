@@ -7,7 +7,6 @@ using UnityEngine;
 using System.Text;
 using OUCC.FluentParticleSystem.Generator;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace OUCC.FluentParticleSystem.SourceGenerator
@@ -128,7 +127,7 @@ $@"    }}
                 });
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.Type}Extension.cs";
+                var filePath = $"Packages/FluentParticleSystem/Runtime/Extensions/{module.Type}Extension.cs";
                 WriteExtensionFile(filePath, module);
             }
             AssetDatabase.Refresh();
