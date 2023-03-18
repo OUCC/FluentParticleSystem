@@ -394,6 +394,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2022_2_OR_NEWER
         #region GravitySource
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravitySource"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, ParticleSystemGravitySource gravitySource)
         {
@@ -403,6 +406,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.gravitySource"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
         {
@@ -412,6 +418,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravitySource"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravitySource(this MainModule module, ParticleSystemGravitySource gravitySource)
         {
@@ -419,6 +428,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.gravitySource"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravitySource(this MainModule module, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
         {

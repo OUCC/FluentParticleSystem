@@ -850,6 +850,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2022_2_OR_NEWER
         #region TextureScale
+        /// <summary>
+        /// Assign a value to <see cref="TrailModule.textureScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Vector2 textureScale)
         {
@@ -859,6 +862,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TrailModule.textureScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Func<Vector2, Vector2> textureScaleChanger)
         {
@@ -868,6 +874,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Assign a value to <see cref="TrailModule.textureScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetTextureScale(this TrailModule module, Vector2 textureScale)
         {
@@ -875,6 +884,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit <see cref="TrailModule.textureScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetTextureScale(this TrailModule module, Func<Vector2, Vector2> textureScaleChanger)
         {
