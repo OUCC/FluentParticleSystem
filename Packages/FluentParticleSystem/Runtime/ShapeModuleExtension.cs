@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class ShapeModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.shape"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditShape(this ParticleSystem particleSystem, Action<ShapeModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AlignToDirection
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.alignToDirection"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAlignToDirection(this ParticleSystem particleSystem, bool alignToDirection)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.alignToDirection"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAlignToDirection(this ParticleSystem particleSystem, Func<bool, bool> alignToDirectionChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.alignToDirection"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetAlignToDirection(this ShapeModule module, bool alignToDirection)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.alignToDirection"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetAlignToDirection(this ShapeModule module, Func<bool, bool> alignToDirectionChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Angle
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.angle"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAngle(this ParticleSystem particleSystem, float angle)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.angle"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeAngle(this ParticleSystem particleSystem, Func<float, float> angleChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.angle"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetAngle(this ShapeModule module, float angle)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.angle"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetAngle(this ShapeModule module, Func<float, float> angleChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Arc
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arc"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArc(this ParticleSystem particleSystem, float arc)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.arc"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArc(this ParticleSystem particleSystem, Func<float, float> arcChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arc"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArc(this ShapeModule module, float arc)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.arc"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArc(this ShapeModule module, Func<float, float> arcChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ArcMode
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue arcMode)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.arcMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> arcModeChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcMode(this ShapeModule module, ParticleSystemShapeMultiModeValue arcMode)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.arcMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> arcModeChanger)
         {
@@ -153,6 +208,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ArcSpeed
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeed(this ParticleSystem particleSystem, MinMaxCurve arcSpeed)
         {
@@ -162,6 +220,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.arcSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> arcSpeedChanger)
         {
@@ -171,6 +232,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpeed(this ShapeModule module, MinMaxCurve arcSpeed)
         {
@@ -178,6 +243,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.arcSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpeed(this ShapeModule module, Func<MinMaxCurve, MinMaxCurve> arcSpeedChanger)
         {
@@ -187,6 +255,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ArcSpeedMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeedMultiplier(this ParticleSystem particleSystem, float arcSpeedMultiplier)
         {
@@ -196,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.arcSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> arcSpeedMultiplierChanger)
         {
@@ -205,6 +279,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpeedMultiplier(this ShapeModule module, float arcSpeedMultiplier)
         {
@@ -212,6 +290,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.arcSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpeedMultiplier(this ShapeModule module, Func<float, float> arcSpeedMultiplierChanger)
         {
@@ -221,6 +302,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ArcSpread
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpread(this ParticleSystem particleSystem, float arcSpread)
         {
@@ -230,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.arcSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeArcSpread(this ParticleSystem particleSystem, Func<float, float> arcSpreadChanger)
         {
@@ -239,6 +326,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.arcSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpread(this ShapeModule module, float arcSpread)
         {
@@ -246,6 +337,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.arcSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetArcSpread(this ShapeModule module, Func<float, float> arcSpreadChanger)
         {
@@ -255,6 +349,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Box
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.box"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
@@ -267,6 +364,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.box"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
@@ -279,6 +379,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.box"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
@@ -289,6 +393,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.box"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use scale instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/ShapeModule.scale", false)]
 #endif
@@ -301,6 +408,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region BoxThickness
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.boxThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Vector3 boxThickness)
         {
@@ -310,6 +420,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.boxThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeBoxThickness(this ParticleSystem particleSystem, Func<Vector3, Vector3> boxThicknessChanger)
         {
@@ -319,6 +432,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.boxThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetBoxThickness(this ShapeModule module, Vector3 boxThickness)
         {
@@ -326,6 +443,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.boxThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetBoxThickness(this ShapeModule module, Func<Vector3, Vector3> boxThicknessChanger)
         {
@@ -335,6 +455,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region DonutRadius
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.donutRadius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeDonutRadius(this ParticleSystem particleSystem, float donutRadius)
         {
@@ -344,6 +467,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.donutRadius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeDonutRadius(this ParticleSystem particleSystem, Func<float, float> donutRadiusChanger)
         {
@@ -353,6 +479,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.donutRadius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetDonutRadius(this ShapeModule module, float donutRadius)
         {
@@ -360,6 +490,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.donutRadius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetDonutRadius(this ShapeModule module, Func<float, float> donutRadiusChanger)
         {
@@ -369,6 +502,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -378,6 +514,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -387,6 +526,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetEnabled(this ShapeModule module, bool enabled)
         {
@@ -394,6 +537,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetEnabled(this ShapeModule module, Func<bool, bool> enabledChanger)
         {
@@ -403,6 +549,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Length
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.length"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeLength(this ParticleSystem particleSystem, float length)
         {
@@ -412,6 +561,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.length"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeLength(this ParticleSystem particleSystem, Func<float, float> lengthChanger)
         {
@@ -421,6 +573,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.length"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetLength(this ShapeModule module, float length)
         {
@@ -428,6 +584,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.length"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetLength(this ShapeModule module, Func<float, float> lengthChanger)
         {
@@ -437,6 +596,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Mesh
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.mesh"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Mesh mesh)
         {
@@ -446,6 +608,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.mesh"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMesh(this ParticleSystem particleSystem, Func<Mesh, Mesh> meshChanger)
         {
@@ -455,6 +620,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.mesh"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMesh(this ShapeModule module, Mesh mesh)
         {
@@ -462,6 +631,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.mesh"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMesh(this ShapeModule module, Func<Mesh, Mesh> meshChanger)
         {
@@ -471,6 +643,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshMaterialIndex
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshMaterialIndex(this ParticleSystem particleSystem, int meshMaterialIndex)
         {
@@ -480,6 +655,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshMaterialIndex(this ParticleSystem particleSystem, Func<int, int> meshMaterialIndexChanger)
         {
@@ -489,6 +667,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshMaterialIndex(this ShapeModule module, int meshMaterialIndex)
         {
@@ -496,6 +678,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshMaterialIndex(this ShapeModule module, Func<int, int> meshMaterialIndexChanger)
         {
@@ -505,6 +690,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshRenderer
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, MeshRenderer meshRenderer)
         {
@@ -514,6 +702,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshRenderer(this ParticleSystem particleSystem, Func<MeshRenderer, MeshRenderer> meshRendererChanger)
         {
@@ -523,6 +714,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshRenderer(this ShapeModule module, MeshRenderer meshRenderer)
         {
@@ -530,6 +725,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshRenderer(this ShapeModule module, Func<MeshRenderer, MeshRenderer> meshRendererChanger)
         {
@@ -539,6 +737,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshScale
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshScale"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
@@ -551,6 +752,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshScale"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
@@ -563,6 +767,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshScale"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
@@ -573,6 +781,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshScale"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("meshScale property is deprecated.Please use scale instead.", false)]
 #endif
@@ -585,6 +796,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshShapeType
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshShapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, ParticleSystemMeshShapeType meshShapeType)
         {
@@ -594,6 +808,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshShapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshShapeType(this ParticleSystem particleSystem, Func<ParticleSystemMeshShapeType, ParticleSystemMeshShapeType> meshShapeTypeChanger)
         {
@@ -603,6 +820,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshShapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshShapeType(this ShapeModule module, ParticleSystemMeshShapeType meshShapeType)
         {
@@ -610,6 +831,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshShapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshShapeType(this ShapeModule module, Func<ParticleSystemMeshShapeType, ParticleSystemMeshShapeType> meshShapeTypeChanger)
         {
@@ -619,6 +843,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshSpawnMode
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue meshSpawnMode)
         {
@@ -628,6 +855,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshSpawnMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
         {
@@ -637,6 +867,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnMode(this ShapeModule module, ParticleSystemShapeMultiModeValue meshSpawnMode)
         {
@@ -644,6 +878,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshSpawnMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> meshSpawnModeChanger)
         {
@@ -653,6 +890,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshSpawnSpeed
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeed(this ParticleSystem particleSystem, MinMaxCurve meshSpawnSpeed)
         {
@@ -662,6 +902,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshSpawnSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> meshSpawnSpeedChanger)
         {
@@ -671,6 +914,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpeed(this ShapeModule module, MinMaxCurve meshSpawnSpeed)
         {
@@ -678,6 +925,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshSpawnSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpeed(this ShapeModule module, Func<MinMaxCurve, MinMaxCurve> meshSpawnSpeedChanger)
         {
@@ -687,6 +937,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshSpawnSpeedMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeedMultiplier(this ParticleSystem particleSystem, float meshSpawnSpeedMultiplier)
         {
@@ -696,6 +949,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshSpawnSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> meshSpawnSpeedMultiplierChanger)
         {
@@ -705,6 +961,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpeedMultiplier(this ShapeModule module, float meshSpawnSpeedMultiplier)
         {
@@ -712,6 +972,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshSpawnSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpeedMultiplier(this ShapeModule module, Func<float, float> meshSpawnSpeedMultiplierChanger)
         {
@@ -721,6 +984,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MeshSpawnSpread
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpread(this ParticleSystem particleSystem, float meshSpawnSpread)
         {
@@ -730,6 +996,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.meshSpawnSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeMeshSpawnSpread(this ParticleSystem particleSystem, Func<float, float> meshSpawnSpreadChanger)
         {
@@ -739,6 +1008,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.meshSpawnSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpread(this ShapeModule module, float meshSpawnSpread)
         {
@@ -746,6 +1019,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.meshSpawnSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetMeshSpawnSpread(this ShapeModule module, Func<float, float> meshSpawnSpreadChanger)
         {
@@ -755,6 +1031,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region NormalOffset
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.normalOffset"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeNormalOffset(this ParticleSystem particleSystem, float normalOffset)
         {
@@ -764,6 +1043,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.normalOffset"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeNormalOffset(this ParticleSystem particleSystem, Func<float, float> normalOffsetChanger)
         {
@@ -773,6 +1055,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.normalOffset"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetNormalOffset(this ShapeModule module, float normalOffset)
         {
@@ -780,6 +1066,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.normalOffset"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetNormalOffset(this ShapeModule module, Func<float, float> normalOffsetChanger)
         {
@@ -789,6 +1078,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Position
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.position"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Vector3 position)
         {
@@ -798,6 +1090,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.position"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapePosition(this ParticleSystem particleSystem, Func<Vector3, Vector3> positionChanger)
         {
@@ -807,6 +1102,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.position"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetPosition(this ShapeModule module, Vector3 position)
         {
@@ -814,6 +1113,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.position"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetPosition(this ShapeModule module, Func<Vector3, Vector3> positionChanger)
         {
@@ -823,6 +1125,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Radius
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadius(this ParticleSystem particleSystem, float radius)
         {
@@ -832,6 +1137,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadius(this ParticleSystem particleSystem, Func<float, float> radiusChanger)
         {
@@ -841,6 +1149,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadius(this ShapeModule module, float radius)
         {
@@ -848,6 +1160,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radius"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadius(this ShapeModule module, Func<float, float> radiusChanger)
         {
@@ -857,6 +1172,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusMode
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, ParticleSystemShapeMultiModeValue radiusMode)
         {
@@ -866,6 +1184,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radiusMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusMode(this ParticleSystem particleSystem, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> radiusModeChanger)
         {
@@ -875,6 +1196,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusMode(this ShapeModule module, ParticleSystemShapeMultiModeValue radiusMode)
         {
@@ -882,6 +1207,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radiusMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusMode(this ShapeModule module, Func<ParticleSystemShapeMultiModeValue, ParticleSystemShapeMultiModeValue> radiusModeChanger)
         {
@@ -891,6 +1219,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusSpeed
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeed(this ParticleSystem particleSystem, MinMaxCurve radiusSpeed)
         {
@@ -900,6 +1231,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radiusSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> radiusSpeedChanger)
         {
@@ -909,6 +1243,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpeed(this ShapeModule module, MinMaxCurve radiusSpeed)
         {
@@ -916,6 +1254,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radiusSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpeed(this ShapeModule module, Func<MinMaxCurve, MinMaxCurve> radiusSpeedChanger)
         {
@@ -925,6 +1266,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusSpeedMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeedMultiplier(this ParticleSystem particleSystem, float radiusSpeedMultiplier)
         {
@@ -934,6 +1278,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radiusSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> radiusSpeedMultiplierChanger)
         {
@@ -943,6 +1290,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpeedMultiplier(this ShapeModule module, float radiusSpeedMultiplier)
         {
@@ -950,6 +1301,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radiusSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpeedMultiplier(this ShapeModule module, Func<float, float> radiusSpeedMultiplierChanger)
         {
@@ -959,6 +1313,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusSpread
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpread(this ParticleSystem particleSystem, float radiusSpread)
         {
@@ -968,6 +1325,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radiusSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusSpread(this ParticleSystem particleSystem, Func<float, float> radiusSpreadChanger)
         {
@@ -977,6 +1337,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpread(this ShapeModule module, float radiusSpread)
         {
@@ -984,6 +1348,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radiusSpread"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusSpread(this ShapeModule module, Func<float, float> radiusSpreadChanger)
         {
@@ -993,6 +1360,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusThickness
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusThickness(this ParticleSystem particleSystem, float radiusThickness)
         {
@@ -1002,6 +1372,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.radiusThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRadiusThickness(this ParticleSystem particleSystem, Func<float, float> radiusThicknessChanger)
         {
@@ -1011,6 +1384,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.radiusThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusThickness(this ShapeModule module, float radiusThickness)
         {
@@ -1018,6 +1395,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.radiusThickness"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRadiusThickness(this ShapeModule module, Func<float, float> radiusThicknessChanger)
         {
@@ -1027,6 +1407,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomDirection
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
@@ -1039,6 +1422,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.randomDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
@@ -1051,6 +1437,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
@@ -1061,6 +1451,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.randomDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("randomDirection property is deprecated. Use randomDirectionAmount instead.", false)]
 #endif
@@ -1073,6 +1466,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomDirectionAmount
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomDirectionAmount(this ParticleSystem particleSystem, float randomDirectionAmount)
         {
@@ -1082,6 +1478,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.randomDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomDirectionAmount(this ParticleSystem particleSystem, Func<float, float> randomDirectionAmountChanger)
         {
@@ -1091,6 +1490,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRandomDirectionAmount(this ShapeModule module, float randomDirectionAmount)
         {
@@ -1098,6 +1501,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.randomDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRandomDirectionAmount(this ShapeModule module, Func<float, float> randomDirectionAmountChanger)
         {
@@ -1107,6 +1513,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomPositionAmount
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomPositionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomPositionAmount(this ParticleSystem particleSystem, float randomPositionAmount)
         {
@@ -1116,6 +1525,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.randomPositionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRandomPositionAmount(this ParticleSystem particleSystem, Func<float, float> randomPositionAmountChanger)
         {
@@ -1125,6 +1537,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.randomPositionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRandomPositionAmount(this ShapeModule module, float randomPositionAmount)
         {
@@ -1132,6 +1548,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.randomPositionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRandomPositionAmount(this ShapeModule module, Func<float, float> randomPositionAmountChanger)
         {
@@ -1141,6 +1560,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Rotation
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.rotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Vector3 rotation)
         {
@@ -1150,6 +1572,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.rotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeRotation(this ParticleSystem particleSystem, Func<Vector3, Vector3> rotationChanger)
         {
@@ -1159,6 +1584,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.rotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRotation(this ShapeModule module, Vector3 rotation)
         {
@@ -1166,6 +1595,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.rotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetRotation(this ShapeModule module, Func<Vector3, Vector3> rotationChanger)
         {
@@ -1175,6 +1607,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Scale
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.scale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Vector3 scale)
         {
@@ -1184,6 +1619,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.scale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeScale(this ParticleSystem particleSystem, Func<Vector3, Vector3> scaleChanger)
         {
@@ -1193,6 +1631,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.scale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetScale(this ShapeModule module, Vector3 scale)
         {
@@ -1200,6 +1642,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.scale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetScale(this ShapeModule module, Func<Vector3, Vector3> scaleChanger)
         {
@@ -1209,6 +1654,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ShapeType
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.shapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, ParticleSystemShapeType shapeType)
         {
@@ -1218,6 +1666,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.shapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeShapeType(this ParticleSystem particleSystem, Func<ParticleSystemShapeType, ParticleSystemShapeType> shapeTypeChanger)
         {
@@ -1227,6 +1678,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.shapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetShapeType(this ShapeModule module, ParticleSystemShapeType shapeType)
         {
@@ -1234,6 +1689,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.shapeType"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetShapeType(this ShapeModule module, Func<ParticleSystemShapeType, ParticleSystemShapeType> shapeTypeChanger)
         {
@@ -1243,6 +1701,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SkinnedMeshRenderer
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.skinnedMeshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, SkinnedMeshRenderer skinnedMeshRenderer)
         {
@@ -1252,6 +1713,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.skinnedMeshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSkinnedMeshRenderer(this ParticleSystem particleSystem, Func<SkinnedMeshRenderer, SkinnedMeshRenderer> skinnedMeshRendererChanger)
         {
@@ -1261,6 +1725,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.skinnedMeshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, SkinnedMeshRenderer skinnedMeshRenderer)
         {
@@ -1268,6 +1736,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.skinnedMeshRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSkinnedMeshRenderer(this ShapeModule module, Func<SkinnedMeshRenderer, SkinnedMeshRenderer> skinnedMeshRendererChanger)
         {
@@ -1277,6 +1748,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SphericalDirectionAmount
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.sphericalDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSphericalDirectionAmount(this ParticleSystem particleSystem, float sphericalDirectionAmount)
         {
@@ -1286,6 +1760,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.sphericalDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSphericalDirectionAmount(this ParticleSystem particleSystem, Func<float, float> sphericalDirectionAmountChanger)
         {
@@ -1295,6 +1772,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.sphericalDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSphericalDirectionAmount(this ShapeModule module, float sphericalDirectionAmount)
         {
@@ -1302,6 +1783,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.sphericalDirectionAmount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSphericalDirectionAmount(this ShapeModule module, Func<float, float> sphericalDirectionAmountChanger)
         {
@@ -1311,6 +1795,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Sprite
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.sprite"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Sprite sprite)
         {
@@ -1320,6 +1807,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.sprite"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSprite(this ParticleSystem particleSystem, Func<Sprite, Sprite> spriteChanger)
         {
@@ -1329,6 +1819,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.sprite"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSprite(this ShapeModule module, Sprite sprite)
         {
@@ -1336,6 +1830,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.sprite"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSprite(this ShapeModule module, Func<Sprite, Sprite> spriteChanger)
         {
@@ -1345,6 +1842,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SpriteRenderer
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.spriteRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, SpriteRenderer spriteRenderer)
         {
@@ -1354,6 +1854,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.spriteRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeSpriteRenderer(this ParticleSystem particleSystem, Func<SpriteRenderer, SpriteRenderer> spriteRendererChanger)
         {
@@ -1363,6 +1866,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.spriteRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSpriteRenderer(this ShapeModule module, SpriteRenderer spriteRenderer)
         {
@@ -1370,6 +1877,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.spriteRenderer"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetSpriteRenderer(this ShapeModule module, Func<SpriteRenderer, SpriteRenderer> spriteRendererChanger)
         {
@@ -1379,6 +1889,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Texture
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.texture"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Texture2D texture)
         {
@@ -1388,6 +1901,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.texture"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTexture(this ParticleSystem particleSystem, Func<Texture2D, Texture2D> textureChanger)
         {
@@ -1397,6 +1913,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.texture"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTexture(this ShapeModule module, Texture2D texture)
         {
@@ -1404,6 +1924,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.texture"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTexture(this ShapeModule module, Func<Texture2D, Texture2D> textureChanger)
         {
@@ -1413,6 +1936,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureAlphaAffectsParticles
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureAlphaAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureAlphaAffectsParticles(this ParticleSystem particleSystem, bool textureAlphaAffectsParticles)
         {
@@ -1422,6 +1948,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureAlphaAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureAlphaAffectsParticles(this ParticleSystem particleSystem, Func<bool, bool> textureAlphaAffectsParticlesChanger)
         {
@@ -1431,6 +1960,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureAlphaAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureAlphaAffectsParticles(this ShapeModule module, bool textureAlphaAffectsParticles)
         {
@@ -1438,6 +1971,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureAlphaAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureAlphaAffectsParticles(this ShapeModule module, Func<bool, bool> textureAlphaAffectsParticlesChanger)
         {
@@ -1447,6 +1983,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureBilinearFiltering
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureBilinearFiltering"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureBilinearFiltering(this ParticleSystem particleSystem, bool textureBilinearFiltering)
         {
@@ -1456,6 +1995,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureBilinearFiltering"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureBilinearFiltering(this ParticleSystem particleSystem, Func<bool, bool> textureBilinearFilteringChanger)
         {
@@ -1465,6 +2007,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureBilinearFiltering"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureBilinearFiltering(this ShapeModule module, bool textureBilinearFiltering)
         {
@@ -1472,6 +2018,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureBilinearFiltering"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureBilinearFiltering(this ShapeModule module, Func<bool, bool> textureBilinearFilteringChanger)
         {
@@ -1481,6 +2030,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureClipChannel
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureClipChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, ParticleSystemShapeTextureChannel textureClipChannel)
         {
@@ -1490,6 +2042,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureClipChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipChannel(this ParticleSystem particleSystem, Func<ParticleSystemShapeTextureChannel, ParticleSystemShapeTextureChannel> textureClipChannelChanger)
         {
@@ -1499,6 +2054,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureClipChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureClipChannel(this ShapeModule module, ParticleSystemShapeTextureChannel textureClipChannel)
         {
@@ -1506,6 +2065,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureClipChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureClipChannel(this ShapeModule module, Func<ParticleSystemShapeTextureChannel, ParticleSystemShapeTextureChannel> textureClipChannelChanger)
         {
@@ -1515,6 +2077,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureClipThreshold
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureClipThreshold"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipThreshold(this ParticleSystem particleSystem, float textureClipThreshold)
         {
@@ -1524,6 +2089,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureClipThreshold"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureClipThreshold(this ParticleSystem particleSystem, Func<float, float> textureClipThresholdChanger)
         {
@@ -1533,6 +2101,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureClipThreshold"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureClipThreshold(this ShapeModule module, float textureClipThreshold)
         {
@@ -1540,6 +2112,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureClipThreshold"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureClipThreshold(this ShapeModule module, Func<float, float> textureClipThresholdChanger)
         {
@@ -1549,6 +2124,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureColorAffectsParticles
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureColorAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureColorAffectsParticles(this ParticleSystem particleSystem, bool textureColorAffectsParticles)
         {
@@ -1558,6 +2136,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureColorAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureColorAffectsParticles(this ParticleSystem particleSystem, Func<bool, bool> textureColorAffectsParticlesChanger)
         {
@@ -1567,6 +2148,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureColorAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureColorAffectsParticles(this ShapeModule module, bool textureColorAffectsParticles)
         {
@@ -1574,6 +2159,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureColorAffectsParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureColorAffectsParticles(this ShapeModule module, Func<bool, bool> textureColorAffectsParticlesChanger)
         {
@@ -1583,6 +2171,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TextureUVChannel
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureUVChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureUVChannel(this ParticleSystem particleSystem, int textureUVChannel)
         {
@@ -1592,6 +2183,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.textureUVChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeTextureUVChannel(this ParticleSystem particleSystem, Func<int, int> textureUVChannelChanger)
         {
@@ -1601,6 +2195,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.textureUVChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureUVChannel(this ShapeModule module, int textureUVChannel)
         {
@@ -1608,6 +2206,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.textureUVChannel"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetTextureUVChannel(this ShapeModule module, Func<int, int> textureUVChannelChanger)
         {
@@ -1617,6 +2218,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseMeshColors
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.useMeshColors"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshColors(this ParticleSystem particleSystem, bool useMeshColors)
         {
@@ -1626,6 +2230,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.useMeshColors"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshColors(this ParticleSystem particleSystem, Func<bool, bool> useMeshColorsChanger)
         {
@@ -1635,6 +2242,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.useMeshColors"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetUseMeshColors(this ShapeModule module, bool useMeshColors)
         {
@@ -1642,6 +2253,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.useMeshColors"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetUseMeshColors(this ShapeModule module, Func<bool, bool> useMeshColorsChanger)
         {
@@ -1651,6 +2265,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseMeshMaterialIndex
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.useMeshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshMaterialIndex(this ParticleSystem particleSystem, bool useMeshMaterialIndex)
         {
@@ -1660,6 +2277,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="ShapeModule.useMeshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetShapeUseMeshMaterialIndex(this ParticleSystem particleSystem, Func<bool, bool> useMeshMaterialIndexChanger)
         {
@@ -1669,6 +2289,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="ShapeModule.useMeshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetUseMeshMaterialIndex(this ShapeModule module, bool useMeshMaterialIndex)
         {
@@ -1676,6 +2300,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="ShapeModule.useMeshMaterialIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ShapeModule SetUseMeshMaterialIndex(this ShapeModule module, Func<bool, bool> useMeshMaterialIndexChanger)
         {

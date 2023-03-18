@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class LightsModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.lights"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLights(this ParticleSystem particleSystem, Action<LightsModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region AlphaAffectsIntensity
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.alphaAffectsIntensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsAlphaAffectsIntensity(this ParticleSystem particleSystem, bool alphaAffectsIntensity)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.alphaAffectsIntensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsAlphaAffectsIntensity(this ParticleSystem particleSystem, Func<bool, bool> alphaAffectsIntensityChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.alphaAffectsIntensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetAlphaAffectsIntensity(this LightsModule module, bool alphaAffectsIntensity)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.alphaAffectsIntensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetAlphaAffectsIntensity(this LightsModule module, Func<bool, bool> alphaAffectsIntensityChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetEnabled(this LightsModule module, bool enabled)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetEnabled(this LightsModule module, Func<bool, bool> enabledChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Intensity
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.intensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensity(this ParticleSystem particleSystem, MinMaxCurve intensity)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.intensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensity(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> intensityChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.intensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetIntensity(this LightsModule module, MinMaxCurve intensity)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.intensity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetIntensity(this LightsModule module, Func<MinMaxCurve, MinMaxCurve> intensityChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region IntensityMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.intensityMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensityMultiplier(this ParticleSystem particleSystem, float intensityMultiplier)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.intensityMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsIntensityMultiplier(this ParticleSystem particleSystem, Func<float, float> intensityMultiplierChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.intensityMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetIntensityMultiplier(this LightsModule module, float intensityMultiplier)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.intensityMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetIntensityMultiplier(this LightsModule module, Func<float, float> intensityMultiplierChanger)
         {
@@ -153,6 +208,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Light
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.light"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Light light)
         {
@@ -162,6 +220,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.light"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsLight(this ParticleSystem particleSystem, Func<Light, Light> lightChanger)
         {
@@ -171,6 +232,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.light"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetLight(this LightsModule module, Light light)
         {
@@ -178,6 +243,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.light"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetLight(this LightsModule module, Func<Light, Light> lightChanger)
         {
@@ -187,6 +255,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MaxLights
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.maxLights"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsMaxLights(this ParticleSystem particleSystem, int maxLights)
         {
@@ -196,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.maxLights"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsMaxLights(this ParticleSystem particleSystem, Func<int, int> maxLightsChanger)
         {
@@ -205,6 +279,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.maxLights"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetMaxLights(this LightsModule module, int maxLights)
         {
@@ -212,6 +290,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.maxLights"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetMaxLights(this LightsModule module, Func<int, int> maxLightsChanger)
         {
@@ -221,6 +302,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRange(this ParticleSystem particleSystem, MinMaxCurve range)
         {
@@ -230,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRange(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rangeChanger)
         {
@@ -239,6 +326,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRange(this LightsModule module, MinMaxCurve range)
         {
@@ -246,6 +337,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRange(this LightsModule module, Func<MinMaxCurve, MinMaxCurve> rangeChanger)
         {
@@ -255,6 +349,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RangeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.rangeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRangeMultiplier(this ParticleSystem particleSystem, float rangeMultiplier)
         {
@@ -264,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.rangeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRangeMultiplier(this ParticleSystem particleSystem, Func<float, float> rangeMultiplierChanger)
         {
@@ -273,6 +373,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.rangeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRangeMultiplier(this LightsModule module, float rangeMultiplier)
         {
@@ -280,6 +384,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.rangeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRangeMultiplier(this LightsModule module, Func<float, float> rangeMultiplierChanger)
         {
@@ -289,6 +396,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Ratio
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.ratio"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRatio(this ParticleSystem particleSystem, float ratio)
         {
@@ -298,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.ratio"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsRatio(this ParticleSystem particleSystem, Func<float, float> ratioChanger)
         {
@@ -307,6 +420,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.ratio"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRatio(this LightsModule module, float ratio)
         {
@@ -314,6 +431,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.ratio"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetRatio(this LightsModule module, Func<float, float> ratioChanger)
         {
@@ -323,6 +443,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SizeAffectsRange
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.sizeAffectsRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsSizeAffectsRange(this ParticleSystem particleSystem, bool sizeAffectsRange)
         {
@@ -332,6 +455,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.sizeAffectsRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsSizeAffectsRange(this ParticleSystem particleSystem, Func<bool, bool> sizeAffectsRangeChanger)
         {
@@ -341,6 +467,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.sizeAffectsRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetSizeAffectsRange(this LightsModule module, bool sizeAffectsRange)
         {
@@ -348,6 +478,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.sizeAffectsRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetSizeAffectsRange(this LightsModule module, Func<bool, bool> sizeAffectsRangeChanger)
         {
@@ -357,6 +490,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseParticleColor
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.useParticleColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseParticleColor(this ParticleSystem particleSystem, bool useParticleColor)
         {
@@ -366,6 +502,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.useParticleColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseParticleColor(this ParticleSystem particleSystem, Func<bool, bool> useParticleColorChanger)
         {
@@ -375,6 +514,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.useParticleColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetUseParticleColor(this LightsModule module, bool useParticleColor)
         {
@@ -382,6 +525,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.useParticleColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetUseParticleColor(this LightsModule module, Func<bool, bool> useParticleColorChanger)
         {
@@ -391,6 +537,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseRandomDistribution
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.useRandomDistribution"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseRandomDistribution(this ParticleSystem particleSystem, bool useRandomDistribution)
         {
@@ -400,6 +549,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LightsModule.useRandomDistribution"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLightsUseRandomDistribution(this ParticleSystem particleSystem, Func<bool, bool> useRandomDistributionChanger)
         {
@@ -409,6 +561,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LightsModule.useRandomDistribution"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetUseRandomDistribution(this LightsModule module, bool useRandomDistribution)
         {
@@ -416,6 +572,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LightsModule.useRandomDistribution"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LightsModule SetUseRandomDistribution(this LightsModule module, Func<bool, bool> useRandomDistributionChanger)
         {

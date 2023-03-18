@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class RotationBySpeedModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.rotationBySpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditRotationBySpeed(this ParticleSystem particleSystem, Action<RotationBySpeedModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetEnabled(this RotationBySpeedModule module, bool enabled)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetEnabled(this RotationBySpeedModule module, Func<bool, bool> enabledChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetRange(this RotationBySpeedModule module, Vector2 range)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetRange(this RotationBySpeedModule module, Func<Vector2, Vector2> rangeChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SeparateAxes
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetSeparateAxes(this RotationBySpeedModule module, bool separateAxes)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetSeparateAxes(this RotationBySpeedModule module, Func<bool, bool> separateAxesChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region X
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetX(this RotationBySpeedModule module, MinMaxCurve x)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetX(this RotationBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -153,6 +208,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region XMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -162,6 +220,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
         {
@@ -171,6 +232,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetXMultiplier(this RotationBySpeedModule module, float xMultiplier)
         {
@@ -178,6 +243,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetXMultiplier(this RotationBySpeedModule module, Func<float, float> xMultiplierChanger)
         {
@@ -187,6 +255,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Y
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -196,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -205,6 +279,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetY(this RotationBySpeedModule module, MinMaxCurve y)
         {
@@ -212,6 +290,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetY(this RotationBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -221,6 +302,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region YMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -230,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
         {
@@ -239,6 +326,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetYMultiplier(this RotationBySpeedModule module, float yMultiplier)
         {
@@ -246,6 +337,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetYMultiplier(this RotationBySpeedModule module, Func<float, float> yMultiplierChanger)
         {
@@ -255,6 +349,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Z
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -264,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -273,6 +373,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetZ(this RotationBySpeedModule module, MinMaxCurve z)
         {
@@ -280,6 +384,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetZ(this RotationBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -289,6 +396,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
@@ -298,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="RotationBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetRotationBySpeedZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
         {
@@ -307,6 +420,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="RotationBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetZMultiplier(this RotationBySpeedModule module, float zMultiplier)
         {
@@ -314,6 +431,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="RotationBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RotationBySpeedModule SetZMultiplier(this RotationBySpeedModule module, Func<float, float> zMultiplierChanger)
         {

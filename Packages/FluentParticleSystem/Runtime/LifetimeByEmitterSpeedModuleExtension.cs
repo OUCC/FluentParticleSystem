@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class LifetimeByEmitterSpeedModuleExtension
     {
 #if UNITY_2020_3_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.lifetimeByEmitterSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditLifetimeByEmitterSpeed(this ParticleSystem particleSystem, Action<LifetimeByEmitterSpeedModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Curve
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.curve"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, MinMaxCurve curve)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LifetimeByEmitterSpeedModule.curve"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurve(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> curveChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.curve"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, MinMaxCurve curve)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LifetimeByEmitterSpeedModule.curve"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetCurve(this LifetimeByEmitterSpeedModule module, Func<MinMaxCurve, MinMaxCurve> curveChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region CurveMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.curveMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, float curveMultiplier)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LifetimeByEmitterSpeedModule.curveMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedCurveMultiplier(this ParticleSystem particleSystem, Func<float, float> curveMultiplierChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.curveMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, float curveMultiplier)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LifetimeByEmitterSpeedModule.curveMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetCurveMultiplier(this LifetimeByEmitterSpeedModule module, Func<float, float> curveMultiplierChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LifetimeByEmitterSpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, bool enabled)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LifetimeByEmitterSpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetEnabled(this LifetimeByEmitterSpeedModule module, Func<bool, bool> enabledChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="LifetimeByEmitterSpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetLifetimeByEmitterSpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="LifetimeByEmitterSpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, Vector2 range)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="LifetimeByEmitterSpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LifetimeByEmitterSpeedModule SetRange(this LifetimeByEmitterSpeedModule module, Func<Vector2, Vector2> rangeChanger)
         {

@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class TextureSheetAnimationModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.textureSheetAnimation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTextureSheetAnimation(this ParticleSystem particleSystem, Action<TextureSheetAnimationModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Animation
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.animation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, ParticleSystemAnimationType animation)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.animation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationAnimation(this ParticleSystem particleSystem, Func<ParticleSystemAnimationType, ParticleSystemAnimationType> animationChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.animation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, ParticleSystemAnimationType animation)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.animation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetAnimation(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationType, ParticleSystemAnimationType> animationChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region CycleCount
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.cycleCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationCycleCount(this ParticleSystem particleSystem, int cycleCount)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.cycleCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationCycleCount(this ParticleSystem particleSystem, Func<int, int> cycleCountChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.cycleCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetCycleCount(this TextureSheetAnimationModule module, int cycleCount)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.cycleCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetCycleCount(this TextureSheetAnimationModule module, Func<int, int> cycleCountChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetEnabled(this TextureSheetAnimationModule module, bool enabled)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetEnabled(this TextureSheetAnimationModule module, Func<bool, bool> enabledChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipU
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.flipU"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
@@ -131,6 +176,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.flipU"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
@@ -143,6 +191,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.flipU"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
@@ -153,6 +205,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.flipU"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipU property is deprecated. Use ParticleSystemRenderer.flip.x instead.", false)]
 #endif
@@ -165,6 +220,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipV
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.flipV"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
@@ -177,6 +235,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.flipV"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
@@ -189,6 +250,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.flipV"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
@@ -199,6 +264,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.flipV"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("flipV property is deprecated. Use ParticleSystemRenderer.flip.y instead.", false)]
 #endif
@@ -211,6 +279,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Fps
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.fps"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFps(this ParticleSystem particleSystem, float fps)
         {
@@ -220,6 +291,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.fps"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFps(this ParticleSystem particleSystem, Func<float, float> fpsChanger)
         {
@@ -229,6 +303,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.fps"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFps(this TextureSheetAnimationModule module, float fps)
         {
@@ -236,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.fps"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFps(this TextureSheetAnimationModule module, Func<float, float> fpsChanger)
         {
@@ -245,6 +326,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FrameOverTime
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.frameOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTime(this ParticleSystem particleSystem, MinMaxCurve frameOverTime)
         {
@@ -254,6 +338,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.frameOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> frameOverTimeChanger)
         {
@@ -263,6 +350,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.frameOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFrameOverTime(this TextureSheetAnimationModule module, MinMaxCurve frameOverTime)
         {
@@ -270,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.frameOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFrameOverTime(this TextureSheetAnimationModule module, Func<MinMaxCurve, MinMaxCurve> frameOverTimeChanger)
         {
@@ -279,6 +373,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FrameOverTimeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.frameOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTimeMultiplier(this ParticleSystem particleSystem, float frameOverTimeMultiplier)
         {
@@ -288,6 +385,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.frameOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationFrameOverTimeMultiplier(this ParticleSystem particleSystem, Func<float, float> frameOverTimeMultiplierChanger)
         {
@@ -297,6 +397,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.frameOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFrameOverTimeMultiplier(this TextureSheetAnimationModule module, float frameOverTimeMultiplier)
         {
@@ -304,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.frameOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetFrameOverTimeMultiplier(this TextureSheetAnimationModule module, Func<float, float> frameOverTimeMultiplierChanger)
         {
@@ -313,6 +420,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Mode
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.mode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, ParticleSystemAnimationMode mode)
         {
@@ -322,6 +432,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.mode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationMode, ParticleSystemAnimationMode> modeChanger)
         {
@@ -331,6 +444,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.mode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, ParticleSystemAnimationMode mode)
         {
@@ -338,6 +455,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.mode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationMode, ParticleSystemAnimationMode> modeChanger)
         {
@@ -347,6 +467,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region NumTilesX
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.numTilesX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesX(this ParticleSystem particleSystem, int numTilesX)
         {
@@ -356,6 +479,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.numTilesX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesX(this ParticleSystem particleSystem, Func<int, int> numTilesXChanger)
         {
@@ -365,6 +491,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.numTilesX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetNumTilesX(this TextureSheetAnimationModule module, int numTilesX)
         {
@@ -372,6 +502,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.numTilesX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetNumTilesX(this TextureSheetAnimationModule module, Func<int, int> numTilesXChanger)
         {
@@ -381,6 +514,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region NumTilesY
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.numTilesY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesY(this ParticleSystem particleSystem, int numTilesY)
         {
@@ -390,6 +526,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.numTilesY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationNumTilesY(this ParticleSystem particleSystem, Func<int, int> numTilesYChanger)
         {
@@ -399,6 +538,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.numTilesY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetNumTilesY(this TextureSheetAnimationModule module, int numTilesY)
         {
@@ -406,6 +549,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.numTilesY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetNumTilesY(this TextureSheetAnimationModule module, Func<int, int> numTilesYChanger)
         {
@@ -415,6 +561,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RowIndex
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.rowIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowIndex(this ParticleSystem particleSystem, int rowIndex)
         {
@@ -424,6 +573,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.rowIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowIndex(this ParticleSystem particleSystem, Func<int, int> rowIndexChanger)
         {
@@ -433,6 +585,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.rowIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetRowIndex(this TextureSheetAnimationModule module, int rowIndex)
         {
@@ -440,6 +596,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.rowIndex"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetRowIndex(this TextureSheetAnimationModule module, Func<int, int> rowIndexChanger)
         {
@@ -451,6 +610,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2019_4_OR_NEWER
         #region RowMode
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.rowMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, ParticleSystemAnimationRowMode rowMode)
         {
@@ -460,6 +622,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.rowMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationRowMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationRowMode, ParticleSystemAnimationRowMode> rowModeChanger)
         {
@@ -469,6 +634,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.rowMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, ParticleSystemAnimationRowMode rowMode)
         {
@@ -476,6 +645,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.rowMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetRowMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationRowMode, ParticleSystemAnimationRowMode> rowModeChanger)
         {
@@ -487,6 +659,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2018_4_OR_NEWER
         #region SpeedRange
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.speedRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Vector2 speedRange)
         {
@@ -496,6 +671,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.speedRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationSpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> speedRangeChanger)
         {
@@ -505,6 +683,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.speedRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, Vector2 speedRange)
         {
@@ -512,6 +694,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.speedRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetSpeedRange(this TextureSheetAnimationModule module, Func<Vector2, Vector2> speedRangeChanger)
         {
@@ -521,6 +706,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartFrame
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.startFrame"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrame(this ParticleSystem particleSystem, MinMaxCurve startFrame)
         {
@@ -530,6 +718,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.startFrame"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrame(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startFrameChanger)
         {
@@ -539,6 +730,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.startFrame"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetStartFrame(this TextureSheetAnimationModule module, MinMaxCurve startFrame)
         {
@@ -546,6 +741,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.startFrame"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetStartFrame(this TextureSheetAnimationModule module, Func<MinMaxCurve, MinMaxCurve> startFrameChanger)
         {
@@ -555,6 +753,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartFrameMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.startFrameMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrameMultiplier(this ParticleSystem particleSystem, float startFrameMultiplier)
         {
@@ -564,6 +765,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.startFrameMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationStartFrameMultiplier(this ParticleSystem particleSystem, Func<float, float> startFrameMultiplierChanger)
         {
@@ -573,6 +777,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.startFrameMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetStartFrameMultiplier(this TextureSheetAnimationModule module, float startFrameMultiplier)
         {
@@ -580,6 +788,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.startFrameMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetStartFrameMultiplier(this TextureSheetAnimationModule module, Func<float, float> startFrameMultiplierChanger)
         {
@@ -589,6 +800,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region TimeMode
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.timeMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, ParticleSystemAnimationTimeMode timeMode)
         {
@@ -598,6 +812,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.timeMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationTimeMode(this ParticleSystem particleSystem, Func<ParticleSystemAnimationTimeMode, ParticleSystemAnimationTimeMode> timeModeChanger)
         {
@@ -607,6 +824,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.timeMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, ParticleSystemAnimationTimeMode timeMode)
         {
@@ -614,6 +835,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.timeMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetTimeMode(this TextureSheetAnimationModule module, Func<ParticleSystemAnimationTimeMode, ParticleSystemAnimationTimeMode> timeModeChanger)
         {
@@ -623,6 +847,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseRandomRow
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.useRandomRow"/>
+        /// </summary>
 #if UNITY_2019_4_OR_NEWER
         [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
 #endif
@@ -635,6 +862,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.useRandomRow"/>
+        /// </summary>
 #if UNITY_2019_4_OR_NEWER
         [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
 #endif
@@ -647,6 +877,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.useRandomRow"/>
+        /// </summary>
 #if UNITY_2019_4_OR_NEWER
         [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
 #endif
@@ -657,6 +891,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.useRandomRow"/>
+        /// </summary>
 #if UNITY_2019_4_OR_NEWER
         [Obsolete("useRandomRow property is deprecated. Use rowMode instead.", false)]
 #endif
@@ -669,6 +906,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UvChannelMask
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.uvChannelMask"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationUvChannelMask(this ParticleSystem particleSystem, UnityEngine.Rendering.UVChannelFlags uvChannelMask)
         {
@@ -678,6 +918,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TextureSheetAnimationModule.uvChannelMask"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTextureSheetAnimationUvChannelMask(this ParticleSystem particleSystem, Func<UnityEngine.Rendering.UVChannelFlags, UnityEngine.Rendering.UVChannelFlags> uvChannelMaskChanger)
         {
@@ -687,6 +930,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TextureSheetAnimationModule.uvChannelMask"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetUvChannelMask(this TextureSheetAnimationModule module, UnityEngine.Rendering.UVChannelFlags uvChannelMask)
         {
@@ -694,6 +941,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TextureSheetAnimationModule.uvChannelMask"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TextureSheetAnimationModule SetUvChannelMask(this TextureSheetAnimationModule module, Func<UnityEngine.Rendering.UVChannelFlags, UnityEngine.Rendering.UVChannelFlags> uvChannelMaskChanger)
         {

@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class EmissionModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.emission"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditEmission(this ParticleSystem particleSystem, Action<EmissionModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region BurstCount
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.burstCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, int burstCount)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.burstCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, Func<int, int> burstCountChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.burstCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetBurstCount(this EmissionModule module, int burstCount)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.burstCount"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetBurstCount(this EmissionModule module, Func<int, int> burstCountChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetEnabled(this EmissionModule module, bool enabled)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetEnabled(this EmissionModule module, Func<bool, bool> enabledChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Rate
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rate"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
@@ -97,6 +129,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rate"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
@@ -109,6 +144,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rate"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
@@ -119,6 +158,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rate"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rate property is deprecated. Use rateOverTime or rateOverDistance instead.", false)]
 #endif
@@ -131,6 +173,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateMultiplier"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
@@ -143,6 +188,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rateMultiplier"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
@@ -155,6 +203,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateMultiplier"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
@@ -165,6 +217,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rateMultiplier"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("rateMultiplier property is deprecated. Use rateOverTimeMultiplier or rateOverDistanceMultiplier instead.", false)]
 #endif
@@ -177,6 +232,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateOverDistance
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverDistance"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, MinMaxCurve rateOverDistance)
         {
@@ -186,6 +244,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rateOverDistance"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
@@ -195,6 +256,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverDistance"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistance(this EmissionModule module, MinMaxCurve rateOverDistance)
         {
@@ -202,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rateOverDistance"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistance(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
@@ -211,6 +279,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateOverDistanceMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverDistanceMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, float rateOverDistanceMultiplier)
         {
@@ -220,6 +291,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rateOverDistanceMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverDistanceMultiplierChanger)
         {
@@ -229,6 +303,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverDistanceMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, float rateOverDistanceMultiplier)
         {
@@ -236,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rateOverDistanceMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, Func<float, float> rateOverDistanceMultiplierChanger)
         {
@@ -245,6 +326,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateOverTime
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTime(this ParticleSystem particleSystem, MinMaxCurve rateOverTime)
         {
@@ -254,6 +338,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rateOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverTimeChanger)
         {
@@ -263,6 +350,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTime(this EmissionModule module, MinMaxCurve rateOverTime)
         {
@@ -270,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rateOverTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTime(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverTimeChanger)
         {
@@ -279,6 +373,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RateOverTimeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTimeMultiplier(this ParticleSystem particleSystem, float rateOverTimeMultiplier)
         {
@@ -288,6 +385,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.rateOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTimeMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverTimeMultiplierChanger)
         {
@@ -297,6 +397,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.rateOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTimeMultiplier(this EmissionModule module, float rateOverTimeMultiplier)
         {
@@ -304,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.rateOverTimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTimeMultiplier(this EmissionModule module, Func<float, float> rateOverTimeMultiplierChanger)
         {
@@ -313,6 +420,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Type
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.type"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
@@ -325,6 +435,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="EmissionModule.type"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
@@ -337,6 +450,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="EmissionModule.type"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif
@@ -347,6 +464,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="EmissionModule.type"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("ParticleSystemEmissionType no longer does anything. Time and Distance based emission are now both always active.", false)]
 #endif

@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class SubEmittersModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.subEmitters"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditSubEmitters(this ParticleSystem particleSystem, Action<SubEmittersModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Birth0
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.birth0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -29,6 +35,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.birth0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -41,6 +50,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.birth0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -51,6 +64,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.birth0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -63,6 +79,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Birth1
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.birth1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -75,6 +94,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.birth1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -87,6 +109,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.birth1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -97,6 +123,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.birth1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("birth1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -109,6 +138,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Collision0
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.collision0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -121,6 +153,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.collision0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -133,6 +168,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.collision0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -143,6 +182,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.collision0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -155,6 +197,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Collision1
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.collision1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -167,6 +212,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.collision1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -179,6 +227,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.collision1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -189,6 +241,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.collision1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("collision1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -201,6 +256,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Death0
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.death0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -213,6 +271,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.death0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -225,6 +286,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.death0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -235,6 +300,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.death0"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death0 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -247,6 +315,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Death1
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.death1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -259,6 +330,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.death1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -271,6 +345,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.death1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -281,6 +359,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.death1"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("death1 property is deprecated. Use AddSubEmitter, RemoveSubEmitter, SetSubEmitterSystem and GetSubEmitterSystem instead.", false)]
 #endif
@@ -293,6 +374,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -302,6 +386,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SubEmittersModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -311,6 +398,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SubEmittersModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetEnabled(this SubEmittersModule module, bool enabled)
         {
@@ -318,6 +409,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SubEmittersModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetEnabled(this SubEmittersModule module, Func<bool, bool> enabledChanger)
         {

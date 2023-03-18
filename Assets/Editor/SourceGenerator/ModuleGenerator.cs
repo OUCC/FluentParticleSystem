@@ -33,6 +33,9 @@ namespace OUCC.FluentParticleSystem
     public static class {module.Type}Extension
     {{
 #if UNITY_{module.ReleaseVersion.Replace('.', '_')}_OR_NEWER
+        /// <summary>
+        /// Edit <see cref=""ParticleSystem.{module.PropertyName}""/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.Type}> moduleEditor)
         {{
@@ -53,7 +56,10 @@ $@"
 #endif";
 
                 builder.Write($@"{(isSameAsPrevious ? "" : $"\n#if UNITY_{property.ReleaseVersion.Replace('.', '_')}_OR_NEWER")}
-        #region {property.PropertyName.c2p()}{obsolete}
+        #region {property.PropertyName.c2p()}
+        /// <summary>
+        /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
         {{
@@ -62,7 +68,10 @@ $@"
             module.{property.PropertyName} = {property.PropertyName.p2c()};
             return particleSystem;
         }}
-{obsolete}
+
+        /// <summary>
+        /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
@@ -71,14 +80,21 @@ $@"
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return particleSystem;
         }}
-{obsolete}
+
+        
+        /// <summary>
+        /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, {property.Type} {property.PropertyName.p2c()})
         {{
             module.{property.PropertyName} = {property.PropertyName.p2c()};
             return module;
         }}
-{obsolete}
+
+        /// <summary>
+        /// Edit see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{

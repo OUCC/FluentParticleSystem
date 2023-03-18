@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class TriggerModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.trigger"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrigger(this ParticleSystem particleSystem, Action<TriggerModule> moduleEditor)
         {
@@ -19,6 +22,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2020_3_OR_NEWER
         #region ColliderQueryMode
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.colliderQueryMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, ParticleSystemColliderQueryMode colliderQueryMode)
         {
@@ -28,6 +34,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.colliderQueryMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
@@ -37,6 +46,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.colliderQueryMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetColliderQueryMode(this TriggerModule module, ParticleSystemColliderQueryMode colliderQueryMode)
         {
@@ -44,6 +57,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.colliderQueryMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetColliderQueryMode(this TriggerModule module, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
@@ -55,6 +71,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2018_4_OR_NEWER
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -64,6 +83,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -73,6 +95,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnabled(this TriggerModule module, bool enabled)
         {
@@ -80,6 +106,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnabled(this TriggerModule module, Func<bool, bool> enabledChanger)
         {
@@ -89,6 +118,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Enter
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.enter"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, ParticleSystemOverlapAction enter)
         {
@@ -98,6 +130,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.enter"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
@@ -107,6 +142,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.enter"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnter(this TriggerModule module, ParticleSystemOverlapAction enter)
         {
@@ -114,6 +153,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.enter"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnter(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
@@ -123,6 +165,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Exit
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.exit"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, ParticleSystemOverlapAction exit)
         {
@@ -132,6 +177,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.exit"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
@@ -141,6 +189,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.exit"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetExit(this TriggerModule module, ParticleSystemOverlapAction exit)
         {
@@ -148,6 +200,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.exit"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetExit(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
@@ -157,6 +212,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Inside
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.inside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, ParticleSystemOverlapAction inside)
         {
@@ -166,6 +224,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.inside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
@@ -175,6 +236,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.inside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetInside(this TriggerModule module, ParticleSystemOverlapAction inside)
         {
@@ -182,6 +247,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.inside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetInside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
@@ -191,6 +259,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Outside
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.outside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, ParticleSystemOverlapAction outside)
         {
@@ -200,6 +271,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.outside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
@@ -209,6 +283,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.outside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetOutside(this TriggerModule module, ParticleSystemOverlapAction outside)
         {
@@ -216,6 +294,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.outside"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetOutside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
@@ -225,6 +306,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadiusScale
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.radiusScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerRadiusScale(this ParticleSystem particleSystem, float radiusScale)
         {
@@ -234,6 +318,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="TriggerModule.radiusScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerRadiusScale(this ParticleSystem particleSystem, Func<float, float> radiusScaleChanger)
         {
@@ -243,6 +330,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="TriggerModule.radiusScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetRadiusScale(this TriggerModule module, float radiusScale)
         {
@@ -250,6 +341,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="TriggerModule.radiusScale"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetRadiusScale(this TriggerModule module, Func<float, float> radiusScaleChanger)
         {

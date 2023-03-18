@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class SizeBySpeedModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.sizeBySpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditSizeBySpeed(this ParticleSystem particleSystem, Action<SizeBySpeedModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetEnabled(this SizeBySpeedModule module, bool enabled)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetEnabled(this SizeBySpeedModule module, Func<bool, bool> enabledChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Range
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Vector2 range)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> rangeChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Vector2 range)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.range"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetRange(this SizeBySpeedModule module, Func<Vector2, Vector2> rangeChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SeparateAxes
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, bool separateAxes)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.separateAxes"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSeparateAxes(this SizeBySpeedModule module, Func<bool, bool> separateAxesChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Size
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.size"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSize(this ParticleSystem particleSystem, MinMaxCurve size)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.size"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> sizeChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.size"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSize(this SizeBySpeedModule module, MinMaxCurve size)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.size"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSize(this SizeBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> sizeChanger)
         {
@@ -153,6 +208,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SizeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.sizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSizeMultiplier(this ParticleSystem particleSystem, float sizeMultiplier)
         {
@@ -162,6 +220,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.sizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> sizeMultiplierChanger)
         {
@@ -171,6 +232,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.sizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSizeMultiplier(this SizeBySpeedModule module, float sizeMultiplier)
         {
@@ -178,6 +243,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.sizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetSizeMultiplier(this SizeBySpeedModule module, Func<float, float> sizeMultiplierChanger)
         {
@@ -187,6 +255,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region X
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -196,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -205,6 +279,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetX(this SizeBySpeedModule module, MinMaxCurve x)
         {
@@ -212,6 +290,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetX(this SizeBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -221,6 +302,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region XMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -230,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
         {
@@ -239,6 +326,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetXMultiplier(this SizeBySpeedModule module, float xMultiplier)
         {
@@ -246,6 +337,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetXMultiplier(this SizeBySpeedModule module, Func<float, float> xMultiplierChanger)
         {
@@ -255,6 +349,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Y
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -264,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -273,6 +373,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetY(this SizeBySpeedModule module, MinMaxCurve y)
         {
@@ -280,6 +384,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetY(this SizeBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -289,6 +396,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region YMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -298,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
         {
@@ -307,6 +420,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetYMultiplier(this SizeBySpeedModule module, float yMultiplier)
         {
@@ -314,6 +431,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetYMultiplier(this SizeBySpeedModule module, Func<float, float> yMultiplierChanger)
         {
@@ -323,6 +443,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Z
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -332,6 +455,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -341,6 +467,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetZ(this SizeBySpeedModule module, MinMaxCurve z)
         {
@@ -348,6 +478,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetZ(this SizeBySpeedModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -357,6 +490,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
@@ -366,6 +502,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="SizeBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeBySpeedZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
         {
@@ -375,6 +514,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="SizeBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetZMultiplier(this SizeBySpeedModule module, float zMultiplier)
         {
@@ -382,6 +525,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="SizeBySpeedModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeBySpeedModule SetZMultiplier(this SizeBySpeedModule module, Func<float, float> zMultiplierChanger)
         {

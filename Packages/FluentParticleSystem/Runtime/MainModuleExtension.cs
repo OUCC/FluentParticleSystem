@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class MainModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.main"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region CullingMode
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.cullingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.cullingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.cullingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCullingMode(this MainModule module, ParticleSystemCullingMode cullingMode)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.cullingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCullingMode(this MainModule module, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region CustomSimulationSpace
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.customSimulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Transform customSimulationSpace)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.customSimulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<Transform, Transform> customSimulationSpaceChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.customSimulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCustomSimulationSpace(this MainModule module, Transform customSimulationSpace)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.customSimulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCustomSimulationSpace(this MainModule module, Func<Transform, Transform> customSimulationSpaceChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Duration
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.duration"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, float duration)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.duration"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, Func<float, float> durationChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.duration"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetDuration(this MainModule module, float duration)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.duration"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetDuration(this MainModule module, Func<float, float> durationChanger)
         {
@@ -121,6 +163,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2021_3_OR_NEWER
         #region EmitterVelocity
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.emitterVelocity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Vector3 emitterVelocity)
         {
@@ -130,6 +175,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.emitterVelocity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<Vector3, Vector3> emitterVelocityChanger)
         {
@@ -139,6 +187,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.emitterVelocity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocity(this MainModule module, Vector3 emitterVelocity)
         {
@@ -146,6 +198,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.emitterVelocity"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocity(this MainModule module, Func<Vector3, Vector3> emitterVelocityChanger)
         {
@@ -157,6 +212,9 @@ namespace OUCC.FluentParticleSystem
 
 #if UNITY_2018_4_OR_NEWER
         #region EmitterVelocityMode
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.emitterVelocityMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
@@ -166,6 +224,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.emitterVelocityMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
@@ -175,6 +236,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.emitterVelocityMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocityMode(this MainModule module, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
@@ -182,6 +247,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.emitterVelocityMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocityMode(this MainModule module, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
@@ -191,6 +259,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region FlipRotation
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.flipRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
         {
@@ -200,6 +271,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.flipRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, Func<float, float> flipRotationChanger)
         {
@@ -209,6 +283,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.flipRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetFlipRotation(this MainModule module, float flipRotation)
         {
@@ -216,6 +294,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.flipRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetFlipRotation(this MainModule module, Func<float, float> flipRotationChanger)
         {
@@ -225,6 +306,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region GravityModifier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravityModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
         {
@@ -234,6 +318,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.gravityModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
         {
@@ -243,6 +330,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravityModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifier(this MainModule module, MinMaxCurve gravityModifier)
         {
@@ -250,6 +341,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.gravityModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifier(this MainModule module, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
         {
@@ -259,6 +353,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region GravityModifierMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravityModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
         {
@@ -268,6 +365,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.gravityModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, Func<float, float> gravityModifierMultiplierChanger)
         {
@@ -277,6 +377,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.gravityModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifierMultiplier(this MainModule module, float gravityModifierMultiplier)
         {
@@ -284,6 +388,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.gravityModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifierMultiplier(this MainModule module, Func<float, float> gravityModifierMultiplierChanger)
         {
@@ -293,6 +400,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Loop
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.loop"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, bool loop)
         {
@@ -302,6 +412,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.loop"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, Func<bool, bool> loopChanger)
         {
@@ -311,6 +424,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.loop"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetLoop(this MainModule module, bool loop)
         {
@@ -318,6 +435,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.loop"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetLoop(this MainModule module, Func<bool, bool> loopChanger)
         {
@@ -327,6 +447,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region MaxParticles
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.maxParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
         {
@@ -336,6 +459,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.maxParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, Func<int, int> maxParticlesChanger)
         {
@@ -345,6 +471,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.maxParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetMaxParticles(this MainModule module, int maxParticles)
         {
@@ -352,6 +482,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.maxParticles"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetMaxParticles(this MainModule module, Func<int, int> maxParticlesChanger)
         {
@@ -361,6 +494,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region PlayOnAwake
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.playOnAwake"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
         {
@@ -370,6 +506,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.playOnAwake"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, Func<bool, bool> playOnAwakeChanger)
         {
@@ -379,6 +518,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.playOnAwake"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPlayOnAwake(this MainModule module, bool playOnAwake)
         {
@@ -386,6 +529,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.playOnAwake"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPlayOnAwake(this MainModule module, Func<bool, bool> playOnAwakeChanger)
         {
@@ -395,6 +541,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Prewarm
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.prewarm"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, bool prewarm)
         {
@@ -404,6 +553,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.prewarm"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, Func<bool, bool> prewarmChanger)
         {
@@ -413,6 +565,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.prewarm"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPrewarm(this MainModule module, bool prewarm)
         {
@@ -420,6 +576,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.prewarm"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPrewarm(this MainModule module, Func<bool, bool> prewarmChanger)
         {
@@ -429,6 +588,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RandomizeRotationDirection
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.randomizeRotationDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
@@ -441,6 +603,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.randomizeRotationDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
@@ -453,6 +618,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.randomizeRotationDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
@@ -463,6 +632,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.randomizeRotationDirection"/>
+        /// </summary>
 #if UNITY_2018_4_OR_NEWER
         [Obsolete("Please use flipRotation instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/MainModule.flipRotation", false)]
 #endif
@@ -475,6 +647,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RingBufferLoopRange
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.ringBufferLoopRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Vector2 ringBufferLoopRange)
         {
@@ -484,6 +659,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.ringBufferLoopRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
@@ -493,6 +671,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.ringBufferLoopRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferLoopRange(this MainModule module, Vector2 ringBufferLoopRange)
         {
@@ -500,6 +682,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.ringBufferLoopRange"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferLoopRange(this MainModule module, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
@@ -509,6 +694,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RingBufferMode
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.ringBufferMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, ParticleSystemRingBufferMode ringBufferMode)
         {
@@ -518,6 +706,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.ringBufferMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
@@ -527,6 +718,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.ringBufferMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferMode(this MainModule module, ParticleSystemRingBufferMode ringBufferMode)
         {
@@ -534,6 +729,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.ringBufferMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferMode(this MainModule module, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
@@ -543,6 +741,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ScalingMode
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.scalingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, ParticleSystemScalingMode scalingMode)
         {
@@ -552,6 +753,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.scalingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
@@ -561,6 +765,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.scalingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetScalingMode(this MainModule module, ParticleSystemScalingMode scalingMode)
         {
@@ -568,6 +776,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.scalingMode"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetScalingMode(this MainModule module, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
@@ -577,6 +788,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SimulationSpace
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.simulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace simulationSpace)
         {
@@ -586,6 +800,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.simulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
@@ -595,6 +812,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.simulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpace(this MainModule module, ParticleSystemSimulationSpace simulationSpace)
         {
@@ -602,6 +823,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.simulationSpace"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpace(this MainModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
@@ -611,6 +835,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SimulationSpeed
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.simulationSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
         {
@@ -620,6 +847,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.simulationSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, Func<float, float> simulationSpeedChanger)
         {
@@ -629,6 +859,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.simulationSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpeed(this MainModule module, float simulationSpeed)
         {
@@ -636,6 +870,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.simulationSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpeed(this MainModule module, Func<float, float> simulationSpeedChanger)
         {
@@ -645,6 +882,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartColor
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
         {
@@ -654,6 +894,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
         {
@@ -663,6 +906,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartColor(this MainModule module, MinMaxGradient startColor)
         {
@@ -670,6 +917,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startColor"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartColor(this MainModule module, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
         {
@@ -679,6 +929,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartDelay
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startDelay"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, MinMaxCurve startDelay)
         {
@@ -688,6 +941,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startDelay"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startDelayChanger)
         {
@@ -697,6 +953,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startDelay"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelay(this MainModule module, MinMaxCurve startDelay)
         {
@@ -704,6 +964,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startDelay"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelay(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startDelayChanger)
         {
@@ -713,6 +976,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartDelayMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startDelayMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, float startDelayMultiplier)
         {
@@ -722,6 +988,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startDelayMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, Func<float, float> startDelayMultiplierChanger)
         {
@@ -731,6 +1000,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startDelayMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelayMultiplier(this MainModule module, float startDelayMultiplier)
         {
@@ -738,6 +1011,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startDelayMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelayMultiplier(this MainModule module, Func<float, float> startDelayMultiplierChanger)
         {
@@ -747,6 +1023,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartLifetime
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startLifetime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, MinMaxCurve startLifetime)
         {
@@ -756,6 +1035,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startLifetime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startLifetimeChanger)
         {
@@ -765,6 +1047,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startLifetime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetime(this MainModule module, MinMaxCurve startLifetime)
         {
@@ -772,6 +1058,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startLifetime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetime(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startLifetimeChanger)
         {
@@ -781,6 +1070,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartLifetimeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startLifetimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, float startLifetimeMultiplier)
         {
@@ -790,6 +1082,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startLifetimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, Func<float, float> startLifetimeMultiplierChanger)
         {
@@ -799,6 +1094,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startLifetimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetimeMultiplier(this MainModule module, float startLifetimeMultiplier)
         {
@@ -806,6 +1105,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startLifetimeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetimeMultiplier(this MainModule module, Func<float, float> startLifetimeMultiplierChanger)
         {
@@ -815,6 +1117,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotation
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
         {
@@ -824,6 +1129,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
@@ -833,6 +1141,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation(this MainModule module, MinMaxCurve startRotation)
         {
@@ -840,6 +1152,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotation"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
@@ -849,6 +1164,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotation3D
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotation3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, bool startRotation3D)
         {
@@ -858,6 +1176,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotation3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, Func<bool, bool> startRotation3DChanger)
         {
@@ -867,6 +1188,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotation3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation3D(this MainModule module, bool startRotation3D)
         {
@@ -874,6 +1199,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotation3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation3D(this MainModule module, Func<bool, bool> startRotation3DChanger)
         {
@@ -883,6 +1211,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, float startRotationMultiplier)
         {
@@ -892,6 +1223,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationMultiplierChanger)
         {
@@ -901,6 +1235,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationMultiplier(this MainModule module, float startRotationMultiplier)
         {
@@ -908,6 +1246,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationMultiplier(this MainModule module, Func<float, float> startRotationMultiplierChanger)
         {
@@ -917,6 +1258,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationX
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, MinMaxCurve startRotationX)
         {
@@ -926,6 +1270,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationXChanger)
         {
@@ -935,6 +1282,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationX(this MainModule module, MinMaxCurve startRotationX)
         {
@@ -942,6 +1293,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationXChanger)
         {
@@ -951,6 +1305,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationXMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, float startRotationXMultiplier)
         {
@@ -960,6 +1317,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationXMultiplierChanger)
         {
@@ -969,6 +1329,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationXMultiplier(this MainModule module, float startRotationXMultiplier)
         {
@@ -976,6 +1340,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationXMultiplier(this MainModule module, Func<float, float> startRotationXMultiplierChanger)
         {
@@ -985,6 +1352,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationY
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, MinMaxCurve startRotationY)
         {
@@ -994,6 +1364,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationYChanger)
         {
@@ -1003,6 +1376,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationY(this MainModule module, MinMaxCurve startRotationY)
         {
@@ -1010,6 +1387,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationYChanger)
         {
@@ -1019,6 +1399,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationYMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, float startRotationYMultiplier)
         {
@@ -1028,6 +1411,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationYMultiplierChanger)
         {
@@ -1037,6 +1423,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationYMultiplier(this MainModule module, float startRotationYMultiplier)
         {
@@ -1044,6 +1434,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationYMultiplier(this MainModule module, Func<float, float> startRotationYMultiplierChanger)
         {
@@ -1053,6 +1446,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationZ
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, MinMaxCurve startRotationZ)
         {
@@ -1062,6 +1458,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationZChanger)
         {
@@ -1071,6 +1470,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZ(this MainModule module, MinMaxCurve startRotationZ)
         {
@@ -1078,6 +1481,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationZChanger)
         {
@@ -1087,6 +1493,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartRotationZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, float startRotationZMultiplier)
         {
@@ -1096,6 +1505,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startRotationZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationZMultiplierChanger)
         {
@@ -1105,6 +1517,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startRotationZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZMultiplier(this MainModule module, float startRotationZMultiplier)
         {
@@ -1112,6 +1528,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startRotationZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZMultiplier(this MainModule module, Func<float, float> startRotationZMultiplierChanger)
         {
@@ -1121,6 +1540,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSize
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSize"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
         {
@@ -1130,6 +1552,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSize"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
@@ -1139,6 +1564,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSize"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize(this MainModule module, MinMaxCurve startSize)
         {
@@ -1146,6 +1575,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSize"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
@@ -1155,6 +1587,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSize3D
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSize3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
         {
@@ -1164,6 +1599,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSize3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, Func<bool, bool> startSize3DChanger)
         {
@@ -1173,6 +1611,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSize3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize3D(this MainModule module, bool startSize3D)
         {
@@ -1180,6 +1622,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSize3D"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize3D(this MainModule module, Func<bool, bool> startSize3DChanger)
         {
@@ -1189,6 +1634,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
         {
@@ -1198,6 +1646,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeMultiplierChanger)
         {
@@ -1207,6 +1658,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeMultiplier(this MainModule module, float startSizeMultiplier)
         {
@@ -1214,6 +1669,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeMultiplier(this MainModule module, Func<float, float> startSizeMultiplierChanger)
         {
@@ -1223,6 +1681,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeX
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
         {
@@ -1232,6 +1693,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
@@ -1241,6 +1705,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeX(this MainModule module, MinMaxCurve startSizeX)
         {
@@ -1248,6 +1716,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
@@ -1257,6 +1728,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeXMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
         {
@@ -1266,6 +1740,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeXMultiplierChanger)
         {
@@ -1275,6 +1752,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeXMultiplier(this MainModule module, float startSizeXMultiplier)
         {
@@ -1282,6 +1763,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeXMultiplier(this MainModule module, Func<float, float> startSizeXMultiplierChanger)
         {
@@ -1291,6 +1775,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeY
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
         {
@@ -1300,6 +1787,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
@@ -1309,6 +1799,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeY(this MainModule module, MinMaxCurve startSizeY)
         {
@@ -1316,6 +1810,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
@@ -1325,6 +1822,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeYMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
         {
@@ -1334,6 +1834,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeYMultiplierChanger)
         {
@@ -1343,6 +1846,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeYMultiplier(this MainModule module, float startSizeYMultiplier)
         {
@@ -1350,6 +1857,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeYMultiplier(this MainModule module, Func<float, float> startSizeYMultiplierChanger)
         {
@@ -1359,6 +1869,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeZ
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
         {
@@ -1368,6 +1881,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
         {
@@ -1377,6 +1893,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZ(this MainModule module, MinMaxCurve startSizeZ)
         {
@@ -1384,6 +1904,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
         {
@@ -1393,6 +1916,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSizeZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
         {
@@ -1402,6 +1928,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSizeZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeZMultiplierChanger)
         {
@@ -1411,6 +1940,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSizeZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZMultiplier(this MainModule module, float startSizeZMultiplier)
         {
@@ -1418,6 +1951,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSizeZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZMultiplier(this MainModule module, Func<float, float> startSizeZMultiplierChanger)
         {
@@ -1427,6 +1963,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSpeed
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
         {
@@ -1436,6 +1975,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
         {
@@ -1445,6 +1987,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeed(this MainModule module, MinMaxCurve startSpeed)
         {
@@ -1452,6 +1998,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSpeed"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeed(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
         {
@@ -1461,6 +2010,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StartSpeedMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
         {
@@ -1470,6 +2022,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.startSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> startSpeedMultiplierChanger)
         {
@@ -1479,6 +2034,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.startSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeedMultiplier(this MainModule module, float startSpeedMultiplier)
         {
@@ -1486,6 +2045,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.startSpeedMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeedMultiplier(this MainModule module, Func<float, float> startSpeedMultiplierChanger)
         {
@@ -1495,6 +2057,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region StopAction
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.stopAction"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, ParticleSystemStopAction stopAction)
         {
@@ -1504,6 +2069,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.stopAction"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
@@ -1513,6 +2081,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.stopAction"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStopAction(this MainModule module, ParticleSystemStopAction stopAction)
         {
@@ -1520,6 +2092,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.stopAction"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStopAction(this MainModule module, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
@@ -1529,6 +2104,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region UseUnscaledTime
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.useUnscaledTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
         {
@@ -1538,6 +2116,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="MainModule.useUnscaledTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, Func<bool, bool> useUnscaledTimeChanger)
         {
@@ -1547,6 +2128,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="MainModule.useUnscaledTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetUseUnscaledTime(this MainModule module, bool useUnscaledTime)
         {
@@ -1554,6 +2139,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="MainModule.useUnscaledTime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetUseUnscaledTime(this MainModule module, Func<bool, bool> useUnscaledTimeChanger)
         {

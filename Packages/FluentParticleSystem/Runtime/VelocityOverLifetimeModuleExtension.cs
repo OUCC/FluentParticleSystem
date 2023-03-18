@@ -8,6 +8,9 @@ namespace OUCC.FluentParticleSystem
     public static class VelocityOverLifetimeModuleExtension
     {
 #if UNITY_2018_4_OR_NEWER
+        /// <summary>
+        /// Edit <see cref="ParticleSystem.velocityOverLifetime"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditVelocityOverLifetime(this ParticleSystem particleSystem, Action<VelocityOverLifetimeModule> moduleEditor)
         {
@@ -17,6 +20,9 @@ namespace OUCC.FluentParticleSystem
         }
 
         #region Enabled
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
@@ -26,6 +32,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
@@ -35,6 +44,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetEnabled(this VelocityOverLifetimeModule module, bool enabled)
         {
@@ -42,6 +55,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.enabled"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetEnabled(this VelocityOverLifetimeModule module, Func<bool, bool> enabledChanger)
         {
@@ -51,6 +67,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetX
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetX(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetX)
         {
@@ -60,6 +79,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetXChanger)
         {
@@ -69,6 +91,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetX(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetX)
         {
@@ -76,6 +102,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetXChanger)
         {
@@ -85,6 +114,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetXMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetXMultiplier(this ParticleSystem particleSystem, float orbitalOffsetXMultiplier)
         {
@@ -94,6 +126,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetXMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalOffsetXMultiplierChanger)
         {
@@ -103,6 +138,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetXMultiplier(this VelocityOverLifetimeModule module, float orbitalOffsetXMultiplier)
         {
@@ -110,6 +149,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalOffsetXMultiplierChanger)
         {
@@ -119,6 +161,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetY
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetY)
         {
@@ -128,6 +173,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
         {
@@ -137,6 +185,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetY)
         {
@@ -144,6 +196,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetYChanger)
         {
@@ -153,6 +208,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetYMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetYMultiplier(this ParticleSystem particleSystem, float orbitalOffsetYMultiplier)
         {
@@ -162,6 +220,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetYMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalOffsetYMultiplierChanger)
         {
@@ -171,6 +232,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetYMultiplier(this VelocityOverLifetimeModule module, float orbitalOffsetYMultiplier)
         {
@@ -178,6 +243,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalOffsetYMultiplierChanger)
         {
@@ -187,6 +255,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetZ
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, MinMaxCurve orbitalOffsetZ)
         {
@@ -196,6 +267,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
         {
@@ -205,6 +279,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalOffsetZ)
         {
@@ -212,6 +290,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalOffsetZChanger)
         {
@@ -221,6 +302,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalOffsetZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZMultiplier(this ParticleSystem particleSystem, float orbitalOffsetZMultiplier)
         {
@@ -230,6 +314,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalOffsetZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalOffsetZMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalOffsetZMultiplierChanger)
         {
@@ -239,6 +326,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalOffsetZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetZMultiplier(this VelocityOverLifetimeModule module, float orbitalOffsetZMultiplier)
         {
@@ -246,6 +337,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalOffsetZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalOffsetZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalOffsetZMultiplierChanger)
         {
@@ -255,6 +349,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalX
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, MinMaxCurve orbitalX)
         {
@@ -264,6 +361,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
         {
@@ -273,6 +373,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, MinMaxCurve orbitalX)
         {
@@ -280,6 +384,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalX"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalXChanger)
         {
@@ -289,6 +396,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalXMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, float orbitalXMultiplier)
         {
@@ -298,6 +408,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalXMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalXMultiplierChanger)
         {
@@ -307,6 +420,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, float orbitalXMultiplier)
         {
@@ -314,6 +431,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalXMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalXMultiplierChanger)
         {
@@ -323,6 +443,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalY
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, MinMaxCurve orbitalY)
         {
@@ -332,6 +455,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
         {
@@ -341,6 +467,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, MinMaxCurve orbitalY)
         {
@@ -348,6 +478,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalY"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalYChanger)
         {
@@ -357,6 +490,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalYMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, float orbitalYMultiplier)
         {
@@ -366,6 +502,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalYMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalYMultiplierChanger)
         {
@@ -375,6 +514,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, float orbitalYMultiplier)
         {
@@ -382,6 +525,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalYMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalYMultiplierChanger)
         {
@@ -391,6 +537,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalZ
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, MinMaxCurve orbitalZ)
         {
@@ -400,6 +549,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
         {
@@ -409,6 +561,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, MinMaxCurve orbitalZ)
         {
@@ -416,6 +572,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalZ"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> orbitalZChanger)
         {
@@ -425,6 +584,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region OrbitalZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, float orbitalZMultiplier)
         {
@@ -434,6 +596,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.orbitalZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeOrbitalZMultiplier(this ParticleSystem particleSystem, Func<float, float> orbitalZMultiplierChanger)
         {
@@ -443,6 +608,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.orbitalZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, float orbitalZMultiplier)
         {
@@ -450,6 +619,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.orbitalZMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetOrbitalZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> orbitalZMultiplierChanger)
         {
@@ -459,6 +631,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Radial
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.radial"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadial(this ParticleSystem particleSystem, MinMaxCurve radial)
         {
@@ -468,6 +643,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.radial"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadial(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> radialChanger)
         {
@@ -477,6 +655,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.radial"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetRadial(this VelocityOverLifetimeModule module, MinMaxCurve radial)
         {
@@ -484,6 +666,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.radial"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetRadial(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> radialChanger)
         {
@@ -493,6 +678,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region RadialMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.radialMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadialMultiplier(this ParticleSystem particleSystem, float radialMultiplier)
         {
@@ -502,6 +690,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.radialMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeRadialMultiplier(this ParticleSystem particleSystem, Func<float, float> radialMultiplierChanger)
         {
@@ -511,6 +702,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.radialMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetRadialMultiplier(this VelocityOverLifetimeModule module, float radialMultiplier)
         {
@@ -518,6 +713,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.radialMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetRadialMultiplier(this VelocityOverLifetimeModule module, Func<float, float> radialMultiplierChanger)
         {
@@ -527,6 +725,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Space
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.space"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace space)
         {
@@ -536,6 +737,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.space"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
@@ -545,6 +749,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.space"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, ParticleSystemSimulationSpace space)
         {
@@ -552,6 +760,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.space"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpace(this VelocityOverLifetimeModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> spaceChanger)
         {
@@ -561,6 +772,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SpeedModifier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.speedModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifier(this ParticleSystem particleSystem, MinMaxCurve speedModifier)
         {
@@ -570,6 +784,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.speedModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifier(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> speedModifierChanger)
         {
@@ -579,6 +796,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.speedModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpeedModifier(this VelocityOverLifetimeModule module, MinMaxCurve speedModifier)
         {
@@ -586,6 +807,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.speedModifier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpeedModifier(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> speedModifierChanger)
         {
@@ -595,6 +819,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region SpeedModifierMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.speedModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifierMultiplier(this ParticleSystem particleSystem, float speedModifierMultiplier)
         {
@@ -604,6 +831,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.speedModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeSpeedModifierMultiplier(this ParticleSystem particleSystem, Func<float, float> speedModifierMultiplierChanger)
         {
@@ -613,6 +843,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.speedModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpeedModifierMultiplier(this VelocityOverLifetimeModule module, float speedModifierMultiplier)
         {
@@ -620,6 +854,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.speedModifierMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetSpeedModifierMultiplier(this VelocityOverLifetimeModule module, Func<float, float> speedModifierMultiplierChanger)
         {
@@ -629,6 +866,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region X
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
@@ -638,6 +878,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -647,6 +890,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, MinMaxCurve x)
         {
@@ -654,6 +901,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.x"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetX(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
@@ -663,6 +913,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region XMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
@@ -672,6 +925,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
         {
@@ -681,6 +937,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, float xMultiplier)
         {
@@ -688,6 +948,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.xMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetXMultiplier(this VelocityOverLifetimeModule module, Func<float, float> xMultiplierChanger)
         {
@@ -697,6 +960,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Y
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
@@ -706,6 +972,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -715,6 +984,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, MinMaxCurve y)
         {
@@ -722,6 +995,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.y"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetY(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
@@ -731,6 +1007,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region YMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
@@ -740,6 +1019,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
         {
@@ -749,6 +1031,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, float yMultiplier)
         {
@@ -756,6 +1042,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.yMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetYMultiplier(this VelocityOverLifetimeModule module, Func<float, float> yMultiplierChanger)
         {
@@ -765,6 +1054,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region Z
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
@@ -774,6 +1066,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -783,6 +1078,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, MinMaxCurve z)
         {
@@ -790,6 +1089,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.z"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetZ(this VelocityOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
@@ -799,6 +1101,9 @@ namespace OUCC.FluentParticleSystem
         #endregion
 
         #region ZMultiplier
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
@@ -808,6 +1113,9 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        /// <summary>
+        /// Edit <see cref="VelocityOverLifetimeModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetVelocityOverLifetimeZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
         {
@@ -817,6 +1125,10 @@ namespace OUCC.FluentParticleSystem
             return particleSystem;
         }
 
+        
+        /// <summary>
+        /// Assign a value to <see cref="VelocityOverLifetimeModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, float zMultiplier)
         {
@@ -824,6 +1136,9 @@ namespace OUCC.FluentParticleSystem
             return module;
         }
 
+        /// <summary>
+        /// Edit see cref="VelocityOverLifetimeModule.zMultiplier"/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VelocityOverLifetimeModule SetZMultiplier(this VelocityOverLifetimeModule module, Func<float, float> zMultiplierChanger)
         {
