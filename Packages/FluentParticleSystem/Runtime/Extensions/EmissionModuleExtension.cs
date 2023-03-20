@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditEmission(this ParticleSystem particleSystem, Action<EmissionModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.emission);
             return particleSystem;
         }
@@ -26,7 +28,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, int burstCount)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.burstCount = burstCount;
             return particleSystem;
@@ -38,7 +40,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionBurstCount(this ParticleSystem particleSystem, Func<int, int> burstCountChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(burstCountChanger != null, "burstCountChanger cannot be null");
             var module = particleSystem.emission;
             module.burstCount = burstCountChanger(module.burstCount);
             return particleSystem;
@@ -60,6 +63,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetBurstCount(this EmissionModule module, Func<int, int> burstCountChanger)
         {
+            Debug.Assert(burstCountChanger != null, "burstCountChanger cannot be null");
             module.burstCount = burstCountChanger(module.burstCount);
             return module;
         }
@@ -72,7 +76,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, bool enabled)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.enabled = enabled;
             return particleSystem;
@@ -84,7 +88,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             var module = particleSystem.emission;
             module.enabled = enabledChanger(module.enabled);
             return particleSystem;
@@ -106,6 +111,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetEnabled(this EmissionModule module, Func<bool, bool> enabledChanger)
         {
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
@@ -121,7 +127,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRate(this ParticleSystem particleSystem, MinMaxCurve rate)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rate = rate;
             return particleSystem;
@@ -136,7 +142,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRate(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateChanger != null, "rateChanger cannot be null");
             var module = particleSystem.emission;
             module.rate = rateChanger(module.rate);
             return particleSystem;
@@ -164,6 +171,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRate(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateChanger)
         {
+            Debug.Assert(rateChanger != null, "rateChanger cannot be null");
             module.rate = rateChanger(module.rate);
             return module;
         }
@@ -179,7 +187,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateMultiplier(this ParticleSystem particleSystem, float rateMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rateMultiplier = rateMultiplier;
             return particleSystem;
@@ -194,7 +202,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateMultiplier(this ParticleSystem particleSystem, Func<float, float> rateMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateMultiplierChanger != null, "rateMultiplierChanger cannot be null");
             var module = particleSystem.emission;
             module.rateMultiplier = rateMultiplierChanger(module.rateMultiplier);
             return particleSystem;
@@ -222,6 +231,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateMultiplier(this EmissionModule module, Func<float, float> rateMultiplierChanger)
         {
+            Debug.Assert(rateMultiplierChanger != null, "rateMultiplierChanger cannot be null");
             module.rateMultiplier = rateMultiplierChanger(module.rateMultiplier);
             return module;
         }
@@ -234,7 +244,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, MinMaxCurve rateOverDistance)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rateOverDistance = rateOverDistance;
             return particleSystem;
@@ -246,7 +256,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistance(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateOverDistanceChanger != null, "rateOverDistanceChanger cannot be null");
             var module = particleSystem.emission;
             module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
             return particleSystem;
@@ -268,6 +279,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistance(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverDistanceChanger)
         {
+            Debug.Assert(rateOverDistanceChanger != null, "rateOverDistanceChanger cannot be null");
             module.rateOverDistance = rateOverDistanceChanger(module.rateOverDistance);
             return module;
         }
@@ -280,7 +292,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, float rateOverDistanceMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rateOverDistanceMultiplier = rateOverDistanceMultiplier;
             return particleSystem;
@@ -292,7 +304,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverDistanceMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverDistanceMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateOverDistanceMultiplierChanger != null, "rateOverDistanceMultiplierChanger cannot be null");
             var module = particleSystem.emission;
             module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
             return particleSystem;
@@ -314,6 +327,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverDistanceMultiplier(this EmissionModule module, Func<float, float> rateOverDistanceMultiplierChanger)
         {
+            Debug.Assert(rateOverDistanceMultiplierChanger != null, "rateOverDistanceMultiplierChanger cannot be null");
             module.rateOverDistanceMultiplier = rateOverDistanceMultiplierChanger(module.rateOverDistanceMultiplier);
             return module;
         }
@@ -326,7 +340,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTime(this ParticleSystem particleSystem, MinMaxCurve rateOverTime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rateOverTime = rateOverTime;
             return particleSystem;
@@ -338,7 +352,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> rateOverTimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateOverTimeChanger != null, "rateOverTimeChanger cannot be null");
             var module = particleSystem.emission;
             module.rateOverTime = rateOverTimeChanger(module.rateOverTime);
             return particleSystem;
@@ -360,6 +375,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTime(this EmissionModule module, Func<MinMaxCurve, MinMaxCurve> rateOverTimeChanger)
         {
+            Debug.Assert(rateOverTimeChanger != null, "rateOverTimeChanger cannot be null");
             module.rateOverTime = rateOverTimeChanger(module.rateOverTime);
             return module;
         }
@@ -372,7 +388,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTimeMultiplier(this ParticleSystem particleSystem, float rateOverTimeMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.rateOverTimeMultiplier = rateOverTimeMultiplier;
             return particleSystem;
@@ -384,7 +400,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionRateOverTimeMultiplier(this ParticleSystem particleSystem, Func<float, float> rateOverTimeMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(rateOverTimeMultiplierChanger != null, "rateOverTimeMultiplierChanger cannot be null");
             var module = particleSystem.emission;
             module.rateOverTimeMultiplier = rateOverTimeMultiplierChanger(module.rateOverTimeMultiplier);
             return particleSystem;
@@ -406,6 +423,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetRateOverTimeMultiplier(this EmissionModule module, Func<float, float> rateOverTimeMultiplierChanger)
         {
+            Debug.Assert(rateOverTimeMultiplierChanger != null, "rateOverTimeMultiplierChanger cannot be null");
             module.rateOverTimeMultiplier = rateOverTimeMultiplierChanger(module.rateOverTimeMultiplier);
             return module;
         }
@@ -421,7 +439,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, ParticleSystemEmissionType type)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.emission;
             module.type = type;
             return particleSystem;
@@ -436,7 +454,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetEmissionType(this ParticleSystem particleSystem, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(typeChanger != null, "typeChanger cannot be null");
             var module = particleSystem.emission;
             module.type = typeChanger(module.type);
             return particleSystem;
@@ -464,6 +483,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EmissionModule SetType(this EmissionModule module, Func<ParticleSystemEmissionType, ParticleSystemEmissionType> typeChanger)
         {
+            Debug.Assert(typeChanger != null, "typeChanger cannot be null");
             module.type = typeChanger(module.type);
             return module;
         }

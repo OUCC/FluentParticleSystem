@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrigger(this ParticleSystem particleSystem, Action<TriggerModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.trigger);
             return particleSystem;
         }
@@ -28,7 +30,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, ParticleSystemColliderQueryMode colliderQueryMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.colliderQueryMode = colliderQueryMode;
             return particleSystem;
@@ -40,7 +42,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerColliderQueryMode(this ParticleSystem particleSystem, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(colliderQueryModeChanger != null, "colliderQueryModeChanger cannot be null");
             var module = particleSystem.trigger;
             module.colliderQueryMode = colliderQueryModeChanger(module.colliderQueryMode);
             return particleSystem;
@@ -62,6 +65,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetColliderQueryMode(this TriggerModule module, Func<ParticleSystemColliderQueryMode, ParticleSystemColliderQueryMode> colliderQueryModeChanger)
         {
+            Debug.Assert(colliderQueryModeChanger != null, "colliderQueryModeChanger cannot be null");
             module.colliderQueryMode = colliderQueryModeChanger(module.colliderQueryMode);
             return module;
         }
@@ -76,7 +80,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, bool enabled)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.enabled = enabled;
             return particleSystem;
@@ -88,7 +92,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             var module = particleSystem.trigger;
             module.enabled = enabledChanger(module.enabled);
             return particleSystem;
@@ -110,6 +115,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnabled(this TriggerModule module, Func<bool, bool> enabledChanger)
         {
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
@@ -122,7 +128,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, ParticleSystemOverlapAction enter)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.enter = enter;
             return particleSystem;
@@ -134,7 +140,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerEnter(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enterChanger != null, "enterChanger cannot be null");
             var module = particleSystem.trigger;
             module.enter = enterChanger(module.enter);
             return particleSystem;
@@ -156,6 +163,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetEnter(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> enterChanger)
         {
+            Debug.Assert(enterChanger != null, "enterChanger cannot be null");
             module.enter = enterChanger(module.enter);
             return module;
         }
@@ -168,7 +176,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, ParticleSystemOverlapAction exit)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.exit = exit;
             return particleSystem;
@@ -180,7 +188,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerExit(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(exitChanger != null, "exitChanger cannot be null");
             var module = particleSystem.trigger;
             module.exit = exitChanger(module.exit);
             return particleSystem;
@@ -202,6 +211,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetExit(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> exitChanger)
         {
+            Debug.Assert(exitChanger != null, "exitChanger cannot be null");
             module.exit = exitChanger(module.exit);
             return module;
         }
@@ -214,7 +224,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, ParticleSystemOverlapAction inside)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.inside = inside;
             return particleSystem;
@@ -226,7 +236,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerInside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(insideChanger != null, "insideChanger cannot be null");
             var module = particleSystem.trigger;
             module.inside = insideChanger(module.inside);
             return particleSystem;
@@ -248,6 +259,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetInside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> insideChanger)
         {
+            Debug.Assert(insideChanger != null, "insideChanger cannot be null");
             module.inside = insideChanger(module.inside);
             return module;
         }
@@ -260,7 +272,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, ParticleSystemOverlapAction outside)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.outside = outside;
             return particleSystem;
@@ -272,7 +284,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerOutside(this ParticleSystem particleSystem, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(outsideChanger != null, "outsideChanger cannot be null");
             var module = particleSystem.trigger;
             module.outside = outsideChanger(module.outside);
             return particleSystem;
@@ -294,6 +307,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetOutside(this TriggerModule module, Func<ParticleSystemOverlapAction, ParticleSystemOverlapAction> outsideChanger)
         {
+            Debug.Assert(outsideChanger != null, "outsideChanger cannot be null");
             module.outside = outsideChanger(module.outside);
             return module;
         }
@@ -306,7 +320,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerRadiusScale(this ParticleSystem particleSystem, float radiusScale)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trigger;
             module.radiusScale = radiusScale;
             return particleSystem;
@@ -318,7 +332,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTriggerRadiusScale(this ParticleSystem particleSystem, Func<float, float> radiusScaleChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(radiusScaleChanger != null, "radiusScaleChanger cannot be null");
             var module = particleSystem.trigger;
             module.radiusScale = radiusScaleChanger(module.radiusScale);
             return particleSystem;
@@ -340,6 +355,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TriggerModule SetRadiusScale(this TriggerModule module, Func<float, float> radiusScaleChanger)
         {
+            Debug.Assert(radiusScaleChanger != null, "radiusScaleChanger cannot be null");
             module.radiusScale = radiusScaleChanger(module.radiusScale);
             return module;
         }

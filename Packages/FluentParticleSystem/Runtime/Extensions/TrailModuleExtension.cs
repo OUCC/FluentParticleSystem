@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditTrails(this ParticleSystem particleSystem, Action<TrailModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.trails);
             return particleSystem;
         }
@@ -26,7 +28,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, bool attachRibbonsToTransform)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.attachRibbonsToTransform = attachRibbonsToTransform;
             return particleSystem;
@@ -38,7 +40,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsAttachRibbonsToTransform(this ParticleSystem particleSystem, Func<bool, bool> attachRibbonsToTransformChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(attachRibbonsToTransformChanger != null, "attachRibbonsToTransformChanger cannot be null");
             var module = particleSystem.trails;
             module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
             return particleSystem;
@@ -60,6 +63,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetAttachRibbonsToTransform(this TrailModule module, Func<bool, bool> attachRibbonsToTransformChanger)
         {
+            Debug.Assert(attachRibbonsToTransformChanger != null, "attachRibbonsToTransformChanger cannot be null");
             module.attachRibbonsToTransform = attachRibbonsToTransformChanger(module.attachRibbonsToTransform);
             return module;
         }
@@ -72,7 +76,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, MinMaxGradient colorOverLifetime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.colorOverLifetime = colorOverLifetime;
             return particleSystem;
@@ -84,7 +88,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverLifetime(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(colorOverLifetimeChanger != null, "colorOverLifetimeChanger cannot be null");
             var module = particleSystem.trails;
             module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
             return particleSystem;
@@ -106,6 +111,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetColorOverLifetime(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverLifetimeChanger)
         {
+            Debug.Assert(colorOverLifetimeChanger != null, "colorOverLifetimeChanger cannot be null");
             module.colorOverLifetime = colorOverLifetimeChanger(module.colorOverLifetime);
             return module;
         }
@@ -118,7 +124,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, MinMaxGradient colorOverTrail)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.colorOverTrail = colorOverTrail;
             return particleSystem;
@@ -130,7 +136,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsColorOverTrail(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(colorOverTrailChanger != null, "colorOverTrailChanger cannot be null");
             var module = particleSystem.trails;
             module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
             return particleSystem;
@@ -152,6 +159,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetColorOverTrail(this TrailModule module, Func<MinMaxGradient, MinMaxGradient> colorOverTrailChanger)
         {
+            Debug.Assert(colorOverTrailChanger != null, "colorOverTrailChanger cannot be null");
             module.colorOverTrail = colorOverTrailChanger(module.colorOverTrail);
             return module;
         }
@@ -164,7 +172,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, bool dieWithParticles)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.dieWithParticles = dieWithParticles;
             return particleSystem;
@@ -176,7 +184,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsDieWithParticles(this ParticleSystem particleSystem, Func<bool, bool> dieWithParticlesChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(dieWithParticlesChanger != null, "dieWithParticlesChanger cannot be null");
             var module = particleSystem.trails;
             module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
             return particleSystem;
@@ -198,6 +207,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetDieWithParticles(this TrailModule module, Func<bool, bool> dieWithParticlesChanger)
         {
+            Debug.Assert(dieWithParticlesChanger != null, "dieWithParticlesChanger cannot be null");
             module.dieWithParticles = dieWithParticlesChanger(module.dieWithParticles);
             return module;
         }
@@ -210,7 +220,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsEnabled(this ParticleSystem particleSystem, bool enabled)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.enabled = enabled;
             return particleSystem;
@@ -222,7 +232,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             var module = particleSystem.trails;
             module.enabled = enabledChanger(module.enabled);
             return particleSystem;
@@ -244,6 +255,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetEnabled(this TrailModule module, Func<bool, bool> enabledChanger)
         {
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
@@ -256,7 +268,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, bool generateLightingData)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.generateLightingData = generateLightingData;
             return particleSystem;
@@ -268,7 +280,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsGenerateLightingData(this ParticleSystem particleSystem, Func<bool, bool> generateLightingDataChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(generateLightingDataChanger != null, "generateLightingDataChanger cannot be null");
             var module = particleSystem.trails;
             module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
             return particleSystem;
@@ -290,6 +303,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetGenerateLightingData(this TrailModule module, Func<bool, bool> generateLightingDataChanger)
         {
+            Debug.Assert(generateLightingDataChanger != null, "generateLightingDataChanger cannot be null");
             module.generateLightingData = generateLightingDataChanger(module.generateLightingData);
             return module;
         }
@@ -302,7 +316,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, bool inheritParticleColor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.inheritParticleColor = inheritParticleColor;
             return particleSystem;
@@ -314,7 +328,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsInheritParticleColor(this ParticleSystem particleSystem, Func<bool, bool> inheritParticleColorChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(inheritParticleColorChanger != null, "inheritParticleColorChanger cannot be null");
             var module = particleSystem.trails;
             module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
             return particleSystem;
@@ -336,6 +351,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetInheritParticleColor(this TrailModule module, Func<bool, bool> inheritParticleColorChanger)
         {
+            Debug.Assert(inheritParticleColorChanger != null, "inheritParticleColorChanger cannot be null");
             module.inheritParticleColor = inheritParticleColorChanger(module.inheritParticleColor);
             return module;
         }
@@ -348,7 +364,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetime(this ParticleSystem particleSystem, MinMaxCurve lifetime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.lifetime = lifetime;
             return particleSystem;
@@ -360,7 +376,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> lifetimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(lifetimeChanger != null, "lifetimeChanger cannot be null");
             var module = particleSystem.trails;
             module.lifetime = lifetimeChanger(module.lifetime);
             return particleSystem;
@@ -382,6 +399,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetLifetime(this TrailModule module, Func<MinMaxCurve, MinMaxCurve> lifetimeChanger)
         {
+            Debug.Assert(lifetimeChanger != null, "lifetimeChanger cannot be null");
             module.lifetime = lifetimeChanger(module.lifetime);
             return module;
         }
@@ -394,7 +412,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetimeMultiplier(this ParticleSystem particleSystem, float lifetimeMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.lifetimeMultiplier = lifetimeMultiplier;
             return particleSystem;
@@ -406,7 +424,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsLifetimeMultiplier(this ParticleSystem particleSystem, Func<float, float> lifetimeMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(lifetimeMultiplierChanger != null, "lifetimeMultiplierChanger cannot be null");
             var module = particleSystem.trails;
             module.lifetimeMultiplier = lifetimeMultiplierChanger(module.lifetimeMultiplier);
             return particleSystem;
@@ -428,6 +447,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetLifetimeMultiplier(this TrailModule module, Func<float, float> lifetimeMultiplierChanger)
         {
+            Debug.Assert(lifetimeMultiplierChanger != null, "lifetimeMultiplierChanger cannot be null");
             module.lifetimeMultiplier = lifetimeMultiplierChanger(module.lifetimeMultiplier);
             return module;
         }
@@ -440,7 +460,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMinVertexDistance(this ParticleSystem particleSystem, float minVertexDistance)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.minVertexDistance = minVertexDistance;
             return particleSystem;
@@ -452,7 +472,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMinVertexDistance(this ParticleSystem particleSystem, Func<float, float> minVertexDistanceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(minVertexDistanceChanger != null, "minVertexDistanceChanger cannot be null");
             var module = particleSystem.trails;
             module.minVertexDistance = minVertexDistanceChanger(module.minVertexDistance);
             return particleSystem;
@@ -474,6 +495,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetMinVertexDistance(this TrailModule module, Func<float, float> minVertexDistanceChanger)
         {
+            Debug.Assert(minVertexDistanceChanger != null, "minVertexDistanceChanger cannot be null");
             module.minVertexDistance = minVertexDistanceChanger(module.minVertexDistance);
             return module;
         }
@@ -486,7 +508,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, ParticleSystemTrailMode mode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.mode = mode;
             return particleSystem;
@@ -498,7 +520,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(modeChanger != null, "modeChanger cannot be null");
             var module = particleSystem.trails;
             module.mode = modeChanger(module.mode);
             return particleSystem;
@@ -520,6 +543,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetMode(this TrailModule module, Func<ParticleSystemTrailMode, ParticleSystemTrailMode> modeChanger)
         {
+            Debug.Assert(modeChanger != null, "modeChanger cannot be null");
             module.mode = modeChanger(module.mode);
             return module;
         }
@@ -532,7 +556,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, float ratio)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.ratio = ratio;
             return particleSystem;
@@ -544,7 +568,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRatio(this ParticleSystem particleSystem, Func<float, float> ratioChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(ratioChanger != null, "ratioChanger cannot be null");
             var module = particleSystem.trails;
             module.ratio = ratioChanger(module.ratio);
             return particleSystem;
@@ -566,6 +591,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetRatio(this TrailModule module, Func<float, float> ratioChanger)
         {
+            Debug.Assert(ratioChanger != null, "ratioChanger cannot be null");
             module.ratio = ratioChanger(module.ratio);
             return module;
         }
@@ -578,7 +604,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, int ribbonCount)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.ribbonCount = ribbonCount;
             return particleSystem;
@@ -590,7 +616,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsRibbonCount(this ParticleSystem particleSystem, Func<int, int> ribbonCountChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(ribbonCountChanger != null, "ribbonCountChanger cannot be null");
             var module = particleSystem.trails;
             module.ribbonCount = ribbonCountChanger(module.ribbonCount);
             return particleSystem;
@@ -612,6 +639,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetRibbonCount(this TrailModule module, Func<int, int> ribbonCountChanger)
         {
+            Debug.Assert(ribbonCountChanger != null, "ribbonCountChanger cannot be null");
             module.ribbonCount = ribbonCountChanger(module.ribbonCount);
             return module;
         }
@@ -624,7 +652,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, float shadowBias)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.shadowBias = shadowBias;
             return particleSystem;
@@ -636,7 +664,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsShadowBias(this ParticleSystem particleSystem, Func<float, float> shadowBiasChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(shadowBiasChanger != null, "shadowBiasChanger cannot be null");
             var module = particleSystem.trails;
             module.shadowBias = shadowBiasChanger(module.shadowBias);
             return particleSystem;
@@ -658,6 +687,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetShadowBias(this TrailModule module, Func<float, float> shadowBiasChanger)
         {
+            Debug.Assert(shadowBiasChanger != null, "shadowBiasChanger cannot be null");
             module.shadowBias = shadowBiasChanger(module.shadowBias);
             return module;
         }
@@ -670,7 +700,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, bool sizeAffectsLifetime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.sizeAffectsLifetime = sizeAffectsLifetime;
             return particleSystem;
@@ -682,7 +712,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsLifetime(this ParticleSystem particleSystem, Func<bool, bool> sizeAffectsLifetimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(sizeAffectsLifetimeChanger != null, "sizeAffectsLifetimeChanger cannot be null");
             var module = particleSystem.trails;
             module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
             return particleSystem;
@@ -704,6 +735,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSizeAffectsLifetime(this TrailModule module, Func<bool, bool> sizeAffectsLifetimeChanger)
         {
+            Debug.Assert(sizeAffectsLifetimeChanger != null, "sizeAffectsLifetimeChanger cannot be null");
             module.sizeAffectsLifetime = sizeAffectsLifetimeChanger(module.sizeAffectsLifetime);
             return module;
         }
@@ -716,7 +748,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsWidth(this ParticleSystem particleSystem, bool sizeAffectsWidth)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.sizeAffectsWidth = sizeAffectsWidth;
             return particleSystem;
@@ -728,7 +760,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSizeAffectsWidth(this ParticleSystem particleSystem, Func<bool, bool> sizeAffectsWidthChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(sizeAffectsWidthChanger != null, "sizeAffectsWidthChanger cannot be null");
             var module = particleSystem.trails;
             module.sizeAffectsWidth = sizeAffectsWidthChanger(module.sizeAffectsWidth);
             return particleSystem;
@@ -750,6 +783,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSizeAffectsWidth(this TrailModule module, Func<bool, bool> sizeAffectsWidthChanger)
         {
+            Debug.Assert(sizeAffectsWidthChanger != null, "sizeAffectsWidthChanger cannot be null");
             module.sizeAffectsWidth = sizeAffectsWidthChanger(module.sizeAffectsWidth);
             return module;
         }
@@ -762,7 +796,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, bool splitSubEmitterRibbons)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.splitSubEmitterRibbons = splitSubEmitterRibbons;
             return particleSystem;
@@ -774,7 +808,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsSplitSubEmitterRibbons(this ParticleSystem particleSystem, Func<bool, bool> splitSubEmitterRibbonsChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(splitSubEmitterRibbonsChanger != null, "splitSubEmitterRibbonsChanger cannot be null");
             var module = particleSystem.trails;
             module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
             return particleSystem;
@@ -796,6 +831,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetSplitSubEmitterRibbons(this TrailModule module, Func<bool, bool> splitSubEmitterRibbonsChanger)
         {
+            Debug.Assert(splitSubEmitterRibbonsChanger != null, "splitSubEmitterRibbonsChanger cannot be null");
             module.splitSubEmitterRibbons = splitSubEmitterRibbonsChanger(module.splitSubEmitterRibbons);
             return module;
         }
@@ -808,7 +844,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, ParticleSystemTrailTextureMode textureMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.textureMode = textureMode;
             return particleSystem;
@@ -820,7 +856,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureMode(this ParticleSystem particleSystem, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(textureModeChanger != null, "textureModeChanger cannot be null");
             var module = particleSystem.trails;
             module.textureMode = textureModeChanger(module.textureMode);
             return particleSystem;
@@ -842,6 +879,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetTextureMode(this TrailModule module, Func<ParticleSystemTrailTextureMode, ParticleSystemTrailTextureMode> textureModeChanger)
         {
+            Debug.Assert(textureModeChanger != null, "textureModeChanger cannot be null");
             module.textureMode = textureModeChanger(module.textureMode);
             return module;
         }
@@ -856,7 +894,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Vector2 textureScale)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.textureScale = textureScale;
             return particleSystem;
@@ -868,7 +906,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsTextureScale(this ParticleSystem particleSystem, Func<Vector2, Vector2> textureScaleChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(textureScaleChanger != null, "textureScaleChanger cannot be null");
             var module = particleSystem.trails;
             module.textureScale = textureScaleChanger(module.textureScale);
             return particleSystem;
@@ -890,6 +929,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetTextureScale(this TrailModule module, Func<Vector2, Vector2> textureScaleChanger)
         {
+            Debug.Assert(textureScaleChanger != null, "textureScaleChanger cannot be null");
             module.textureScale = textureScaleChanger(module.textureScale);
             return module;
         }
@@ -904,7 +944,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrail(this ParticleSystem particleSystem, MinMaxCurve widthOverTrail)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.widthOverTrail = widthOverTrail;
             return particleSystem;
@@ -916,7 +956,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrail(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> widthOverTrailChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(widthOverTrailChanger != null, "widthOverTrailChanger cannot be null");
             var module = particleSystem.trails;
             module.widthOverTrail = widthOverTrailChanger(module.widthOverTrail);
             return particleSystem;
@@ -938,6 +979,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWidthOverTrail(this TrailModule module, Func<MinMaxCurve, MinMaxCurve> widthOverTrailChanger)
         {
+            Debug.Assert(widthOverTrailChanger != null, "widthOverTrailChanger cannot be null");
             module.widthOverTrail = widthOverTrailChanger(module.widthOverTrail);
             return module;
         }
@@ -950,7 +992,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrailMultiplier(this ParticleSystem particleSystem, float widthOverTrailMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.widthOverTrailMultiplier = widthOverTrailMultiplier;
             return particleSystem;
@@ -962,7 +1004,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWidthOverTrailMultiplier(this ParticleSystem particleSystem, Func<float, float> widthOverTrailMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(widthOverTrailMultiplierChanger != null, "widthOverTrailMultiplierChanger cannot be null");
             var module = particleSystem.trails;
             module.widthOverTrailMultiplier = widthOverTrailMultiplierChanger(module.widthOverTrailMultiplier);
             return particleSystem;
@@ -984,6 +1027,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWidthOverTrailMultiplier(this TrailModule module, Func<float, float> widthOverTrailMultiplierChanger)
         {
+            Debug.Assert(widthOverTrailMultiplierChanger != null, "widthOverTrailMultiplierChanger cannot be null");
             module.widthOverTrailMultiplier = widthOverTrailMultiplierChanger(module.widthOverTrailMultiplier);
             return module;
         }
@@ -996,7 +1040,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, bool worldSpace)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.trails;
             module.worldSpace = worldSpace;
             return particleSystem;
@@ -1008,7 +1052,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetTrailsWorldSpace(this ParticleSystem particleSystem, Func<bool, bool> worldSpaceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(worldSpaceChanger != null, "worldSpaceChanger cannot be null");
             var module = particleSystem.trails;
             module.worldSpace = worldSpaceChanger(module.worldSpace);
             return particleSystem;
@@ -1030,6 +1075,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TrailModule SetWorldSpace(this TrailModule module, Func<bool, bool> worldSpaceChanger)
         {
+            Debug.Assert(worldSpaceChanger != null, "worldSpaceChanger cannot be null");
             module.worldSpace = worldSpaceChanger(module.worldSpace);
             return module;
         }

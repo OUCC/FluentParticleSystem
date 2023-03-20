@@ -1,3 +1,4 @@
+﻿#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.main);
             return particleSystem;
         }
@@ -26,7 +28,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.cullingMode = cullingMode;
             return particleSystem;
@@ -38,7 +40,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(cullingModeChanger != null, "cullingModeChanger cannot be null");
             var module = particleSystem.main;
             module.cullingMode = cullingModeChanger(module.cullingMode);
             return particleSystem;
@@ -60,6 +63,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCullingMode(this MainModule module, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger)
         {
+            Debug.Assert(cullingModeChanger != null, "cullingModeChanger cannot be null");
             module.cullingMode = cullingModeChanger(module.cullingMode);
             return module;
         }
@@ -72,7 +76,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Transform customSimulationSpace)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.customSimulationSpace = customSimulationSpace;
             return particleSystem;
@@ -84,7 +88,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainCustomSimulationSpace(this ParticleSystem particleSystem, Func<Transform, Transform> customSimulationSpaceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(customSimulationSpaceChanger != null, "customSimulationSpaceChanger cannot be null");
             var module = particleSystem.main;
             module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
             return particleSystem;
@@ -106,6 +111,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetCustomSimulationSpace(this MainModule module, Func<Transform, Transform> customSimulationSpaceChanger)
         {
+            Debug.Assert(customSimulationSpaceChanger != null, "customSimulationSpaceChanger cannot be null");
             module.customSimulationSpace = customSimulationSpaceChanger(module.customSimulationSpace);
             return module;
         }
@@ -118,7 +124,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, float duration)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.duration = duration;
             return particleSystem;
@@ -130,7 +136,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainDuration(this ParticleSystem particleSystem, Func<float, float> durationChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(durationChanger != null, "durationChanger cannot be null");
             var module = particleSystem.main;
             module.duration = durationChanger(module.duration);
             return particleSystem;
@@ -152,6 +159,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetDuration(this MainModule module, Func<float, float> durationChanger)
         {
+            Debug.Assert(durationChanger != null, "durationChanger cannot be null");
             module.duration = durationChanger(module.duration);
             return module;
         }
@@ -166,7 +174,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Vector3 emitterVelocity)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.emitterVelocity = emitterVelocity;
             return particleSystem;
@@ -178,7 +186,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocity(this ParticleSystem particleSystem, Func<Vector3, Vector3> emitterVelocityChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(emitterVelocityChanger != null, "emitterVelocityChanger cannot be null");
             var module = particleSystem.main;
             module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
             return particleSystem;
@@ -200,6 +209,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocity(this MainModule module, Func<Vector3, Vector3> emitterVelocityChanger)
         {
+            Debug.Assert(emitterVelocityChanger != null, "emitterVelocityChanger cannot be null");
             module.emitterVelocity = emitterVelocityChanger(module.emitterVelocity);
             return module;
         }
@@ -214,7 +224,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, ParticleSystemEmitterVelocityMode emitterVelocityMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.emitterVelocityMode = emitterVelocityMode;
             return particleSystem;
@@ -226,7 +236,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainEmitterVelocityMode(this ParticleSystem particleSystem, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(emitterVelocityModeChanger != null, "emitterVelocityModeChanger cannot be null");
             var module = particleSystem.main;
             module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
             return particleSystem;
@@ -248,6 +259,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetEmitterVelocityMode(this MainModule module, Func<ParticleSystemEmitterVelocityMode, ParticleSystemEmitterVelocityMode> emitterVelocityModeChanger)
         {
+            Debug.Assert(emitterVelocityModeChanger != null, "emitterVelocityModeChanger cannot be null");
             module.emitterVelocityMode = emitterVelocityModeChanger(module.emitterVelocityMode);
             return module;
         }
@@ -260,7 +272,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, float flipRotation)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.flipRotation = flipRotation;
             return particleSystem;
@@ -272,7 +284,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainFlipRotation(this ParticleSystem particleSystem, Func<float, float> flipRotationChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(flipRotationChanger != null, "flipRotationChanger cannot be null");
             var module = particleSystem.main;
             module.flipRotation = flipRotationChanger(module.flipRotation);
             return particleSystem;
@@ -294,6 +307,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetFlipRotation(this MainModule module, Func<float, float> flipRotationChanger)
         {
+            Debug.Assert(flipRotationChanger != null, "flipRotationChanger cannot be null");
             module.flipRotation = flipRotationChanger(module.flipRotation);
             return module;
         }
@@ -306,7 +320,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, MinMaxCurve gravityModifier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.gravityModifier = gravityModifier;
             return particleSystem;
@@ -318,7 +332,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifier(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(gravityModifierChanger != null, "gravityModifierChanger cannot be null");
             var module = particleSystem.main;
             module.gravityModifier = gravityModifierChanger(module.gravityModifier);
             return particleSystem;
@@ -340,6 +355,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifier(this MainModule module, Func<MinMaxCurve, MinMaxCurve> gravityModifierChanger)
         {
+            Debug.Assert(gravityModifierChanger != null, "gravityModifierChanger cannot be null");
             module.gravityModifier = gravityModifierChanger(module.gravityModifier);
             return module;
         }
@@ -352,7 +368,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, float gravityModifierMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.gravityModifierMultiplier = gravityModifierMultiplier;
             return particleSystem;
@@ -364,7 +380,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravityModifierMultiplier(this ParticleSystem particleSystem, Func<float, float> gravityModifierMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(gravityModifierMultiplierChanger != null, "gravityModifierMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
             return particleSystem;
@@ -386,6 +403,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravityModifierMultiplier(this MainModule module, Func<float, float> gravityModifierMultiplierChanger)
         {
+            Debug.Assert(gravityModifierMultiplierChanger != null, "gravityModifierMultiplierChanger cannot be null");
             module.gravityModifierMultiplier = gravityModifierMultiplierChanger(module.gravityModifierMultiplier);
             return module;
         }
@@ -400,7 +418,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, ParticleSystemGravitySource gravitySource)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.gravitySource = gravitySource;
             return particleSystem;
@@ -412,7 +430,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainGravitySource(this ParticleSystem particleSystem, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(gravitySourceChanger != null, "gravitySourceChanger cannot be null");
             var module = particleSystem.main;
             module.gravitySource = gravitySourceChanger(module.gravitySource);
             return particleSystem;
@@ -434,6 +453,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetGravitySource(this MainModule module, Func<ParticleSystemGravitySource, ParticleSystemGravitySource> gravitySourceChanger)
         {
+            Debug.Assert(gravitySourceChanger != null, "gravitySourceChanger cannot be null");
             module.gravitySource = gravitySourceChanger(module.gravitySource);
             return module;
         }
@@ -448,7 +468,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, bool loop)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.loop = loop;
             return particleSystem;
@@ -460,7 +480,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainLoop(this ParticleSystem particleSystem, Func<bool, bool> loopChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(loopChanger != null, "loopChanger cannot be null");
             var module = particleSystem.main;
             module.loop = loopChanger(module.loop);
             return particleSystem;
@@ -482,6 +503,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetLoop(this MainModule module, Func<bool, bool> loopChanger)
         {
+            Debug.Assert(loopChanger != null, "loopChanger cannot be null");
             module.loop = loopChanger(module.loop);
             return module;
         }
@@ -494,7 +516,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, int maxParticles)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.maxParticles = maxParticles;
             return particleSystem;
@@ -506,7 +528,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainMaxParticles(this ParticleSystem particleSystem, Func<int, int> maxParticlesChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(maxParticlesChanger != null, "maxParticlesChanger cannot be null");
             var module = particleSystem.main;
             module.maxParticles = maxParticlesChanger(module.maxParticles);
             return particleSystem;
@@ -528,6 +551,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetMaxParticles(this MainModule module, Func<int, int> maxParticlesChanger)
         {
+            Debug.Assert(maxParticlesChanger != null, "maxParticlesChanger cannot be null");
             module.maxParticles = maxParticlesChanger(module.maxParticles);
             return module;
         }
@@ -540,7 +564,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, bool playOnAwake)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.playOnAwake = playOnAwake;
             return particleSystem;
@@ -552,7 +576,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPlayOnAwake(this ParticleSystem particleSystem, Func<bool, bool> playOnAwakeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(playOnAwakeChanger != null, "playOnAwakeChanger cannot be null");
             var module = particleSystem.main;
             module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
             return particleSystem;
@@ -574,6 +599,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPlayOnAwake(this MainModule module, Func<bool, bool> playOnAwakeChanger)
         {
+            Debug.Assert(playOnAwakeChanger != null, "playOnAwakeChanger cannot be null");
             module.playOnAwake = playOnAwakeChanger(module.playOnAwake);
             return module;
         }
@@ -586,7 +612,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, bool prewarm)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.prewarm = prewarm;
             return particleSystem;
@@ -598,7 +624,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainPrewarm(this ParticleSystem particleSystem, Func<bool, bool> prewarmChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(prewarmChanger != null, "prewarmChanger cannot be null");
             var module = particleSystem.main;
             module.prewarm = prewarmChanger(module.prewarm);
             return particleSystem;
@@ -620,6 +647,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetPrewarm(this MainModule module, Func<bool, bool> prewarmChanger)
         {
+            Debug.Assert(prewarmChanger != null, "prewarmChanger cannot be null");
             module.prewarm = prewarmChanger(module.prewarm);
             return module;
         }
@@ -635,7 +663,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRandomizeRotationDirection(this ParticleSystem particleSystem, float randomizeRotationDirection)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.randomizeRotationDirection = randomizeRotationDirection;
             return particleSystem;
@@ -650,7 +678,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRandomizeRotationDirection(this ParticleSystem particleSystem, Func<float, float> randomizeRotationDirectionChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(randomizeRotationDirectionChanger != null, "randomizeRotationDirectionChanger cannot be null");
             var module = particleSystem.main;
             module.randomizeRotationDirection = randomizeRotationDirectionChanger(module.randomizeRotationDirection);
             return particleSystem;
@@ -678,6 +707,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRandomizeRotationDirection(this MainModule module, Func<float, float> randomizeRotationDirectionChanger)
         {
+            Debug.Assert(randomizeRotationDirectionChanger != null, "randomizeRotationDirectionChanger cannot be null");
             module.randomizeRotationDirection = randomizeRotationDirectionChanger(module.randomizeRotationDirection);
             return module;
         }
@@ -690,7 +720,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Vector2 ringBufferLoopRange)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.ringBufferLoopRange = ringBufferLoopRange;
             return particleSystem;
@@ -702,7 +732,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferLoopRange(this ParticleSystem particleSystem, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(ringBufferLoopRangeChanger != null, "ringBufferLoopRangeChanger cannot be null");
             var module = particleSystem.main;
             module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
             return particleSystem;
@@ -724,6 +755,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferLoopRange(this MainModule module, Func<Vector2, Vector2> ringBufferLoopRangeChanger)
         {
+            Debug.Assert(ringBufferLoopRangeChanger != null, "ringBufferLoopRangeChanger cannot be null");
             module.ringBufferLoopRange = ringBufferLoopRangeChanger(module.ringBufferLoopRange);
             return module;
         }
@@ -736,7 +768,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, ParticleSystemRingBufferMode ringBufferMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.ringBufferMode = ringBufferMode;
             return particleSystem;
@@ -748,7 +780,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainRingBufferMode(this ParticleSystem particleSystem, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(ringBufferModeChanger != null, "ringBufferModeChanger cannot be null");
             var module = particleSystem.main;
             module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
             return particleSystem;
@@ -770,6 +803,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetRingBufferMode(this MainModule module, Func<ParticleSystemRingBufferMode, ParticleSystemRingBufferMode> ringBufferModeChanger)
         {
+            Debug.Assert(ringBufferModeChanger != null, "ringBufferModeChanger cannot be null");
             module.ringBufferMode = ringBufferModeChanger(module.ringBufferMode);
             return module;
         }
@@ -782,7 +816,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, ParticleSystemScalingMode scalingMode)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.scalingMode = scalingMode;
             return particleSystem;
@@ -794,7 +828,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainScalingMode(this ParticleSystem particleSystem, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(scalingModeChanger != null, "scalingModeChanger cannot be null");
             var module = particleSystem.main;
             module.scalingMode = scalingModeChanger(module.scalingMode);
             return particleSystem;
@@ -816,6 +851,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetScalingMode(this MainModule module, Func<ParticleSystemScalingMode, ParticleSystemScalingMode> scalingModeChanger)
         {
+            Debug.Assert(scalingModeChanger != null, "scalingModeChanger cannot be null");
             module.scalingMode = scalingModeChanger(module.scalingMode);
             return module;
         }
@@ -828,7 +864,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, ParticleSystemSimulationSpace simulationSpace)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.simulationSpace = simulationSpace;
             return particleSystem;
@@ -840,7 +876,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpace(this ParticleSystem particleSystem, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(simulationSpaceChanger != null, "simulationSpaceChanger cannot be null");
             var module = particleSystem.main;
             module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
             return particleSystem;
@@ -862,6 +899,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpace(this MainModule module, Func<ParticleSystemSimulationSpace, ParticleSystemSimulationSpace> simulationSpaceChanger)
         {
+            Debug.Assert(simulationSpaceChanger != null, "simulationSpaceChanger cannot be null");
             module.simulationSpace = simulationSpaceChanger(module.simulationSpace);
             return module;
         }
@@ -874,7 +912,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, float simulationSpeed)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.simulationSpeed = simulationSpeed;
             return particleSystem;
@@ -886,7 +924,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainSimulationSpeed(this ParticleSystem particleSystem, Func<float, float> simulationSpeedChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(simulationSpeedChanger != null, "simulationSpeedChanger cannot be null");
             var module = particleSystem.main;
             module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
             return particleSystem;
@@ -908,6 +947,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetSimulationSpeed(this MainModule module, Func<float, float> simulationSpeedChanger)
         {
+            Debug.Assert(simulationSpeedChanger != null, "simulationSpeedChanger cannot be null");
             module.simulationSpeed = simulationSpeedChanger(module.simulationSpeed);
             return module;
         }
@@ -920,7 +960,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, MinMaxGradient startColor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startColor = startColor;
             return particleSystem;
@@ -932,7 +972,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartColor(this ParticleSystem particleSystem, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startColorChanger != null, "startColorChanger cannot be null");
             var module = particleSystem.main;
             module.startColor = startColorChanger(module.startColor);
             return particleSystem;
@@ -954,6 +995,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartColor(this MainModule module, Func<MinMaxGradient, MinMaxGradient> startColorChanger)
         {
+            Debug.Assert(startColorChanger != null, "startColorChanger cannot be null");
             module.startColor = startColorChanger(module.startColor);
             return module;
         }
@@ -966,7 +1008,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, MinMaxCurve startDelay)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startDelay = startDelay;
             return particleSystem;
@@ -978,7 +1020,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelay(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startDelayChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startDelayChanger != null, "startDelayChanger cannot be null");
             var module = particleSystem.main;
             module.startDelay = startDelayChanger(module.startDelay);
             return particleSystem;
@@ -1000,6 +1043,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelay(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startDelayChanger)
         {
+            Debug.Assert(startDelayChanger != null, "startDelayChanger cannot be null");
             module.startDelay = startDelayChanger(module.startDelay);
             return module;
         }
@@ -1012,7 +1056,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, float startDelayMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startDelayMultiplier = startDelayMultiplier;
             return particleSystem;
@@ -1024,7 +1068,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartDelayMultiplier(this ParticleSystem particleSystem, Func<float, float> startDelayMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startDelayMultiplierChanger != null, "startDelayMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startDelayMultiplier = startDelayMultiplierChanger(module.startDelayMultiplier);
             return particleSystem;
@@ -1046,6 +1091,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartDelayMultiplier(this MainModule module, Func<float, float> startDelayMultiplierChanger)
         {
+            Debug.Assert(startDelayMultiplierChanger != null, "startDelayMultiplierChanger cannot be null");
             module.startDelayMultiplier = startDelayMultiplierChanger(module.startDelayMultiplier);
             return module;
         }
@@ -1058,7 +1104,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, MinMaxCurve startLifetime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startLifetime = startLifetime;
             return particleSystem;
@@ -1070,7 +1116,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetime(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startLifetimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startLifetimeChanger != null, "startLifetimeChanger cannot be null");
             var module = particleSystem.main;
             module.startLifetime = startLifetimeChanger(module.startLifetime);
             return particleSystem;
@@ -1092,6 +1139,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetime(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startLifetimeChanger)
         {
+            Debug.Assert(startLifetimeChanger != null, "startLifetimeChanger cannot be null");
             module.startLifetime = startLifetimeChanger(module.startLifetime);
             return module;
         }
@@ -1104,7 +1152,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, float startLifetimeMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startLifetimeMultiplier = startLifetimeMultiplier;
             return particleSystem;
@@ -1116,7 +1164,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartLifetimeMultiplier(this ParticleSystem particleSystem, Func<float, float> startLifetimeMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startLifetimeMultiplierChanger != null, "startLifetimeMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startLifetimeMultiplier = startLifetimeMultiplierChanger(module.startLifetimeMultiplier);
             return particleSystem;
@@ -1138,6 +1187,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartLifetimeMultiplier(this MainModule module, Func<float, float> startLifetimeMultiplierChanger)
         {
+            Debug.Assert(startLifetimeMultiplierChanger != null, "startLifetimeMultiplierChanger cannot be null");
             module.startLifetimeMultiplier = startLifetimeMultiplierChanger(module.startLifetimeMultiplier);
             return module;
         }
@@ -1150,7 +1200,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, MinMaxCurve startRotation)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotation = startRotation;
             return particleSystem;
@@ -1162,7 +1212,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationChanger != null, "startRotationChanger cannot be null");
             var module = particleSystem.main;
             module.startRotation = startRotationChanger(module.startRotation);
             return particleSystem;
@@ -1184,6 +1235,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationChanger)
         {
+            Debug.Assert(startRotationChanger != null, "startRotationChanger cannot be null");
             module.startRotation = startRotationChanger(module.startRotation);
             return module;
         }
@@ -1196,7 +1248,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, bool startRotation3D)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotation3D = startRotation3D;
             return particleSystem;
@@ -1208,7 +1260,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotation3D(this ParticleSystem particleSystem, Func<bool, bool> startRotation3DChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotation3DChanger != null, "startRotation3DChanger cannot be null");
             var module = particleSystem.main;
             module.startRotation3D = startRotation3DChanger(module.startRotation3D);
             return particleSystem;
@@ -1230,6 +1283,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotation3D(this MainModule module, Func<bool, bool> startRotation3DChanger)
         {
+            Debug.Assert(startRotation3DChanger != null, "startRotation3DChanger cannot be null");
             module.startRotation3D = startRotation3DChanger(module.startRotation3D);
             return module;
         }
@@ -1242,7 +1296,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, float startRotationMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationMultiplier = startRotationMultiplier;
             return particleSystem;
@@ -1254,7 +1308,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationMultiplierChanger != null, "startRotationMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationMultiplier = startRotationMultiplierChanger(module.startRotationMultiplier);
             return particleSystem;
@@ -1276,6 +1331,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationMultiplier(this MainModule module, Func<float, float> startRotationMultiplierChanger)
         {
+            Debug.Assert(startRotationMultiplierChanger != null, "startRotationMultiplierChanger cannot be null");
             module.startRotationMultiplier = startRotationMultiplierChanger(module.startRotationMultiplier);
             return module;
         }
@@ -1288,7 +1344,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, MinMaxCurve startRotationX)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationX = startRotationX;
             return particleSystem;
@@ -1300,7 +1356,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationXChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationXChanger != null, "startRotationXChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationX = startRotationXChanger(module.startRotationX);
             return particleSystem;
@@ -1322,6 +1379,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationXChanger)
         {
+            Debug.Assert(startRotationXChanger != null, "startRotationXChanger cannot be null");
             module.startRotationX = startRotationXChanger(module.startRotationX);
             return module;
         }
@@ -1334,7 +1392,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, float startRotationXMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationXMultiplier = startRotationXMultiplier;
             return particleSystem;
@@ -1346,7 +1404,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationXMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationXMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationXMultiplierChanger != null, "startRotationXMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationXMultiplier = startRotationXMultiplierChanger(module.startRotationXMultiplier);
             return particleSystem;
@@ -1368,6 +1427,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationXMultiplier(this MainModule module, Func<float, float> startRotationXMultiplierChanger)
         {
+            Debug.Assert(startRotationXMultiplierChanger != null, "startRotationXMultiplierChanger cannot be null");
             module.startRotationXMultiplier = startRotationXMultiplierChanger(module.startRotationXMultiplier);
             return module;
         }
@@ -1380,7 +1440,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, MinMaxCurve startRotationY)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationY = startRotationY;
             return particleSystem;
@@ -1392,7 +1452,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationYChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationYChanger != null, "startRotationYChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationY = startRotationYChanger(module.startRotationY);
             return particleSystem;
@@ -1414,6 +1475,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationYChanger)
         {
+            Debug.Assert(startRotationYChanger != null, "startRotationYChanger cannot be null");
             module.startRotationY = startRotationYChanger(module.startRotationY);
             return module;
         }
@@ -1426,7 +1488,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, float startRotationYMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationYMultiplier = startRotationYMultiplier;
             return particleSystem;
@@ -1438,7 +1500,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationYMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationYMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationYMultiplierChanger != null, "startRotationYMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationYMultiplier = startRotationYMultiplierChanger(module.startRotationYMultiplier);
             return particleSystem;
@@ -1460,6 +1523,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationYMultiplier(this MainModule module, Func<float, float> startRotationYMultiplierChanger)
         {
+            Debug.Assert(startRotationYMultiplierChanger != null, "startRotationYMultiplierChanger cannot be null");
             module.startRotationYMultiplier = startRotationYMultiplierChanger(module.startRotationYMultiplier);
             return module;
         }
@@ -1472,7 +1536,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, MinMaxCurve startRotationZ)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationZ = startRotationZ;
             return particleSystem;
@@ -1484,7 +1548,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startRotationZChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationZChanger != null, "startRotationZChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationZ = startRotationZChanger(module.startRotationZ);
             return particleSystem;
@@ -1506,6 +1571,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startRotationZChanger)
         {
+            Debug.Assert(startRotationZChanger != null, "startRotationZChanger cannot be null");
             module.startRotationZ = startRotationZChanger(module.startRotationZ);
             return module;
         }
@@ -1518,7 +1584,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, float startRotationZMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startRotationZMultiplier = startRotationZMultiplier;
             return particleSystem;
@@ -1530,7 +1596,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartRotationZMultiplier(this ParticleSystem particleSystem, Func<float, float> startRotationZMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startRotationZMultiplierChanger != null, "startRotationZMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startRotationZMultiplier = startRotationZMultiplierChanger(module.startRotationZMultiplier);
             return particleSystem;
@@ -1552,6 +1619,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartRotationZMultiplier(this MainModule module, Func<float, float> startRotationZMultiplierChanger)
         {
+            Debug.Assert(startRotationZMultiplierChanger != null, "startRotationZMultiplierChanger cannot be null");
             module.startRotationZMultiplier = startRotationZMultiplierChanger(module.startRotationZMultiplier);
             return module;
         }
@@ -1564,7 +1632,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, MinMaxCurve startSize)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSize = startSize;
             return particleSystem;
@@ -1576,7 +1644,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeChanger != null, "startSizeChanger cannot be null");
             var module = particleSystem.main;
             module.startSize = startSizeChanger(module.startSize);
             return particleSystem;
@@ -1598,6 +1667,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeChanger)
         {
+            Debug.Assert(startSizeChanger != null, "startSizeChanger cannot be null");
             module.startSize = startSizeChanger(module.startSize);
             return module;
         }
@@ -1610,7 +1680,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, bool startSize3D)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSize3D = startSize3D;
             return particleSystem;
@@ -1622,7 +1692,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSize3D(this ParticleSystem particleSystem, Func<bool, bool> startSize3DChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSize3DChanger != null, "startSize3DChanger cannot be null");
             var module = particleSystem.main;
             module.startSize3D = startSize3DChanger(module.startSize3D);
             return particleSystem;
@@ -1644,6 +1715,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSize3D(this MainModule module, Func<bool, bool> startSize3DChanger)
         {
+            Debug.Assert(startSize3DChanger != null, "startSize3DChanger cannot be null");
             module.startSize3D = startSize3DChanger(module.startSize3D);
             return module;
         }
@@ -1656,7 +1728,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, float startSizeMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeMultiplier = startSizeMultiplier;
             return particleSystem;
@@ -1668,7 +1740,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeMultiplierChanger != null, "startSizeMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
             return particleSystem;
@@ -1690,6 +1763,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeMultiplier(this MainModule module, Func<float, float> startSizeMultiplierChanger)
         {
+            Debug.Assert(startSizeMultiplierChanger != null, "startSizeMultiplierChanger cannot be null");
             module.startSizeMultiplier = startSizeMultiplierChanger(module.startSizeMultiplier);
             return module;
         }
@@ -1702,7 +1776,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, MinMaxCurve startSizeX)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeX = startSizeX;
             return particleSystem;
@@ -1714,7 +1788,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeXChanger != null, "startSizeXChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeX = startSizeXChanger(module.startSizeX);
             return particleSystem;
@@ -1736,6 +1811,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeX(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeXChanger)
         {
+            Debug.Assert(startSizeXChanger != null, "startSizeXChanger cannot be null");
             module.startSizeX = startSizeXChanger(module.startSizeX);
             return module;
         }
@@ -1748,7 +1824,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, float startSizeXMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeXMultiplier = startSizeXMultiplier;
             return particleSystem;
@@ -1760,7 +1836,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeXMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeXMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeXMultiplierChanger != null, "startSizeXMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
             return particleSystem;
@@ -1782,6 +1859,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeXMultiplier(this MainModule module, Func<float, float> startSizeXMultiplierChanger)
         {
+            Debug.Assert(startSizeXMultiplierChanger != null, "startSizeXMultiplierChanger cannot be null");
             module.startSizeXMultiplier = startSizeXMultiplierChanger(module.startSizeXMultiplier);
             return module;
         }
@@ -1794,7 +1872,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, MinMaxCurve startSizeY)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeY = startSizeY;
             return particleSystem;
@@ -1806,7 +1884,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeYChanger != null, "startSizeYChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeY = startSizeYChanger(module.startSizeY);
             return particleSystem;
@@ -1828,6 +1907,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeY(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeYChanger)
         {
+            Debug.Assert(startSizeYChanger != null, "startSizeYChanger cannot be null");
             module.startSizeY = startSizeYChanger(module.startSizeY);
             return module;
         }
@@ -1840,7 +1920,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, float startSizeYMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeYMultiplier = startSizeYMultiplier;
             return particleSystem;
@@ -1852,7 +1932,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeYMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeYMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeYMultiplierChanger != null, "startSizeYMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
             return particleSystem;
@@ -1874,6 +1955,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeYMultiplier(this MainModule module, Func<float, float> startSizeYMultiplierChanger)
         {
+            Debug.Assert(startSizeYMultiplierChanger != null, "startSizeYMultiplierChanger cannot be null");
             module.startSizeYMultiplier = startSizeYMultiplierChanger(module.startSizeYMultiplier);
             return module;
         }
@@ -1886,7 +1968,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, MinMaxCurve startSizeZ)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeZ = startSizeZ;
             return particleSystem;
@@ -1898,7 +1980,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeZChanger != null, "startSizeZChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeZ = startSizeZChanger(module.startSizeZ);
             return particleSystem;
@@ -1920,6 +2003,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZ(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSizeZChanger)
         {
+            Debug.Assert(startSizeZChanger != null, "startSizeZChanger cannot be null");
             module.startSizeZ = startSizeZChanger(module.startSizeZ);
             return module;
         }
@@ -1932,7 +2016,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, float startSizeZMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSizeZMultiplier = startSizeZMultiplier;
             return particleSystem;
@@ -1944,7 +2028,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSizeZMultiplier(this ParticleSystem particleSystem, Func<float, float> startSizeZMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSizeZMultiplierChanger != null, "startSizeZMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
             return particleSystem;
@@ -1966,6 +2051,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSizeZMultiplier(this MainModule module, Func<float, float> startSizeZMultiplierChanger)
         {
+            Debug.Assert(startSizeZMultiplierChanger != null, "startSizeZMultiplierChanger cannot be null");
             module.startSizeZMultiplier = startSizeZMultiplierChanger(module.startSizeZMultiplier);
             return module;
         }
@@ -1978,7 +2064,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, MinMaxCurve startSpeed)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSpeed = startSpeed;
             return particleSystem;
@@ -1990,7 +2076,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeed(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSpeedChanger != null, "startSpeedChanger cannot be null");
             var module = particleSystem.main;
             module.startSpeed = startSpeedChanger(module.startSpeed);
             return particleSystem;
@@ -2012,6 +2099,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeed(this MainModule module, Func<MinMaxCurve, MinMaxCurve> startSpeedChanger)
         {
+            Debug.Assert(startSpeedChanger != null, "startSpeedChanger cannot be null");
             module.startSpeed = startSpeedChanger(module.startSpeed);
             return module;
         }
@@ -2024,7 +2112,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, float startSpeedMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.startSpeedMultiplier = startSpeedMultiplier;
             return particleSystem;
@@ -2036,7 +2124,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStartSpeedMultiplier(this ParticleSystem particleSystem, Func<float, float> startSpeedMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(startSpeedMultiplierChanger != null, "startSpeedMultiplierChanger cannot be null");
             var module = particleSystem.main;
             module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
             return particleSystem;
@@ -2058,6 +2147,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStartSpeedMultiplier(this MainModule module, Func<float, float> startSpeedMultiplierChanger)
         {
+            Debug.Assert(startSpeedMultiplierChanger != null, "startSpeedMultiplierChanger cannot be null");
             module.startSpeedMultiplier = startSpeedMultiplierChanger(module.startSpeedMultiplier);
             return module;
         }
@@ -2070,7 +2160,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, ParticleSystemStopAction stopAction)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.stopAction = stopAction;
             return particleSystem;
@@ -2082,7 +2172,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainStopAction(this ParticleSystem particleSystem, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(stopActionChanger != null, "stopActionChanger cannot be null");
             var module = particleSystem.main;
             module.stopAction = stopActionChanger(module.stopAction);
             return particleSystem;
@@ -2104,6 +2195,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetStopAction(this MainModule module, Func<ParticleSystemStopAction, ParticleSystemStopAction> stopActionChanger)
         {
+            Debug.Assert(stopActionChanger != null, "stopActionChanger cannot be null");
             module.stopAction = stopActionChanger(module.stopAction);
             return module;
         }
@@ -2116,7 +2208,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, bool useUnscaledTime)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.main;
             module.useUnscaledTime = useUnscaledTime;
             return particleSystem;
@@ -2128,7 +2220,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetMainUseUnscaledTime(this ParticleSystem particleSystem, Func<bool, bool> useUnscaledTimeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(useUnscaledTimeChanger != null, "useUnscaledTimeChanger cannot be null");
             var module = particleSystem.main;
             module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
             return particleSystem;
@@ -2150,6 +2243,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MainModule SetUseUnscaledTime(this MainModule module, Func<bool, bool> useUnscaledTimeChanger)
         {
+            Debug.Assert(useUnscaledTimeChanger != null, "useUnscaledTimeChanger cannot be null");
             module.useUnscaledTime = useUnscaledTimeChanger(module.useUnscaledTime);
             return module;
         }

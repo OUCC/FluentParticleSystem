@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditSubEmitters(this ParticleSystem particleSystem, Action<SubEmittersModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.subEmitters);
             return particleSystem;
         }
@@ -29,7 +31,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersBirth0(this ParticleSystem particleSystem, ParticleSystem birth0)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.birth0 = birth0;
             return particleSystem;
@@ -44,7 +46,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersBirth0(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> birth0Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(birth0Changer != null, "birth0Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.birth0 = birth0Changer(module.birth0);
             return particleSystem;
@@ -72,6 +75,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetBirth0(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> birth0Changer)
         {
+            Debug.Assert(birth0Changer != null, "birth0Changer cannot be null");
             module.birth0 = birth0Changer(module.birth0);
             return module;
         }
@@ -87,7 +91,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersBirth1(this ParticleSystem particleSystem, ParticleSystem birth1)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.birth1 = birth1;
             return particleSystem;
@@ -102,7 +106,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersBirth1(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> birth1Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(birth1Changer != null, "birth1Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.birth1 = birth1Changer(module.birth1);
             return particleSystem;
@@ -130,6 +135,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetBirth1(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> birth1Changer)
         {
+            Debug.Assert(birth1Changer != null, "birth1Changer cannot be null");
             module.birth1 = birth1Changer(module.birth1);
             return module;
         }
@@ -145,7 +151,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersCollision0(this ParticleSystem particleSystem, ParticleSystem collision0)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.collision0 = collision0;
             return particleSystem;
@@ -160,7 +166,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersCollision0(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> collision0Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(collision0Changer != null, "collision0Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.collision0 = collision0Changer(module.collision0);
             return particleSystem;
@@ -188,6 +195,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetCollision0(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> collision0Changer)
         {
+            Debug.Assert(collision0Changer != null, "collision0Changer cannot be null");
             module.collision0 = collision0Changer(module.collision0);
             return module;
         }
@@ -203,7 +211,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersCollision1(this ParticleSystem particleSystem, ParticleSystem collision1)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.collision1 = collision1;
             return particleSystem;
@@ -218,7 +226,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersCollision1(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> collision1Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(collision1Changer != null, "collision1Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.collision1 = collision1Changer(module.collision1);
             return particleSystem;
@@ -246,6 +255,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetCollision1(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> collision1Changer)
         {
+            Debug.Assert(collision1Changer != null, "collision1Changer cannot be null");
             module.collision1 = collision1Changer(module.collision1);
             return module;
         }
@@ -261,7 +271,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersDeath0(this ParticleSystem particleSystem, ParticleSystem death0)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.death0 = death0;
             return particleSystem;
@@ -276,7 +286,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersDeath0(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> death0Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(death0Changer != null, "death0Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.death0 = death0Changer(module.death0);
             return particleSystem;
@@ -304,6 +315,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetDeath0(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> death0Changer)
         {
+            Debug.Assert(death0Changer != null, "death0Changer cannot be null");
             module.death0 = death0Changer(module.death0);
             return module;
         }
@@ -319,7 +331,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersDeath1(this ParticleSystem particleSystem, ParticleSystem death1)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.death1 = death1;
             return particleSystem;
@@ -334,7 +346,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersDeath1(this ParticleSystem particleSystem, Func<ParticleSystem, ParticleSystem> death1Changer)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(death1Changer != null, "death1Changer cannot be null");
             var module = particleSystem.subEmitters;
             module.death1 = death1Changer(module.death1);
             return particleSystem;
@@ -362,6 +375,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetDeath1(this SubEmittersModule module, Func<ParticleSystem, ParticleSystem> death1Changer)
         {
+            Debug.Assert(death1Changer != null, "death1Changer cannot be null");
             module.death1 = death1Changer(module.death1);
             return module;
         }
@@ -374,7 +388,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersEnabled(this ParticleSystem particleSystem, bool enabled)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.subEmitters;
             module.enabled = enabled;
             return particleSystem;
@@ -386,7 +400,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSubEmittersEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             var module = particleSystem.subEmitters;
             module.enabled = enabledChanger(module.enabled);
             return particleSystem;
@@ -408,6 +423,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SubEmittersModule SetEnabled(this SubEmittersModule module, Func<bool, bool> enabledChanger)
         {
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             module.enabled = enabledChanger(module.enabled);
             return module;
         }

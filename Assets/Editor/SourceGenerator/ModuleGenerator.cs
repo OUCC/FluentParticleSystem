@@ -22,7 +22,8 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
             builder.Write(
-$@"using System;
+$@"#nullable enable
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -38,7 +39,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.Type}> moduleEditor)
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
+            Debug.Assert(moduleEditor != null, ""moduleEditor cannot be null"");
             moduleEditor(particleSystem.{module.PropertyName});
             return particleSystem;
         }}
@@ -62,7 +64,7 @@ $@"
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
             var module = particleSystem.{module.PropertyName};
             module.{property.PropertyName} = {property.PropertyName.p2c()};
             return particleSystem;
@@ -74,7 +76,8 @@ $@"
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
+            Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
             var module = particleSystem.{module.PropertyName};
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return particleSystem;
@@ -96,6 +99,7 @@ $@"
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
+            Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return module;
         }}

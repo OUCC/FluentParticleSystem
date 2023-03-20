@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem EditSizeOverLifetime(this ParticleSystem particleSystem, Action<SizeOverLifetimeModule> moduleEditor)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(moduleEditor != null, "moduleEditor cannot be null");
             moduleEditor(particleSystem.sizeOverLifetime);
             return particleSystem;
         }
@@ -26,7 +28,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeEnabled(this ParticleSystem particleSystem, bool enabled)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.enabled = enabled;
             return particleSystem;
@@ -38,7 +40,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeEnabled(this ParticleSystem particleSystem, Func<bool, bool> enabledChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.enabled = enabledChanger(module.enabled);
             return particleSystem;
@@ -60,6 +63,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetEnabled(this SizeOverLifetimeModule module, Func<bool, bool> enabledChanger)
         {
+            Debug.Assert(enabledChanger != null, "enabledChanger cannot be null");
             module.enabled = enabledChanger(module.enabled);
             return module;
         }
@@ -72,7 +76,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, bool separateAxes)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.separateAxes = separateAxes;
             return particleSystem;
@@ -84,7 +88,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSeparateAxes(this ParticleSystem particleSystem, Func<bool, bool> separateAxesChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(separateAxesChanger != null, "separateAxesChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.separateAxes = separateAxesChanger(module.separateAxes);
             return particleSystem;
@@ -106,6 +111,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSeparateAxes(this SizeOverLifetimeModule module, Func<bool, bool> separateAxesChanger)
         {
+            Debug.Assert(separateAxesChanger != null, "separateAxesChanger cannot be null");
             module.separateAxes = separateAxesChanger(module.separateAxes);
             return module;
         }
@@ -118,7 +124,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSize(this ParticleSystem particleSystem, MinMaxCurve size)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.size = size;
             return particleSystem;
@@ -130,7 +136,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSize(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> sizeChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(sizeChanger != null, "sizeChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.size = sizeChanger(module.size);
             return particleSystem;
@@ -152,6 +159,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSize(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> sizeChanger)
         {
+            Debug.Assert(sizeChanger != null, "sizeChanger cannot be null");
             module.size = sizeChanger(module.size);
             return module;
         }
@@ -164,7 +172,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSizeMultiplier(this ParticleSystem particleSystem, float sizeMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.sizeMultiplier = sizeMultiplier;
             return particleSystem;
@@ -176,7 +184,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeSizeMultiplier(this ParticleSystem particleSystem, Func<float, float> sizeMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(sizeMultiplierChanger != null, "sizeMultiplierChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.sizeMultiplier = sizeMultiplierChanger(module.sizeMultiplier);
             return particleSystem;
@@ -198,6 +207,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetSizeMultiplier(this SizeOverLifetimeModule module, Func<float, float> sizeMultiplierChanger)
         {
+            Debug.Assert(sizeMultiplierChanger != null, "sizeMultiplierChanger cannot be null");
             module.sizeMultiplier = sizeMultiplierChanger(module.sizeMultiplier);
             return module;
         }
@@ -210,7 +220,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeX(this ParticleSystem particleSystem, MinMaxCurve x)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.x = x;
             return particleSystem;
@@ -222,7 +232,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeX(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(xChanger != null, "xChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.x = xChanger(module.x);
             return particleSystem;
@@ -244,6 +255,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetX(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> xChanger)
         {
+            Debug.Assert(xChanger != null, "xChanger cannot be null");
             module.x = xChanger(module.x);
             return module;
         }
@@ -256,7 +268,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeXMultiplier(this ParticleSystem particleSystem, float xMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.xMultiplier = xMultiplier;
             return particleSystem;
@@ -268,7 +280,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeXMultiplier(this ParticleSystem particleSystem, Func<float, float> xMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(xMultiplierChanger != null, "xMultiplierChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.xMultiplier = xMultiplierChanger(module.xMultiplier);
             return particleSystem;
@@ -290,6 +303,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetXMultiplier(this SizeOverLifetimeModule module, Func<float, float> xMultiplierChanger)
         {
+            Debug.Assert(xMultiplierChanger != null, "xMultiplierChanger cannot be null");
             module.xMultiplier = xMultiplierChanger(module.xMultiplier);
             return module;
         }
@@ -302,7 +316,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeY(this ParticleSystem particleSystem, MinMaxCurve y)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.y = y;
             return particleSystem;
@@ -314,7 +328,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeY(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(yChanger != null, "yChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.y = yChanger(module.y);
             return particleSystem;
@@ -336,6 +351,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetY(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> yChanger)
         {
+            Debug.Assert(yChanger != null, "yChanger cannot be null");
             module.y = yChanger(module.y);
             return module;
         }
@@ -348,7 +364,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeYMultiplier(this ParticleSystem particleSystem, float yMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.yMultiplier = yMultiplier;
             return particleSystem;
@@ -360,7 +376,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeYMultiplier(this ParticleSystem particleSystem, Func<float, float> yMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(yMultiplierChanger != null, "yMultiplierChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.yMultiplier = yMultiplierChanger(module.yMultiplier);
             return particleSystem;
@@ -382,6 +399,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetYMultiplier(this SizeOverLifetimeModule module, Func<float, float> yMultiplierChanger)
         {
+            Debug.Assert(yMultiplierChanger != null, "yMultiplierChanger cannot be null");
             module.yMultiplier = yMultiplierChanger(module.yMultiplier);
             return module;
         }
@@ -394,7 +412,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeZ(this ParticleSystem particleSystem, MinMaxCurve z)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.z = z;
             return particleSystem;
@@ -406,7 +424,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeZ(this ParticleSystem particleSystem, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(zChanger != null, "zChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.z = zChanger(module.z);
             return particleSystem;
@@ -428,6 +447,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetZ(this SizeOverLifetimeModule module, Func<MinMaxCurve, MinMaxCurve> zChanger)
         {
+            Debug.Assert(zChanger != null, "zChanger cannot be null");
             module.z = zChanger(module.z);
             return module;
         }
@@ -440,7 +460,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeZMultiplier(this ParticleSystem particleSystem, float zMultiplier)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.zMultiplier = zMultiplier;
             return particleSystem;
@@ -452,7 +472,8 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem SetSizeOverLifetimeZMultiplier(this ParticleSystem particleSystem, Func<float, float> zMultiplierChanger)
         {
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, "particleSystem cannot be null");
+            Debug.Assert(zMultiplierChanger != null, "zMultiplierChanger cannot be null");
             var module = particleSystem.sizeOverLifetime;
             module.zMultiplier = zMultiplierChanger(module.zMultiplier);
             return particleSystem;
@@ -474,6 +495,7 @@ namespace OUCC.FluentParticleSystem
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SizeOverLifetimeModule SetZMultiplier(this SizeOverLifetimeModule module, Func<float, float> zMultiplierChanger)
         {
+            Debug.Assert(zMultiplierChanger != null, "zMultiplierChanger cannot be null");
             module.zMultiplier = zMultiplierChanger(module.zMultiplier);
             return module;
         }
