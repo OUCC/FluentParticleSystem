@@ -7,7 +7,6 @@ using UnityEngine;
 using System.Text;
 using OUCC.FluentParticleSystem.Generator;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace OUCC.FluentParticleSystem.SourceGenerator
@@ -23,7 +22,8 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
             builder.Write(
-$@"using System;
+$@"#nullable enable
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -33,10 +33,14 @@ namespace OUCC.FluentParticleSystem
     public static class {module.Type}Extension
     {{
 #if UNITY_{module.ReleaseVersion.Replace('.', '_')}_OR_NEWER
+        /// <summary>
+        /// Edit <see cref=""ParticleSystem.{module.PropertyName}""/>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.Type}> moduleEditor)
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
+            Debug.Assert(moduleEditor != null, ""moduleEditor cannot be null"");
             moduleEditor(particleSystem.{module.PropertyName});
             return particleSystem;
         }}
@@ -53,35 +57,49 @@ $@"
 #endif";
 
                 builder.Write($@"{(isSameAsPrevious ? "" : $"\n#if UNITY_{property.ReleaseVersion.Replace('.', '_')}_OR_NEWER")}
-        #region {property.PropertyName.c2p()}{obsolete}
+        #region {property.PropertyName.c2p()}
+        /// <summary>
+        /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
             var module = particleSystem.{module.PropertyName};
             module.{property.PropertyName} = {property.PropertyName.p2c()};
             return particleSystem;
         }}
-{obsolete}
+
+        /// <summary>
+        /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
-            ThrowHelper.ThrowArgumentNullExceptionIfNull(particleSystem, nameof(particleSystem));
+            Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
+            Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
             var module = particleSystem.{module.PropertyName};
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return particleSystem;
         }}
-{obsolete}
+
+        /// <summary>
+        /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, {property.Type} {property.PropertyName.p2c()})
         {{
             module.{property.PropertyName} = {property.PropertyName.p2c()};
             return module;
         }}
-{obsolete}
+
+        /// <summary>
+        /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
+        /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
+            Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
             return module;
         }}
@@ -113,7 +131,7 @@ $@"    }}
                 });
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/{module.Type}Extension.cs";
+                var filePath = $"Packages/FluentParticleSystem/Runtime/Extensions/{module.Type}Extension.cs";
                 WriteExtensionFile(filePath, module);
             }
             AssetDatabase.Refresh();
