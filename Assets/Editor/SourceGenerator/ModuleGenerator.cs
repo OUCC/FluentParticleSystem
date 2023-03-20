@@ -22,8 +22,7 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
             builder.Write(
-$@"#nullable enable
-using System;
+$@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
