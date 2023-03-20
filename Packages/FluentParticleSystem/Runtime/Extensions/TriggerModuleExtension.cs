@@ -1,4 +1,6 @@
+#if UNITY_2020_2_OR_NEWER
 #nullable enable
+#endif
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;

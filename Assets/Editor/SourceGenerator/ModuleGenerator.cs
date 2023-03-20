@@ -22,7 +22,9 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
             builder.Write(
-$@"#nullable enable
+$@"#if UNITY_2020_2_OR_NEWER
+#nullable enable
+#endif
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
