@@ -1,7 +1,7 @@
 {
   "name": "org.oucc.fluent-particle-system",
   "displayName": "FluentParticleSystem",
-  "version": "1.0.0",
+  "version": "20.0.0",
   "unity": "2020.2",
   "description": "Provides extension methods to write ParticleSystem of Unity with method chains.",
   "license": "MIT",
