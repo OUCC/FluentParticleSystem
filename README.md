@@ -38,23 +38,45 @@ public class Foo : MonoBehavior
 
     private void Start()
     {
-        // Assign value with Set<Module Name><Property Name>
+        // Assign value with Set<ModuleName><PropertyName>
         particleSystem.SetMainDuration(5.0f);
 
-        // 現在の設定値を利用して変更できます
+        // You can change the value with the current value.
         particleSystem.SetMainDuration(d => d * 2);
 
-        // 返り値は ParticleSystem なのでメソッドチェーンで続けて書けます
+        // You can write with method chains
         particleSystem.SetMainDuration(5.0f)
             .SetMainLoop(true)
             .SetCollisionDampen(0.1f);
 
-        // Edit<モジュール名> を使うことで一つのモジュールについて一度に設定できます
+        // Using Edit<ModuleName>, configure some settings of a module at a time
         particleSystem
             .EditMain(m =>
                 m.SetDuration(5.0f)
                  .SetLoop(l => !l))
             .SetCollisionDampen(0.1f);
+    }
+}
+```
+
+## Definition
+
+The extension methods provided are defined as follows
+
+```csharp
+namespace OUCC.FluentParticleSystem
+{
+    public static class MainModuleExtension
+    {
+        public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor);
+
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode);
+
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger);
+
+        public static MainModule SetCullingMode(this MainModule module, ParticleSystemCullingMode cullingMode);
+
+        public static MainModule SetCullingMode(this MainModule module, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger);
     }
 }
 ```

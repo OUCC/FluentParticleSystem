@@ -58,3 +58,25 @@ public class Foo : MonoBehavior
     }
 }
 ```
+
+## 定義
+
+提供している拡張メソッドは以下のように定義されています。
+
+```csharp
+namespace OUCC.FluentParticleSystem
+{
+    public static class MainModuleExtension
+    {
+        public static ParticleSystem EditMain(this ParticleSystem particleSystem, Action<MainModule> moduleEditor);
+
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, ParticleSystemCullingMode cullingMode);
+
+        public static ParticleSystem SetMainCullingMode(this ParticleSystem particleSystem, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger);
+
+        public static MainModule SetCullingMode(this MainModule module, ParticleSystemCullingMode cullingMode);
+
+        public static MainModule SetCullingMode(this MainModule module, Func<ParticleSystemCullingMode, ParticleSystemCullingMode> cullingModeChanger);
+    }
+}
+```
