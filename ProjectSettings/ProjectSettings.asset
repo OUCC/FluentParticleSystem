@@ -544,7 +544,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     : ZIP_AVAILABLE
-    Standalone: ZIP_AVAILABLE;NUGET_PACKAGE_READY
+    Standalone: ZIP_AVAILABLE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
