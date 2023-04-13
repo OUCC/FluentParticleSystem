@@ -16,12 +16,12 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
         private const string INFO_PATH = "Assets/Editor/SourceGenerator/module-info.json";
 
         #region generate scripts
-        internal static void WriteExtensionFile(string filePath, PSModuleInfo module)
+        internal static void WriteExtensionFile(string filePath, string nullableFilePath, PSModuleInfo module)
         {
-            var builder = new StringWriter();
+            var builder = new StringBuilder();
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
 
-            builder.Write(
+            builder.Append(
 $@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -55,7 +55,7 @@ $@"
         [Obsolete(""{property.ObsoleteData.Message}"", {property.ObsoleteData.IsError.ToString().ToLower()})]
 #endif";
 
-                builder.Write($@"{(isSameAsPrevious ? "" : $"\n#if UNITY_{property.ReleaseVersion.Replace('.', '_')}_OR_NEWER")}
+                builder.Append($@"{(isSameAsPrevious ? "" : $"\n#if UNITY_{property.ReleaseVersion.Replace('.', '_')}_OR_NEWER")}
         #region {property.PropertyName.c2p()}
         /// <summary>
         /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
@@ -107,12 +107,14 @@ $@"
                 isSameAsPrevious = isSameAsNext;
             }
 
-            builder.Write(
+            builder.Append(
 $@"    }}
 }}
 ");
 
             File.WriteAllText(filePath, builder.ToString().Replace("\r\n", "\n"));
+
+            File.WriteAllText(nullableFilePath, "#nullable enable\n" + builder.ToString().Replace("\r\n", "\n")); ;
         }
 
         /// <summary>
@@ -130,8 +132,9 @@ $@"    }}
                 });
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/Extensions/{module.Type}Extension.cs";
-                WriteExtensionFile(filePath, module);
+                var filePath = $"Packages/FluentParticleSystem/Runtime/NonNullable/Extensions/{module.Type}Extension.cs";
+                var nullableFilePath = $"Packages/FluentParticleSystem/Runtime/Nullable/Extensions/{module.Type}Extension.cs";
+                WriteExtensionFile(filePath, nullableFilePath, module);
             }
             AssetDatabase.Refresh();
         }
