@@ -16,7 +16,7 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
         private const string INFO_PATH = "Assets/Editor/SourceGenerator/module-info.json";
 
         #region generate scripts
-        internal static void WriteExtensionFile(string filePath, string nullableFilePath, PSModuleInfo module)
+        internal static void WriteExtensionFile(string filePath, PSModuleInfo module)
         {
             var builder = new StringBuilder();
             var isSameAsPrevious = module.Properties.Any() && module.Properties.First().ReleaseVersion == module.ReleaseVersion;
@@ -25,7 +25,12 @@ namespace OUCC.FluentParticleSystem.SourceGenerator
 $@"using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+
 using static UnityEngine.ParticleSystem;
+
+#if UNITY_2020_2_OR_NEWER
+using System.Diagnostics.CodeAnalysis;
+#endif
 
 namespace OUCC.FluentParticleSystem
 {{
@@ -36,7 +41,18 @@ namespace OUCC.FluentParticleSystem
         /// Edit <see cref=""ParticleSystem.{module.PropertyName}""/>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Edit{module.PropertyName.c2p()}(this ParticleSystem particleSystem, Action<{module.Type}> moduleEditor)
+#if UNITY_2020_2_OR_NEWER
+        [return: NotNull]
+#endif
+        public static ParticleSystem Edit{module.PropertyName.c2p()}(
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+            this ParticleSystem particleSystem,
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+            Action<{module.Type}> moduleEditor)
         {{
             Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
             Debug.Assert(moduleEditor != null, ""moduleEditor cannot be null"");
@@ -61,7 +77,14 @@ $@"
         /// Assign a value to <see cref=""{module.Type}.{property.PropertyName}""/>
         /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
+#if UNITY_2020_2_OR_NEWER
+        [return: NotNull]
+#endif
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+            this ParticleSystem particleSystem, {property.Type} {property.PropertyName.p2c()})
         {{
             Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
             var module = particleSystem.{module.PropertyName};
@@ -73,7 +96,18 @@ $@"
         /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
         /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(this ParticleSystem particleSystem, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
+#if UNITY_2020_2_OR_NEWER
+        [return: NotNull]
+#endif
+        public static ParticleSystem Set{module.PropertyName.c2p()}{property.PropertyName.c2p()}(
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+            this ParticleSystem particleSystem,
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+             Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
             Debug.Assert(particleSystem != null, ""particleSystem cannot be null"");
             Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
@@ -96,7 +130,11 @@ $@"
         /// Edit <see cref=""{module.Type}.{property.PropertyName}""/>
         /// </summary>{obsolete}
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module, Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
+        public static {module.Type} Set{property.PropertyName.c2p()}(this {module.Type} module,
+#if UNITY_2020_2_OR_NEWER
+            [DisallowNull]
+#endif
+            Func<{property.Type}, {property.Type}> {property.PropertyName.p2c()}Changer)
         {{
             Debug.Assert({property.PropertyName.p2c()}Changer != null, ""{property.PropertyName.p2c()}Changer cannot be null"");
             module.{property.PropertyName} = {property.PropertyName.p2c()}Changer(module.{property.PropertyName});
@@ -113,8 +151,6 @@ $@"    }}
 ");
 
             File.WriteAllText(filePath, builder.ToString().Replace("\r\n", "\n"));
-
-            File.WriteAllText(nullableFilePath, "#nullable enable\n" + builder.ToString().Replace("\r\n", "\n")); ;
         }
 
         /// <summary>
@@ -132,9 +168,8 @@ $@"    }}
                 });
             foreach (var module in modules)
             {
-                var filePath = $"Packages/FluentParticleSystem/Runtime/NonNullable/Extensions/{module.Type}Extension.cs";
-                var nullableFilePath = $"Packages/FluentParticleSystem/Runtime/Nullable/Extensions/{module.Type}Extension.cs";
-                WriteExtensionFile(filePath, nullableFilePath, module);
+                var filePath = $"Packages/FluentParticleSystem/Runtime/Extensions/{module.Type}Extension.cs";
+                WriteExtensionFile(filePath, module);
             }
             AssetDatabase.Refresh();
         }
